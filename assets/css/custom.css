@@ -6,11 +6,16 @@
     margin-bottom: -5px;
 }
 
+.navbar.navbar-transparent .navbar-nav>li>a {
+	/* Hide links when scrolled to the top of the page */
+	display: none;
+}
+
 .navbar:not(.navbar-transparent) #ckcollab_logo_svg {
 	height: 50px;
 }
 
-/* When navbar does not have class .navbar-transparent, style .ckclogo this way */
+/* When navbar does not have class .navbar-transparent (aka scrolled past the top) */
 .navbar:not(.navbar-transparent) .ckclogo .letters path,
 .navbar:not(.navbar-transparent) .ckclogo .border  {
 	fill: #efefef;
@@ -45,7 +50,10 @@ section h1 {
 	margin:40px;
 }
 
-
+.brands img {
+    width: 64px;
+    margin: 10px;
+}
 
 
 
@@ -59,8 +67,13 @@ section h1 {
 
 
 
+#what-weve-done img {
+	width: 128px;
+}
 
-
+.work-details-title {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
 
 
 
@@ -71,42 +84,45 @@ section h1 {
  What we do
  *****************************************************************************/
 
-#what-we-do {
-	margin-top: 200px;
-	text-align: center;
-}
+/*#what-we-do {*/
+	/*margin-top: 200px;*/
+	/*text-align: center;*/
+/*}*/
 
-#what-we-do img {
-	width: 128px;
-}
+/*#what-we-do img {*/
+	/*width: 128px;*/
+/*}*/
 
-#what-we-do .brands > div {
-    display: inline-block;
-    float: none;
-	margin-bottom: 20px;
-}
+/*#what-we-do .brands > div {*/
+    /*display: inline-block;*/
+    /*float: none;*/
+	/*margin-bottom: 20px;*/
+/*}*/
 
 
 /******************************************************************************
  What we've done
  *****************************************************************************/
 
-#what-weve-done {
+/*#what-weve-done img {*/
+	/*width: 256px;*/
+	/*display: block;*/
+	/*margin: 20px auto;*/
+	/*padding-bottom: 10px;*/
+/*}*/
+/*#what-weve-done img:last-of-type {*/
+	/*padding-bottom:200px;*/
+/*}*/
+
+
+/******************************************************************************
+ Landscape
+ *****************************************************************************/
+
+#landscape {
 	background:url('../../assets/images/wwd_bg.jpg'); background-size:cover;
 	text-align: center;
 }
-
-#what-weve-done img {
-	width: 256px;
-	display: block;
-	margin: 20px auto;
-	padding-bottom: 10px;
-}
-#what-weve-done img:last-of-type {
-	padding-bottom:200px;
-}
-
-
 
 
 
@@ -152,11 +168,6 @@ Logos (section 1)
 	/**/
 	/**/
 /*}*/
-
-.brands img {
-    width: 64px;
-    margin: 10px;
-}
 
 .horizontal-brands {
 	text-align: center;

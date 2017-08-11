@@ -380,10 +380,12 @@ Overlays
 
 .bg-dark,
 .bg-dark-30,
+.bg-dark-35,
 .bg-dark-50,
 .bg-dark-90,
 .bg-dark .module-title,
 .bg-dark-30 .module-title,
+.bg-dark-35 .module-title,
 .bg-dark-50 .module-title,
 .bg-dark-90 .module-title {
 	color: #fff;
@@ -396,6 +398,16 @@ Overlays
 .bg-dark-30:before {
 	position: absolute;
 	background: rgba(0, 0, 0, .3);
+	content: " ";
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.bg-dark-35:before {
+	position: absolute;
+	background: rgba(0, 0, 0, .35);
 	content: " ";
 	height: 100%;
 	width: 100%;

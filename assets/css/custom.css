@@ -2,15 +2,8 @@
  Header/navbar
  *****************************************************************************/
 #ckcollab_logo_svg {
-	eight: 43px;
     margin-top: 4px;
     margin-bottom: -5px;
-
-	-webkit-transition: fill 3000ms linear, color 1s linear;
-	-moz-transition: fill 3000ms linear, color 1s linear;
-	-o-transition: fill 3000ms linear, color 1s linear;
-	-ms-transition: fill 3000ms linear, color 1s linear;
-	transition: fill 3000ms linear, color 1s linear;
 }
 
 .navbar:not(.navbar-transparent) #ckcollab_logo_svg {
@@ -51,6 +44,28 @@ section h1 {
 	font-weight: bold;
 	margin:40px;
 }
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+ Description
+ *****************************************************************************/
+
+
+
+
+
+
+
+
+
+
 
 /******************************************************************************
  What we do

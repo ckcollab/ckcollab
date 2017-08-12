@@ -6,6 +6,7 @@
  Header/navbar
  *****************************************************************************/
 #ckcollab_logo_svg {
+    cursor: pointer;
     margin-top: 4px;
     margin-bottom: -5px;
     opacity: 0.5;

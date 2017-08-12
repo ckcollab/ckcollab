@@ -1,3 +1,7 @@
+.wrapper {
+	background: rgb(245, 245, 245);
+}
+
 /******************************************************************************
  Header/navbar
  *****************************************************************************/
@@ -53,7 +57,6 @@
 /******************************************************************************
  Styles common to all sections/modules
  *****************************************************************************/
-
 section h1 {
 	text-align: center;
 	font-family: "Overpass", sans-serif;
@@ -98,9 +101,15 @@ a > img:hover {
 	padding-bottom: 80px;
 }
 
+/* What we do */
+#what-we-do {
+	padding-bottom: 150px;
+}
 #what-we-do img {
 	width: 64px;
 }
+
+/* Who for */
 #who-for img {
 	height: 64px;
 }
@@ -111,46 +120,12 @@ a > img:hover {
 
 .work-details-title {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
 }
 
 
 
-
-
-
-/******************************************************************************
- What we do
- *****************************************************************************/
-
-/*#what-we-do {*/
-	/*margin-top: 200px;*/
-	/*text-align: center;*/
-/*}*/
-
-/*#what-we-do img {*/
-	/*width: 128px;*/
-/*}*/
-
-/*#what-we-do .brands > div {*/
-    /*display: inline-block;*/
-    /*float: none;*/
-	/*margin-bottom: 20px;*/
-/*}*/
-
-
-/******************************************************************************
- What we've done
- *****************************************************************************/
-
-/*#who-for img {*/
-	/*width: 256px;*/
-	/*display: block;*/
-	/*margin: 20px auto;*/
-	/*padding-bottom: 10px;*/
-/*}*/
-/*#who-for img:last-of-type {*/
-	/*padding-bottom:200px;*/
-/*}*/
 
 
 /******************************************************************************
@@ -208,60 +183,4 @@ a > img:hover {
 	/*background-image: url("../images/bg_pattern.jpg");*/
 	/*background-repeat: repeat;*/
 	/*-webkit-background-size: inherit;*/
-/*}*/
-
-.wrapper {
-	background-color: transparent;
-}
-
-
-#top-description {
-	background-color: white;
-}
-
-
-
-
-/* ------------------------------------------------------------------
-Logos (section 1)
------------------------------------------------------------------- */
-/*#images {*/
-	/*!*width: 1170px;*!*/
-/*}*/
-
-/*#images img {*/
-	/*height: auto;*/
-	/*width: auto;*/
-	/*max-width: 135px;*/
-	/*max-height: 135px;*/
-	/*float: left;*/
-	/*position: relative;*/
-	/*padding: 10px 20px 20px 10px;*/
-	/*margin-bottom: 30px;*/
-	/**/
-	/**/
-/*}*/
-
-.horizontal-brands {
-	text-align: center;
-}
-
-
-
-/*.wwd-bg{*/
-	/*max-width: 100%;*/
-	/*max-height: 450px;*/
-/*}*/
-
-/*.wwd-info img{*/
-	/*margin: 20px;*/
-	/*padding: 10px;*/
-	/*height: auto;*/
-	/*width: auto;*/
-	/*max-width: 300px;*/
-	/**/
-/*}*/
-
-/*.wwd-info{*/
-	/*text-align: center;*/
 /*}*/

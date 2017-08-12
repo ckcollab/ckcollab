@@ -4,6 +4,16 @@
 #ckcollab_logo_svg {
     margin-top: 4px;
     margin-bottom: -5px;
+
+	/* Specifying this height makes transitions nice and links aligned properly */
+	height: 43px;
+
+	-webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+}
+
+#ckcollab_logo_svg path {
+	/*stroke: red;*/
 }
 
 .navbar.navbar-transparent .navbar-nav>li>a {
@@ -12,7 +22,7 @@
 }
 
 .navbar:not(.navbar-transparent) #ckcollab_logo_svg {
-	height: 50px;
+	/*height: 50px;*/
 }
 
 /* When navbar does not have class .navbar-transparent (aka scrolled past the top) */
@@ -36,6 +46,9 @@
 	}
 }
 
+.caption-content {
+	text-shadow: 0px 0px 1px #60aed9;
+}
 
 /******************************************************************************
  Styles common to all sections/modules
@@ -45,17 +58,33 @@ section h1 {
 	text-align: center;
 	font-family: "Overpass", sans-serif;
 	font-size: 60px;
-	color:#ef6d7e;
+	color: #ef6d7e;
 	font-weight: bold;
-	margin:40px;
+	margin: 40px;
+}
+
+.brands {
 }
 
 .brands img {
-    width: 64px;
+    /*width: 64px;*/
+    /*height: 64px;*/
     margin: 10px;
 }
 
+a > img {
+	/*border: 3px outset transparent;*/
+	/*box-sizing: border-box;*/
+}
+a > img:hover {
+	margin-top: 5px;
+	margin-bottom: 15px;
 
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
 
 
 
@@ -64,11 +93,20 @@ section h1 {
 /******************************************************************************
  Description
  *****************************************************************************/
+#top-description {
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
 
-
-
-#what-weve-done img {
-	width: 128px;
+#what-we-do img {
+	width: 64px;
+}
+#who-for img {
+	height: 64px;
+}
+#who-for a {
+	display: block;
+	margin-bottom: 20px;
 }
 
 .work-details-title {
@@ -104,13 +142,13 @@ section h1 {
  What we've done
  *****************************************************************************/
 
-/*#what-weve-done img {*/
+/*#who-for img {*/
 	/*width: 256px;*/
 	/*display: block;*/
 	/*margin: 20px auto;*/
 	/*padding-bottom: 10px;*/
 /*}*/
-/*#what-weve-done img:last-of-type {*/
+/*#who-for img:last-of-type {*/
 	/*padding-bottom:200px;*/
 /*}*/
 
@@ -120,9 +158,44 @@ section h1 {
  *****************************************************************************/
 
 #landscape {
-	background:url('../../assets/images/wwd_bg.jpg'); background-size:cover;
+	background: url('../../assets/images/wwd_bg.jpg');
+	background-size: cover;
 	text-align: center;
 }
+
+/* Contact us */
+.comment-form h4 {
+	color: #efefef !important;
+	text-shadow: 0px 0px 5px rgba(35, 75, 97, 0.8);
+}
+
+.form-control {
+	text-transform: none;
+}
+
+.comment-form {
+	padding: 100px 0;
+}
+
+/* Bottom links */
+.footer-captions {
+	padding: 100px 0;
+	color: #efefef;
+	text-shadow: 0px 0px 5px rgba(35, 75, 97, 0.8);
+}
+.footer-captions a {
+	color: #efefef;
+	cursor: pointer;
+}
+.footer-captions a:hover{
+	/*color: #99d8f1;*/
+
+	/*color: #3a6a7d;*/
+	/*text-shadow: 0px 0px 2px rgba(35, 75, 97, 0.8);*/
+	/*color: rgba(58, 106, 125, 0.25);*/
+    text-shadow: 0px 0px 0px #fff;
+}
+
 
 
 

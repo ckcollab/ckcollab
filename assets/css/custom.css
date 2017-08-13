@@ -67,7 +67,7 @@
 }
 
 .caption-content {
-    text-shadow: 0px 0px 1px #60aed9;
+    text-shadow: 0 0 1px #60aed9;
 }
 
 /******************************************************************************
@@ -155,7 +155,7 @@ a > img:hover {
 /* Contact us */
 .comment-form h4 {
     color: #efefef !important;
-    text-shadow: 0px 0px 5px rgba(35, 75, 97, 0.8);
+    text-shadow: 0 0 5px rgba(35, 75, 97, 0.8);
 }
 
 .form-control {
@@ -170,7 +170,7 @@ a > img:hover {
 .footer-captions {
     padding: 100px 0;
     color: #efefef;
-    text-shadow: 0px 0px 10px rgb(1, 19, 29);
+    text-shadow: 0 0 10px rgb(1, 19, 29);
 }
 
 .footer-captions a {
@@ -182,9 +182,9 @@ a > img:hover {
     /*color: #99d8f1;*/
 
     /*color: #3a6a7d;*/
-    /*text-shadow: 0px 0px 2px rgba(35, 75, 97, 0.8);*/
+    /*text-shadow: 0 0 2px rgba(35, 75, 97, 0.8);*/
     /*color: rgba(58, 106, 125, 0.25);*/
-    text-shadow: 0px 0px 0px #fff;
+    text-shadow: 0 0 0 #fff;
 }
 
 /*.module {*/

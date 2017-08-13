@@ -79,6 +79,7 @@ section h1 {
 }
 
 .brands {
+    padding-top: 20px;
 }
 
 .brands img {
@@ -106,8 +107,7 @@ a > img:hover {
  Description
  *****************************************************************************/
 #top-description {
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding: 160px 0;
 }
 
 /* What we do */

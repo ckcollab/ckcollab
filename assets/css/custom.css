@@ -40,9 +40,13 @@
     /*height: 50px;*/
 }
 
+.navbar.navbar-transparent .ckclogo .letters path,
+.navbar.navbar-transparent .ckclogo .border {
+    fill: #efefef;
+}
+
 /* When navbar does not have class .navbar-transparent (aka scrolled past the top) */
-.navbar:not(.navbar-transparent) .ckclogo .letters path,
-.navbar:not(.navbar-transparent) .ckclogo .border {
+.navbar:not(.navbar-transparent) .ckclogo .letters path{
     fill: #efefef;
 }
 

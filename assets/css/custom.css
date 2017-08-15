@@ -117,6 +117,41 @@ a > img:hover {
     min-height: 100vh;
 }
 
+#top-description .panel a {
+    color: rgb(27, 60, 125);
+}
+
+.panel-body {
+    position: relative;
+}
+
+.panel-body .expand-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    bottom: -20px;
+    opacity: 0;
+    color: rgb(249, 249, 249);
+    background-color: rgba(96, 174, 217, 0.95);
+    border-radius: 0 0 4px 4px;
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.panel-body:hover .expand-profile {
+    opacity: 1;
+}
+
+.panel-default>.panel-heading {
+    color: #f2fcfd;
+    background-color: rgba(239, 109, 126, 0.55);
+}
+
 /* What we do */
 #what-we-do {
     padding-bottom: 150px;
@@ -140,6 +175,10 @@ a > img:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     display: inline-block;
     color: rgba(0, 0, 0, 0.8);
+}
+
+.experience-list {
+    margin-bottom: 0;
 }
 
 

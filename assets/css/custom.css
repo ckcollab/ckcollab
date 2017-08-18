@@ -193,7 +193,7 @@ a > img:hover {
 #landscape {
     background: linear-gradient(
             rgba(239, 109, 126, 0),
-            rgba(239, 109, 126, 0.85)
+            rgba(239, 109, 126, 0.55)
     ), url('../../assets/images/wwd_bg.jpg');
     background-size: cover;
     text-align: center;

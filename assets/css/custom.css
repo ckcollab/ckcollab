@@ -107,7 +107,7 @@ a > img {
     /*box-sizing: border-box;*/
 }
 
-a > img:hover {
+a:hover > img {
     margin-top: 5px;
     margin-bottom: 15px;
 

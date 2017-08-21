@@ -69,6 +69,10 @@
     body {
         padding-top: 50px;
     }
+
+    #home {
+        background-position: 100% center;
+    }
 }
 
 .caption-content {
@@ -126,8 +130,12 @@ a > img:hover {
     color: rgb(27, 60, 125);
 }
 
-.panel-body {
+#top-description .panel-body {
     position: relative;
+}
+#top-description .panel-body img {
+    height: 328px;
+    text-align: center;
 }
 
 .panel-body .expand-profile {
@@ -150,6 +158,13 @@ a > img:hover {
 
 .panel-body:hover .expand-profile {
     opacity: 1;
+}
+.expand-profile dd {
+    margin-bottom: 5px;
+    /*margin-left: 135px;*/
+}
+.expand-profile dt {
+    /*width: 120px;*/
 }
 
 .panel-default>.panel-heading {
@@ -183,7 +198,13 @@ a > img:hover {
 }
 
 .experience-list {
-    margin-bottom: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#projects {
+    padding-bottom: 80px;
 }
 
 

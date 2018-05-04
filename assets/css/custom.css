@@ -75,7 +75,7 @@
     .navbar-custom {
         background: none;
         border: 0;
-        border-bottom: 0;
+        border-bottom: 0 !important;
     }
     #ckcollab_logo_svg {
         margin-left: 8px;   

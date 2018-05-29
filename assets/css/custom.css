@@ -70,6 +70,10 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
+    #who-for img {
+        width: 150px;
+    }
 }
 @media (max-width: 768px) {
     .navbar-custom {
@@ -83,6 +87,14 @@
 
     #home {
         background-position: 98% center;
+    }
+
+    #who-for {
+        padding-bottom: 20px;
+    }
+    #who-for img {
+        width: 65%;
+        padding-bottom: 35px;
     }
 }
 
@@ -105,6 +117,7 @@ section h1 {
 
 .brands {
     padding-top: 20px;
+    text-align: center;
 }
 
 .brands img {
@@ -193,10 +206,6 @@ a:hover > img {
 }
 
 /* Who for */
-#who-for img {
-    height: 64px;
-}
-
 #who-for a {
     display: block;
     margin-bottom: 20px;
@@ -273,3 +282,8 @@ a:hover > img {
 /*background-repeat: repeat;*/
 /*-webkit-background-size: inherit;*/
 /*}*/
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

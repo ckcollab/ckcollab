@@ -294,7 +294,9 @@ a:hover > img {
 /*-webkit-background-size: inherit;*/
 /*}*/
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.copyright, .copyright a {
+    color: #efefef;
+}
+.copyright a:hover {
+    color: #a34646;
 }

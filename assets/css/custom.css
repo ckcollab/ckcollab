@@ -74,6 +74,13 @@
     #who-for img {
         width: 150px;
     }
+
+    #brand_draper {
+        margin-top: 30px;
+    }
+    a #brand_draper:hover {
+        margin-top: 25px;
+    }
 }
 @media (max-width: 768px) {
     .navbar-custom {

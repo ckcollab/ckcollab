@@ -88,8 +88,9 @@
         border: 0;
         border-bottom: 0 !important;
     }
+
     #ckcollab_logo_svg {
-        margin-left: 8px;   
+        margin-left: 8px;
     }
 
     #home {
@@ -99,14 +100,16 @@
     #who-for {
         padding-bottom: 20px;
     }
+
     #who-for img {
         width: 65%;
         padding-bottom: 35px;
     }
+}
 
-    #top-description .panel-body img {
-        margin-left: 30px;
-    }
+#team .panel {
+    /*margin-left: 30px;*/
+    text-align: center;
 }
 
 .caption-content {

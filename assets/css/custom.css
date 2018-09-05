@@ -107,11 +107,6 @@
     }
 }
 
-#team .panel {
-    /*margin-left: 30px;*/
-    text-align: center;
-}
-
 .caption-content {
     text-shadow: 0 0 1px #60aed9;
 }
@@ -170,6 +165,7 @@ a:hover > img {
 
 #top-description .panel-body {
     position: relative;
+    text-align: center;
 }
 #top-description .panel-body img {
     height: 328px;

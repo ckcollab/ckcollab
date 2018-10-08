@@ -105,6 +105,10 @@
         width: 65%;
         padding-bottom: 35px;
     }
+
+    .panel-body img {
+        height: auto !important;
+    }
 }
 
 .caption-content {

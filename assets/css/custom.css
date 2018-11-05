@@ -112,7 +112,21 @@
 }
 
 .caption-content {
+    text-align: left;
     text-shadow: 0 0 1px #60aed9;
+}
+
+#typewriter {
+    /*min-width: 100%;*/
+}
+#typewriter .cursor {
+    color: #ef6d7e;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.font-code {
+    font-family: monospace;
 }
 
 

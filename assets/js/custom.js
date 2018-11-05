@@ -447,6 +447,36 @@
 			return false;
 		});
 
+		/* ----------------------------------------------
+		 * Typewriter effect
+		 * ---------------------------------------------- */
+		function type_writer(element_id, text) {
+            var p = document.getElementById(element_id)
+            p.innerHTML = ''
+			var prefix = "<b>></b>"
+            var n = 0
+            var typeTimer = setInterval(function () {
+                n = n + 1
+                p.innerHTML = prefix + text.slice(0, n)
+                if (n === text.length) {
+                    clearInterval(typeTimer)
+                    p.innerHTML = prefix + text
+                    n = 0
+                    setInterval(function () {
+
+                        if (n === 0) {
+                            p.innerHTML = prefix + text + "<span class='cursor'>_</span>"
+                            n = 1
+                        } else {
+                            p.innerHTML = prefix + text
+                            n = 0
+                        }
+
+                    }, 500)
+                }
+            }, 60)
+        }
+        type_writer("typewriter", "your wish is our cmd")
 	});
 
 })(jQuery);

@@ -124,6 +124,9 @@
     font-weight: bold;
     text-shadow: none;
 }
+#typewriter .cursor.off {
+    opacity: 0;
+}
 
 .font-code {
     font-family: monospace;

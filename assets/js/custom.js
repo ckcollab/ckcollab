@@ -467,10 +467,10 @@
                         setInterval(function () {
 
                             if (n === 0) {
-                                p.innerHTML = prefix + text + "<span class='cursor'>_</span>"
+                                p.innerHTML = prefix + text + "<span class='cursor on'>_</span>"
                                 n = 1
                             } else {
-                                p.innerHTML = prefix + text
+                                p.innerHTML = prefix + text + "<span class='cursor off'>_</span>"
                                 n = 0
                             }
 

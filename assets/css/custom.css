@@ -151,23 +151,13 @@
 }
 
 @keyframes hovering_1 {
-    from {
-        top: 5%;
-    }
-
-    to {
-        top: 0%;
-    }
+    0% { transform: translateY(75px); }
+    100% { transform: none; }
 }
 
 @keyframes hovering_2 {
-    from {
-        top: -15%;
-    }
-
-    to {
-        top: -10%;
-    }
+    0% { transform: none; }
+    100% { transform: translateY(75px); }
 }
 
 #astro_1, #astro_2 {
@@ -176,39 +166,35 @@
     animation-timing-function: ease;
 }
 
+#astro_1 {
+    animation-delay: .1s;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar.navbar-transparent .navbar-header {
         text-align: center;
     }
     #astro_1, #astro_2 {
-        width: 150px;
+        width: 400px;
     }
 
     #astro_1 {
-        right: 40%;
+        top: 25%;
+        right: 25%;
     }
 
     #astro_2 {
-        right: 20%;
+        top: 15%;
+        right: -20%;
     }
 
     @keyframes hovering_1 {
-        from {
-            top: 30%;
-        }
-
-        to {
-            top: 25%;
-        }
+        0% { transform: translateY(25px); }
+        100% { transform: none; }
     }
     @keyframes hovering_2 {
-        from {
-            top: 25%;
-        }
-
-        to {
-            top: 15%;
-        }
+        0% { transform: none; }
+        100% { transform: translateY(25px); }
     }
 }
 
@@ -305,10 +291,6 @@
         background: none;
         border: 0;
         border-bottom: 0 !important;
-    }
-
-    #ckcollab_logo_svg {
-        margin-left: 8px;
     }
 
     #home {

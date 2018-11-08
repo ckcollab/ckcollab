@@ -176,16 +176,18 @@
     }
     #astro_1, #astro_2 {
         width: 400px;
+        height: 200px;
     }
 
     #astro_1 {
-        top: 25%;
+        top: 60%;
         right: 25%;
     }
 
     #astro_2 {
-        top: 15%;
-        right: -20%;
+        width: 200px;
+        top: 50%;
+        right: 0%;
     }
 
     @keyframes hovering_1 {

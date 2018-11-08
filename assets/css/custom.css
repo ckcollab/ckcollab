@@ -189,11 +189,42 @@
     position: absolute;
     top: 5%;
     right: -5%;
+    animation-name: hovering_1;
+    animation-duration: 4s;
 }
 #astro_2 {
     position: absolute;
     top: -10%;
     right: -30%;
+    animation-name: hovering_2;
+    animation-duration: 5s;
+}
+
+
+
+@keyframes hovering_1 {
+    from {
+        top: 5%;
+    }
+
+    to {
+        top: 0%;
+    }
+}
+@keyframes hovering_2 {
+    from {
+        top: -15%;
+    }
+
+    to {
+        top: -10%;
+    }
+}
+#astro_1, #astro_2 {
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
 
 

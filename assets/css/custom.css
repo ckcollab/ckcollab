@@ -5,7 +5,211 @@
 #home .caption-content {
     color: #fff;
     text-shadow: -1px -1px 0 rgb(75, 164, 206),
-                 -1px 1px 7px rgba(1, 19, 29, 0.45);
+    -1px 1px 7px rgba(1, 19, 29, 0.45);
+}
+
+/**
+ Astronauts/animations
+ */
+
+@keyframes alternating-logo-letters {
+    from {
+        fill: #ffffff;
+    }
+
+    to {
+        fill: #e36876;
+    }
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(0) {
+    animation-delay: 0.0s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(4) {
+    animation-delay: 0.25s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(5) {
+    animation-delay: 0.3s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(6) {
+    animation-delay: 0.35s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(7) {
+    animation-delay: 0.4s;
+}
+
+.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(8) {
+    animation-delay: 0.45s;
+}
+
+@keyframes alternating-color-1 {
+    from {
+        fill: #66a9d7;
+    }
+
+    to {
+        fill: #e36876;
+    }
+}
+
+@keyframes alternating-color-2 {
+    from {
+        fill: #e36876;
+    }
+
+    to {
+        fill: #66a9d7;
+    }
+}
+
+.astronaut-stripe path {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-name: alternating-color-1;
+}
+
+/*.astronaut-stripe path:nth-of-type(odd) {*/
+/*animation-name: alternating-color-2;*/
+/*}*/
+/*.astronaut-stripe path:nth-of-type(even) {*/
+/*animation-name: alternating-color-2;*/
+/*!*fill: green !important;*!*/
+/*}*/
+/*.astronaut-stripe path:nth-of-type(3) {*/
+/*animation-name: alternating-color-1;*/
+/*fill: orange !important;*/
+/*}*/
+
+.astronaut-stripe path:nth-of-type(0) {
+    animation-delay: 0.0s;
+}
+
+.astronaut-stripe path:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.astronaut-stripe path:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.astronaut-stripe path:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+.astronaut-stripe path:nth-of-type(4) {
+    animation-delay: 0.25s;
+}
+
+.astronaut-stripe path:nth-of-type(5) {
+    animation-delay: 0.3s;
+}
+
+.astronaut-stripe path:nth-of-type(6) {
+    animation-delay: 0.35s;
+}
+
+.astronaut-stripe path:nth-of-type(7) {
+    animation-delay: 0.4s;
+}
+
+.astronaut-stripe path:nth-of-type(8) {
+    animation-delay: 0.45s;
+}
+
+#astro_1 {
+    position: absolute;
+    top: 5%;
+    right: -5%;
+    animation-name: hovering_1;
+    animation-duration: 4s;
+}
+
+#astro_2 {
+    position: absolute;
+    top: -10%;
+    right: -30%;
+    animation-name: hovering_2;
+    animation-duration: 5s;
+}
+
+@keyframes hovering_1 {
+    from {
+        top: 5%;
+    }
+
+    to {
+        top: 0%;
+    }
+}
+
+@keyframes hovering_2 {
+    from {
+        top: -15%;
+    }
+
+    to {
+        top: -10%;
+    }
+}
+
+#astro_1, #astro_2 {
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar.navbar-transparent .navbar-header {
+        text-align: center;
+    }
+    #astro_1, #astro_2 {
+        width: 150px;
+    }
+
+    #astro_1 {
+        right: 40%;
+    }
+
+    #astro_2 {
+        right: 20%;
+    }
+
+    @keyframes hovering_1 {
+        from {
+            top: 30%;
+        }
+
+        to {
+            top: 25%;
+        }
+    }
+    @keyframes hovering_2 {
+        from {
+            top: 25%;
+        }
+
+        to {
+            top: 15%;
+        }
+    }
 }
 
 /******************************************************************************
@@ -18,7 +222,6 @@
 
     /* Specifying this height makes transitions nice and links aligned properly */
 
-
     /*-webkit-filter: drop-shadow(-2px -2px 10px rgba(0, 0, 0, 0.59));*/
     /*filter: drop-shadow(-2px -2px 10px rgba(0, 0, 0, 0.59));*/
 
@@ -27,9 +230,11 @@
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
+
 .navbar-transparent #ckcollab_logo_svg {
     height: 300px;
 }
+
 #ckcollab_logo_svg:hover {
     margin-top: 0;
     opacity: 1;
@@ -57,6 +262,7 @@
 .navbar:not(.navbar-transparent) .ckclogo .border {
     fill: #efefef;
 }
+
 .navbar:not(.navbar-transparent) .ckclogo .letters path {
     fill: #efefef;
     animation-duration: 1s;
@@ -88,10 +294,12 @@
     #brand_draper {
         margin-top: 30px;
     }
+
     a #brand_draper:hover {
         margin-top: 25px;
     }
 }
+
 @media (max-width: 768px) {
     .navbar-custom {
         background: none;
@@ -119,6 +327,10 @@
     .panel-body img {
         height: auto !important;
     }
+
+    .hs-title-size-3 {
+        font-size: 28px;
+    }
 }
 
 .caption-content {
@@ -129,11 +341,13 @@
 #typewriter {
     /*min-width: 100%;*/
 }
+
 #typewriter .cursor {
     color: #ef6d7e;
     font-weight: bold;
     text-shadow: none;
 }
+
 #typewriter .cursor.off {
     opacity: 0;
 }
@@ -141,126 +355,6 @@
 .font-code {
     font-family: monospace;
 }
-
-@keyframes alternating-logo-letters {
-    from {
-        fill: #ffffff;
-    }
-
-    to {
-        fill: #e36876;
-    }
-}
-
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(0) { animation-delay: 0.0s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(1) { animation-delay: 0.1s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(2) { animation-delay: 0.2s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(3) { animation-delay: 0.3s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(4) { animation-delay: 0.25s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(5) { animation-delay: 0.3s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(6) { animation-delay: 0.35s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(7) { animation-delay: 0.4s; }
-.navbar:not(.navbar-transparent) .ckclogo .letters path:nth-of-type(8) { animation-delay: 0.45s; }
-
-
-
-
-
-
-
-
-@keyframes alternating-color-1 {
-    from {
-        fill: #66a9d7;
-    }
-
-    to {
-        fill: #e36876;
-    }
-}
-@keyframes alternating-color-2 {
-    from {
-        fill: #e36876;
-    }
-
-    to {
-        fill: #66a9d7;
-    }
-}
-
-.astronaut-stripe path {
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    animation-name: alternating-color-1;
-}
-
-/*.astronaut-stripe path:nth-of-type(odd) {*/
-    /*animation-name: alternating-color-2;*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(even) {*/
-    /*animation-name: alternating-color-2;*/
-    /*!*fill: green !important;*!*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(3) {*/
-    /*animation-name: alternating-color-1;*/
-    /*fill: orange !important;*/
-/*}*/
-
-.astronaut-stripe path:nth-of-type(0) { animation-delay: 0.0s; }
-.astronaut-stripe path:nth-of-type(1) { animation-delay: 0.1s; }
-.astronaut-stripe path:nth-of-type(2) { animation-delay: 0.2s; }
-.astronaut-stripe path:nth-of-type(3) { animation-delay: 0.3s; }
-.astronaut-stripe path:nth-of-type(4) { animation-delay: 0.25s; }
-.astronaut-stripe path:nth-of-type(5) { animation-delay: 0.3s; }
-.astronaut-stripe path:nth-of-type(6) { animation-delay: 0.35s; }
-.astronaut-stripe path:nth-of-type(7) { animation-delay: 0.4s; }
-.astronaut-stripe path:nth-of-type(8) { animation-delay: 0.45s; }
-
-
-#astro_1 {
-    position: absolute;
-    top: 5%;
-    right: -5%;
-    animation-name: hovering_1;
-    animation-duration: 4s;
-}
-#astro_2 {
-    position: absolute;
-    top: -10%;
-    right: -30%;
-    animation-name: hovering_2;
-    animation-duration: 5s;
-}
-
-
-
-@keyframes hovering_1 {
-    from {
-        top: 5%;
-    }
-
-    to {
-        top: 0%;
-    }
-}
-@keyframes hovering_2 {
-    from {
-        top: -15%;
-    }
-
-    to {
-        top: -10%;
-    }
-}
-#astro_1, #astro_2 {
-
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease;
-}
-
 
 /******************************************************************************
  Styles common to all sections/modules
@@ -300,7 +394,6 @@ a:hover > img {
     transition: all 0.1s ease-in-out;
 }
 
-
 /******************************************************************************
  Description
  *****************************************************************************/
@@ -317,6 +410,7 @@ a:hover > img {
     position: relative;
     text-align: center;
 }
+
 #top-description .panel-body img {
     height: 328px;
     text-align: center;
@@ -343,15 +437,17 @@ a:hover > img {
 .panel-body:hover .expand-profile {
     opacity: 1;
 }
+
 .expand-profile dd {
     margin-bottom: 5px;
     /*margin-left: 135px;*/
 }
+
 .expand-profile dt {
     /*width: 120px;*/
 }
 
-.panel-default>.panel-heading {
+.panel-default > .panel-heading {
     color: #f2fcfd;
     background-color: rgba(239, 109, 126, 0.55);
 }
@@ -386,7 +482,6 @@ a:hover > img {
 #projects {
     padding-bottom: 80px;
 }
-
 
 /******************************************************************************
  Landscape
@@ -446,6 +541,7 @@ a:hover > img {
 .copyright, .copyright a {
     color: #efefef;
 }
+
 .copyright a:hover {
     color: #a34646;
 }

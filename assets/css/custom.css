@@ -200,6 +200,13 @@
         0% { transform: none; }
         100% { transform: translateY(25px); }
     }
+
+    .hs-title-size-3 {
+        font-size: 50px;
+    }
+    .font-code {
+        font-size: 24px;
+    }
 }
 
 /* Mobile */

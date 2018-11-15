@@ -170,7 +170,40 @@
     animation-delay: .1s;
 }
 
-@media only screen and (max-width: 768px) {
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar.navbar-transparent .navbar-header {
+        text-align: center;
+    }
+
+    #astro_1, #astro_2 {
+        width: 400px;
+        height: 200px;
+    }
+
+    #astro_1 {
+        top: 20%;
+        right: 12%;
+    }
+
+    #astro_2 {
+        width: 200px;
+        top: 10%;
+        right: 1%;
+    }
+
+    @keyframes hovering_1 {
+        0% { transform: translateY(25px); }
+        100% { transform: none; }
+    }
+    @keyframes hovering_2 {
+        0% { transform: none; }
+        100% { transform: translateY(25px); }
+    }
+}
+
+/* Mobile */
+@media (min-width: 481px) and (max-width: 767px) {
     .navbar.navbar-transparent .navbar-header {
         text-align: center;
     }

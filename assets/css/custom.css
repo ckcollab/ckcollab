@@ -8,6 +8,11 @@
     -1px 1px 7px rgba(1, 19, 29, 0.45);
 }
 
+.caption-content {
+    display: block !important;
+    padding-top: 220px;
+}
+
 /**
  Astronauts/animations
  */
@@ -137,7 +142,7 @@
 #astro_1 {
     position: absolute;
     top: 5%;
-    right: -5%;
+    right: 20%;
     animation-name: hovering_1;
     animation-duration: 4s;
 }
@@ -145,22 +150,31 @@
 #astro_2 {
     position: absolute;
     top: -10%;
-    right: -30%;
+    right: 0;
     animation-name: hovering_2;
     animation-duration: 5s;
 }
 
 @keyframes hovering_1 {
-    0% { transform: translateY(75px); }
-    100% { transform: none; }
+    0% {
+        transform: translateY(75px);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 @keyframes hovering_2 {
-    0% { transform: none; }
-    100% { transform: translateY(75px); }
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateY(75px);
+    }
 }
 
 #astro_1, #astro_2 {
+    max-width: 60vw;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease;
@@ -168,6 +182,10 @@
 
 #astro_1 {
     animation-delay: .1s;
+}
+
+.hs-caption {
+    padding-top: 100px;
 }
 
 /* Tablet */
@@ -179,6 +197,7 @@
     #astro_1, #astro_2 {
         width: 400px;
         height: 200px;
+        max-width: 100vw;
     }
 
     #astro_1 {
@@ -193,17 +212,26 @@
     }
 
     @keyframes hovering_1 {
-        0% { transform: translateY(25px); }
-        100% { transform: none; }
+        0% {
+            transform: translateY(25px);
+        }
+        100% {
+            transform: none;
+        }
     }
     @keyframes hovering_2 {
-        0% { transform: none; }
-        100% { transform: translateY(25px); }
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(25px);
+        }
     }
 
     .hs-title-size-3 {
         font-size: 50px;
     }
+
     .font-code {
         font-size: 24px;
     }
@@ -214,9 +242,10 @@
     .navbar.navbar-transparent .navbar-header {
         text-align: center;
     }
+
     #astro_1, #astro_2 {
-        width: 400px;
-        height: 200px;
+        max-width: 100vw;
+        height: auto;
     }
 
     #astro_1 {
@@ -225,25 +254,51 @@
     }
 
     #astro_2 {
-        width: 200px;
         top: 50%;
-        right: 0%;
+        right: 0;
     }
 
     @keyframes hovering_1 {
-        0% { transform: translateY(25px); }
-        100% { transform: none; }
+        0% {
+            transform: translateY(25px);
+        }
+        100% {
+            transform: none;
+        }
     }
     @keyframes hovering_2 {
-        0% { transform: none; }
-        100% { transform: translateY(25px); }
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(25px);
+        }
     }
 }
+
+
+@media screen and (max-width: 480px) {
+    #astro_1, #astro_2 {
+        max-width: 100vw;
+    }
+
+    #astro_1 {
+        top: 22%;
+        right: 30%;
+    }
+
+    #astro_2 {
+        top: 15%;
+        right: 0;
+    }
+}
+
 
 /******************************************************************************
  Header/navbar
  *****************************************************************************/
 #ckcollab_logo_svg {
+    max-width: 100vw;
     cursor: pointer;
     margin-top: 4px;
     margin-bottom: -5px;

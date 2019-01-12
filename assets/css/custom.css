@@ -624,3 +624,27 @@ a:hover > img {
 .copyright a:hover {
     color: #a34646;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#team .panel {
+    width: 328px;
+    border: none !important;
+}
+
+#team .panel-body {
+    height: 328px;
+    /* set in template, like: background: url(http://localhost:63342/ckcollab/assets/images/avatars/eric1.png); */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}

@@ -4,10 +4,11 @@
 
 ```bash
 gem install jekyll bundler
+bundle install
 ```
 
 ### running locally
 
 ```bash
-jekyll serve
+bundle exec jekyll serve
 ```

@@ -504,7 +504,7 @@ a:hover > img {
     bottom: -20px;
     opacity: 0;
     color: rgb(249, 249, 249);
-    background-color: rgba(96, 174, 217, 0.95);
+    background-color: rgba(96, 174, 217, 0.85);
     border-radius: 0 0 4px 4px;
 
     -webkit-transition: all 0.25s ease-in-out;

@@ -1,6 +1,6 @@
 # ckcollab
 
-### installation
+### installing
 
 ```bash
 gem install jekyll bundler

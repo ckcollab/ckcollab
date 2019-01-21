@@ -13,6 +13,10 @@
     word-wrap: break-word;
 }
 
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    color: rgb(94, 171, 214);
+}
+
 /* footer */
 .drop-us-a-line {
     font-style: italic;

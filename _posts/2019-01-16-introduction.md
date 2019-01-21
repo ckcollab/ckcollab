@@ -1,6 +1,6 @@
 ---
 title:  "CKC"
-date: 2010-01-16 00:00:00 +0800
+date: 2019-01-16 00:00:00 +0800
 ---
 
 # What we do/who we are

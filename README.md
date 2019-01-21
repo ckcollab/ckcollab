@@ -10,5 +10,6 @@ bundle install
 ### running locally
 
 ```bash
-bundle exec jekyll serve
+# --future let's us view articles with dates in the future
+bundle exec jekyll serve --future
 ```

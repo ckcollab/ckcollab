@@ -30,7 +30,7 @@ and *(b)* responses hitting the 30s time limit Heroku allows for generating a re
 
 <img src="/assets/images/articles/heroku_memory_1.png" class="img-bordered">
 
-# First problem: memory
+# (a) memory problems
 
 ### Why are we using so much memory?
 
@@ -47,7 +47,7 @@ if that stops memory usage problems.
 
 
 
-# Second problem: timeouts
+# (b) timeouts
 
 I bet the source of timeouts is probably an API request generating way too many queries to Postgres -- or -- potentially
 some deadlock is happening (events out of sync and something is forced to wait indefinitely).

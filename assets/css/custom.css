@@ -278,18 +278,22 @@
 
 
 @media screen and (max-width: 480px) {
+    #team .panel {
+        width: 100% !important;
+    }
+
     #astro_1, #astro_2 {
         max-width: 100vw;
     }
 
     #astro_1 {
         top: 22%;
-        right: 30%;
+        right: 19%;
     }
 
     #astro_2 {
         top: 15%;
-        right: 0;
+        right: -19%;
     }
 }
 

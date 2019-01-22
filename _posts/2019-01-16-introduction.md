@@ -3,10 +3,16 @@ title:  "CKC"
 date: 2019-01-16 00:00:00 +0800
 ---
 
-# What we do/who we are
+
 
 We’re a lean, agile, jack-of-all-trades mix of nerds (that happen to be software developers). The team has experience working
 with Microsoft Research, Google, University of Paris, The United Nations, CERN, etc.
+
+
+<!--more-->
+
+
+# What we do/who we are
 
 We’re self starters and extremely passionate. You’ll find us outside work setting power lifting records, getting our
 asses kicked in jiu-jitsu, drilling out rusted bolts in an engine block, making storyboards for a Pixar-like studio,
@@ -15,6 +21,7 @@ climbing the side of a mountain, leading guild raids in WoW, hunting elk, and so
 Our home is beautiful Coeur d’Alene, Idaho, in the Innovation Den startup building.
 
 Our quick-pace attitude aligns best with fresh, disruptive ideas.
+
 
 
 # Speed
@@ -68,5 +75,5 @@ If you can code, you can code!
 
 
 It’s exciting to see Coeur d’Alene grow into a startup environment. Please feel free to shoot
-us a message <a href=“mailto:hello@ckcollab.com”>hello@ckcollab.com</a> &mdash; thanks!
+us a message [hello@ckcollab.com](mailto:hello@ckcollab.com) &mdash; thanks!
 

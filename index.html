@@ -1447,6 +1447,17 @@
     <!-- PORTFOLIO DESCRIPTION -->
     <section id="top-description" class="module-small">
         <div class="container">
+            <!--<div class="row">
+                <div id="services" class="col-md-6 col-md-offset-3">
+                    <h2 class="work-details-title font-alt">specialties</h2>
+
+                    <br>
+                        <div class="service">custom web development</div>
+                        <div class="service">startup architecting</div>
+                        <div class="service">rapid mvp creation</div>
+                        <div class="service">machine learning competitions</div>
+                </div>
+            </div>-->
             <div class="row text-center">
                 <div id="what-we-do" class="col-md-6">
                     <div class="work-details">
@@ -1698,13 +1709,18 @@
                 </div>
             </div>
 
-            <ul>
-                {% for post in site.posts %}
-                <!--<li>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </li>-->
-                {% endfor %}
-            </ul>
+            <div class="col-md-12  text-center" style="padding-top: 50px;">
+                <h2 class="work-details-title font-alt">Recent blog posts</h2>
+            </div>
+            {% for post in site.posts %}
+            <div id="recent-blogs" class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </section>
     <!-- /PORTFOLIO DESCRIPTION -->

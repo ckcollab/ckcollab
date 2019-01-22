@@ -1,7 +1,7 @@
 ---
 title:  "Optimizing Heroku Django Memory"
 date: 2019-01-25 00:00:00 +0800
-permalink: /test/
+published: false
 ---
 
 
@@ -9,6 +9,9 @@ This week we're writing about a particularly tech detailed situation we have wit
 architecture that has slowed down and behaving poorly. There are warnings about too much memory usage,
 requests are timing out after 30 seconds &mdash; causing some pages to be completely unresponsive for
 clients with more than 300 offices.
+
+
+<!--more-->
 
 
 # Nerdy stuff

@@ -439,6 +439,46 @@
     font-family: monospace;
 }
 
+#services {
+    text-align: center;
+}
+
+#services .service {
+    display: inline-block;
+    color: #efefef;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(239, 109, 126, 0.29);
+}
+
+#services .service:hover {
+    transform: translateY(-5px);
+
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+
+#recent-blogs p {
+    text-align: justify;
+    word-wrap: break-word;
+    margin: 2px 0;
+}
+#recent-blogs h3 {
+    line-height: .5;
+    padding-top: 5px;
+}
+#recent-blogs .btn {
+    opacity: 0.5;
+}
+#recent-blogs .btn:hover {
+    opacity: 1;
+}
+
+
 /******************************************************************************
  Styles common to all sections/modules
  *****************************************************************************/

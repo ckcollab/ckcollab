@@ -14,16 +14,7 @@ with Microsoft Research, Google, University of Paris, The United Nations, CERN, 
 
 # What we do/who we are
 
-We’re self starters and extremely passionate. Eric Carmichael started this business with his sister Katie Carmichael
-in 2011, after their mother was in a motorcycle accident that left her in a coma with 1% chance to recover. Thankfully, she recovered,
-but suffered permanent brain damage which required 24/7 care. Eric dropped out of college and moved home to take help
-take care of his mom. The name CKC means "Carmichael Kid's Collaboration."
-
-Eric started learning Python + Django (after a life of using PHP) to get freelance work while helping the family.
-One thing led to another, and after years of learning, he's been blessed to work with Microsoft Research, The United
-Nations, and even Google.
-
-You’ll find us outside work setting power lifting records, getting our
+We’re self starters and extremely passionate. You’ll find us outside work setting power lifting records, getting our
 asses kicked in jiu-jitsu, drilling out rusted bolts in an engine block, making storyboards for a Pixar-like studio,
 climbing the side of a mountain, leading guild raids in WoW, hunting elk, blasting each other in virtual reality,
 and so much more.

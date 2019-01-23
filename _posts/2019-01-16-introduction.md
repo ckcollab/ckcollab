@@ -1,5 +1,5 @@
 ---
-title:  "CKC"
+title:  "CKC - Who are we?"
 date: 2019-01-16 00:00:00 +0800
 ---
 
@@ -14,9 +14,19 @@ with Microsoft Research, Google, University of Paris, The United Nations, CERN, 
 
 # What we do/who we are
 
-We’re self starters and extremely passionate. You’ll find us outside work setting power lifting records, getting our
+We’re self starters and extremely passionate. Eric Carmichael started this business with his sister Katie Carmichael
+in 2011, after their mother was in a motorcycle accident that left her in a coma with 1% chance to recover. Thankfully, she recovered,
+but suffered permanent brain damage which required 24/7 care. Eric dropped out of college and moved home to take help
+take care of his mom. The name CKC means "Carmichael Kid's Collaboration."
+
+Eric started learning Python + Django (after a life of using PHP) to get freelance work while helping the family.
+One thing led to another, and after years of learning, he's been blessed to work with Microsoft Research, The United
+Nations, and even Google.
+
+You’ll find us outside work setting power lifting records, getting our
 asses kicked in jiu-jitsu, drilling out rusted bolts in an engine block, making storyboards for a Pixar-like studio,
-climbing the side of a mountain, leading guild raids in WoW, hunting elk, and so much more.
+climbing the side of a mountain, leading guild raids in WoW, hunting elk, blasting each other in virtual reality,
+and so much more.
 
 Our home is beautiful Coeur d’Alene, Idaho, in the Innovation Den startup building.
 
@@ -47,7 +57,7 @@ left the project, and barely heard a peep because their team was able to solve a
 
 We also have a deep respect for uptime, one of our main clients is a machine learning competition website. Uptime is
 critical to us, we're compelled to provide 24/7/365 support and build a rock solid reputation for it. For example,
-over the last Christmas break, right on Christmas Eve, there was a problem with a competition out of India. I was around
+over the last Christmas break, right on Christmas Eve, there was a problem with a competition out of India. CKC was around
 and ready to take on the problem and fixed it before the kids were even awake!
 
 

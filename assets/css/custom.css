@@ -465,10 +465,10 @@
 #recent-blogs p {
     text-align: justify;
     word-wrap: break-word;
-    margin: 2px 0;
+    margin: 5px 0;
 }
 #recent-blogs h3 {
-    line-height: .5;
+    line-height: .5 !important;
     padding-top: 5px;
 }
 #recent-blogs .btn {

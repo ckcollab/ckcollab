@@ -188,6 +188,48 @@
     padding-top: 100px;
 }
 
+/* Extra large desktop */
+@media (min-width: 2560px) {
+    .container {
+        width: 1440px;
+    }
+
+    #ckcollab_logo_svg {
+        top: -3px;
+        left: 5px;
+        position: absolute;
+    }
+
+    .navbar-transparent #ckcollab_logo_svg {
+        height: 600px !important;
+        position: absolute;
+        top: 20px;
+        left: 75px;
+    }
+
+    #home .hs-caption {
+        position: absolute;
+        top: 280px;
+        left: 80px;
+    }
+    #home .hs-title-size-3.font-alt {
+        font-size: 53px !important;
+    }
+    #home .hs-title-size-2 {
+        font-size: 32px !important;
+    }
+
+    #astro_1 {
+        top: 25%;
+        right: 22%;
+    }
+
+    #astro_2 {
+        top: 18%;
+        right: 0;
+    }
+}
+
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar.navbar-transparent .navbar-header {
@@ -276,7 +318,7 @@
     }
 }
 
-
+/* Small mobile */
 @media screen and (max-width: 480px) {
     #team .panel {
         width: 100% !important;

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="header-row row">
+    <div class="col-md-12 case-header">
+        <div>{{page.title}} Case Study</div>
+        <a id="viewsite-btn" href="{{page.site-url}}" class="button btn-danger">
+            View Site</a>
+        <div class="mockup">
+            <img id="desktop-mock" src="{{ page.desktop-mock }}">
+            <img id="phone-mock" src="{{ page.phone-mock }}">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="text-center col-md-8 about">
+        <h1> About {{page.title}}</h1>
+        <div class="about-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eaque excepturi
+            nam nostrum perspiciatis quam quisquam sunt, suscipit?
+            <hr>
+            <div class="row">
+                <div class="objectives col-md-12">
+                    <h1>Objectives</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 strategy">
+        <h2>Strategy</h2>
+        <ul>
+            {{page.strategy}}
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<style>
+    .header-row {
+        background-image: url('{{page.background-img}}');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        background-color: rgba(0, 0, 0, 0.94);
+        background-blend-mode: luminosity;
+    }
+
+    .case-header {
+        background: linear-gradient(to bottom right, #000000d9, #001e44c9);
+        line-height: 4em;
+        font-size: 48px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        padding: 120px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        height: 510px;
+    }
+
+    .mockup img {
+        width: 370px;
+        height: auto;
+        z-index: 3;
+        position: absolute;
+        right: 70px;
+        top: 70px;
+    }
+
+    .mockup #desktop-mock {
+        width: 540px;
+        height: auto;
+        top: 65px;
+        opacity: 0;
+        animation: comein 1000ms ease forwards;
+    }
+
+    .mockup #phone-mock {
+        top: 242px;
+        right: 461px;
+        height: 271px;
+        width: auto;
+        opacity: 0;
+        animation: comein 700ms ease 600ms forwards;
+    }
+
+    @keyframes comein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    #viewsite-btn {
+        background: linear-gradient(#d40000, #820000);
+        padding: 3px 35px;
+        border-color: #842323;
+        border-radius: 100px;
+        font-size: 30px;
+    }
+
+    #viewsite-btn:hover {
+        background: linear-gradient(#de0000, #9e0000);
+        text-decoration: none;
+    }
+
+    .about {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .about h1 {
+        text-align: center;
+        padding-left: 35px;
+    }
+
+    .about-description {
+        padding: 35px;
+        text-align: center;
+    }
+
+    .about-description img {
+        float: right;
+        width: 350px;
+    }
+
+    .strategy {
+        text-shadow: 1px 1px 1px #adadad;
+        padding: 50px;
+        background-color: gainsboro;
+        color: white;
+    }
+
+    .strategy h2 {
+        font-weight: 100;
+        font-size: 56px;
+    }
+
+    .strategy ul {
+        list-style: none;
+        font-size: 25px;
+        padding-left: 20px;
+    }
+
+    .objectives h1 {
+        text-align: left;
+    }
+</style>

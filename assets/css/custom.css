@@ -212,9 +212,11 @@
         top: 280px;
         left: 80px;
     }
+
     #home .hs-title-size-3.font-alt {
         font-size: 53px !important;
     }
+
     #home .hs-title-size-2 {
         font-size: 32px !important;
     }
@@ -509,13 +511,16 @@
     word-wrap: break-word;
     margin: 5px 0;
 }
+
 #recent-blogs h3 {
     line-height: .5 !important;
     padding-top: 5px;
 }
+
 #recent-blogs .btn {
     opacity: 0.5;
 }
+
 #recent-blogs .btn:hover {
     opacity: 1;
 }
@@ -711,16 +716,86 @@ a:hover > img {
     color: #a34646;
 }
 
+/******************************************************************************
+ Case Studies
+ *****************************************************************************/
 
+.overlay {
+    height: 250px;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 32px;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px black;
+}
 
+.overlay:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: block;
+    padding: 20px;
+}
 
+.animated-icon {
+    display: none;
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+}
 
+.overlay:hover:after {
+    opacity: 0.3;
+}
 
+.overlay:hover .animated-icon {
+    display: block;
+}
 
+.overlay.codalab:after {
+    content: 'Codalab';
+    background-color: rgba(0, 128, 0, 0.42);
+}
 
+.overlay.fragile-families:after {
+    content: 'Fragile Families';
+    background-color: rgba(128, 0, 2, 0.42);
+}
 
+.overlay.see-4c:after {
+    content: 'See.4C';
+    background-color: rgba(0, 52, 128, 0.42);
+}
 
+.overlay.draper:after {
+    content: 'DRAPER';
+    background-color: rgba(105, 16, 128, 0.42);
+}
 
+.overlay.chalearn:after {
+    content: 'CHALEARN';
+    background-color: rgba(128, 126, 1, 0.42);
+}
+
+.overlay.coeur-holdings:after {
+    content: 'Coeur Holdings';
+    background-color: rgba(9, 125, 128, 0.42);
+}
+
+.overlay.everfresh:after {
+    content: 'Everfresh';
+    background-color: rgba(3, 128, 12, 0.42);
+}
 
 
 #team .panel {

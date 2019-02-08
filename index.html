@@ -1540,60 +1540,51 @@
                 </div>
                 <div class="row cs-row">
                     <a href="./case_studies/codalab">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/codalabPH.jpg');"
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay codalab">
-                            Codalab
-                            <div class="animated-icon">+</div>
                         </div>
                     </a>
                     <a href="./case_studies/fragilefamilies">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/fragilefamiliesPH.jpeg');"
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay fragile-families">
-                            Fragile Families
-                            <div class="animated-icon">+</div>
                         </div>
                     </a>
                     <a href="./case_studies/see4c">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/see4cPH.jpeg');"
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay see-4c">
-                            See.4C
-                            <div class="animated-icon">+</div>
                         </div>
                     </a>
                 </div>
                 <div class="row cs-row">
                     <a href="./case_studies/draper">
-                        <div style=" background-image: url('./assets/images/CK Collab Placeholders/DRAPERPH.png');"
-                             class="col-md-6 overlay draper">
-                            DRAPER
-                            <div class="animated-icon">+</div>
-                        </div>
-                    </a>
-                    <a href="./case_studies/chalearn">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/chalearnPH.jpeg');"
-                             class="col-md-6 overlay chalearn">
-                            CHALEARN
-                            <div class="animated-icon">+</div>
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
+                             class="col-md-12 overlay draper">
                         </div>
                     </a>
                 </div>
                 <div class="row cs-row">
                     <a href="./case_studies/coeurholdings">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/coeurholdingsPH.jpeg');"
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-8 overlay coeur-holdings">
-                            Coeur Holdings
-                            <div class="animated-icon">+</div>
                         </div>
                     </a>
                     <a href="./case_studies/everfresh">
-                        <div style="background-image: url('./assets/images/CK Collab Placeholders/EverFreshPH.jpeg');"
+                        <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay everfresh">
-                            Everfresh
-                            <div class="animated-icon">+</div>
                         </div>
                     </a>
                 </div>
             </div>
+
+            <style>
+                .client-logo {
+                    mix-blend-mode: hard-light;
+                    justify-content: center;
+                    align-items: center;
+                    filter: grayscale(100%);
+
+                }
+            </style>
             <!--<div id="projects" class="row">-->
             <!--<div class="col-md-12 text-center">-->
             <!--<h1 class="work-details-title font-alt">Projects</h1>-->
@@ -1798,7 +1789,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                    <a style="margin: 20px 0 40px;" href="{{ post.url }}" class="btn btn-primary">read more...</a>
                 </div>
             </div>
             {% endfor %}

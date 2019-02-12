@@ -772,7 +772,7 @@ a:hover > img {
 
 .overlay.fragile-families:after {
     content: '';
-    background-color: rgba(245, 45, 45, 0.49);
+    background-color: rgba(255, 255, 255, 0.48);
 }
 
 .overlay.see-4c:after {

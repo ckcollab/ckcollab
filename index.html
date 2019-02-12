@@ -1554,7 +1554,7 @@
                     <a href="./case_studies/see4c">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay see-4c">
-                            <img class="client-logo" src="./assets/images/see4c.png">
+                            <img class="client-logo" src="./assets/images/CK%20Collab%20Placeholders/Asset%202.svg">
                         </div>
                     </a>
                 </div>
@@ -1583,15 +1583,17 @@
             <style>
                 .client-logo {
                     z-index: 3;
-                    filter: invert(30%) grayscale(2%) contrast(2);
+                    filter: invert(0.1) grayscale(0) contrast(0.6);
                     transform: scale(1);
-                    transition: transform 200ms ease-in;
+                    transition: all 200ms ease-in;
+                    mix-blend-mode: color-burn;
                 }
 
                 .overlay:hover .client-logo {
                     filter: none;
                     transform: scale(1.05);
-                    transition: transform 200ms ease-in;
+                    transition: all 200ms ease-in;
+                    mix-blend-mode: unset;
                 }
             </style>
             <!--<div id="projects" class="row">-->

@@ -1521,7 +1521,7 @@
                                         style="filter: drop-shadow(0px 0px 1px #bbb);"></a>
                             </div>
                         </div>
-                         <div class="row text-center">
+                        <div class="row text-center">
                             <div class="col-sm-12 col-xs-12">
                                 <a href="http://myeverfresh.com/" target="_blank"><img
                                         src="assets/images/CK%20Collab%20Placeholders/everfreshLogo.png"
@@ -1542,35 +1542,39 @@
                     <a href="./case_studies/codalab">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay codalab">
+                            <img class="client-logo" src="./assets/images/codalab.png">
                         </div>
                     </a>
                     <a href="./case_studies/fragilefamilies">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay fragile-families">
+                            <img class="client-logo" src="./assets/images/ffam.png">
                         </div>
                     </a>
                     <a href="./case_studies/see4c">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay see-4c">
+                            <img class="client-logo" src="./assets/images/see4c.png">
                         </div>
                     </a>
                 </div>
                 <div class="row cs-row">
                     <a href="./case_studies/draper">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
-                             class="col-md-12 overlay draper">
+                             class="col-md-4 overlay draper">
+                            <img class="client-logo" src="./assets/images/draper.png">
                         </div>
                     </a>
-                </div>
-                <div class="row cs-row">
                     <a href="./case_studies/coeurholdings">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
-                             class="col-md-8 overlay coeur-holdings">
+                             class="col-md-4 overlay coeur-holdings">
+                            <img class="client-logo" src="./assets/images/logo_coeur_holdings.svg">
                         </div>
                     </a>
                     <a href="./case_studies/everfresh">
                         <div style="background-image: url('./assets/images/ckc_bg-min.png');"
                              class="col-md-4 overlay everfresh">
+                            <img class="client-logo" src="./assets/images/CK%20Collab%20Placeholders/everfreshLogo.png">
                         </div>
                     </a>
                 </div>
@@ -1578,11 +1582,16 @@
 
             <style>
                 .client-logo {
-                    mix-blend-mode: hard-light;
-                    justify-content: center;
-                    align-items: center;
-                    filter: grayscale(100%);
+                    z-index: 3;
+                    filter: invert(30%) grayscale(2%) contrast(2);
+                    transform: scale(1);
+                    transition: transform 200ms ease-in;
+                }
 
+                .overlay:hover .client-logo {
+                    filter: none;
+                    transform: scale(1.05);
+                    transition: transform 200ms ease-in;
                 }
             </style>
             <!--<div id="projects" class="row">-->

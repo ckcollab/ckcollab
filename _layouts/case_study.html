@@ -11,7 +11,8 @@
     <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="../assets/css/et-line-font.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
 </head>
 <body>
@@ -131,15 +132,15 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="about-strat-row row">
     <div class="text-center col-md-8 about">
         <h1> About {{page.title}}</h1>
         <div class="about-description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eaque excepturi
             nam nostrum perspiciatis quam quisquam sunt, suscipit?
             <hr>
-            <div class="row">
-                <div class="objectives col-md-12">
+            <div class="objectives row">
+                <div class="col-md-12">
                     <h1>Objectives</h1>
                 </div>
                 <ul>
@@ -158,44 +159,185 @@
     </div>
 </div>
 
+<div class="contact-row row">
+    <div class="contact-us col-md-8">
+        <h3>LET'S TALK!</h3>
+        <div class="contact-us-desc col-md-12">
+            <strong>We are here to bring you what you need!</strong> If you're looking to get a website made from the
+            ground up, or if you've got a site you'd like to bring into the modern web, we'd love to chat with you!
+            Drop us a line to the right, or use the contacts at the bottom of the page to reach out! We look forward to
+            hearing from you
+        </div>
+    </div>
+    <div class="contact-form col-md-4">
+        <div class="container">
+            <div class="col-lg-offset-0 col-md-4" id="panel">
+                <h2>Get In Touch</h2>
+                <form>
+                    <div class="group">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Name</label>
+                    </div>
+
+                    <div class="group">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="group">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Mobile No</label>
+                    </div>
+
+                    <div class="group">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Message</label>
+                    </div>
+                    <div class="group">
+                        <center>
+                            <button type="submit" class="btn btn-warning">Send <span
+                                    class="glyphicon glyphicon-send"></span></button>
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contact-row {
+        background-color: whitesmoke;
+        color: #353535;
+    }
+
+    .contact-us {
+        margin-top: 35px;
+    }
+
+    .contact-us h3 {
+        padding: 0 100px;
+        font-size: 56px;
+    }
+
+    .contact-us-desc {
+        font-size: 22px;
+        line-height: 1.75em;
+        padding: 20px 100px 40px;
+        font-family: "Merriweather", serif;
+    }
+
+    .contact-form {
+        margin-bottom: 100px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    /* form starting stylings ------------------------------- */
+    .group {
+        position: relative;
+        margin-bottom: 35px;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 5px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    /* LABEL ======================================= */
+    label {
+        color: #fff;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    /* active state */
+    input:focus ~ label, input:valid ~ label {
+        top: -20px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    /* BOTTOM BARS ================================= */
+    .bar {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .bar:before, .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #fff;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .bar:before {
+        left: 50%;
+    }
+
+    .bar:after {
+        right: 50%;
+    }
+
+    #panel {
+        border: 1px solid rgb(200, 200, 200);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+        background: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+        background: red; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* Standard syntax (must be last) */
+        border-radius: 4px;
+        top: 50px;
+    }
+
+</style>
+
 <section id="landscape" class="module p-t-0 p-b-0">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <!--&nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br>-->
-                <!--&nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br>-->
-                <!--&nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br> &nbsp; <br>-->
-
-
-                <!--<h1>What we've done</h1>-->
-                <!--&lt;!&ndash;<img src="assets/images/wwd_bg.jpg">&ndash;&gt;-->
-                <!--<img src="assets/images/codalab.png">-->
-                <!--<img src="assets/images/ffam.png">-->
-
                 <div class="container">
-
-                    <!--<div class="row">-->
-                    <!--<div class="col-md-12">-->
-                    <!--<div class="comment-form">-->
-                    <!--<h4 class="comment-form-title font-alt">Shoot us a message</h4>-->
-                    <!--<form method="post">-->
-                    <!--<div class="form-group">-->
-                    <!--<label class="sr-only" for="name">Name</label>-->
-                    <!--<input type="text" id="name" class="form-control" name="name" placeholder="Name">-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                    <!--<label class="sr-only" for="email">Name</label>-->
-                    <!--<input type="text" id="email" class="form-control" name="email" placeholder="E-mail">-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                    <!--<textarea class="form-control" id="comment" name="comment" rows="6" placeholder="Comment"></textarea>-->
-                    <!--</div>-->
-                    <!--<button type="submit" class="btn btn-round btn-g">Post comment</button>-->
-                    <!--</form>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-
                     <div class="row footer-captions">
                         <div class="col-sm-4">
                             <div class="content-box">
@@ -266,6 +408,10 @@
 
 
 <style>
+    body {
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
     .header-row {
         background-image: url('{{page.background-img}}');
         background-size: cover;
@@ -279,7 +425,7 @@
         background: linear-gradient(to bottom right, #000000d9, #001e44c9);
         line-height: 4em;
         font-size: 48px;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-weight: 300;
         padding: 120px;
         color: white;
@@ -322,24 +468,14 @@
         }
     }
 
-    /*#viewsite-btn {*/
-    /*background: linear-gradient(#d40000, #820000);*/
-    /*padding: 3px 35px;*/
-    /*border-color: #842323;*/
-    /*border-radius: 100px;*/
-    /*font-size: 30px;*/
-    /*}*/
-
-    /*#viewsite-btn:hover {*/
-    /*background: linear-gradient(#de0000, #9e0000);*/
-    /*text-decoration: none;*/
-    /*}*/
+    .about-strat-row {
+        background-color: #f06a7ccc;
+    }
 
     .about {
         font-size: 24px;
-        text-shadow: 1px 1px 1px #4e4e4e;
         padding: 50px;
-        background: linear-gradient(to top, #729ab9cc, #5287b1c7);
+        background: linear-gradient(to top, #143861cc, rgb(114, 154, 185));
         color: #ffffff;
     }
 
@@ -353,6 +489,8 @@
     .about-description {
         padding: 35px;
         text-align: center;
+        font-size: 20px;
+        font-family: "Merriweather", serif;
     }
 
     .about-description img {
@@ -361,10 +499,9 @@
     }
 
     .strategy {
-        text-shadow: 1px 1px 1px #adadad;
-        padding-top: 50px;
-        background-color: gainsboro;
+        padding: 50px 60px 0;
         color: white;
+        font-family: "Roboto Condensed", sans-serif;
     }
 
     .strategy h2 {
@@ -376,6 +513,11 @@
         list-style: none;
         font-size: 25px;
         padding-left: 20px;
+    }
+
+    .objectives {
+        text-align: left;
+        font-family: "Roboto Condensed", sans-serif;
     }
 
     .objectives h1 {

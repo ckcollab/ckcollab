@@ -1711,15 +1711,18 @@
             <div class="col-md-12  text-center" style="padding-top: 50px;">
                 <h2 class="work-details-title font-alt">Recent blog posts</h2>
             </div>
-            {% for post in site.posts %}
+
             <div id="recent-blogs" class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                {% for post in site.posts %}
+                <div class="post row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </section>
     <!-- /PORTFOLIO DESCRIPTION -->

@@ -508,16 +508,22 @@
     text-align: justify;
     word-wrap: break-word;
     margin: 5px 0;
+    font-size: 1.3em;
 }
 #recent-blogs h3 {
-    line-height: .5 !important;
+    /*line-height: .5 !important;*/
     padding-top: 5px;
+    font-size: 2.2em;
 }
 #recent-blogs .btn {
+    margin-top: 20px;
     opacity: 0.5;
 }
 #recent-blogs .btn:hover {
     opacity: 1;
+}
+#recent-blogs .post {
+    margin-bottom: 20px;
 }
 
 

@@ -721,6 +721,9 @@ a:hover > img {
  *****************************************************************************/
 
 .overlay {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     height: 250px;
     background-size: cover;
     position: relative;
@@ -755,7 +758,7 @@ a:hover > img {
 }
 
 .overlay:hover:after {
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .overlay:hover .animated-icon {
@@ -763,37 +766,41 @@ a:hover > img {
 }
 
 .overlay.codalab:after {
-    content: 'Codalab';
+    content: '';
     background-color: rgba(0, 128, 0, 0.42);
 }
 
 .overlay.fragile-families:after {
-    content: 'Fragile Families';
+    content: '';
     background-color: rgba(128, 0, 2, 0.42);
 }
 
 .overlay.see-4c:after {
-    content: 'See.4C';
+    content: '';
     background-color: rgba(0, 52, 128, 0.42);
 }
 
 .overlay.draper:after {
-    content: 'DRAPER';
+    content: '';
     background-color: rgba(105, 16, 128, 0.42);
 }
 
 .overlay.chalearn:after {
-    content: 'CHALEARN';
+    content: '';
     background-color: rgba(128, 126, 1, 0.42);
 }
 
 .overlay.coeur-holdings:after {
-    content: 'Coeur Holdings';
+    content: '';
     background-color: rgba(9, 125, 128, 0.42);
 }
 
+.coeur-holdings {
+    justify-content: initial;
+}
+
 .overlay.everfresh:after {
-    content: 'Everfresh';
+    content: '';
     background-color: rgba(3, 128, 12, 0.42);
 }
 

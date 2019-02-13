@@ -785,10 +785,16 @@ a:hover > img {
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
 }
+.see-4c .client-logo {
+    width: 100%;  /* for some reason without this, see4c logo doesn't have width on my machine */
+}
 
 .overlay.draper:after {
     content: '';
     background-color: rgba(105, 16, 128, 0.48);
+}
+.draper .client-logo {
+    mix-blend-mode: hue;
 }
 
 .overlay.chalearn:after {
@@ -808,6 +814,29 @@ a:hover > img {
 .overlay.everfresh:after {
     content: '';
     background-color: rgba(12, 208, 81, 0.47);
+}
+.everfresh .client-logo {
+    mix-blend-mode: color-burn;
+}
+
+.client-logo {
+    z-index: 3;
+    filter: invert(0.1) grayscale(0) contrast(0.1);
+    transform: scale(1);
+    transition: all 200ms ease-in;
+    /*mix-blend-mode: color-burn;*/
+    mix-blend-mode: screen;
+}
+
+.overlay:hover .client-logo {
+    filter: none;
+    transform: scale(1.05);
+    transition: all 200ms ease-in;
+    mix-blend-mode: unset;
+}
+
+#team {
+    padding-top: 100px;
 }
 
 #team .panel {

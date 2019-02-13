@@ -726,6 +726,13 @@ a:hover > img {
  Case Studies
  *****************************************************************************/
 
+.cs-row.first {
+    box-shadow: #2c8b72 0px 2px 10px;
+}
+.cs-row.second {
+    box-shadow: #c94a5a 0px 2px 10px;
+}
+
 .overlay {
     display: grid;
     justify-content: center;

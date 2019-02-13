@@ -527,6 +527,7 @@
 #recent-blogs .btn:hover {
     opacity: 1;
 }
+
 #recent-blogs .post {
     margin-bottom: 20px;
 }
@@ -726,11 +727,14 @@ a:hover > img {
  Case Studies
  *****************************************************************************/
 
-.cs-row.first {
-    box-shadow: #2c8b72 0px 2px 10px;
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
-.cs-row.second {
-    box-shadow: #c94a5a 0px 2px 10px;
+
+.cs-panel {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 6px;
 }
 
 .overlay {
@@ -781,27 +785,40 @@ a:hover > img {
 .overlay.codalab:after {
     content: '';
     background-color: rgba(0, 128, 0, 0.42);
+    border-top-left-radius: 6px;
+}
+
+.overlay.codalab {
+    border-top-left-radius: 6px;
 }
 
 .overlay.fragile-families:after {
     content: '';
-    background-color: rgba(255, 255, 255, 0.48);
+    background-color: rgba(178, 14, 181, 0.5);
 }
 
 .overlay.see-4c:after {
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
+    border-top-right-radius: 6px;
 }
+
+.overlay.see-4c {
+    border-top-right-radius: 6px;
+}
+
 .see-4c .client-logo {
-    width: 100%;  /* for some reason without this, see4c logo doesn't have width on my machine */
+    width: 100%; /* for some reason without this, see4c logo doesn't have width on my machine */
 }
 
 .overlay.draper:after {
     content: '';
     background-color: rgba(105, 16, 128, 0.48);
+    border-bottom-left-radius: 6px;
 }
-.draper .client-logo {
-    mix-blend-mode: hue;
+
+.overlay.draper {
+    border-bottom-left-radius: 6px;
 }
 
 .overlay.chalearn:after {
@@ -821,24 +838,29 @@ a:hover > img {
 .overlay.everfresh:after {
     content: '';
     background-color: rgba(12, 208, 81, 0.47);
+    border-bottom-right-radius: 6px;
 }
+
+.overlay.everfresh {
+    border-bottom-right-radius: 6px;
+}
+
 .everfresh .client-logo {
-    mix-blend-mode: color-burn;
+    filter: invert(0.1) grayscale(100%) contrast(1);
 }
 
 .client-logo {
     z-index: 3;
-    filter: invert(0.1) grayscale(0) contrast(0.1);
+    filter: invert(0.1) grayscale(100%) contrast(0);
     transform: scale(1);
-    transition: all 200ms ease-in;
-    /*mix-blend-mode: color-burn;*/
+    transition: all 350ms ease-in-out;
     mix-blend-mode: screen;
 }
 
 .overlay:hover .client-logo {
     filter: none;
     transform: scale(1.05);
-    transition: all 200ms ease-in;
+    transition: all 350ms ease-in-out;
     mix-blend-mode: unset;
 }
 

@@ -161,9 +161,9 @@
         <h3>LET'S TALK!</h3>
         <div class="contact-us-desc col-md-12">
             <strong>We are here to bring you what you need!</strong> If you're looking to get a website made from the
-            ground up, or if you've got a site you'd like to bring into the modern web, we'd love to chat with you!
-            Drop us a line to the right, or use the contacts at the bottom of the page to reach out! We look forward to
-            hearing from you
+            ground up, or if you've got a site you'd like to bring into the modern web, we'd love to chat with you.
+            Drop us a line to the right, or use the contacts at the bottom of the page to reach out. We look forward to
+            hearing from you.
         </div>
     </div>
     <div class="contact-form col-md-4">
@@ -225,11 +225,23 @@
         font-size: 56px;
     }
 
+    .contact-us h3::after {
+        content: '';
+        width: 265px;
+        height: 4px;
+        background-color: #7dc1f9;
+        display: block;
+    }
+
     .contact-us-desc {
         font-size: 22px;
         line-height: 1.75em;
         padding: 20px 100px 40px;
         font-family: "Merriweather", serif;
+    }
+
+    .contact-us-desc strong {
+        color: #f06a7c;
     }
 
     .contact-form {

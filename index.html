@@ -1464,7 +1464,7 @@
             <div class="row text-center">
                 <div id="what-we-do" class="col-md-6">
                     <div class="work-details">
-                        <h2 class="work-details-title font-alt">Tools</h2>
+                        <h2 class="work-details-title font-alt">Technologies</h2>
                         <!--<ul>-->
                         <!--<li class="font-inc"><strong>Client: </strong>SomeCompany</li>-->
                         <!--<li class="font-inc"><strong>Date: </strong>23 November, 2015</li>-->
@@ -1483,6 +1483,8 @@
                             <a href="https://www.elastic.co/" target="_blank"><img
                                     src="assets/images/elasticsearch.png"/></a>
                             <a href="https://aws.amazon.com/" target="_blank"><img src="assets/images/aws.png"/></a>
+                            <a href="https://bitcoin.org/" target="_blank"><img src="assets/images/bitcoin.png"/></a>
+                            <a href="https://lightning.network/" target="_blank"><img src="assets/images/lightning-network.png"/></a>
                         </div>
                     </div>
                 </div>
@@ -1792,18 +1794,21 @@
                 </div>
             </div>
 
-            <div class="col-md-12  text-center" style="padding-top: 50px;">
+            <div class="col-md-12  text-center" style="padding-top: 160px;">
                 <h2 class="work-details-title font-alt">Recent blog posts</h2>
             </div>
-            {% for post in site.posts %}
+
             <div id="recent-blogs" class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                    <a style="margin: 20px 0 40px;" href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                {% for post in site.posts %}
+                <div class="post row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </section>
     <!-- /PORTFOLIO DESCRIPTION -->

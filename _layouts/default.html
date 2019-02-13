@@ -33,6 +33,18 @@
 <main id="content" class="main-content" role="main">
     {{ content }}
 
+    <!-- Look the author details up from the site config. -->
+    {% assign author = site.data.authors[page.author] %}
+
+    {% if author %}
+        <span>
+            <!-- Personal Info. -->
+            <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> wrote this on
+        </span>
+    {% endif %}
+
+    {{ page.date | date: "%-d %B %Y" }}
+
     <footer class="site-footer">
         <p class="drop-us-a-line">drop us a line, <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a></p>
     </footer>

@@ -136,26 +136,23 @@
     <div class="text-center col-md-8 about">
         <h1> About {{page.title}}</h1>
         <div class="about-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eaque excepturi
-            nam nostrum perspiciatis quam quisquam sunt, suscipit?
+            {{ page.about_description }}
             <hr>
             <div class="objectives row">
                 <div class="col-md-12">
                     <h1>Objectives</h1>
                 </div>
-                <ul>
-                    <li>a</li>
-                    <li>b</li>
-                    <li>c</li>
-                </ul>
+
+                <div class="col-md-12">
+                    {{ page.objectives | markdownify }}
+                </div>
             </div>
         </div>
     </div>
     <div class="col-md-4 strategy">
         <h2>Strategy</h2>
-        <ul>
-            {{page.strategy}}
-        </ul>
+
+        {{ page.strategy | markdownify }}
     </div>
 </div>
 

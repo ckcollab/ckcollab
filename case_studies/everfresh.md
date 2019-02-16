@@ -16,7 +16,7 @@ about_description: "
 
 &nbsp;\n
 
-Evergreen United Food Hub connects the Puget Sound's most pioneering Chefs
+[Evergreen United Food Hub](https://www.eufoodhub.com/about) connects the Puget Sound's most pioneering Chefs
 and Farmers, pushing the boundaries of seasonality and diversity in the Pacific
 Northwest while providing consistent local food service and emboldening our
 community foodshed.

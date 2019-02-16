@@ -136,7 +136,7 @@
     <div class="text-center col-md-8 about">
         <h1> About {{page.title}}</h1>
         <div class="about-description">
-            {{ page.about_description }}
+            {{ page.about_description | markdownify }}
             <hr>
             <div class="objectives row">
                 <div class="col-md-12">
@@ -503,6 +503,9 @@
         text-align: center;
         padding-left: 35px;
         font-size: 56px;
+    }
+    .about h3 {
+        color: #f58796;
     }
 
     .about-description {

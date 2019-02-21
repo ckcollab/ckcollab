@@ -12,6 +12,15 @@ about_description: "
 Codalab is a machine learning competition website, where researchers and organizers
 can create competitions for participants ranging from student to top level
 researchers.
+
+Currently Codalab has hosted competitions for some of the following organizations:
+
+ * Microsoft Research\n
+ * CERN\n
+ * Google\n
+ * University of Paris\n
+ * Princeton\n
+ * Stanford\n
 "
 
 strategy: "
@@ -30,5 +39,6 @@ objectives: "
     <li>Support version 1.5 of Codalab while developing version 2.</li>
     <li>Currently we're still developing version 2, which leverages new libaries,
 a better architecture, real time output, a clear API, and much more!</li>
+</ul>
 "
 ---

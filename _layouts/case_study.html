@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/ckc_style.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/case_study.css">
     <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="../assets/css/et-line-font.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-
 </head>
 <body>
 
@@ -136,7 +135,7 @@
     <div class="text-center col-md-8 about">
         <h1> About {{page.title}}</h1>
         <div class="about-description">
-            {{ page.about_description }}
+            {{ page.about_description | markdownify }}
             <hr>
             <div class="objectives row">
                 <div class="col-md-12">
@@ -170,30 +169,30 @@
         <div class="container">
             <div class="col-lg-offset-0 col-md-4" id="panel">
                 <h2>Get In Touch</h2>
-                <form>
+                <form action="https://formspree.io/hello@ckcollab.com" method="POST">
                     <div class="group">
-                        <input type="text" required>
+                        <input type="text" name="name" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Name</label>
                     </div>
 
                     <div class="group">
-                        <input type="text" required>
+                        <input type="text" name="_replyto" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Email</label>
                     </div>
 
                     <div class="group">
-                        <input type="text" required>
+                        <input type="text" name="mobile_number" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Mobile No</label>
                     </div>
 
                     <div class="group">
-                        <input type="text" required>
+                        <textarea name="message" required></textarea>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Message</label>
@@ -209,149 +208,6 @@
         </div>
     </div>
 </div>
-
-<style>
-    .contact-row {
-        background-color: whitesmoke;
-        color: #353535;
-    }
-
-    .contact-us {
-        margin-top: 35px;
-    }
-
-    .contact-us h3 {
-        padding: 0 100px;
-        font-size: 56px;
-        /*color: #7dc1f9;*/
-    }
-
-    .contact-us h3::after {
-        content: '';
-        width: 265px;
-        height: 4px;
-        /*background-color: #7dc1f9;*/
-        display: block;
-    }
-
-    .contact-us-desc {
-        font-size: 22px;
-        line-height: 1.75em;
-        padding: 20px 100px 40px;
-        font-family: "Merriweather", serif;
-    }
-
-    .contact-us-desc strong {
-        color: #f06a7c;
-    }
-
-    .contact-form {
-        margin-bottom: 100px;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-
-    h2 {
-        text-align: center;
-        margin-bottom: 50px;
-        color: #fff;
-    }
-
-    /* form starting stylings ------------------------------- */
-    .group {
-        position: relative;
-        margin-bottom: 35px;
-    }
-
-    input {
-        font-size: 18px;
-        padding: 5px 10px 10px 5px;
-        display: block;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #fff;
-        background: transparent;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    /* LABEL ======================================= */
-    label {
-        color: #fff;
-        font-size: 18px;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        left: 5px;
-        top: 10px;
-        transition: 0.2s ease all;
-        -moz-transition: 0.2s ease all;
-        -webkit-transition: 0.2s ease all;
-    }
-
-    /* active state */
-    input:focus ~ label, input:valid ~ label {
-        top: -20px;
-        font-size: 14px;
-        color: #fff;
-    }
-
-    /* BOTTOM BARS ================================= */
-    .bar {
-        position: relative;
-        display: block;
-        width: 100%;
-    }
-
-    .bar:before, .bar:after {
-        content: '';
-        height: 2px;
-        width: 0;
-        bottom: 1px;
-        position: absolute;
-        background: #fff;
-        transition: 0.2s ease all;
-        -moz-transition: 0.2s ease all;
-        -webkit-transition: 0.2s ease all;
-    }
-
-    .bar:before {
-        left: 50%;
-    }
-
-    .bar:after {
-        right: 50%;
-    }
-
-    #panel {
-        border: 1px solid rgb(200, 200, 200);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-        background: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
-        background: red; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%); /* Standard syntax (must be last) */
-        border-radius: 4px;
-        top: 50px;
-    }
-
-    #panel .btn-warning {
-        background-color: #f06a7c;
-        border-color: #eb5266;
-    }
-
-    #panel .btn-warning:hover {
-        background-color: #eb5266;
-        border-color: #f06a7c;
-    }
-
-</style>
 
 <section id="landscape" class="module p-t-0 p-b-0">
     <div class="container">
@@ -421,140 +277,5 @@
         </div>
     </div>
 </section>
-
-
 </body>
 </html>
-
-
-<style>
-    body {
-        font-family: "Roboto Condensed", sans-serif;
-    }
-
-    .header-row {
-        background-image: url('{{page.background-img}}');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: 50% 50%;
-        background-color: rgba(0, 0, 0, 0.94);
-        background-blend-mode: luminosity;
-    }
-
-    .case-header {
-        background: linear-gradient(to bottom right, #000000d9, #001e44c9);
-        line-height: 4em;
-        font-size: 48px;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 300;
-        padding: 120px;
-        color: white;
-        text-shadow: 1px 1px 1px black;
-        height: 510px;
-    }
-
-    .mockup img {
-        width: 370px;
-        height: auto;
-        z-index: 3;
-        position: absolute;
-        right: 70px;
-        top: 70px;
-    }
-
-    .mockup #desktop-mock {
-        width: 540px;
-        height: auto;
-        top: 65px;
-        opacity: 0;
-        animation: comein 1000ms ease forwards;
-    }
-
-    .mockup #phone-mock {
-        top: 242px;
-        right: 461px;
-        height: 271px;
-        width: auto;
-        opacity: 0;
-        animation: comein 700ms ease 600ms forwards;
-    }
-
-    @keyframes comein {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    .about-strat-row {
-        background-color: #f06a7ccc;
-    }
-
-    .about {
-        font-size: 24px;
-        padding: 50px;
-        background: #6ba4d6;
-        color: #ffffff;
-    }
-
-    .about h1 {
-        font-weight: 100;
-        text-align: center;
-        padding-left: 35px;
-        font-size: 56px;
-    }
-
-    .about-description {
-        padding: 35px;
-        text-align: center;
-        font-size: 20px;
-        font-family: "Merriweather", serif;
-    }
-
-    .about-description img {
-        float: right;
-        width: 350px;
-    }
-
-    .strategy {
-        padding: 50px 60px 0;
-        color: white;
-        font-family: "Roboto Condensed", sans-serif;
-    }
-
-    .strategy h2 {
-        font-weight: 100;
-        font-size: 56px;
-    }
-
-    .strategy ul {
-        list-style: none;
-        font-size: 25px;
-        padding-left: 20px;
-    }
-
-    .objectives {
-        text-align: left;
-        font-family: "Roboto Condensed", sans-serif;
-    }
-
-    .objectives h1 {
-        text-align: left;
-    }
-
-    .view-site-btn:hover .view-site {
-        fill: #ffaaaa;
-    }
-
-    .view-site-btn:hover .view-site-border {
-        fill: #60AED9;
-    }
-
-    .footer-captions a:hover {
-        text-shadow: 0 0 0 #fff;
-        color: white;
-        text-decoration: none;
-    }
-</style>

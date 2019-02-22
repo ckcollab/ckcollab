@@ -95,7 +95,7 @@
 </nav>
 <!-- /NAVIGATION -->
 
-<div class="header-row row">
+<div style="background-image: url('{{page.background-img}}');" class="header-row row">
     <div class="col-md-12 case-header">
         <div>{{page.title}} Case Study</div>
         <a href="{{page.site-url}}">
@@ -136,12 +136,12 @@
         <h1> About {{page.title}}</h1>
         <div class="about-description">
             {{ page.about_description | markdownify }}
+            {{ page.badges | markdownify }}
             <hr>
             <div class="objectives row">
                 <div class="col-md-12">
                     <h1>Objectives</h1>
                 </div>
-
                 <div class="col-md-12">
                     {{ page.objectives | markdownify }}
                 </div>
@@ -150,7 +150,6 @@
     </div>
     <div class="col-md-4 strategy">
         <h2>Strategy</h2>
-
         {{ page.strategy | markdownify }}
     </div>
 </div>
@@ -261,9 +260,7 @@
                             </div>
                         </div>
                         <!-- /CONTENT BOX -->
-
                     </div>
-
                 </div>
             </div>
         </div>

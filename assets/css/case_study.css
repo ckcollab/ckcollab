@@ -3,7 +3,6 @@ body {
 }
 
 .header-row {
-    background-image: url('{{page.background-img}}');
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%;
@@ -17,7 +16,7 @@ body {
     font-size: 48px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    padding: 120px;
+    padding: 120px !important;
     color: white;
     text-shadow: 1px 1px 1px black;
     height: 510px;
@@ -65,7 +64,7 @@ body {
 .about {
     font-size: 24px;
     padding: 50px;
-    background: linear-gradient(to top, #143861cc, rgb(114, 154, 185));
+    background: #60AED9;
     color: #ffffff;
 }
 
@@ -74,20 +73,22 @@ body {
     text-align: center;
     padding-left: 35px;
     font-size: 56px;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .about h3 {
-    color: #f58796;
+    color: #ffadb8;
 }
 
 .about a {
-    color: #f58796;
+    color: white;
     border-bottom: 2px solid #f58796;
 }
 
 .about a:hover {
     color: #efefef;
     text-decoration: none;
+    background-color: #f38897;
 }
 
 .about-description {
@@ -102,8 +103,17 @@ body {
     width: 350px;
 }
 
+.about-description .badge {
+    font-family: "Roboto Condensed", sans-serif;
+    border: solid 1px #eb5265;
+    background-color: #f06a7c;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
 .strategy {
-    padding: 50px 60px 0;
+    padding: 50px 60px;
     color: white;
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -152,9 +162,12 @@ body {
     margin-top: 35px;
 }
 
+
+
 .contact-us h3 {
     padding: 0 100px;
     font-size: 56px;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .contact-us h3::after {
@@ -168,8 +181,25 @@ body {
 .contact-us-desc {
     font-size: 22px;
     line-height: 1.75em;
-    padding: 20px 100px 40px;
+    padding: 20px 100px 40px !important;
     font-family: "Merriweather", serif;
+}
+
+@media screen and (max-width: 610px) {
+    .contact-us h3 {
+        margin: 0 auto;
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    .contact-us h3::after {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contact-us-desc {
+        padding: 20px 30px 40px !important;
+    }
 }
 
 .contact-us-desc strong {
@@ -188,7 +218,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 50px;
-    color: #fff;
+    color: #fff !important;
 }
 
 /* form starting stylings ------------------------------- */

@@ -121,12 +121,13 @@ body {
 .strategy h2 {
     font-weight: 100;
     font-size: 56px;
+    text-align: left;
+    padding-left: 40px;
 }
 
 .strategy ul {
-    list-style: none;
     font-size: 25px;
-    padding-left: 20px;
+    padding-left: 100px;
 }
 
 .objectives {
@@ -161,7 +162,6 @@ body {
 .contact-us {
     margin-top: 35px;
 }
-
 
 
 .contact-us h3 {
@@ -233,6 +233,8 @@ input, textarea {
     padding: 5px 10px 10px 5px;
     display: block;
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -315,4 +317,43 @@ textarea:valid ~ label {
 #panel .btn-warning:hover {
     background-color: #eb5266;
     border-color: #f06a7c;
+}
+
+@media screen and (max-width: 1120px) {
+    #phone-mock {
+        top: 400px !important;
+        right: 269px !important;
+        height: 111px !important;
+    }
+
+    #desktop-mock {
+        width: 260px !important;
+        top: 295px !important;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .case-header {
+        line-height: 1em;
+        font-size: 40px;
+        text-align: center;
+        padding: 80px 25px 0 !important;
+    }
+
+    .about h1 {
+        padding-left: 0;
+    }
+
+    .strategy {
+        padding: 20px 40px 40px !important;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .strategy h2 {
+        text-align: left;
+    }
 }

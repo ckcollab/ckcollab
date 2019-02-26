@@ -14,13 +14,15 @@ can create competitions for participants ranging from student to top level
 researchers.
 
 Currently Codalab has hosted competitions for some of the following organizations:
+"
 
- * Microsoft Research\n
- * CERN\n
- * Google\n
- * University of Paris\n
- * Princeton\n
- * Stanford\n
+badges: "
+<span class='badge badge-secondary'>Microsoft Research</span>
+<span class='badge badge-secondary'>CERN</span>
+<span class='badge badge-secondary'>Google</span>
+<span class='badge badge-secondary'>University of Paris</span>
+<span class='badge badge-secondary'>Princeton</span>
+<span class='badge badge-secondary'>Stanford</span>
 "
 
 strategy: "

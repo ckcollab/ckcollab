@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
     <link rel="stylesheet" href="../assets/css/ckc_style.css">
@@ -95,7 +96,7 @@
 </nav>
 <!-- /NAVIGATION -->
 
-<div class="header-row row">
+<div style="background-image: url('{{page.background-img}}');" class="header-row row">
     <div class="col-md-12 case-header">
         <div>{{page.title}} Case Study</div>
         <a href="{{page.site-url}}">
@@ -136,12 +137,12 @@
         <h1> About {{page.title}}</h1>
         <div class="about-description">
             {{ page.about_description | markdownify }}
+            {{ page.badges | markdownify }}
             <hr>
             <div class="objectives row">
                 <div class="col-md-12">
                     <h1>Objectives</h1>
                 </div>
-
                 <div class="col-md-12">
                     {{ page.objectives | markdownify }}
                 </div>
@@ -150,7 +151,6 @@
     </div>
     <div class="col-md-4 strategy">
         <h2>Strategy</h2>
-
         {{ page.strategy | markdownify }}
     </div>
 </div>
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="group">
-                        <textarea name="message" required></textarea>
+                        <textarea id="txtarea" name="message" required></textarea>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Message</label>
@@ -208,7 +208,6 @@
         </div>
     </div>
 </div>
-
 
 <section id="landscape" class="module p-t-0 p-b-0">
     <div class="container">
@@ -262,9 +261,7 @@
                             </div>
                         </div>
                         <!-- /CONTENT BOX -->
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -278,7 +275,16 @@
         </div>
     </div>
 </section>
-
-
 </body>
 </html>
+
+<script>
+    function expandTextarea(id) {
+        document.getElementById(id).addEventListener('keyup', function () {
+            this.style.overflow = 'hidden';
+            this.style.height = this.scrollHeight + 'px';
+        }, false);
+    }
+
+    expandTextarea('txtarea');
+</script>

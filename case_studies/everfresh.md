@@ -24,7 +24,7 @@ community foodshed.
 
 ### Success!
 
-After implementing our solution the first order on the website was **2x the normal order!**
+After releasing Everfresh into its beta phase, the first order on the website was **2x the normal order!**
 
 
 "
@@ -34,17 +34,20 @@ strategy: "
     <li>Architect solution</li>
     <li>Train staff</li>
     <li>Integrate with Quickbooks</li>
+    <li>Provide ongoing support and updates</li>
+    <li>Implement effective beta rollout with small user group</li>
 </ul>
 "
 
 objectives: "
 <ul>
-    <li>Create an interface for selecting produce orders</li>
+    <li>Create an interface for selecting food orders</li>
     <li>Calculate all order prices appropriately based on wholesale costs or retail costs</li>
-    <li>Integrate with Quickbooks to: get existing vendors and track inventory</li>
-    <li>Increase sales by providing a slick interface showing all offerings</li>
+    <li>Integrate with Quickbooks to get existing vendors and track inventory</li>
+    <li>Increase sales and user interaction</li>
     <li>Analyze sales</li>
     <li>Save on labor costs/time</li>
+    <li>Give buyers an easier interface to purchase rather than using spreadsheets and email</li>
 </ul>
 "
 ---

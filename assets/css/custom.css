@@ -747,7 +747,7 @@ a:hover > img {
     cursor: pointer;
     color: white;
     font-size: 32px;
-    padding: 20px;
+    padding: 60px;
     font-family: Roboto, sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -785,11 +785,6 @@ a:hover > img {
 .overlay.codalab:after {
     content: '';
     background-color: rgba(0, 128, 0, 0.42);
-    border-top-left-radius: 6px;
-}
-
-.overlay.codalab {
-    border-top-left-radius: 6px;
 }
 
 .overlay.fragile-families:after {
@@ -800,11 +795,6 @@ a:hover > img {
 .overlay.see-4c:after {
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
-    border-top-right-radius: 6px;
-}
-
-.overlay.see-4c {
-    border-top-right-radius: 6px;
 }
 
 .see-4c .client-logo {
@@ -814,11 +804,6 @@ a:hover > img {
 .overlay.draper:after {
     content: '';
     background-color: rgba(105, 16, 128, 0.48);
-    border-bottom-left-radius: 6px;
-}
-
-.overlay.draper {
-    border-bottom-left-radius: 6px;
 }
 
 .overlay.chalearn:after {
@@ -838,11 +823,6 @@ a:hover > img {
 .overlay.everfresh:after {
     content: '';
     background-color: rgba(12, 208, 81, 0.47);
-    border-bottom-right-radius: 6px;
-}
-
-.overlay.everfresh {
-    border-bottom-right-radius: 6px;
 }
 
 .everfresh .client-logo {
@@ -876,6 +856,91 @@ a:hover > img {
 #team .panel-body {
     height: 328px;
     /* set in template, like: background: url(http://localhost:63342/ckcollab/assets/images/avatars/eric1.png); */
-    background-size: contain !important;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
+}
+
+.copyright {
+    padding: 10px;
+}
+@media screen and (min-width: 2559px) {
+    .col-xl-1 {
+        width: 25% !important;
+    }
+
+    .col-xl-offset-0 {
+        margin: 0 !important;
+    }
+
+    #recent-blogs p {
+        font-size: 1.80em;
+    }
+
+    #recent-blogs h3 {
+        font-size: 2.8em;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .content-box-icon {
+        font-size: 55px;
+    }
+
+    .content-box-title {
+        font-size: 24px;
+    }
+
+    .copyright {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .col-xs-offset-0 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .overlay {
+        padding: 0 200px !important;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .overlay.draper {
+        border-bottom-left-radius: 6px;
+    }
+
+    .overlay.draper::after {
+        border-bottom-left-radius: 6px;
+    }
+
+    .overlay.everfresh {
+        border-bottom-right-radius: 6px;
+    }
+
+    .overlay.everfresh::after {
+        border-bottom-right-radius: 6px;
+    }
+
+    .overlay.see-4c {
+        border-top-right-radius: 6px;
+    }
+
+    .overlay.see-4c::after {
+        border-top-right-radius: 6px;
+    }
+
+    .overlay.codalab {
+        border-top-left-radius: 6px;
+    }
+
+    .overlay.codalab::after {
+        border-top-left-radius: 6px;
+    }
 }

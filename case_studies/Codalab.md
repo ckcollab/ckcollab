@@ -13,6 +13,9 @@ Codalab is a machine learning competition website, where researchers and organiz
 can create competitions for participants ranging from student to top level
 researchers.
 
+Codalab has approximately 100 competitions, 30 thousand participants, 200k submissions,
+and 400 competition organizers.
+
 Currently Codalab has hosted competitions for some of the following organizations:
 "
 
@@ -33,6 +36,8 @@ strategy: "
     <li>24/7 support</li>
     <li>UX/UI improvements</li>
     <li>Community support</li>
+    <li>Manage modular platform</li>
+    <li>Search indexing</li>
 </ul>
 "
 
@@ -41,6 +46,8 @@ objectives: "
     <li>Support version 1.5 of Codalab while developing version 2.</li>
     <li>Currently we're still developing version 2, which leverages new libaries,
 a better architecture, real time output, a clear API, and much more!</li>
+    <li>Create a "hub" called <a href="https://chahub.org/">Chahub.org</a> for
+    easily finding machine learning competitions, datasets, other researchers, etc.</li>
 </ul>
 "
 ---

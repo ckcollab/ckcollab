@@ -952,7 +952,8 @@ a:hover > img {
 
 /* ---------- PRICING TIERS ------------ */
 .pricing-tiers {
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .pricing-details-title {

@@ -46,7 +46,7 @@ objectives: "
     <li>Support version 1.5 of Codalab while developing version 2.</li>
     <li>Currently we're still developing version 2, which leverages new libaries,
 a better architecture, real time output, a clear API, and much more!</li>
-    <li>Create a "hub" called <a href="https://chahub.org/">Chahub.org</a> for
+    <li>Create a 'hub' called <a href='https://chahub.org/'>Chahub.org</a> for
     easily finding machine learning competitions, datasets, other researchers, etc.</li>
 </ul>
 "

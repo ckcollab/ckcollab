@@ -1018,7 +1018,7 @@ a:hover > img {
     position: relative;
     left: -15px;
     content: '✓';
-    color: hotpink;
+    color: #f16b7c;
     font-size: 20px;
 }
 

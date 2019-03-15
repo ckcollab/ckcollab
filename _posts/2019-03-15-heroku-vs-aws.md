@@ -8,8 +8,13 @@ Heroku.. almost a bad word in many circles. It's expensive, polished, and
 restrictive. To me: it's like the Apple of hosting providers. I can rely on it to
 _"just work"_ the vast, vast majority of the time.
 
+
 <!--more-->
 
+
+<div style="text-align: center;">
+    <img src="/assets/images/articles/heroku-logotype-horizontal-white.png" class="img-bordered">
+</div>
 
 ## Why Heroku?
 
@@ -40,7 +45,9 @@ realtime live backups with a 4hour rollback window.
  * Relying on third parties that can go down (but, is based in the same facilities as 
    Netflix)
 
-
+<div style="text-align: center;">
+    <img src="/assets/images/articles/aws-logo.png" class="img-bordered">
+</div>
 
 # Why AWS?
 
@@ -71,5 +78,10 @@ on a managed host with hundreds of millions behind it.
 
 
 
+# Conclusion
 
+At CKC we love simplicity and speed. Heroku brings us the capability to develop
+complex applications as quickly as possible, and to run those applications
+at scale.
 
+Have an app you're having trouble deploying? Let us [setup something for you!](mailto:hello@ckcollab.com) 

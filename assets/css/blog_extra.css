@@ -27,6 +27,10 @@ header {
     color: rgb(94, 171, 214);
 }
 
+#disqus_thread {
+    margin-top: 40px;
+}
+
 /* footer */
 .drop-us-a-line {
     font-style: italic;

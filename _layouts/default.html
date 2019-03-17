@@ -41,7 +41,7 @@
     {% assign author = site.data.authors[page.author] %}
 
     {% if author %}
-        <span>
+    <span>
             <!-- Personal Info. -->
             <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> wrote this on
         </span>
@@ -52,13 +52,39 @@
     <div>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
-            style="display:inline-block;width:728px;height:90px"
-            data-ad-client="ca-pub-1425635593332114"
-            data-ad-slot="1"></ins>
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-1425635593332114"
+             data-ad-slot="1"></ins>
         <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            console.log("PAGE:")
+            console.log(this.page)
+            this.page.url = "https://ckcollab.com{{ page.url | absolute }}"
+            this.page.identifier = "{{ page.url | absolute }}"
+            this.page.title = "{{ page.title }}"
+        }
+
+        (function () {
+            var d = document, s = d.createElement('script')
+
+            s.src = 'https://ckcollab.disqus.com/embed.js'
+
+            s.setAttribute('data-timestamp', +new Date())
+            (d.head || d.body).appendChild(s)
+        })()
+    </script>
+    <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+            comments powered by Disqus.
+        </a>
+    </noscript>
 
     <footer class="site-footer">
         <p class="drop-us-a-line">drop us a line, <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a></p>

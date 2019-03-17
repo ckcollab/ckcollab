@@ -63,8 +63,6 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function () {
-            console.log("PAGE:")
-            console.log(this.page)
             this.page.url = "https://ckcollab.com{{ page.url | absolute }}"
             this.page.identifier = "{{ page.url | absolute }}"
             this.page.title = "{{ page.title }}"
@@ -72,9 +70,7 @@
 
         (function () {
             var d = document, s = d.createElement('script')
-
-            s.src = 'https://ckcollab.disqus.com/embed.js'
-
+            s.src = 'https://ck-collab.disqus.com/embed.js'
             s.setAttribute('data-timestamp', +new Date())
             (d.head || d.body).appendChild(s)
         })()

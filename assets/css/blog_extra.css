@@ -17,6 +17,11 @@ header {
     margin: 0;
 }
 
+.post-title {
+    text-align: center;
+    color: #eb6c7d !important;
+}
+
 /* content */
 .main-content p {
     text-align: justify;

@@ -33,9 +33,12 @@
     <h1 class="project-name"><a href="/">CKC</a></h1>
     <!-- This is a bit tacky with our new longer description =\ -->
     <!--<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>-->
+    <h2 class="project-tagline">we ♡ web development</h2>
 </header>
 
 <main id="content" class="main-content" role="main">
+    <h1 class="post-title">{{ page.title }}</h1>
+
     {{ content }}
 
     <!-- Look the author details up from the site config. -->
@@ -43,13 +46,13 @@
 
     {% if author %}
     <span>
-            <!-- Personal Info. -->
-            <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> wrote this on
-        </span>
+        <!-- Personal Info. -->
+        <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> wrote this on
+    </span>
     {% endif %}
 
     {{ page.date | date: "%-d %B %Y" }}
-    
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- 1 -->
     <ins class="adsbygoogle"

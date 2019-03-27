@@ -68,6 +68,8 @@ the right fit for marketing, sales, and our dev team. We've made small test apps
 
 # Community
 
+We're blessed to be web developers in Coeur d'Alene, Idaho.
+
 We count ourselves lucky to be in this field, and realize that many others haven’t been afforded the same opportunities we have.
 There are so many people that never get a second look in this vocation because they don’t have a fancy piece of paper touting
 their qualifications. We want to give these people the chance they are looking for, so we’re always open to bringing on people

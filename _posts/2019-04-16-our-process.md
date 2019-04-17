@@ -1,7 +1,6 @@
 ---
 title:  "Our process"
-date: 2019-01-30 00:00:00 +0800
-published: false
+date: 2019-04-16 00:00:00 +0800
 author: eric
 ---
 
@@ -44,7 +43,9 @@ need the iteration on our end first.
 
 # Sprint schedule
 
-<img here>
+<div style="text-align: center;">
+    <img src="/assets/images/articles/sprint-process.png" class="img-bordered">
+</div>
 
 Sprints are in 2 week chunks with a review meeting at the end. On the last day of sprints
 we demo the work done and also go over any internal problems we're having.
@@ -112,12 +113,19 @@ During the meeting it is rather quick as we score tasks to help plan their diffi
 
 ## Day 2 - 14
 
+<div style="text-align: center;">
+    <img src="/assets/images/articles/analytics_burndown.png" class="img-bordered">
+</div>
+
+The project managers make sure we're staying on track to end, informing the client and
+engineers as we need to add or remove features to land on time.
+
 ### Staying on track
 
+???
 
-<img of burndown chart>
 
-Define: velocity, burndown chart
+
 
 ### Don't add mid-sprint!
 

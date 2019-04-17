@@ -65,7 +65,10 @@ last 3 weeks. Given our "velocity" we can plot the landing date on a burndown ch
 
 ## Day -1 (before the first sprint ever starts)
 
-On a new project the bulk of tasks are scored in a "kick off meeting" 
+On a new project the bulk of tasks are scored in a "kick off meeting" (or sometimes 
+kickoff _week_). Project managers, developers, architects, stake holders, etc. all
+get together and scope out the work, tasks, and the developers score the tasks
+difficulty.
 
 ## Day 0 (before sprint ends)
 

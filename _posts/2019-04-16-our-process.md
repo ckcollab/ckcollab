@@ -123,12 +123,6 @@ During the meeting it is rather quick as we score tasks to help plan their diffi
 The project managers make sure we're staying on track to end, informing the client and
 engineers as we need to add or remove features to land on time.
 
-### Staying on track
-
-???
-
-
-
 
 ### Don't add mid-sprint!
 

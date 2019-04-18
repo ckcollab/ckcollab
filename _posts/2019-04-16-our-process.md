@@ -50,6 +50,16 @@ need the iteration on our end first.
 Sprints are in 2 week chunks with a review meeting at the end. On the last day of sprints
 we demo the work done and also go over any internal problems we're having.
 
+### User stories
+
+User stories are concise simple descriptions of some feature, from the perspective of
+the person who would be using the feature. Typically in the form of:
+
+> As a <something>, I want \<an objective\> [for \<some reason\>]
+
+We generate user stories to help facilitate discussion about the purpose behind this
+solution to some problem, instead of discussing the implementation of the problem. 
+
 ### Scoring tasks
 
 To plan effectively we "score tasks" by giving them a difficulty number, then using
@@ -81,6 +91,9 @@ questions we have on tasks should be answered here.
 Importantly, we organize our sprints with backloog grooming sessions before the beginning 
 of the next sprint. This way we can start a sprint with as fresh of priority as possible.
 
+Also, during this grooming session it's important that we make sure all tasks have
+an up-to-date acceptance criteria based on all of the information we have available. 
+
 ## Day 1 - Sprint end & review, start of new sprint
 
 We end the previous sprint and start the next one on the same day.
@@ -103,6 +116,20 @@ We keep track of what's causing pain and what's getting better. If someone has b
 having some stress with a client, something in their life, or anything else, we try
 to talk through it and help out. 
 
+
+### Code review
+
+Most every line of code we put out is examined by another engineer. This facilitates
+learning in many ways:
+
+* The people involved in the code review get to bond
+* Sharing of knowledge
+* An extra set of eyes on potential edge cases
+* Helping to enforce consistent style and paradigms
+* Acceptance criteria is met
+
+After code is reviewed and accepted, with all automated tests passing, it is merged in
+to the main code base -- ready to be deployed!
 
 
 ### Planning

@@ -64,7 +64,7 @@ minutia -- but we'll gladly do this for the right people.
 
 ### Don't give up!
 It might take 50 tries to find a company with the right mindset to fit in a greenhorn, 
-but with Upwork-and-friends it's a global market place and only a matter of time for  
+but with Upwork-and-friends it's a global market place and only a matter of time for 
 someone to recognize your talent. Take some shit salaries to get your foot in the door, 
 if you have to. $15/hr is great to start at, I did.
 

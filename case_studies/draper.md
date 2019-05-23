@@ -11,27 +11,22 @@ background-img: ../assets/images/CK Collab Placeholders/DRAPERPH.png
 
 
 about_description: "
-
-> _We provide engineering services directly to government, commercial
-companies and academia; work on teams as prime contractor or subcontractor;
-and participate as a collaborator in consortia._
-
-
-<sub><sup>_&mdash; [Draper](https://www.draperinc.com/)_</sup></sub>
-
+\"_From whiteboard concept to fielded systems, Draper engineers design, 
+develop and deploy advanced technology solutions for the world’s most difficult 
+and important problems._\" <sub><sup>_&mdash; [Draper](https://www.draper.com/)_</sup></sub>
 "
 
 strategy: "
 <ul>
-    <li>Train their staff</li>
-    <li>Provide support for our work</li>
+    <li>Provide one on one training for their staff</li>
+    <li>Provide technical support</li>
 </ul>
 "
 
 objectives: "
 <ul>
     <li>Create widgets for posting submissions to the Codalab machine learning competition platform</li>
-    <li>Create widgets for the competition data, like leaderboards</li>
+    <li>Create widgets like leaderboards for their competition data</li>
 </ul>
 "
 ---

@@ -26,10 +26,10 @@ strategy: "
 objectives: "
 <ul>
     <li>Create half a dozen small websites, many as placeholders for future growth</li>
-    <li>The websites are editable by their staff</li>
-    <li>Page flow considered carefully, focus on contacting</li>
+    <li>Client-editable webpages</li>
+    <li>Page flow organization</li>
+    <li>Logo design assistance</li>
     <li>Drone footage</li>
-    <li>Some help with logo design</li>
 </ul>
 "
 ---

@@ -9,14 +9,16 @@ phone-mock: ../assets/images/CK%20Collab%20Placeholders/phoneCodalab.png
 background-img: ../assets/images/CK Collab Placeholders/codalabPH.jpg
 
 about_description: "
-Codalab is a machine learning competition website, where researchers and organizers
-can create competitions for participants ranging from student to top level
+Codalab is a machine learning competition website that allows researchers and organizers
+to host competitions aimed at participants ranging in ability from students to top level
 researchers.
 
-Codalab has approximately 100 competitions, 30 thousand participants, 200k submissions,
-and 400 competition organizers.
 
-Currently Codalab has hosted competitions for some of the following organizations:
+Codalab has approximately 100 competitions, 400 competition organizers, 30 thousand participants,
+and 200 thousand submissions.
+
+
+Currently, Codalab has hosted competitions for these organizations:
 "
 
 badges: "
@@ -44,8 +46,7 @@ strategy: "
 objectives: "
 <ul>
     <li>Support version 1.5 of Codalab while developing version 2.</li>
-    <li>Currently we're still developing version 2, which leverages new libaries,
-a better architecture, real time output, a clear API, and much more!</li>
+    <li>Develop version 2, leveraging new libaries, an improved architecture, real time output, and much more!</li>
     <li>Create a 'hub' called <a href='https://chahub.org/'>Chahub.org</a> for
     easily finding machine learning competitions, datasets, other researchers, etc.</li>
 </ul>

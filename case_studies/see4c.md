@@ -16,7 +16,6 @@ principal task being forecasting electricity grid traffic) and designing a
 specially tailored competition to benchmark advanced algorithms, within well
 defined computational constraints.
 
-\n
 
 See.4C is funded by the European Commission under Horizon 2020.
 
@@ -31,9 +30,9 @@ strategy: "
 
 objectives: "
 <ul>
+    <li>Create a custom, branded, version of Codalab for their competition</li>
     <li>Create many users quickly for stress testing the service</li>
     <li>Provide support for See.4C competition</li>
-    <li>Create a custom, branded, version of Codalab for their competition</li>
 </ul>
 "
 ---

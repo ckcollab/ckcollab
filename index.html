@@ -21,6 +21,7 @@
     <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
     <!-- Plugins -->
     <link href="assets/css/simpletextrotator.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -1476,20 +1477,20 @@
                         <!--</ul>-->
                         <div class="brands">
                             <a href="https://www.djangoproject.com/" target="_blank"><img
-                                src="assets/images/django.png"/></a>
+                                    src="assets/images/django.png"/></a>
                             <a href="https://www.python.org/" target="_blank"><img src="assets/images/python.png"/></a>
                             <a href="http://riotjs.com/" target="_blank"><img src="assets/images/riot.svg"/></a>
                             <a href="http://www.celeryproject.org/" target="_blank"><img
-                                src="assets/images/celery.png"/></a>
+                                    src="assets/images/celery.png"/></a>
                             <a href="https://www.postgresql.org/" target="_blank"><img
-                                src="assets/images/postgres.png"/></a>
+                                    src="assets/images/postgres.png"/></a>
                             <a href="https://heroku.com" target="_blank"><img src="assets/images/heroku.png"/></a>
                             <a href="https://www.elastic.co/" target="_blank"><img
-                                src="assets/images/elasticsearch.png"/></a>
+                                    src="assets/images/elasticsearch.png"/></a>
                             <a href="https://aws.amazon.com/" target="_blank"><img src="assets/images/aws.png"/></a>
                             <a href="https://bitcoin.org/" target="_blank"><img src="assets/images/bitcoin.png"/></a>
                             <a href="https://lightning.network/" target="_blank"><img
-                                src="assets/images/lightning-network.png"/></a>
+                                    src="assets/images/lightning-network.png"/></a>
                         </div>
                     </div>
                 </div>
@@ -1506,7 +1507,7 @@
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <a href="http://fragilefamilies.princeton.edu/" target="_blank"><img
-                                    src="assets/images/ffam.png"></a>
+                                        src="assets/images/ffam.png"></a>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <a href="https://web.see4c.eu/" target="_blank"><img src="assets/images/see4c.png"></a>
@@ -1524,15 +1525,15 @@
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <a href="http://coeurholdings.com/" target="_blank"><img
-                                    src="assets/images/logo_coeur_holdings.svg"
-                                    style="filter: drop-shadow(0px 0px 1px #bbb);"></a>
+                                        src="assets/images/logo_coeur_holdings.svg"
+                                        style="filter: drop-shadow(0px 0px 1px #bbb);"></a>
                             </div>
                         </div>
                         <div class="row text-center">
                             <div class="col-sm-12 col-xs-12">
                                 <a href="http://myeverfresh.com/" target="_blank"><img
-                                    src="assets/images/CK%20Collab%20Placeholders/everfreshLogo.png"
-                                    style="filter: drop-shadow(0px 0px 1px #bbb);"></a>
+                                        src="assets/images/CK%20Collab%20Placeholders/everfreshLogo.png"
+                                        style="filter: drop-shadow(0px 0px 1px #bbb);"></a>
                             </div>
                         </div>
                     </div>
@@ -1921,17 +1922,47 @@
                 <h2 class="work-details-title font-alt">Recent blog posts</h2>
             </div>
 
-            <div id="recent-blogs" class="row">
+            <!--<div id="recent-blogs" class="row">-->
+            <!--{% for post in site.posts limit:5 %}-->
+            <!--<div class="post row">-->
+            <!--{% assign author = site.data.authors[post.author] %}-->
+            <!--{% if author %}-->
+            <!--<img class="img-responsive pull-left img-circle" src="{{author.avatar_url}}" style="height: 110px; width: 100px; margin-top: 40px;"></img>-->
+            <!--&lt;!&ndash;<img src="{{author.avatar_url}}" height="100px;" width="100px" style="top: 20px;"></img>&ndash;&gt;-->
+            <!--{% endif %}-->
+            <!--<div class="col-md-8 col-md-offset-2">-->
+
+            <!--<h3>{{ post.title }}</h3>-->
+            <!--<p>{{ post.excerpt }}</p>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--{% endfor %}-->
+            <!--</div>-->
+            <ul class="media-list">
                 {% for post in site.posts limit:5 %}
-                <div class="post row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h3>{{ post.title }}</h3>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                {% assign author = site.data.authors[post.author] %}
+
+                <li class="media" style="overflow: inherit;">
+                    <div class="media-left">
+                        {% if author %}
+                        <img class="media-object img-circle" src="{{author.avatar_url}}" style="height: 100px; width: 100px; max-width: 1000px;"></img>
+                        {% endif %}
+
                     </div>
-                </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url }}" class="btn pull-right btn-primary">read more...</a>
+
+                    </div>
+                </li>
+                {% if forloop.last == false %}
+                <li class="divider" style="height: 1px; width: 100%; display: block; margin: 9px 0; overflow: hidden; background-color: dimgray"></li>
+                {% endif %}
                 {% endfor %}
-            </div>
+            </ul>
+            <!--<div id="recent-blogs"></div>-->
         </div>
     </section>
 

@@ -751,6 +751,8 @@ a:hover > img {
     font-weight: 100;
     text-transform: uppercase;
     text-shadow: 1px 1px 3px black;
+    background-image: url('../images/ckc_bg-min.png');
+
 }
 
 .overlay:after {
@@ -791,6 +793,7 @@ a:hover > img {
     background-color: rgba(178, 14, 181, 0.5);
 }
 
+
 .overlay.see-4c:after {
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
@@ -799,6 +802,26 @@ a:hover > img {
 .see-4c .client-logo {
     width: 100%; /* for some reason without this, see4c logo doesn't have width on my machine */
 }
+
+/*.overlay.draper, .overlay.coeur-holdings, .overlay.fragile-families,*/
+/*.overlay.codalab, .overlay.see-4c, .overlay.chalearn, overlay.everfresh*/
+/*{*/
+    /*background-image: url('../images/ckc_bg-min.png');*/
+/*}*/
+
+
+img.media-object{
+    height: 100px;
+    width: 100px;
+    max-width: 1000px;
+}
+
+.blog-container {
+    width: 90%;
+}
+
+
+
 
 .overlay.draper:after {
     content: '';
@@ -814,6 +837,7 @@ a:hover > img {
     content: '';
     background-color: rgba(9, 125, 128, 0.42);
 }
+
 
 .coeur-holdings {
     justify-content: initial;
@@ -1114,3 +1138,4 @@ a:hover > img {
         margin: 10px auto;
     }
 }
+

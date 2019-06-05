@@ -190,6 +190,10 @@
 
 /* Extra large desktop */
 @media (min-width: 2560px) {
+
+    .media-list {
+        margin-left: 10vw;
+    }
     .container {
         width: 1440px;
     }
@@ -322,6 +326,12 @@
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
+
+    .media-list{
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
     #team .panel {
         width: 100% !important;
     }
@@ -698,21 +708,9 @@ a:hover > img {
 }
 
 .footer-captions a:hover {
-    /*color: #99d8f1;*/
-
-    /*color: #3a6a7d;*/
-    /*text-shadow: 0 0 2px rgba(35, 75, 97, 0.8);*/
-    /*color: rgba(58, 106, 125, 0.25);*/
     text-shadow: 0 0 0 #fff;
 }
 
-/*.module {*/
-/*!*background-color: red;*!*/
-
-/*background-image: url("../images/bg_pattern.jpg");*/
-/*background-repeat: repeat;*/
-/*-webkit-background-size: inherit;*/
-/*}*/
 
 .copyright, .copyright a {
     color: #efefef;
@@ -803,12 +801,6 @@ a:hover > img {
     width: 100%; /* for some reason without this, see4c logo doesn't have width on my machine */
 }
 
-/*.overlay.draper, .overlay.coeur-holdings, .overlay.fragile-families,*/
-/*.overlay.codalab, .overlay.see-4c, .overlay.chalearn, overlay.everfresh*/
-/*{*/
-    /*background-image: url('../images/ckc_bg-min.png');*/
-/*}*/
-
 
 img.media-object{
     height: 100px;
@@ -816,9 +808,14 @@ img.media-object{
     max-width: 1000px;
 }
 
+.media-list {
+    margin-left: 5vw;
+    margin-right: 15vw;
+}
 
-
-
+.media {
+    padding-bottom: 40px;
+}
 
 .overlay.draper:after {
     content: '';
@@ -886,6 +883,11 @@ img.media-object{
 }
 
 @media screen and (min-width: 2559px) {
+
+    .media-list{
+        margin-left: 0vw;
+    }
+
     .col-xl-1 {
         width: 25% !important;
     }
@@ -924,6 +926,10 @@ img.media-object{
     .overlay {
         padding: 0 200px !important;
     }
+    .media-list{
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -935,9 +941,14 @@ img.media-object{
     .overlay {
         padding: 0 30px !important;
     }
+    .media-list{
+        margin-left: 5vw;
+        margin-right: 10vw;
+    }
 }
 
 @media screen and (min-width: 991px) {
+
     .overlay.draper {
         border-bottom-left-radius: 6px;
     }
@@ -1123,6 +1134,10 @@ img.media-object{
     .card {
         margin: 10px 10px;
     }
+    .media-list{
+        margin-left: 5vw;
+        margin-right: 16vw;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -1134,5 +1149,6 @@ img.media-object{
     .card {
         margin: 10px auto;
     }
+
 }
 

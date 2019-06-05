@@ -191,9 +191,7 @@
 /* Extra large desktop */
 @media (min-width: 2560px) {
 
-    .media-list {
-        margin-left: 10vw;
-    }
+
     .container {
         width: 1440px;
     }
@@ -290,6 +288,7 @@
     .navbar.navbar-transparent .navbar-header {
         text-align: center;
     }
+
 
     #astro_1, #astro_2 {
         max-width: 100vw;
@@ -809,8 +808,8 @@ img.media-object{
 }
 
 .media-list {
-    margin-left: 5vw;
-    margin-right: 15vw;
+    margin-left: 25px;
+    margin-right: 50px;
 }
 
 .media {
@@ -885,7 +884,9 @@ img.media-object{
 @media screen and (min-width: 2559px) {
 
     .media-list{
-        margin-left: 0vw;
+        margin-left: 250px;
+        margin-right: 250px;
+
     }
 
     .col-xl-1 {
@@ -926,10 +927,7 @@ img.media-object{
     .overlay {
         padding: 0 200px !important;
     }
-    .media-list{
-        margin-left: 0vw;
-        margin-right: 0vw;
-    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -937,14 +935,14 @@ img.media-object{
         display: flex;
         justify-content: center;
     }
-
+    .media-list{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .overlay {
         padding: 0 30px !important;
     }
-    .media-list{
-        margin-left: 5vw;
-        margin-right: 10vw;
-    }
+
 }
 
 @media screen and (min-width: 991px) {
@@ -1130,13 +1128,20 @@ img.media-object{
     border-color: #f06a7c;
 }
 
-@media screen and (max-width: 1150px) {
+@media (max-width: 2559px) and (min-width: 1150px) {
     .card {
         margin: 10px 10px;
     }
     .media-list{
-        margin-left: 5vw;
-        margin-right: 16vw;
+        margin-left: 175px;
+        margin-right: 225px;
+    }
+}
+
+@media (max-width: 1149px) and (min-width: 992px){
+    .media-list{
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 

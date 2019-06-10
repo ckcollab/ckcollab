@@ -812,6 +812,10 @@ img.media-object{
     margin-right: 50px;
 }
 
+.media-left {
+    padding-right: 30px;
+}
+
 .media {
     padding-bottom: 40px;
 }

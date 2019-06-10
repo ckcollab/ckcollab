@@ -1881,9 +1881,8 @@
 
 
             <ul class="media-list">
-                {% for post in site.posts limit:5 %}
+                {% for post in site.posts %}
                 {% assign author = site.data.authors[post.author] %}
-
                 <li class="media" style="overflow: inherit;">
                     <div class="media-left">
                         {% if author %}
@@ -1893,13 +1892,15 @@
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">{{ post.title }}</h3>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url }}" class="btn btn-primary">read more...</a>
+                        {{ post.excerpt }}
+                        <a href="{{ post.url }}" class="btn pull-right btn-primary">read more...</a>
 
                     </div>
                 </li>
                 {% endfor %}
             </ul>
+
+
         </div>
     </section>
 

@@ -190,6 +190,8 @@
 
 /* Extra large desktop */
 @media (min-width: 2560px) {
+
+
     .container {
         width: 1440px;
     }
@@ -287,6 +289,7 @@
         text-align: center;
     }
 
+
     #astro_1, #astro_2 {
         max-width: 100vw;
         height: auto;
@@ -322,6 +325,12 @@
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
+
+    .media-list{
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
     #team .panel {
         width: 100% !important;
     }
@@ -698,21 +707,9 @@ a:hover > img {
 }
 
 .footer-captions a:hover {
-    /*color: #99d8f1;*/
-
-    /*color: #3a6a7d;*/
-    /*text-shadow: 0 0 2px rgba(35, 75, 97, 0.8);*/
-    /*color: rgba(58, 106, 125, 0.25);*/
     text-shadow: 0 0 0 #fff;
 }
 
-/*.module {*/
-/*!*background-color: red;*!*/
-
-/*background-image: url("../images/bg_pattern.jpg");*/
-/*background-repeat: repeat;*/
-/*-webkit-background-size: inherit;*/
-/*}*/
 
 .copyright, .copyright a {
     color: #efefef;
@@ -751,6 +748,8 @@ a:hover > img {
     font-weight: 100;
     text-transform: uppercase;
     text-shadow: 1px 1px 3px black;
+    background-image: url('../images/ckc_bg-min.png');
+
 }
 
 .overlay:after {
@@ -791,6 +790,7 @@ a:hover > img {
     background-color: rgba(178, 14, 181, 0.5);
 }
 
+
 .overlay.see-4c:after {
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
@@ -798,6 +798,26 @@ a:hover > img {
 
 .see-4c .client-logo {
     width: 100%; /* for some reason without this, see4c logo doesn't have width on my machine */
+}
+
+
+img.media-object{
+    height: 100px;
+    width: 100px;
+    max-width: 1000px;
+}
+
+.media-list {
+    margin-left: 25px;
+    margin-right: 50px;
+}
+
+.media-left {
+    padding-right: 30px;
+}
+
+.media {
+    padding-bottom: 40px;
 }
 
 .overlay.draper:after {
@@ -814,6 +834,7 @@ a:hover > img {
     content: '';
     background-color: rgba(9, 125, 128, 0.42);
 }
+
 
 .coeur-holdings {
     justify-content: initial;
@@ -865,6 +886,13 @@ a:hover > img {
 }
 
 @media screen and (min-width: 2559px) {
+
+    .media-list{
+        margin-left: 250px;
+        margin-right: 250px;
+
+    }
+
     .col-xl-1 {
         width: 25% !important;
     }
@@ -903,6 +931,7 @@ a:hover > img {
     .overlay {
         padding: 0 200px !important;
     }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -910,13 +939,18 @@ a:hover > img {
         display: flex;
         justify-content: center;
     }
-
+    .media-list{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .overlay {
         padding: 0 30px !important;
     }
+
 }
 
 @media screen and (min-width: 991px) {
+
     .overlay.draper {
         border-bottom-left-radius: 6px;
     }
@@ -1098,9 +1132,20 @@ a:hover > img {
     border-color: #f06a7c;
 }
 
-@media screen and (max-width: 1150px) {
+@media (max-width: 2559px) and (min-width: 1150px) {
     .card {
         margin: 10px 10px;
+    }
+    .media-list{
+        margin-left: 175px;
+        margin-right: 225px;
+    }
+}
+
+@media (max-width: 1149px) and (min-width: 992px){
+    .media-list{
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
@@ -1113,4 +1158,6 @@ a:hover > img {
     .card {
         margin: 10px auto;
     }
+
 }
+

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+
+<ul class="media-list">
+    {% for post in paginator.posts %}
+    {% assign author = site.data.authors[post.author] %}
+    <li class="media" style="overflow: inherit;">
+        <div class="media-left">
+            {% if author %}
+            <img class="media-object img-circle" src="{{author.avatar_url}}"></img>
+            {% endif %}
+
+        </div>
+        <div class="media-body">
+            <h3 class="media-heading">{{ post.title }}</h3>
+            {{ post.excerpt }}
+            <a href="{{ post.url }}" class="btn pull-right btn-primary">read more...</a>
+
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

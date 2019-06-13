@@ -20,7 +20,6 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Plugins -->
     <link href="assets/css/simpletextrotator.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -1886,21 +1885,21 @@
                 <li class="media" style="overflow: inherit;">
                     <div class="media-left">
                         {% if author %}
-                        <img class="media-object img-circle" src="{{author.avatar_url}}"></img>
+                            <img class="media-object img-circle" src="{{author.avatar_url}}">
                         {% endif %}
-
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">{{ post.title }}</h3>
                         {{ post.excerpt }}
-                        <a href="{{ post.url }}" class="btn pull-right btn-primary">read more...</a>
-
+                        <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
                     </div>
                 </li>
                 {% endfor %}
             </ul>
 
-
+            <div class="col-md-12 text-center">
+                <a href="/blog/" class="btn btn-lg btn-primary">View all articles</a>
+            </div>
         </div>
     </section>
 

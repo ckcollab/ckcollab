@@ -2,42 +2,63 @@
 layout: default
 ---
 
+<style>
+    .main-content {
+        padding: 1rem 0;
+        font-size: inherit;
+    }
+    .media-left {
+        width: 2000px;
+        padding-right: 15px;
+    }
+    .btn {
+        color: #666666;
+        border-color: #dedede;
+        padding: 7px 30px;
+    }
+    .btn:hover {
+        color: #6a6a6a;
+        border-color: #888888;
+    }
+    .media {
+        margin: 20px 0;
+    }
+</style>
 
 <ul class="media-list">
     {% for post in paginator.posts %}
-    {% assign author = site.data.authors[post.author] %}
-    <li class="media" style="overflow: inherit;">
-        <div class="media-left">
-            {% if author %}
-            <img class="media-object img-circle" src="{{author.avatar_url}}"></img>
-            {% endif %}
-
-        </div>
-        <div class="media-body">
-            <h3 class="media-heading">{{ post.title }}</h3>
-            {{ post.excerpt }}
-            <a href="{{ post.url }}" class="btn pull-right btn-primary">read more...</a>
-
-        </div>
-    </li>
+        {% assign author = site.data.authors[post.author] %}
+        <li class="media">
+            <div class="media-left">
+                {% if author %}
+                    <img class="media-object img-circle" src="{{author.avatar_url}}">
+                {% endif %}
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading">{{ post.title }}</h3>
+                {{ post.excerpt }}
+                <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
+            </div>
+        </li>
     {% endfor %}
 </ul>
 
-<!-- Pagination links -->
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">
+            Previous
+        </a>
+    {% else %}
+        <span class="previous">Previous</span>
+    {% endif %}
+
+    <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    </span>
+
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+        <span class="next ">Next</span>
+    {% endif %}
 </div>

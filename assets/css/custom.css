@@ -13,6 +13,10 @@
     padding-top: 220px;
 }
 
+.navbar.navbar-custom {
+    max-width: 100vw;
+}
+
 /**
  Astronauts/animations
  */
@@ -91,18 +95,6 @@
     animation-name: alternating-color-1;
 }
 
-/*.astronaut-stripe path:nth-of-type(odd) {*/
-/*animation-name: alternating-color-2;*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(even) {*/
-/*animation-name: alternating-color-2;*/
-/*!*fill: green !important;*!*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(3) {*/
-/*animation-name: alternating-color-1;*/
-/*fill: orange !important;*/
-/*}*/
-
 .astronaut-stripe path:nth-of-type(0) {
     animation-delay: 0.0s;
 }
@@ -141,16 +133,18 @@
 
 #astro_1 {
     position: absolute;
-    top: 5%;
-    right: 20%;
+    top: 180px;
+    right: 400px;
+    height: 750px;
     animation-name: hovering_1;
     animation-duration: 4s;
 }
 
 #astro_2 {
     position: absolute;
-    top: -10%;
+    top: 80px;
     right: 0;
+    height: 600px;
     animation-name: hovering_2;
     animation-duration: 5s;
 }
@@ -190,8 +184,6 @@
 
 /* Extra large desktop */
 @media (min-width: 2560px) {
-
-
     .container {
         width: 1440px;
     }
@@ -224,13 +216,13 @@
     }
 
     #astro_1 {
-        top: 25%;
-        right: 22%;
+        height: 1000px;
+        right: 800px;
     }
 
     #astro_2 {
-        top: 18%;
-        right: 0;
+        height: 800px;
+        right: 200px;
     }
 }
 
@@ -240,26 +232,21 @@
         text-align: center;
     }
 
-    #astro_1, #astro_2 {
-        width: 400px;
-        height: 200px;
-        max-width: 100vw;
-    }
-
     #astro_1 {
-        top: 20%;
-        right: 12%;
+        top: 500px;
+        height: 500px;
+        right: 300px;
     }
 
     #astro_2 {
-        width: 200px;
-        top: 10%;
-        right: 1%;
+        height: 400px;
+        top: 500px;
+        right: 60px;
     }
 
     @keyframes hovering_1 {
         0% {
-            transform: translateY(25px);
+            transform: translateY(100px);
         }
         100% {
             transform: none;
@@ -270,7 +257,7 @@
             transform: none;
         }
         100% {
-            transform: translateY(25px);
+            transform: translateY(100px);
         }
     }
 
@@ -280,6 +267,23 @@
 
     .font-code {
         font-size: 24px;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 45px !important;
+        font-weight: normal !important;
+    }
+
+    .worked-with-title, .tech-title {
+        font-size: 33px !important;
+    }
+
+    .card-enterprise .tier-cost {
+        font-size: 54px !important;
+    }
+
+    .card-deck .card {
+        margin: 10px !important;
     }
 }
 
@@ -296,13 +300,15 @@
     }
 
     #astro_1 {
-        top: 60%;
+        top: 55%;
         right: 25%;
+        height: 800px;
     }
 
     #astro_2 {
-        top: 50%;
+        top: 45%;
         right: 0;
+        height: 400px;
     }
 
     @keyframes hovering_1 {
@@ -325,8 +331,7 @@
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
-
-    .media-list{
+    .media-list {
         margin-left: 0vw;
         margin-right: 0vw;
     }
@@ -335,18 +340,73 @@
         width: 100% !important;
     }
 
-    #astro_1, #astro_2 {
-        max-width: 100vw;
-    }
-
     #astro_1 {
-        top: 22%;
-        right: 19%;
+        top: 420px;
+        width: 160px;
+        left: 100px;
+        height: inherit;
     }
 
     #astro_2 {
-        top: 15%;
-        right: -19%;
+        top: 436px;
+        width: 130px;
+        height: inherit;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 30px !important;
+        font-weight: normal !important;
+    }
+
+    #what-we-do {
+        padding-bottom: 30px !important;
+    }
+
+    #team {
+        padding-top: 30px !important;
+    }
+
+    .card-enterprise .tier-cost {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    #astro_1 {
+        top: 420px;
+        left: 80px;
+        height: 170px;
+    }
+
+    #astro_2 {
+        top: 410px;
+        height: 150px;
+        right: 30px;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 26px;
+        font-weight: normal;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #astro_1 {
+        top: 420px;
+        width: 80px;
+        left: 80px;
+        animation-duration: 5s;
+    }
+
+    #astro_2 {
+        width: 60px;
+        right: 100px;
+        animation-duration: 5.5s;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 26px;
+        font-weight: normal;
     }
 }
 
@@ -801,7 +861,7 @@ a:hover > img {
 }
 
 
-img.media-object{
+img.media-object {
     height: 100px;
     width: 100px;
     max-width: 1000px;
@@ -887,7 +947,7 @@ img.media-object{
 
 @media screen and (min-width: 2559px) {
 
-    .media-list{
+    .media-list {
         margin-left: 250px;
         margin-right: 250px;
 
@@ -939,10 +999,12 @@ img.media-object{
         display: flex;
         justify-content: center;
     }
-    .media-list{
+
+    .media-list {
         margin-left: 0px;
         margin-right: 0px;
     }
+
     .overlay {
         padding: 0 30px !important;
     }
@@ -1136,14 +1198,15 @@ img.media-object{
     .card {
         margin: 10px 10px;
     }
-    .media-list{
+
+    .media-list {
         margin-left: 175px;
         margin-right: 225px;
     }
 }
 
-@media (max-width: 1149px) and (min-width: 992px){
-    .media-list{
+@media (max-width: 1149px) and (min-width: 992px) {
+    .media-list {
         margin-left: 100px;
         margin-right: 100px;
     }
@@ -1161,3 +1224,6 @@ img.media-object{
 
 }
 
+.contact-container {
+    width: inherit !important;
+}

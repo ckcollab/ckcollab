@@ -1889,7 +1889,7 @@
                         {% endif %}
                     </div>
                     <div class="media-body">
-                        <h3 class="media-heading">{{ post.title }}</h3>
+                        <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
                         {{ post.excerpt }}
                         <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
                     </div>

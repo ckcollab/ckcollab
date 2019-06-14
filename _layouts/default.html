@@ -26,10 +26,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/ckc_style.css?v=' | append: site.github.build_revision | relative_url }}">
+<!--    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}">-->
+<!--    <link rel="stylesheet" href="{{ '/assets/css/ckc_style.css?v=' | append: site.github.build_revision | relative_url }}">-->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
 </head>
 <body>
@@ -49,13 +50,7 @@
     {% assign author = site.data.authors[page.author] %}
 
     {% if author %}
-        <span>
-            <img src="{{author.avatar_url}}" height="100px;" width="100px" style="margin-right: 100px;"></img>
-            <!-- Personal Info. -->
-            <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> wrote this on
-        </span>
-
-        {{ page.date | date: "%-d %B %Y" }}
+        {{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}
 
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- 1 -->

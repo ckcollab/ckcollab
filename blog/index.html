@@ -3,45 +3,91 @@ layout: default
 ---
 
 <style>
-    .main-content {
-        padding: 1rem 0;
-        font-size: inherit;
+    /*.main-content {*/
+    /*    padding: 1rem 0;*/
+    /*    font-size: inherit;*/
+    /*}*/
+    /*.media-left {*/
+    /*    width: 2000px;*/
+    /*    padding-right: 15px;*/
+    /*}*/
+    /*.btn {*/
+    /*    color: #666666;*/
+    /*    border-color: #dedede;*/
+    /*    padding: 7px 30px;*/
+    /*}*/
+    /*.btn:hover {*/
+    /*    color: #6a6a6a;*/
+    /*    border-color: #888888;*/
+    /*}*/
+    /*.media {*/
+    /*    margin: 20px 0;*/
+    /*}*/
+
+
+
+
+
+
+    /*.media-list {*/
+    /*    list-style-type: none;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+    /*.media-list .media .media-left {*/
+    /*    max-width: 175px;*/
+    /*    display: inline-block;*/
+    /*}*/
+    /*.media-list .media .media-body {*/
+    /*    display: inline-block;*/
+
+    /*}*/
+
+    /* Make avatars larger */
+    .bootstrap-iso .media-left, .bootstrap-iso .media > .pull-left {
+        padding-right: 20px;
+        width: 1750px;
     }
-    .media-left {
-        width: 2000px;
-        padding-right: 15px;
-    }
-    .btn {
+    .bootstrap-iso .btn {
         color: #666666;
         border-color: #dedede;
         padding: 7px 30px;
     }
-    .btn:hover {
+    .bootstrap-iso .btn:hover {
         color: #6a6a6a;
         border-color: #888888;
     }
+
     .media {
-        margin: 20px 0;
+        padding-bottom: 40px;
+    }
+
+    .smaller {
+        font-size: .8rem;
     }
 </style>
 
-<ul class="media-list">
-    {% for post in paginator.posts %}
-        {% assign author = site.data.authors[post.author] %}
-        <li class="media">
-            <div class="media-left">
-                {% if author %}
-                    <img class="media-object img-circle" src="{{author.avatar_url}}">
-                {% endif %}
-            </div>
-            <div class="media-body">
-                <h3 class="media-heading">{{ post.title }}</h3>
-                {{ post.excerpt }}
-                <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
-            </div>
-        </li>
-    {% endfor %}
-</ul>
+<div class="bootstrap-iso">
+    <ul class="media-list">
+        {% for post in paginator.posts %}
+            {% assign author = site.data.authors[post.author] %}
+            <li class="media">
+                <div class="media-left">
+                    {% if author %}
+                        <img class="media-object img-circle" src="{{author.avatar_url}}">
+                    {% endif %}
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    {{ post.excerpt }}
+                    <span class="smaller">
+                        {{ author.name }} wrote this on {{ post.date | date: "%-d %B %Y" }}
+                    </span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 
 <div class="pagination">
     {% if paginator.previous_page %}

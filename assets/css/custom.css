@@ -13,6 +13,10 @@
     padding-top: 220px;
 }
 
+.navbar.navbar-custom {
+    max-width: 100vw;
+}
+
 /**
  Astronauts/animations
  */
@@ -91,18 +95,6 @@
     animation-name: alternating-color-1;
 }
 
-/*.astronaut-stripe path:nth-of-type(odd) {*/
-/*animation-name: alternating-color-2;*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(even) {*/
-/*animation-name: alternating-color-2;*/
-/*!*fill: green !important;*!*/
-/*}*/
-/*.astronaut-stripe path:nth-of-type(3) {*/
-/*animation-name: alternating-color-1;*/
-/*fill: orange !important;*/
-/*}*/
-
 .astronaut-stripe path:nth-of-type(0) {
     animation-delay: 0.0s;
 }
@@ -141,16 +133,18 @@
 
 #astro_1 {
     position: absolute;
-    top: 5%;
-    right: 20%;
+    top: 180px;
+    right: 400px;
+    height: 500px;
     animation-name: hovering_1;
     animation-duration: 4s;
 }
 
 #astro_2 {
     position: absolute;
-    top: -10%;
-    right: 0;
+    top: 80px;
+    right: 100px;
+    height: 400px;
     animation-name: hovering_2;
     animation-duration: 5s;
 }
@@ -190,8 +184,6 @@
 
 /* Extra large desktop */
 @media (min-width: 2560px) {
-
-
     .container {
         width: 1440px;
     }
@@ -224,42 +216,47 @@
     }
 
     #astro_1 {
-        top: 25%;
-        right: 22%;
+        height: 1000px !important;
+        right: 800px !important;
     }
 
     #astro_2 {
-        top: 18%;
-        right: 0;
+        height: 800px !important;
+        right: 200px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    #astro_1 {
+        top: 35%;
+        right: 310px;
+        height: 500px;
+    }
+
+    #astro_2 {
+        top: 25%;
+        right: 30px;
+        height: 400px;
     }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar.navbar-transparent .navbar-header {
-        text-align: center;
-    }
-
-    #astro_1, #astro_2 {
-        width: 400px;
-        height: 200px;
-        max-width: 100vw;
-    }
-
     #astro_1 {
-        top: 20%;
-        right: 12%;
+        top: 500px;
+        height: 500px;
+        right: 300px;
     }
 
     #astro_2 {
-        width: 200px;
-        top: 10%;
-        right: 1%;
+        height: 400px;
+        top: 500px;
+        right: 60px;
     }
 
     @keyframes hovering_1 {
         0% {
-            transform: translateY(25px);
+            transform: translateY(100px);
         }
         100% {
             transform: none;
@@ -270,7 +267,7 @@
             transform: none;
         }
         100% {
-            transform: translateY(25px);
+            transform: translateY(100px);
         }
     }
 
@@ -281,14 +278,35 @@
     .font-code {
         font-size: 24px;
     }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 45px !important;
+        font-weight: normal !important;
+    }
+
+    .worked-with-title, .tech-title {
+        font-size: 33px !important;
+    }
+
+    .card-enterprise .tier-cost {
+        font-size: 54px !important;
+    }
 }
 
 /* Mobile */
 @media (min-width: 481px) and (max-width: 767px) {
     .navbar.navbar-transparent .navbar-header {
-        text-align: center;
+        /*text-align: center;*/
     }
 
+    .hs-caption {
+        padding-top: 16em !important;
+        margin-left: 2em;
+    }
+
+    .caption-content {
+        padding-top: 0;
+    }
 
     #astro_1, #astro_2 {
         max-width: 100vw;
@@ -296,13 +314,15 @@
     }
 
     #astro_1 {
-        top: 60%;
-        right: 25%;
+        top: 55%;
+        right: 45%;
+        height: 400px;
     }
 
     #astro_2 {
         top: 50%;
-        right: 0;
+        right: 11%;
+        height: 300px;
     }
 
     @keyframes hovering_1 {
@@ -325,28 +345,83 @@
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
+    .hs-caption {
+        padding-top: 16em !important;
+        margin-left: 2em;
+    }
 
-    .media-list{
-        margin-left: 0vw;
-        margin-right: 0vw;
+    .caption-content {
+        padding-top: 0;
     }
 
     #team .panel {
         width: 100% !important;
     }
 
-    #astro_1, #astro_2 {
-        max-width: 100vw;
-    }
-
     #astro_1 {
-        top: 22%;
-        right: 19%;
+        top: 50%;
+        height: 260px;
+        left: 10%;
+        animation-duration: 5s;
     }
 
     #astro_2 {
-        top: 15%;
-        right: -19%;
+        height: 220px;
+        right: 10%;
+        top: 50%;
+        animation-duration: 5.5s;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 30px !important;
+        font-weight: normal !important;
+    }
+
+    #what-we-do {
+        padding-bottom: 30px !important;
+    }
+
+    #team {
+        padding-top: 30px !important;
+    }
+
+    .card-enterprise .tier-cost {
+        font-size: 30px;
+    }
+
+    .media-list {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .hs-title-size-3 {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .hs-title-size-3 {
+        font-size: 20px !important;
+    }
+
+    .hs-title-size-2 {
+        font-size: 15px;
+    }
+
+    .work-details-title, .tech-title, .pricing-details-title {
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    #astro_1 {
+        left: 5% !important;
+        animation-duration: 5s;
+    }
+
+    #astro_2 {
+        right: 5% !important;
+        animation-duration: 5.5s;
     }
 }
 
@@ -359,6 +434,7 @@
     cursor: pointer;
     margin-top: 4px;
     margin-bottom: -5px;
+
 
     /* Specifying this height makes transitions nice and links aligned properly */
 
@@ -378,10 +454,6 @@
 #ckcollab_logo_svg:hover {
     margin-top: 0;
     opacity: 1;
-}
-
-#ckcollab_logo_svg path {
-    /*stroke: red;*/
 }
 
 .navbar.navbar-transparent .navbar-nav > li > a {
@@ -438,13 +510,23 @@
     a #brand_draper:hover {
         margin-top: 25px;
     }
+
+    .navbar-transparent #ckcollab_logo_svg {
+        height: 300px;
+        margin-left: 0;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-custom {
         background: none;
         border: 0;
         border-bottom: 0 !important;
+    }
+
+    .navbar-transparent #ckcollab_logo_svg {
+        height: 175px;
+        margin-left: 2em;
     }
 
     #home {
@@ -801,15 +883,15 @@ a:hover > img {
 }
 
 
-img.media-object{
-    height: 100px;
+img.media-object {
+    height: auto;
     width: 100px;
     max-width: 1000px;
 }
 
 .media-list {
-    margin-left: 25px;
-    margin-right: 50px;
+    margin: 0 auto;
+    max-width: 80%;
 }
 
 .media-left {
@@ -887,12 +969,6 @@ img.media-object{
 
 @media screen and (min-width: 2559px) {
 
-    .media-list{
-        margin-left: 250px;
-        margin-right: 250px;
-
-    }
-
     .col-xl-1 {
         width: 25% !important;
     }
@@ -939,46 +1015,38 @@ img.media-object{
         display: flex;
         justify-content: center;
     }
-    .media-list{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+
     .overlay {
         padding: 0 30px !important;
     }
 
+    .media-left {
+        padding-right: 10px;
+    }
+
+    img.media-object{
+        width: 60px !important;
+    }
 }
 
 @media screen and (min-width: 991px) {
 
-    .overlay.draper {
-        border-bottom-left-radius: 6px;
-    }
-
+    .overlay.draper,
     .overlay.draper::after {
         border-bottom-left-radius: 6px;
     }
 
-    .overlay.everfresh {
-        border-bottom-right-radius: 6px;
-    }
-
+    .overlay.everfresh,
     .overlay.everfresh::after {
         border-bottom-right-radius: 6px;
     }
 
-    .overlay.see-4c {
-        border-top-right-radius: 6px;
-    }
-
+    .overlay.see-4c,
     .overlay.see-4c::after {
         border-top-right-radius: 6px;
     }
 
-    .overlay.codalab {
-        border-top-left-radius: 6px;
-    }
-
+    .overlay.codalab,
     .overlay.codalab::after {
         border-top-left-radius: 6px;
     }
@@ -1008,6 +1076,7 @@ img.media-object{
     border: solid 1px gainsboro;
     border-radius: 8px;
     max-width: 550px;
+    min-width: 290px;
     box-shadow: 0 2px 2px 1px rgba(220, 220, 220, 0.56);
 }
 
@@ -1134,18 +1203,7 @@ img.media-object{
 
 @media (max-width: 2559px) and (min-width: 1150px) {
     .card {
-        margin: 10px 10px;
-    }
-    .media-list{
-        margin-left: 175px;
-        margin-right: 225px;
-    }
-}
-
-@media (max-width: 1149px) and (min-width: 992px){
-    .media-list{
-        margin-left: 100px;
-        margin-right: 100px;
+        margin: 10px;
     }
 }
 
@@ -1159,5 +1217,12 @@ img.media-object{
         margin: 10px auto;
     }
 
+    .media-list {
+        max-width: 95%;
+    }
+
 }
 
+.contact-container {
+    width: inherit !important;
+}

@@ -135,7 +135,7 @@
     position: absolute;
     top: 180px;
     right: 400px;
-    height: 750px;
+    height: 500px;
     animation-name: hovering_1;
     animation-duration: 4s;
 }
@@ -143,8 +143,8 @@
 #astro_2 {
     position: absolute;
     top: 80px;
-    right: 0;
-    height: 600px;
+    right: 100px;
+    height: 400px;
     animation-name: hovering_2;
     animation-duration: 5s;
 }
@@ -216,22 +216,32 @@
     }
 
     #astro_1 {
-        height: 1000px;
-        right: 800px;
+        height: 1000px !important;
+        right: 800px !important;
     }
 
     #astro_2 {
-        height: 800px;
-        right: 200px;
+        height: 800px !important;
+        right: 200px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    #astro_1 {
+        top: 35%;
+        right: 310px;
+        height: 500px;
+    }
+
+    #astro_2 {
+        top: 25%;
+        right: 30px;
+        height: 400px;
     }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar.navbar-transparent .navbar-header {
-        text-align: center;
-    }
-
     #astro_1 {
         top: 500px;
         height: 500px;
@@ -281,18 +291,22 @@
     .card-enterprise .tier-cost {
         font-size: 54px !important;
     }
-
-    .card-deck .card {
-        margin: 10px !important;
-    }
 }
 
 /* Mobile */
 @media (min-width: 481px) and (max-width: 767px) {
     .navbar.navbar-transparent .navbar-header {
-        text-align: center;
+        /*text-align: center;*/
     }
 
+    .hs-caption {
+        padding-top: 16em !important;
+        margin-left: 2em;
+    }
+
+    .caption-content {
+        padding-top: 0;
+    }
 
     #astro_1, #astro_2 {
         max-width: 100vw;
@@ -301,14 +315,14 @@
 
     #astro_1 {
         top: 55%;
-        right: 25%;
-        height: 800px;
+        right: 45%;
+        height: 400px;
     }
 
     #astro_2 {
-        top: 45%;
-        right: 0;
-        height: 400px;
+        top: 50%;
+        right: 11%;
+        height: 300px;
     }
 
     @keyframes hovering_1 {
@@ -331,9 +345,13 @@
 
 /* Small mobile */
 @media screen and (max-width: 480px) {
-    .media-list {
-        margin-left: 0vw;
-        margin-right: 0vw;
+    .hs-caption {
+        padding-top: 16em !important;
+        margin-left: 2em;
+    }
+
+    .caption-content {
+        padding-top: 0;
     }
 
     #team .panel {
@@ -341,16 +359,17 @@
     }
 
     #astro_1 {
-        top: 420px;
-        width: 160px;
-        left: 100px;
-        height: inherit;
+        top: 50%;
+        height: 260px;
+        left: 10%;
+        animation-duration: 5s;
     }
 
     #astro_2 {
-        top: 436px;
-        width: 130px;
-        height: inherit;
+        height: 220px;
+        right: 10%;
+        top: 50%;
+        animation-duration: 5.5s;
     }
 
     .work-details-title, .tech-title, .pricing-details-title {
@@ -369,44 +388,40 @@
     .card-enterprise .tier-cost {
         font-size: 30px;
     }
+
+    .media-list {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .hs-title-size-3 {
+        font-size: 23px !important;
+    }
 }
 
 @media screen and (max-width: 369px) {
-    #astro_1 {
-        top: 420px;
-        left: 80px;
-        height: 170px;
+    .hs-title-size-3 {
+        font-size: 20px !important;
     }
 
-    #astro_2 {
-        top: 410px;
-        height: 150px;
-        right: 30px;
+    .hs-title-size-2 {
+        font-size: 15px;
     }
 
     .work-details-title, .tech-title, .pricing-details-title {
         font-size: 26px;
         font-weight: normal;
     }
-}
 
-@media screen and (max-width: 320px) {
     #astro_1 {
-        top: 420px;
-        width: 80px;
-        left: 80px;
+        left: 5% !important;
         animation-duration: 5s;
     }
 
     #astro_2 {
-        width: 60px;
-        right: 100px;
+        right: 5% !important;
         animation-duration: 5.5s;
-    }
-
-    .work-details-title, .tech-title, .pricing-details-title {
-        font-size: 26px;
-        font-weight: normal;
     }
 }
 
@@ -419,6 +434,7 @@
     cursor: pointer;
     margin-top: 4px;
     margin-bottom: -5px;
+
 
     /* Specifying this height makes transitions nice and links aligned properly */
 
@@ -438,10 +454,6 @@
 #ckcollab_logo_svg:hover {
     margin-top: 0;
     opacity: 1;
-}
-
-#ckcollab_logo_svg path {
-    /*stroke: red;*/
 }
 
 .navbar.navbar-transparent .navbar-nav > li > a {
@@ -498,13 +510,23 @@
     a #brand_draper:hover {
         margin-top: 25px;
     }
+
+    .navbar-transparent #ckcollab_logo_svg {
+        height: 300px;
+        margin-left: 0;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-custom {
         background: none;
         border: 0;
         border-bottom: 0 !important;
+    }
+
+    .navbar-transparent #ckcollab_logo_svg {
+        height: 175px;
+        margin-left: 2em;
     }
 
     #home {
@@ -862,14 +884,14 @@ a:hover > img {
 
 
 img.media-object {
-    height: 100px;
+    height: auto;
     width: 100px;
     max-width: 1000px;
 }
 
 .media-list {
-    margin-left: 25px;
-    margin-right: 50px;
+    margin: 0 auto;
+    max-width: 80%;
 }
 
 .media-left {
@@ -947,12 +969,6 @@ img.media-object {
 
 @media screen and (min-width: 2559px) {
 
-    .media-list {
-        margin-left: 250px;
-        margin-right: 250px;
-
-    }
-
     .col-xl-1 {
         width: 25% !important;
     }
@@ -1000,47 +1016,37 @@ img.media-object {
         justify-content: center;
     }
 
-    .media-list {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     .overlay {
         padding: 0 30px !important;
     }
 
+    .media-left {
+        padding-right: 10px;
+    }
+
+    img.media-object{
+        width: 60px !important;
+    }
 }
 
 @media screen and (min-width: 991px) {
 
-    .overlay.draper {
-        border-bottom-left-radius: 6px;
-    }
-
+    .overlay.draper,
     .overlay.draper::after {
         border-bottom-left-radius: 6px;
     }
 
-    .overlay.everfresh {
-        border-bottom-right-radius: 6px;
-    }
-
+    .overlay.everfresh,
     .overlay.everfresh::after {
         border-bottom-right-radius: 6px;
     }
 
-    .overlay.see-4c {
-        border-top-right-radius: 6px;
-    }
-
+    .overlay.see-4c,
     .overlay.see-4c::after {
         border-top-right-radius: 6px;
     }
 
-    .overlay.codalab {
-        border-top-left-radius: 6px;
-    }
-
+    .overlay.codalab,
     .overlay.codalab::after {
         border-top-left-radius: 6px;
     }
@@ -1070,6 +1076,7 @@ img.media-object {
     border: solid 1px gainsboro;
     border-radius: 8px;
     max-width: 550px;
+    min-width: 290px;
     box-shadow: 0 2px 2px 1px rgba(220, 220, 220, 0.56);
 }
 
@@ -1196,19 +1203,7 @@ img.media-object {
 
 @media (max-width: 2559px) and (min-width: 1150px) {
     .card {
-        margin: 10px 10px;
-    }
-
-    .media-list {
-        margin-left: 175px;
-        margin-right: 225px;
-    }
-}
-
-@media (max-width: 1149px) and (min-width: 992px) {
-    .media-list {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin: 10px;
     }
 }
 
@@ -1220,6 +1215,10 @@ img.media-object {
 
     .card {
         margin: 10px auto;
+    }
+
+    .media-list {
+        max-width: 95%;
     }
 
 }

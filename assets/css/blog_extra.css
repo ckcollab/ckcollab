@@ -36,6 +36,11 @@ header {
     margin-top: 40px;
 }
 
+.img-bordered {
+    border: 1px solid rgba(248, 214, 235, 0.8);
+    padding: 2px;
+}
+
 /* footer */
 .drop-us-a-line {
     font-style: italic;

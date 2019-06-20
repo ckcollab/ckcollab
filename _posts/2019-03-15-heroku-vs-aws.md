@@ -1,6 +1,5 @@
 ---
 title:  "Heroku vs AWS"
-excerpt_separator: <!--more-->
 author: eric
 ---
 

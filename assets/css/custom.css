@@ -882,6 +882,10 @@ a:hover > img {
     width: 100%; /* for some reason without this, see4c logo doesn't have width on my machine */
 }
 
+.img-bordered {
+    border: 1px solid rgba(248, 214, 235, 0.8);
+    padding: 2px;
+}
 
 img.media-object {
     height: auto;

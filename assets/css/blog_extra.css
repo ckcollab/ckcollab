@@ -36,7 +36,7 @@ header {
     margin-top: 40px;
 }
 
-.img-bordered {
+img.img-bordered, .img-bordered img {
     border: 1px solid rgba(248, 214, 235, 0.8);
     padding: 2px;
 }

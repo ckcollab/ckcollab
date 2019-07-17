@@ -20,19 +20,30 @@ asses kicked in jiu-jitsu, drilling out rusted bolts in an engine block, making 
 climbing the side of a mountain, leading guild raids in WoW, hunting elk, blasting each other in virtual reality,
 and so much more.
 
-Our home is beautiful Coeur d’Alene, Idaho, in the Innovation Den startup building.
+<div style="text-align: center;">
+    <img src="/assets/images/articles/kids_development.png" class="img-bordered">
+    <small><i>Eric working with a young programmer</i></small>
+</div>
 
-Our quick-pace attitude aligns best with fresh, disruptive ideas.
+Our home is beautiful Coeur d’Alene, Idaho, in the Innovation Den startup building. We want to grow with our community, 
+hopefully some day we help run computer camps for kids in the summer!
 
+Our rapid pace attitude aligns best with fresh, disruptive ideas.
 
-
-# Speed
+# Rapid
 
 Our emphasis is on rapid development processes that leverage the elegance of the Python programming language.
 Python is currently the fastest growing programming language in the world. The reason: *speed.*
 
 Not only will we get a product to deployment faster than our competition, that product will stand up to the load of thousands
 of users without flinching.
+
+<div style="text-align: center;">
+    <a href="{% post_url 2019-04-16-our-process %}">
+        <img src="/assets/images/articles/sprint-process.png" class="img-bordered">
+        <small><i>from our sprint process article</i></small>
+    </a>
+</div>
 
 
 # Reliable

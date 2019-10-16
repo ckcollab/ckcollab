@@ -4,9 +4,9 @@ layout: case_study
 permalink: /case_studies/coeurholdings
 published: true
 site-url: http://coeurholdings.com/
-desktop-mock: ../assets/images/CK%20Collab%20Placeholders/desktopCoeurHoldings.png
-phone-mock: ../assets/images/CK%20Collab%20Placeholders/phoneCoeurHoldings.png
-background-img: ../assets/images/CK Collab Placeholders/coeurholdingsPH.jpeg
+desktop-mock: /assets/images/CK%20Collab%20Placeholders/desktopCoeurHoldings.png
+phone-mock: /assets/images/CK%20Collab%20Placeholders/phoneCoeurHoldings.png
+background-img: /assets/images/CK Collab Placeholders/coeurholdingsPH.jpeg
 
 
 about_description: "

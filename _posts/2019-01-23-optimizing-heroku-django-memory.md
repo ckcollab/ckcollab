@@ -1,7 +1,7 @@
 ---
 title:  "Optimizing Heroku Django Memory"
 date: 2019-01-23 00:00:00 +0800
-author: eric
+author: eric carmichael
 ---
 
 

@@ -4,9 +4,9 @@ layout: case_study
 permalink: /case_studies/codalab
 published: true
 site-url: http://www.codalab.org/
-desktop-mock: ../assets/images/CK%20Collab%20Placeholders/codalabSmall.png
-phone-mock: ../assets/images/CK%20Collab%20Placeholders/phoneCodalab.png
-background-img: ../assets/images/CK Collab Placeholders/codalabPH.jpg
+desktop-mock: /assets/images/CK%20Collab%20Placeholders/codalabSmall.png
+phone-mock: /assets/images/CK%20Collab%20Placeholders/phoneCodalab.png
+background-img: /assets/images/CK Collab Placeholders/codalabPH.jpg
 
 about_description: "
 Codalab is a machine learning competition website that allows researchers and organizers

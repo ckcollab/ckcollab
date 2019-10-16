@@ -642,7 +642,7 @@ section h1 {
 }
 
 .brands img {
-    /*width: 64px;*/
+    /*width: 100px;*/
     /*height: 64px;*/
     margin: 10px;
 }
@@ -725,7 +725,7 @@ a:hover > img {
 }
 
 #what-we-do img {
-    width: 64px;
+    height: 64px;
 }
 
 /* Who for */
@@ -939,6 +939,51 @@ img.media-object {
     filter: invert(0.1) grayscale(100%) contrast(1);
 }
 
+.mgm_resorts .client-logo {
+    filter: invert(0.1) grayscale(100%) contrast(1);
+}
+
+
+
+img.medcurio-logo{
+    transform: scale(.7)
+}
+img.medcurio-logo.special{
+    position: relative;
+}
+img.medcurio-logo.special2{
+    position: relative;
+    top: -30px;
+}
+.overlay.medcurio:after{
+    content: '';
+    background-color: rgba(34, 5, 103, 0.47);
+}
+
+.overlay.mgm_resorts:after{
+    content: '';
+    background-color: rgba(0, 128, 0, 0.42);
+}
+
+.overlay.findagame:after{
+    content: '';
+    background-color: rgba(178, 14, 181, 0.5);
+
+}
+.overlay:hover> img.medcurio-logo{
+    filter: none;
+    transform: scale(.8);
+    transition: all 350ms ease-in-out;
+    mix-blend-mode: screen;
+}
+
+.overlay:hover> img.findagame{
+    filter: invert(0.1) grayscale(100%) contrast(0) opacity(1);
+    mix-blend-mode: color-dodge;
+    opacity: 1 !important;
+
+}
+
 .client-logo {
     z-index: 3;
     filter: invert(0.1) grayscale(100%) contrast(0);
@@ -1015,7 +1060,17 @@ img.media-object {
     .overlay {
         padding: 0 200px !important;
     }
+    .overlay.medcurio{
+        padding: 0 210px !important;
+    }
 
+}
+
+@media screen and (min-width: 1199px){
+
+    .overlay.medcurio{
+        padding-top: 25px !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1026,6 +1081,9 @@ img.media-object {
 
     .overlay {
         padding: 0 30px !important;
+    }
+    .overlay.medcurio{
+        padding: 0 200px !important;
     }
 
     .media-left {
@@ -1057,6 +1115,9 @@ img.media-object {
     .overlay.codalab,
     .overlay.codalab::after {
         border-top-left-radius: 6px;
+    }
+    .medcurio{
+        padding-top: 45px !important;
     }
 }
 
@@ -1233,4 +1294,126 @@ img.media-object {
 
 .contact-container {
     width: inherit !important;
+}
+.slider{
+    background:
+    url("/assets/images/ckc_bg-min.png");
+    height: 300px;
+    position: relative;
+
+}
+.Technologies .slide{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,255,.2);
+    height: 300px;
+}
+.Companies .slide{
+    box-shadow: inset 0 0 0 1000px rgba(0,250,30,.2);
+    height: 100%;
+}
+.Projects .slide{
+    box-shadow: inset 0 0 0 1000px rgba(178, 14, 181, 0.4);
+    height: 300px;
+
+}
+
+
+.slick-next::before, .slick-prev::before {
+    color: #ef6d7e;
+    opacity: 1;
+    font-size: 40px;
+}
+
+@keyframes custom-flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: .2;
+    }
+}
+
+.slick-next:hover, .slick-prev:hover{
+    animation: custom-flash 1.5s;
+    animation-iteration-count: infinite;
+}
+.slick-next::before{
+    content: '\232A';
+    position: relative;
+    left: 2px;
+}
+.slick-prev::before{
+    content: '\2329';
+    right: 50px;
+
+    position: relative;
+}
+
+
+body{
+    line-height: 2 !important;
+}
+
+.ui.tab.active{
+    display: contents;
+
+}
+
+.ui.tabular.menu :not(.active).item:hover{
+    background-color: #ef6d7e;
+    transition: background-color .3s ease-in-out, color .1s ease-in-out;
+    color: white;
+    font-family: "Overpass", sans-serif;
+
+
+}
+
+.ui.tabular.menu .active.item{
+    background-color:#9ddbff;
+    transition: background-color .3s ease-in-out;
+    font-family: "Overpass", sans-serif;
+
+
+}
+.ui.tabular.menu :not(.active).item{
+    background-color: #e8f7ff;
+    transition: background-color .3s ease-in-out;
+    font-family: "Overpass", sans-serif;
+
+
+
+}
+.ui.button{
+    background-color: #9ddbff;
+    transition: background-color .3s ease-in-out, color .1s ease-in-out;
+
+    font-family: "Overpass", sans-serif;
+
+}
+
+.ui.button:hover{
+    background-color: #ef6d7e;
+    transition: color .1s ease-in-out, background-color .3s ease-in-out;
+    color: white;
+
+}
+
+.grouped{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.grouped:hover{
+    cursor: pointer;
+    animation: pulse 1s ease-in-out;
+}
+
+.techs{
+    margin: 10px 20px 10px 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
 }

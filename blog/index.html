@@ -70,32 +70,32 @@ layout: default
 <div class="bootstrap-iso">
     <ul class="media-list">
         {% for post in paginator.posts %}
-            {% assign author = site.data.authors[post.author] %}
-            <li class="media">
-                <div class="media-left">
-                    {% if author %}
-                        <img class="media-object img-circle" src="{{author.avatar_url}}">
-                    {% endif %}
-                </div>
-                <div class="media-body">
-                    <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                    {{ post.excerpt }}
-                    <span class="smaller">
-                        {{ author.name }} wrote this on {{ post.date | date: "%-d %B %Y" }}
+        {% assign author = site.data.authors[post.author] %}
+        <li class="media">
+            <div class="media-left">
+                {% if author %}
+                <img class="media-object img-circle" src="{{author.avatar_url}}">
+                {% endif %}
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                {{ post.excerpt }}
+                <span class="smaller">
+    <a href="/author/{{author.name}}">{{ author.name }} wrote this on {{ post.date | date: "%-d %B %Y" }}</a>
                     </span>
-                </div>
-            </li>
+            </div>
+        </li>
         {% endfor %}
     </ul>
 </div>
 
 <div class="pagination">
     {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">
-            Previous
-        </a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+        Previous
+    </a>
     {% else %}
-        <span class="previous">Previous</span>
+    <span class="previous">Previous</span>
     {% endif %}
 
     <span class="page_number ">
@@ -103,8 +103,8 @@ layout: default
     </span>
 
     {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
     {% else %}
-        <span class="next ">Next</span>
+    <span class="next ">Next</span>
     {% endif %}
 </div>

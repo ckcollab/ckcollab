@@ -642,14 +642,7 @@ section h1 {
 }
 
 .brands img {
-    /*width: 100px;*/
-    /*height: 64px;*/
     margin: 10px;
-}
-
-a > img {
-    /*border: 3px outset transparent;*/
-    /*box-sizing: border-box;*/
 }
 
 a:hover > img {
@@ -1289,7 +1282,6 @@ img.medcurio-logo.special2{
     .media-list {
         max-width: 95%;
     }
-
 }
 
 .contact-container {

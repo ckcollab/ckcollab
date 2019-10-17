@@ -29,8 +29,6 @@ layout: author
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Bootstrap core CSS -->
-    <!--    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}">-->
-    <!--    <link rel="stylesheet" href="{{ '/assets/css/ckc_style.css?v=' | append: site.github.build_revision | relative_url }}">-->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -44,16 +42,11 @@ layout: author
 <body>
 <header class="page-header" role="banner">
     <h1 class="project-name"><a href="/">CKC</a></h1>
-    <!-- This is a bit tacky with our new longer description =\ -->
-    <!--<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>-->
+
     <h2 class="project-tagline">we ♡ web development </h2>
 </header>
 {% assign name = page.title | downcase %}
 <main id="content" class="main-content" role="main">
-        <!--<div class="sixteen wide column ui grid">-->
-            <!--<div class="four wide column">-->
-                <!---->
-            <!--</div>-->
             <div class="sixteen wide column">
                 <div class="ui link card">
                     <div class="header image">
@@ -69,25 +62,20 @@ layout: author
                     </div>
                 </div>
                     {% for blog in site.posts reversed %}
-                    {% if blog.author == name %}
-                    <div class="">
-                        <a href="{{blog.url}}"><h3>{{ blog.title }}</h3></a>
-                    </div>
-
-                    {{ blog.excerpt }}
-                    <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
-                    <h6 style="margin-top: 0px;">Posted on {{ blog.date | date: "%Y %h" }}</h6>
-
-
-                    {% endif %}
+                        {% if blog.author == name %}
+                            <div class="">
+                                <a href="{{blog.url}}"><h3>{{ blog.title }}</h3></a>
+                            </div>
+                            {{ blog.excerpt }}
+                            <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
+                            <h6 style="margin-top: 0px;">Posted on {{ blog.date | date: "%Y %h" }}</h6>
+                        {% endif %}
                     {% endfor %}
             </div>
 
     </div>
 
-
     <!-- Look the author details up from the site config. -->
-
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- 1 -->
     <ins class="adsbygoogle"
@@ -99,7 +87,6 @@ layout: author
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-
 
     <footer class="site-footer">
         <p class="drop-us-a-line">drop me a line, <a href="mailto:hello@ckcollab.com">{{page.email}}</a></p>

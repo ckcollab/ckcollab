@@ -26,8 +26,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Bootstrap core CSS -->
-    <!--    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.min.css?v=' | append: site.github.build_revision | relative_url }}">-->
-    <!--    <link rel="stylesheet" href="{{ '/assets/css/ckc_style.css?v=' | append: site.github.build_revision | relative_url }}">-->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -36,8 +34,7 @@
 <body>
 <header class="page-header" role="banner">
     <h1 class="project-name"><a href="/">CKC</a></h1>
-    <!-- This is a bit tacky with our new longer description =\ -->
-    <!--<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>-->
+
     <h2 class="project-tagline">we ♡ web development</h2>
 </header>
 
@@ -53,7 +50,7 @@
     <div class="row">
         <a href="/author/{{author.name}}">
             <img src="{{author.avatar_url}}" style="height: 50px; border-radius: 15px;"><br>
-        {{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}
+            {{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}
         </a>
     </div>
 

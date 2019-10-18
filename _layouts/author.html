@@ -1,0 +1,79 @@
+---
+layout: author
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: ' en-US' }}">
+<head>
+
+    {% seo %}
+    <meta property="og:image" content="https://ckcollab.com/assets/images/ckclogo.png"/>
+
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/author.css '}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
+</head>
+<body>
+    <header class="page-header" role="banner">
+        <h1 class="project-name"><a href="/">CKC</a></h1>
+        <h2 class="project-tagline">we ♡ web development </h2>
+    </header>
+    {% assign name = page.title | downcase %}
+    <main id="content" class="main-content" role="main">
+        <div class="sixteen wide column">
+            <div class="ui link card">
+                <div class="header image">
+                    <img src="{{page.avatar}}">
+                </div>
+
+                <div class="content">
+                    {{ page.title }}
+                    <a class="right floated" href="//{{page.github}}"><i class="github icon"></i></a>
+                    {% if page.website %}
+                        <a class="right floated" href="//{{page.website}}"><i class="bookmark icon"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% for blog in site.posts reversed %}
+                {% if blog.author == name %}
+                    <div class="">
+                        <a href="{{blog.url}}"><h3>{{ blog.title }}</h3></a>
+                    </div>
+                    {{ blog.excerpt }}
+                    <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
+                    <h6>Posted on {{ blog.date | date: "%Y %h" }}</h6>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <footer class="site-footer">
+            <p class="drop-us-a-line">Drop Me A Line, <a href="mailto:{{page.email}}">{{page.email}}</a></p>
+        </footer>
+    </main>
+</body>
+

@@ -23,12 +23,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
-    <link rel="stylesheet" href="../assets/css/ckc_style.css">
-    <link rel="stylesheet" href="../assets/css/custom.css">
-    <link rel="stylesheet" href="../assets/css/case_study.css">
-    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/et-line-font.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/ckc_style.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/case_study.css">
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/et-line-font.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
@@ -36,7 +36,7 @@
 <body>
 
 <!-- NAVIGATION -->
-<nav style="background-color: #f06b7c;" class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand>img" href="../">
@@ -106,7 +106,7 @@
 
         <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a style="color: white; padding: 18px;" href="mailto:hello@ckcollab.com">drop us a line
+                <li><a class="email-nav" href="mailto:hello@ckcollab.com">drop us a line
                     hello@ckcollab.com</a></li>
             </ul>
         </div>
@@ -303,6 +303,5 @@
             this.style.height = this.scrollHeight + 'px';
         }, false);
     }
-
     expandTextarea('txtarea');
 </script>

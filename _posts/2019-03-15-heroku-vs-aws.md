@@ -1,6 +1,6 @@
 ---
 title:  "Heroku vs AWS"
-author: eric
+author: eric carmichael
 ---
 
 Heroku.. almost a bad word in many circles. It's expensive, polished, and

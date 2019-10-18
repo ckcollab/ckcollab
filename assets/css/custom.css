@@ -642,14 +642,7 @@ section h1 {
 }
 
 .brands img {
-    /*width: 64px;*/
-    /*height: 64px;*/
     margin: 10px;
-}
-
-a > img {
-    /*border: 3px outset transparent;*/
-    /*box-sizing: border-box;*/
 }
 
 a:hover > img {
@@ -725,7 +718,7 @@ a:hover > img {
 }
 
 #what-we-do img {
-    width: 64px;
+    height: 64px;
 }
 
 /* Who for */
@@ -939,6 +932,49 @@ img.media-object {
     filter: invert(0.1) grayscale(100%) contrast(1);
 }
 
+.mgm_resorts .client-logo {
+    filter: invert(0.1) grayscale(100%) contrast(1);
+}
+
+img.medcurio-logo{
+    transform: scale(.7)
+}
+img.medcurio-logo.special{
+    position: relative;
+}
+img.medcurio-logo.special2{
+    position: relative;
+    top: -30px;
+}
+.overlay.medcurio:after{
+    content: '';
+    background-color: rgba(34, 5, 103, 0.47);
+}
+
+.overlay.mgm_resorts:after{
+    content: '';
+    background-color: rgba(0, 128, 0, 0.42);
+}
+
+.overlay.findagame:after{
+    content: '';
+    background-color: rgba(178, 14, 181, 0.5);
+
+}
+.overlay:hover> img.medcurio-logo{
+    filter: none;
+    transform: scale(.8);
+    transition: all 350ms ease-in-out;
+    mix-blend-mode: screen;
+}
+
+.overlay:hover> img.findagame{
+    filter: invert(0.1) grayscale(100%) contrast(0) opacity(1);
+    mix-blend-mode: color-dodge;
+    opacity: 1 !important;
+
+}
+
 .client-logo {
     z-index: 3;
     filter: invert(0.1) grayscale(100%) contrast(0);
@@ -1015,7 +1051,17 @@ img.media-object {
     .overlay {
         padding: 0 200px !important;
     }
+    .overlay.medcurio{
+        padding: 0 210px !important;
+    }
 
+}
+
+@media screen and (min-width: 1199px){
+
+    .overlay.medcurio{
+        padding-top: 25px !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1026,6 +1072,9 @@ img.media-object {
 
     .overlay {
         padding: 0 30px !important;
+    }
+    .overlay.medcurio{
+        padding: 0 200px !important;
     }
 
     .media-left {
@@ -1057,6 +1106,9 @@ img.media-object {
     .overlay.codalab,
     .overlay.codalab::after {
         border-top-left-radius: 6px;
+    }
+    .medcurio{
+        padding-top: 45px !important;
     }
 }
 
@@ -1228,7 +1280,6 @@ img.media-object {
     .media-list {
         max-width: 95%;
     }
-
 }
 
 .contact-container {

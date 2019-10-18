@@ -1448,34 +1448,19 @@
 
                         <div class="brands">
                             <a href="https://www.djangoproject.com/" target="_blank">
-                                <img src="assets/images/django.png"/>
+                                <img class="img-fluid" src="assets/images/django.png"/>
                             </a>
                             <a href="https://www.python.org/" target="_blank">
-                                <img src="assets/images/python.png"/>
+                                <img class="img-fluid" src="assets/images/python.png"/>
                             </a>
-                            <a href="http://riotjs.com/" target="_blank">
-                                <img src="assets/images/riot.svg"/>
-                            </a>
-                            <a href="http://www.celeryproject.org/" target="_blank">
-                                <img src="assets/images/celery.png"/>
-                            </a>
-                            <a href="https://www.postgresql.org/" target="_blank">
-                                <img src="assets/images/postgres.png"/>
+                            <a href="https://www.vuejs.org/" target="_blank">
+                                <img src="assets/images/vuejs.svg">
                             </a>
                             <a href="https://heroku.com" target="_blank">
-                                <img src="assets/images/heroku.png"/>
-                            </a>
-                            <a href="https://www.elastic.co/" target="_blank">
-                                <img src="assets/images/elasticsearch.png"/>
-                            </a>
-                            <a href="https://aws.amazon.com/" target="_blank">
-                                <img src="assets/images/aws.png"/>
-                            </a>
-                            <a href="https://bitcoin.org/" target="_blank">
-                                <img src="assets/images/bitcoin.png"/>
+                                <img class="img-fluid" src="assets/images/heroku.png"/>
                             </a>
                             <a href="https://lightning.network/" target="_blank">
-                                <img src="assets/images/lightning-network.png"/>
+                                <img class="img-fluid" src="assets/images/lightning-network.png"/>
                             </a>
                         </div>
                     </div>
@@ -1932,22 +1917,25 @@
                 <h2 class="work-details-title font-alt">Recent blog posts</h2>
             </div>
 
-
             <ul class="media-list">
                 {% for post in site.posts limit:5 %}
-                {% assign author = site.data.authors[post.author] %}
-                <li class="media" style="overflow: inherit;">
-                    <div class="media-left">
-                        {% if author %}
-                            <img class="media-object img-circle" src="{{author.avatar_url}}">
-                        {% endif %}
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                        {{ post.excerpt }}
-                        <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
-                    </div>
-                </li>
+                    {% assign author = site.data.authors[post.author] %}
+                    <li class="media" style="overflow: inherit;">
+                        <div class="media-left">
+                            {% if author %}
+                                <img class="media-object img-circle" src="{{author.avatar_url}}">
+                            {% endif %}
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">
+                                <a href="{{ post.url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h3>
+                            {{ post.excerpt }}
+                            <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
+                        </div>
+                    </li>
                 {% endfor %}
             </ul>
 
@@ -1963,10 +1951,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-
                     <div class="container contact-container">
-
-
                         <div class="row footer-captions">
                             <div class="col-sm-4">
                                 <div class="content-box">
@@ -2030,8 +2015,6 @@
             </div>
         </div>
     </section>
-
-
 
 </div>
 <!-- /WRAPPER -->

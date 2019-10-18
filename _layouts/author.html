@@ -67,7 +67,7 @@ layout: author
                             </div>
                             {{ blog.excerpt }}
                             <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
-                            <h6 style="margin-top: 0px;">Posted on {{ blog.date | date: "%Y %h" }}</h6>
+                            <h6>Posted on {{ blog.date | date: "%Y %h" }}</h6>
                         {% endif %}
                     {% endfor %}
             </div>

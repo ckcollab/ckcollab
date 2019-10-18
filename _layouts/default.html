@@ -49,7 +49,7 @@
     {% if author %}
     <div class="row">
         <a href="/author/{{author.name}}">
-            <img src="{{author.avatar_url}}" style="height: 50px; border-radius: 15px;"><br>
+            <img class="blog-avatar" src="{{author.avatar_url}}"><br>
             {{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}
         </a>
     </div>

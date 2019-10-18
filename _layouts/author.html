@@ -40,44 +40,42 @@ layout: author
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
 </head>
 <body>
-<header class="page-header" role="banner">
-    <h1 class="project-name"><a href="/">CKC</a></h1>
-    <h2 class="project-tagline">we ♡ web development </h2>
-</header>
-{% assign name = page.title | downcase %}
-<main id="content" class="main-content" role="main">
-            <div class="sixteen wide column">
-                <div class="ui link card">
-                    <div class="header image">
-                        <img src="{{page.avatar}}">
-                    </div>
-
-                    <div class="content">
-                        {{ page.title }}
-                        <a class="right floated" href="//{{page.github}}"><i class="github icon"></i></a>
-                        {% if page.website %}
-                        <a class="right floated" href="//{{page.website}}"><i class="bookmark icon"></i></a>
-                        {% endif %}
-                    </div>
+    <header class="page-header" role="banner">
+        <h1 class="project-name"><a href="/">CKC</a></h1>
+        <h2 class="project-tagline">we ♡ web development </h2>
+    </header>
+    {% assign name = page.title | downcase %}
+    <main id="content" class="main-content" role="main">
+        <div class="sixteen wide column">
+            <div class="ui link card">
+                <div class="header image">
+                    <img src="{{page.avatar}}">
                 </div>
-                    {% for blog in site.posts reversed %}
-                        {% if blog.author == name %}
-                            <div class="">
-                                <a href="{{blog.url}}"><h3>{{ blog.title }}</h3></a>
-                            </div>
-                            {{ blog.excerpt }}
-                            <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
-                            <h6>Posted on {{ blog.date | date: "%Y %h" }}</h6>
-                        {% endif %}
-                    {% endfor %}
+
+                <div class="content">
+                    {{ page.title }}
+                    <a class="right floated" href="//{{page.github}}"><i class="github icon"></i></a>
+                    {% if page.website %}
+                        <a class="right floated" href="//{{page.website}}"><i class="bookmark icon"></i></a>
+                    {% endif %}
+                </div>
             </div>
+            {% for blog in site.posts reversed %}
+                {% if blog.author == name %}
+                    <div class="">
+                        <a href="{{blog.url}}"><h3>{{ blog.title }}</h3></a>
+                    </div>
+                    {{ blog.excerpt }}
+                    <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
+                    <h6>Posted on {{ blog.date | date: "%Y %h" }}</h6>
+                {% endif %}
+            {% endfor %}
+        </div>
 
-    </div>
 
-
-    <footer class="site-footer">
-        <p class="drop-us-a-line">Drop Me A Line, <a href="mailto:{{page.email}}">{{page.email}}</a></p>
-    </footer>
-</main>
+        <footer class="site-footer">
+            <p class="drop-us-a-line">Drop Me A Line, <a href="mailto:{{page.email}}">{{page.email}}</a></p>
+        </footer>
+    </main>
 </body>
 

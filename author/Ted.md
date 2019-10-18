@@ -11,7 +11,6 @@ about: "I'm Brendan but everyone calls me Ted. I specialize in front-end design 
 
 
 
-websites: [
-www.github.BrendanMyers88
-]
+github: "github.com/BrendanMyers88"
+
 ---

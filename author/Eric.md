@@ -11,7 +11,7 @@ about: "Eric is the bossman of CKC, passionate about web and software developmen
 beautiful wife who he is raising two children with."
 
 
-github: "www.github.ckcollab.com"
+github: "github.com/ckcollab"
 website: "www.ericcarmichael.com"
 
 ---

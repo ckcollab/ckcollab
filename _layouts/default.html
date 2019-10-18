@@ -49,8 +49,8 @@
         {% if author %}
             <div class="row">
                 <a href="/author/{{author.name}}">
-                    <img class="blog-avatar" src="{{author.avatar_url}}"><br>
-                    {{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}
+                    <img class="blog-avatar" src="{{author.avatar_url}}" align="left">
+                    <p class="author-link">{{ author.name }} wrote this on {{ page.date | date: "%-d %B %Y" }}</p>
                 </a>
             </div>
         {% endif %}

@@ -10,7 +10,6 @@ email: jimmy@ckcollab.com
 about: "Jimmy is a math wizard and passionate software developer, he graduated from Northwest 
 University with a Bachelor of Arts in Biblical Literature."
 
-websites: [
-www.github.com/jimmykodes
-]
+github: "github.com/jimmykodes"
+
 ---

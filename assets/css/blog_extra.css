@@ -54,3 +54,8 @@ img.img-bordered, .img-bordered img {
     height: 50px;
     border-radius: 15px;
 }
+
+.author-link{
+    padding-left: 60px;
+    padding-top: 10px;
+}

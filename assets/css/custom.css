@@ -936,8 +936,6 @@ img.media-object {
     filter: invert(0.1) grayscale(100%) contrast(1);
 }
 
-
-
 img.medcurio-logo{
     transform: scale(.7)
 }
@@ -1287,5 +1285,3 @@ img.medcurio-logo.special2{
 .contact-container {
     width: inherit !important;
 }
-
-

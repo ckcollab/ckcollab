@@ -1919,11 +1919,11 @@
 
             <ul class="media-list">
                 {% for post in site.posts limit:5 %}
-                    {% assign author = site.data.authors[post.author] %}
+                    {% assign author = site.authors | where: 'short_name', post.author | first %}
                     <li class="media" style="overflow: inherit;">
                         <div class="media-left">
                             {% if author %}
-                                <img class="media-object img-circle" src="{{author.avatar_url}}">
+                                <img class="media-object img-circle" src="{{ author.avatar }}">
                             {% endif %}
                         </div>
                         <div class="media-body">

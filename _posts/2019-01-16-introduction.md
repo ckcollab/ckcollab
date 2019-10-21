@@ -1,7 +1,7 @@
 ---
 title:  "Who are we?"
 date: 2019-01-16 00:00:00 +0800
-author: eric carmichael
+author: eric
 ---
 
 

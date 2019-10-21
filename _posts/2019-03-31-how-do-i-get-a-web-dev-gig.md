@@ -1,7 +1,7 @@
 ---
 title:  "How do I get a web dev gig?"
 date: 2019-03-31 00:00:00 +0800
-author: eric carmichael
+author: eric
 ---
 
 I thought I'd take a moment today to talk about what it takes to make it as a lowly web 

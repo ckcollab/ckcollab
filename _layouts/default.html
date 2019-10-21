@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: ' en-US' }}">
 <head>
-
     {% seo %}
     <meta property="og:image" content="https://ckcollab.com/assets/images/ckclogo.png"/>
 
     {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-    </script>
+            gtag('js', new Date());
+            gtag('config', '{{ site.google_analytics }}');
+        </script>
     {% endif %}
+
     <meta charset="UTF-8">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,65 +27,18 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/author.css'}}">
+
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
 </head>
 <body>
     <header class="page-header" role="banner">
         <h1 class="project-name"><a href="/">CKC</a></h1>
-
         <h2 class="project-tagline">we ♡ web development</h2>
     </header>
 
     <main id="content" class="main-content" role="main">
-        <h1 class="post-title">{{ page.title }}</h1>
-
         {{ content }}
-
-        <!-- Look the author details up from the site config. -->
-        {% assign author = site.data.authors[page.author] %}
-
-        {% if author %}
-            <div class="row">
-                <a href="/author/{{author.name}}">
-                    <img class="blog-avatar" src="{{author.avatar_url}}" align="left">
-                    <p class="author-link">
-                        {{ author.name }}</a>
-                        wrote this on {{ page.date | date: "%-d %B %Y" }}
-                    </p>
-
-            </div>
-        {% endif %}
-
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Ad Unit #1 -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1425635593332114"
-             data-ad-slot="2488181675"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = "https://ckcollab.com{{ page.url | absolute }}"
-                this.page.identifier = "{{ page.url | absolute }}"
-                this.page.title = "{{ page.title }}"
-            };
-
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://ck-collab.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>
-            Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
 
         <footer class="site-footer">
             <p class="drop-us-a-line">drop us a line, <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a></p>

@@ -519,18 +519,18 @@
 
 @media (max-width: 767px) {
 
-    .client-logo-medcurio1, .client-logo-medcurio2{
+    .medcurio-image, .medcurio-name {
         position: relative;
         transform: scale(.7);
         filter: invert(.6);
         left: 15% !important;
     }
 
-    .client-logo-medcurio1{
+    .medcurio-image{
         top: -45px !important;
     }
 
-    .client-logo-medcurio2{
+    .medcurio-name{
         top: -135px !important;
     }
 

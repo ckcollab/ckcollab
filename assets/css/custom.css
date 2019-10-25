@@ -518,6 +518,28 @@
 }
 
 @media (max-width: 767px) {
+
+    .client-logo-medcurio1, .client-logo-medcurio2{
+        position: relative;
+        transform: scale(.7);
+        filter: invert(.6);
+        left: 15% !important;
+    }
+
+    .client-logo-medcurio1{
+        top: -45px !important;
+    }
+
+    .client-logo-medcurio2{
+        top: -135px !important;
+    }
+
+    .hagadone{
+        height: 225px !important;
+        width: auto;
+        filter: drop-shadow(0px 0px 1px #bbb);
+    }
+
     .navbar-custom {
         background: none;
         border: 0;
@@ -939,13 +961,40 @@ img.media-object {
 img.medcurio-logo{
     transform: scale(.7)
 }
+
 img.medcurio-logo.special{
     position: relative;
 }
+
 img.medcurio-logo.special2{
     position: relative;
     top: -30px;
 }
+
+a.medcurio-wrapper{
+    display: inline-grid !important;
+}
+
+.client-logo-medcurio1, .client-logo-medcurio2{
+    position: relative;
+    transform: scale(.7);
+    filter: invert(.6);
+}
+
+.client-logo-medcurio1{
+    top: -25px;
+}
+
+.client-logo-medcurio2{
+    top: -60px;
+}
+
+.hagadone{
+    height: 70px;
+    width: auto !important;
+    filter: drop-shadow(0px 0px 1px #bbb);
+}
+
 .overlay.medcurio:after{
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
@@ -972,7 +1021,6 @@ img.medcurio-logo.special2{
     filter: invert(0.1) grayscale(100%) contrast(0) opacity(1);
     mix-blend-mode: color-dodge;
     opacity: 1 !important;
-
 }
 
 .client-logo {
@@ -1284,4 +1332,13 @@ img.medcurio-logo.special2{
 
 .contact-container {
     width: inherit !important;
+}
+
+.shadow{
+    filter: drop-shadow(0px 0px 1px #bbb);
+}
+
+.couer_holdings{
+    position: relative;
+    top: 15px;
 }

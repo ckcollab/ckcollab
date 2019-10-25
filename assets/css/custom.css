@@ -975,17 +975,17 @@ a.medcurio-wrapper{
     display: inline-grid !important;
 }
 
-.client-logo-medcurio1, .client-logo-medcurio2{
+.medcurio-image, .medcurio-name{
     position: relative;
     transform: scale(.7);
     filter: invert(.6);
 }
 
-.client-logo-medcurio1{
+.medcurio-image{
     top: -25px;
 }
 
-.client-logo-medcurio2{
+.medcurio-name{
     top: -60px;
 }
 
@@ -1336,6 +1336,11 @@ a.medcurio-wrapper{
 
 .shadow{
     filter: drop-shadow(0px 0px 1px #bbb);
+
+}
+
+#brand_draper{
+    filter: invert(.3) drop-shadow(0px 0px 1px #bbb)
 }
 
 .couer_holdings{

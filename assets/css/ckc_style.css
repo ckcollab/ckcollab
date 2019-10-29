@@ -1053,7 +1053,8 @@ opacity: 1;
 /* Portfolio single */
 
 .work-details {
-	margin: 0 0 20px;
+    margin: 0 0 20px;
+    padding-top: 25px;
 }
 
 .work-details-title {

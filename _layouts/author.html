@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/author.css'}}">
+
+<div class="sixteen wide column">
+    <!--
+    <div class="ui link card">
+        <div class="header image">
+            <img src="{{page.avatar}}">
+        </div>
+
+        <div class="content">
+            {{ page.title }}
+            <a class="right floated" href="https://github.com/{{ page.github }}"><i class="github icon"></i></a>
+            {% if page.website %}
+                <a class="right floated" href="{{ page.website }}"><i class="bookmark icon"></i></a>
+            {% endif %}
+        </div>
+    </div>
+    -->
+    <h1>{{ page.title }}'s posts</h1>
+
+    {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+    {% for blog in filtered_posts %}
+        <div>
+            <a href="{{ blog.url }}"><h3>{{ blog.title }}</h3></a>
+        </div>
+        {{ blog.excerpt }}
+        <a class="ui inverted primary button right floated" href="{{ blog.url }}">read more...</a>
+        <h6>Posted on {{ blog.date | date: "%Y %h" }}</h6>
+    {% endfor %}
+</div>

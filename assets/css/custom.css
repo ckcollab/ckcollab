@@ -1291,6 +1291,9 @@ img.media-object {
 }
 
 .blog-container{
-    text-align: center;
     padding: 50px 0px;
+}
+
+#who-for{
+    text-align: center;
 }

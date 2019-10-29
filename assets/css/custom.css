@@ -500,15 +500,7 @@
     }
 
     #who-for img {
-        width: 150px;
-    }
-
-    #brand_draper {
-        margin-top: 30px;
-    }
-
-    a #brand_draper:hover {
-        margin-top: 25px;
+        width: 115px;
     }
 
     .navbar-transparent #ckcollab_logo_svg {
@@ -518,6 +510,18 @@
 }
 
 @media (max-width: 767px) {
+
+    .hagadone{
+        height: 165px !important;
+        width: auto !important;
+        filter: drop-shadow(0px 0px 1px #bbb);
+    }
+
+    .medcurio-image{
+        height: 150px !important;
+        width: auto !important;
+    }
+
     .navbar-custom {
         background: none;
         border: 0;
@@ -539,6 +543,7 @@
 
     #who-for img {
         width: 65%;
+        height: auto;
         padding-bottom: 35px;
     }
 
@@ -642,36 +647,32 @@ section h1 {
 }
 
 .brands img {
-    margin: 10px;
+    margin: 20px 50px;
 }
 
 a:hover > img {
-    margin-top: 5px;
-    margin-bottom: 15px;
-
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    position: relative;
+    transform: translateY(-10px);
+    transition-duration: .3s;
 }
 
 /******************************************************************************
  Description
  *****************************************************************************/
 #top-description {
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
-#top-description .panel a {
+.panel a {
     color: rgb(27, 60, 125);
 }
 
-#top-description .panel-body {
+.panel-body {
     position: relative;
     text-align: center;
 }
 
-#top-description .panel-body img {
+.panel-body img {
     height: 328px;
     text-align: center;
 }
@@ -713,9 +714,6 @@ a:hover > img {
 }
 
 /* What we do */
-#what-we-do {
-    padding-bottom: 150px;
-}
 
 #what-we-do img {
     height: 64px;
@@ -723,7 +721,7 @@ a:hover > img {
 
 /* Who for */
 #who-for a {
-    display: block;
+    width: 80px;
     margin-bottom: 20px;
 }
 
@@ -936,16 +934,12 @@ img.media-object {
     filter: invert(0.1) grayscale(100%) contrast(1);
 }
 
-img.medcurio-logo{
-    transform: scale(.7)
+.hagadone{
+    height: 70px;
+    width: auto !important;
+    filter: drop-shadow(0px 0px 1px #bbb);
 }
-img.medcurio-logo.special{
-    position: relative;
-}
-img.medcurio-logo.special2{
-    position: relative;
-    top: -30px;
-}
+
 .overlay.medcurio:after{
     content: '';
     background-color: rgba(34, 5, 103, 0.47);
@@ -972,7 +966,6 @@ img.medcurio-logo.special2{
     filter: invert(0.1) grayscale(100%) contrast(0) opacity(1);
     mix-blend-mode: color-dodge;
     opacity: 1 !important;
-
 }
 
 .client-logo {
@@ -988,10 +981,6 @@ img.medcurio-logo.special2{
     transform: scale(1.05);
     transition: all 350ms ease-in-out;
     mix-blend-mode: unset;
-}
-
-#team {
-    padding-top: 100px;
 }
 
 #team .panel {
@@ -1054,7 +1043,6 @@ img.medcurio-logo.special2{
     .overlay.medcurio{
         padding: 0 210px !important;
     }
-
 }
 
 @media screen and (min-width: 1199px){
@@ -1092,7 +1080,6 @@ img.medcurio-logo.special2{
     .overlay.draper::after {
         border-bottom-left-radius: 6px;
     }
-
     .overlay.everfresh,
     .overlay.everfresh::after {
         border-bottom-right-radius: 6px;
@@ -1114,7 +1101,6 @@ img.medcurio-logo.special2{
 
 /* ---------- PRICING TIERS ------------ */
 .pricing-tiers {
-    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -1284,4 +1270,27 @@ img.medcurio-logo.special2{
 
 .contact-container {
     width: inherit !important;
+}
+
+.shadow{
+    filter: drop-shadow(0px 0px 1px #bbb);
+
+}
+
+#brand_draper{
+    filter: invert(.3) drop-shadow(0px 0px 1px #bbb)
+}
+
+.couer_holdings{
+    position: relative;
+    top: 15px;
+}
+
+.medcurio-image{
+    filter: invert(.6);
+}
+
+.blog-container{
+    text-align: center;
+    padding: 50px 0px;
 }

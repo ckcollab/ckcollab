@@ -545,7 +545,8 @@
     }
 
     #who-for img {
-        width: 65%;
+        width: 65% !important;
+        height: auto !important;
         padding-bottom: 35px;
     }
 
@@ -666,7 +667,6 @@ a:hover > img {
  Description
  *****************************************************************************/
 #top-description {
-    padding: 30px;
     min-height: 50vh;
 }
 

@@ -520,9 +520,14 @@
 @media (max-width: 767px) {
 
     .hagadone{
-        height: 225px !important;
-        width: auto;
+        height: 165px !important;
+        width: auto !important;
         filter: drop-shadow(0px 0px 1px #bbb);
+    }
+
+    .medcurio-image{
+        height: 150px !important;
+        width: auto !important;
     }
 
     .navbar-custom {
@@ -545,8 +550,8 @@
     }
 
     #who-for img {
-        width: 65% !important;
-        height: auto !important;
+        width: 65%;
+        height: auto;
         padding-bottom: 35px;
     }
 

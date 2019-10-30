@@ -4,9 +4,9 @@ layout: case_study
 permalink: /case_studies/fragilefamilies
 published: true
 site-url: http://fragilefamilies.princeton.edu/
-desktop-mock: ../assets/images/CK%20Collab%20Placeholders/desktopFragileFamilies.png
-phone-mock: ../assets/images/CK%20Collab%20Placeholders/phoneFragileFamilies.png
-background-img: ../assets/images/CK Collab Placeholders/fragilefamiliesPH.jpeg
+desktop-mock: /assets/images/CK%20Collab%20Placeholders/desktopFragileFamilies.png
+phone-mock: /assets/images/CK%20Collab%20Placeholders/phoneFragileFamilies.png
+background-img: /assets/images/CK Collab Placeholders/fragilefamiliesPH.jpeg
 
 about_description: "
 \"_The Fragile Families & Child Wellbeing Study is following a cohort of

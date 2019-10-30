@@ -49,3 +49,13 @@ img.img-bordered, .img-bordered img {
 .adsbygoogle {
     margin: 60px 0;
 }
+
+.blog-avatar {
+    height: 50px;
+    border-radius: 15px;
+}
+
+.author-link{
+    padding-left: 60px;
+    padding-top: 10px;
+}

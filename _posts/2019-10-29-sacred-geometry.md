@@ -221,14 +221,14 @@ times tables has three petals, and so on.
 
 The next bit of math we will need is some small understanding of polar coordinates. Doing the math in polar coordinates 
 will actually handle the modulus logic for us, since it behaves just like our aforementioned clock anyway. If you take a
-polar coordinate and add 2&pi; to it (or Tau(&tau;), depending on 
-[which circle constant you prefer](https://www.youtube.com/watch?v=ZPv1UV0rD8U)) you end up right back where you 
-started. So if we take &tau; and divide it by the number of lines we want, in this case, 12, this gives us the increment
-to move around our circle for the starting points of all our lines. We can then take this polar coordinate (which is 
-really just an angle, usually called _theta_) and multiply it by 2, meaning whatever angle distance we have traveled 
-around our circle to get to that point, we travel that distance twice again, and the polar coordinates handle our 
-modulus division for us. This marks the end of our line. Now we just need to figure out how to turn that polar 
-coordinate into a cartesian one, so we can actually draw it.
+polar coordinate and add 2&pi; to it (or Tau(&tau;), depending on <a href="https://www.youtube.com/watch?v=ZPv1UV0rD8U"
+target="_blank">which circle constant you prefer</a>) you end up right back where you started. So if we take &tau; and 
+divide it by the number of lines we want, in this case, 12, this gives us the increment to move around our circle for 
+the starting points of all our lines. We can then take this polar coordinate (which is really just an angle, usually 
+called _theta_) and multiply it by 2, meaning whatever angle distance we have traveled around our circle to get to 
+that point, we travel that distance twice again, and the polar coordinates handle our modulus division for us. This 
+marks the end of our line. Now we just need to figure out how to turn that polar coordinate into a cartesian one, 
+so we can actually draw it.
 
 This is done with two formulas:
 
@@ -249,7 +249,7 @@ y = Math.sin(theta) * radius + cy
 
 We'll put this all together now, and write the code for drawing one of these circles. For convenience, (and because I 
 don't like most of vanilla javascript's functions for dealing with lists, objects, and whatnot) I'll be using some 
-lodash methods (docs [here](https://lodash.com/docs/)).
+lodash methods (docs <a href="https://lodash.com/docs/" target="_blank">here</a>).
 ```javascript
 // hand-wavy setup, covered above
 let canvas
@@ -307,7 +307,9 @@ function draw() {
 }
 ```
 And that's basically it. There is plenty of room to add extra flare to it, like more lines, or changing colors, or a 
-nice little boomerang in there. Here is an example of what I have done, click the button below to jump to multiplier.
+nice little boomerang in there. The core of this code can be found 
+<a href="https://github.com/jimmykodes/multiplication_tables" target="_blank">here</a>, feel free to fork the repo and
+start playing with it! Here is an example of how I have improved it, click the button below to jump to multiplier.
 
 <div style="text-align: center">
     <canvas id="final_canvas"></canvas>

@@ -652,7 +652,7 @@ section h1 {
 
 a:hover > img {
     position: relative;
-    transform: translateY(-10px);
+    transform: translateY(-3px);
     transition-duration: .3s;
 }
 

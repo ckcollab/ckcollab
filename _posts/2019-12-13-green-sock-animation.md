@@ -4,7 +4,7 @@ date: 2019-12-13 00:00:00 +0800
 author: jimmy
 ---
 
-Canvas animations are great for eye catching displays, but what about animations on buttons? Or anything else that isn't a canvas? You _could_ use native css animations, but those can be cumbersome, especially for complex animations. Instead, we'll be taking a look at the popular animation library GreenSock.
+Canvas animations are great for eye catching displays, but what about animations on buttons? Or anything else that isn't a canvas? You _could_ use native css animations, but those can be cumbersome, especially for complex animations. Instead, we'll be taking a look at the popular animation library <a href="https://greensock.com/" target="_blank">GreenSock</a>.
 <!--more-->
 
 In my last <a href="{% post_url 2019-10-29-sacred-geometry %}" target="_blank">post</a>, I went into a fair amount of detail about using native javascript and html canvases to make animations. But if you want some buttons to slide on to the page, or an image to fade in as you scroll down the page, or really, interact with anything that _isn't_ a canvas, you'll need something else. 
@@ -64,7 +64,7 @@ Achieving this kind of control over keyframes _probably_ exists, but I couldn't 
 
 ## Enter GreenSock
 
-So what is [GreenSock](https://greensock.com/) exactly? To quote them directly:
+So what is GreenSock exactly? To quote them directly:
 > Ultra high-performance, professional-grade animation for the modern web
 
 I personally believe the "high-performance" is both an attribute of the speed of the library itself, and also the speed of development with the library. I spent so much time trying to figure out how to get css to animate things the way I wanted to, and it took me probably a quarter of the time to get a GreenSock version of the same thing (only better) running.
@@ -73,16 +73,16 @@ One of the greatest assets of GreenSock, in my opinion, is the timeline feature.
 
 ```html
 <style>
-#bg-image, .buttons {
-    opacity: 0
-}
+    #bg-image, .buttons {
+        opacity: 0
+    }
 </style>
 <script>
-$(function () {
-let tl = gsap.timeline()
-tl.to("#bg-image", {opacity: 1, duration: 3})
-tl.to(".buttons", {opacity: 1, duration: 3}, "-=1")
-})
+    $(function () {
+        let tl = gsap.timeline()
+        tl.to("#bg-image", {opacity: 1, duration: 3})
+        tl.to(".buttons", {opacity: 1, duration: 3}, "-=1")
+    })
 </script>
 ```
 That was all it took to get the same functionality as the keyframes. We create a GreenSock timeline (`tl` here) and we then start adding actions to it. We give it a css selector, and then our arguments, which are essentially our destination. We set our css to opacity 0 so that at page load, the elements are hidden, and then GreenSock's `to` functionality handles the tweening to get the element to its destination (opacity of 1). 

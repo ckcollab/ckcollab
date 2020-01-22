@@ -1145,7 +1145,7 @@ img.media-object {
 }
 
 .card-header {
-    height: 150px;
+    height: 115px;
     text-align: center;
     width: 100%;
     border-top-left-radius: 5px;
@@ -1154,6 +1154,10 @@ img.media-object {
     background-color: gainsboro;
     color: grey;
     margin-bottom: 10px;
+}
+
+.card-title{
+    font-size: 40px;
 }
 
 .tier-item {

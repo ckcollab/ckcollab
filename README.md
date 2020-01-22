@@ -3,6 +3,10 @@
 ### installing
 
 ```bash
+# you haven't installed ruby yet:
+# brew install ruby
+# add ruby to $PATH
+
 gem install jekyll bundler
 bundle install
 ```

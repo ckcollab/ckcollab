@@ -24,6 +24,7 @@ interested in programming and also our idea for a class based around making a te
 1. [Why is this a good way to learn?](#why-is-this-a-good-way-to-learn)
 1. [Growing?](#growing)
 1. [Structure](#structure)
+1. [Can any student do this?](#can-any-student-do-this)
 1. [How can I find out more?](#how-can-i-find-out-more)
 
 ## How did I start?
@@ -85,7 +86,7 @@ The day was structured like this:
 
 Run a small class/seminar/whatever you'd like to call it, as an experiment, to see if there are enough students
 in the area to put on a small summer camp. Our goal is to make a text-based game class that can capture their
-attention in under 2 hours. 
+attention in under 2 hours. We'll be doing a few trial runs with friends and family before doing a public class.
 
 > _A text game or text-based game is an electronic game that uses a text-based user interface, that is, 
  the user interface employs a set of encodable characters such as ASCII instead of bitmap or vector graphics._
@@ -243,6 +244,17 @@ Broadly, if I had a child with a high aptitude for programming, this is how I wo
 
 In my case, when I arrived at college I knew almost all of the material or could very easily grasp new concepts, because
 of my strong fundamentals.
+
+## Can any student do this?
+
+I don't think so, unfortunately. I think there are some kids who love computers and figure this stuff out quickly, and
+many students who this isn't for. Some minimum requirements:
+
+1. 30WPM typing speed
+1. Strong understanding of math/logic, picks things up easily
+1. Strong ability to focus
+1. Strong reader
+1. Very interested in how things work
 
 ## How can I find out more?
 

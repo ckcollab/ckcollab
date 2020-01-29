@@ -12,14 +12,28 @@ interested in programming and also our idea for a class based around making a te
 
 <!--more-->
 
+# This article..
+1. [How did I start?](#how-did-i-start)
+1. [What I loved about computer camp](#what-i-loved-about-computer-camp)
+1. [What are we trying to do?](#what-are-we-trying-to-do)
+    1. [Pros of starting text-based](#pros-of-starting-text-based)
+    1. [Conss of starting text-based](#cons-of-starting-text-based)
+1. [Coding Concepts](#coding-concepts)
+    1. [fun with sockets..](#fun-with-sockets)
+    1. [fun with script injection..](#fun-with-script-injection)
+1. [Why is this a good way to learn?](#why-is-this-a-good-way-to-learn)
+1. [Growing?](#growing)
+1. [Structure](#structure)
+1. [How can I find out more?](#how-can-i-find-out-more)
+
 ## How did I start?
 
 <"picture of me as nerd kid at computer">
 
 I started programming in ~1996 when I was 8 years old at the University of Oregon. It would be the first of many
-computer camps, and the foundation of a fruitful career.
+computer camps, and the nerdy foundation of a fruitful career.
 
-That summer between grades one of our assignments was to memorize the state capitals. The first program I ever wrote was
+That first summer between grades one of our assignments was to memorize the state capitals. The first program I ever wrote was
 a giant set of "if statements" for each state, something like this:
 
 ```python
@@ -46,7 +60,32 @@ Sometime after making this state guessing script I made some basic text based ad
 and other neat constructs -- not realizing I was learning the fundamentals that are so hard to imbue later in life.
 I was learning how to have fun "playing with programming."
 
-## What is a text-based adventure game?
+## What I loved about computer camp
+
+I loved the freedom and inspiration from computer camp. If I had an idea I wanted to pursue, there were mentors around
+ready to help. If I wanted to challenge someone to a game of Worms, well that was an option, too! Having other nerdy
+kids around really helped me have fun associations with programming and feel like I was part of something.
+
+The day was structured like this:
+ - 8am - 10am: first class time
+ - 10am - 11:30am: play video games, or continue working
+ - 11:30am - 1pm: lunch
+ - 1pm - 3pm: second class time
+ - 3pm - 5pm: play video games, or continue working
+ 
+ The last day of the week, the second half of the day was devoted to video game tournaments, for each game. Back in the day,
+ that was Worms: Armageddon and StarCraft!
+ 
+ I remember very vividly playing a match against some students from Stanford.. I had no idea how to play but had a blast
+ anyway. Competitive StarCraft would become one of my favorite hobbies, I was eventually ranked in the top ~1,600 in the USA
+ out of almost 750,000 players.
+ 
+
+## What are we trying to do?
+
+Run a small class/seminar/whatever you'd like to call it, as an experiment, to see if there are enough students
+in the area to put on a small summer camp. Our goal is to make a text-based game class that can capture their
+attention in under 2 hours. 
 
 > _A text game or text-based game is an electronic game that uses a text-based user interface, that is, 
  the user interface employs a set of encodable characters such as ASCII instead of bitmap or vector graphics._
@@ -94,6 +133,9 @@ In 2 hours that would be pretty phenomenal!
  
  - Maybe a bit boring at first; nothing fancy to look at
  - For faster/experienced students, will be a slow start
+ 
+ One of my hopes for the class, is that we'll be able to make even this simple experiment fun. If I see students' eyes
+ lighting up, I'll know we're onto something.
 
 
 <div style="text-align: center;">
@@ -101,25 +143,48 @@ In 2 hours that would be pretty phenomenal!
     <small><i>Eric working with a young programmer</i></small>
 </div>
 
-## Concepts
+## Coding Concepts
  
-Using the aforementioned concepts you could make a small fun text based adventure, or if you wanted to do something more serious
+Using the aforementioned concepts (input, output, functions, etc.) you could make a small fun text based adventure, or 
+if you wanted to do something more serious
 you have some base concepts to build on top of for a challenging idea. Leveraging the concept of a "function call" you could
 ask "what are some other functions?"
 
-Built into Python there are thousands of useful functions, which are usually grouped by the concept of "modules" like
-the "sockets" module for talking over the Internet to other computers.
+Built into Python there are thousands of useful functions, which are usually grouped by the concept of "modules." A module
+is typically a collection of variables and functions useful for some well defined purpose. You can even make your own
+modules and share them between programs.
 
 Some fun built in Python modules:
- - [math](https://docs.python.org/3/library/math.html)
- - [csv](https://docs.python.org/3/library/csv.html)
- - [tempfile](https://docs.python.org/3/library/tempfile.html)
- - [socket](https://docs.python.org/3/library/socket.html)
+ - [math](https://docs.python.org/3/library/math.html) - ..do math!
+ - [csv](https://docs.python.org/3/library/csv.html) - read/write excel-like files, do spreadsheets for baseball card collections
+ - [tempfile](https://docs.python.org/3/library/tempfile.html) - store data temporarily while you're processing it
+ - [socket](https://docs.python.org/3/library/socket.html) - talk to another computer over the Internet
  - ..and thousands more available online, most you can install with a simple command: 
  ```bash
  pip install <module>
-``` 
+ ```
 
+It might be intimidating at first, but if you call the right functions.. you can do it :)
+
+### fun with sockets...
+
+At quite a young age I was writing chat bots with sockets for StarCraft and Diablo II, a skill that has repeatedly been useful
+and allowed me to skin the cat a way another engineer wasn't aware of. This skill also came in handy in highschool when
+I wrote a script to make text-to-speech happen across all of the computers in the computer lab. Was a fun, albeit loud,
+experience!
+
+### fun with script injection...
+
+Another time some random skills came in handy was during the highschool online virtual stock exchange game. I was able to
+"hack" the website via script injection and take control of everyone's account -- don't worry, I didn't do anything malicious and only had some
+fun after the website staff didn't respond to my alerts about the vulnerability. 
+
+<object width="420" height="315" style="display: block; margin: 0 auto;" data="https://www.youtube.com/embed/Cwkej79U3ek">
+</object>
+
+All I did was replace the header of the 
+page with a heartwarming song and everyone's names with the lyrics of the song, in order. So if you went to the second or
+third page, it would continue listing the lyrics :)
 
 ## Why is this a good way to learn?
 
@@ -179,7 +244,7 @@ Broadly, if I had a child with a high aptitude for programming, this is how I wo
 In my case, when I arrived at college I knew almost all of the material or could very easily grasp new concepts, because
 of my strong fundamentals.
 
-## How can we learn more?
+## How can I find out more?
 
 We're planning on running a small trial class soon, follow us on Facebook <linky> for more information!
 

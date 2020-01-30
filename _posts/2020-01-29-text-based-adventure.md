@@ -1,5 +1,5 @@
 ---
-title: "Python Text Based Adventure!"
+title: "How I started programming?"
 date: 2020-01-29 00:00:00 +0800
 author: eric
 ---
@@ -7,22 +7,26 @@ author: eric
 CKC is exploring the idea of running a small code camp this summer, with a focus on fundamentals and,
 in particular, the most beautiful language in all of programming: Python. 
 
-In this article we'll learn how I became
-interested in programming and also our idea for a class based around making a text-based adventure game!
+In this article we'll learn how I became interested in programming and also our idea for a class based around making a 
+text-based adventure game!
 
 <!--more-->
 
 # This article..
 1. [How did I start?](#how-did-i-start)
+1. [Where did I get?](#where-did-i-get)
 1. [What I loved about computer camp](#what-i-loved-about-computer-camp)
+    1. [Freedom](#freedom)
+    1. [Community](#community)
+    1. [Competition](#competition)
 1. [What are we trying to do?](#what-are-we-trying-to-do)
     1. [Pros of starting text-based](#pros-of-starting-text-based)
-    1. [Conss of starting text-based](#cons-of-starting-text-based)
+    1. [Cons of starting text-based](#cons-of-starting-text-based)
 1. [Coding Concepts](#coding-concepts)
     1. [fun with sockets..](#fun-with-sockets)
     1. [fun with script injection..](#fun-with-script-injection)
 1. [Why is this a good way to learn?](#why-is-this-a-good-way-to-learn)
-1. [Growing?](#growing)
+1. [Facilitating growth?](#facilitating-growth)
 1. [Structure](#structure)
 1. [Can any student do this?](#can-any-student-do-this)
 1. [How can I find out more?](#how-can-i-find-out-more)
@@ -61,25 +65,44 @@ Sometime after making this state guessing script I made some basic text based ad
 and other neat constructs -- not realizing I was learning the fundamentals that are so hard to imbue later in life.
 I was learning how to have fun "playing with programming."
 
+## Where did I get?
+
+Because of a tragic motorcycle accident my mother was in I dropped out of college to move home and care for her. I wasn't
+sure what I was going to do, but I could certainly program. So, I started a small software company and took as many
+contracts as I could find. Small local contracts turned into completely remote (working from home) for large companies.
+
+Using fundamentals I learned mainly at computer camp, I earned a few fun feather's in the cap: Microsoft Research, The United Nations, quite a few universities,
+DRAPER, large Django firms like Tivix and Caktus Group, and larger local companies like Hagadone, Coeur Holdings and Fluent Edge.
+
+..and not to forget: over the last few years I've been able to grow the company to almost 10 team members. All thanks
+to my father making the decision to encourage my computer addiction by sending me to computer camp!
+
 ## What I loved about computer camp
 
-I loved the freedom and inspiration from computer camp. If I had an idea I wanted to pursue, there were mentors around
-ready to help. If I wanted to challenge someone to a game of Worms, well that was an option, too! Having other nerdy
-kids around really helped me have fun associations with programming and feel like I was part of something.
+#### Freedom
+I loved the freedom and inspiration from computer camp. If I had an idea I wanted to pursue there were mentors around
+ready to help -- after we went over the basic material for the day. If I wanted to challenge someone to a game of Worms, 
+that was an option, too! 
+
+#### Community
+Having other nerdy kids around all fired up about coding really helped me have fun associations with programming and 
+sense of community.
 
 The day was structured like this:
- - 8am - 10am: first class time
- - 10am - 11:30am: play video games, or continue working
- - 11:30am - 1pm: lunch
- - 1pm - 3pm: second class time
- - 3pm - 5pm: play video games, or continue working
+ - _8am - 10am_ - first class time
+ - _10am - 11am_ - play video games, or continue working
+ - _11am - 12pm_ - lunch
+ - _12pm - 3pm_ - second class time
+ - _3pm - 5pm_ - play video games, or continue working
+
+#### Competition
  
- The last day of the week, the second half of the day was devoted to video game tournaments, for each game. Back in the day,
- that was Worms: Armageddon and StarCraft!
- 
- I remember very vividly playing a match against some students from Stanford.. I had no idea how to play but had a blast
- anyway. Competitive StarCraft would become one of my favorite hobbies, I was eventually ranked in the top ~1,600 in the USA
- out of almost 750,000 players.
+The last day of the week, the second half of the day was devoted to video game tournaments, for each game. Back in the day,
+that was Worms: Armageddon and StarCraft!
+
+I remember very vividly playing a match against some students from Stanford.. I had no idea how to play but had a blast
+anyway. Competitive StarCraft would become one of my favorite hobbies, I was eventually ranked in the top ~1,600 in the USA
+out of almost 750,000 players.
  
 
 ## What are we trying to do?
@@ -210,11 +233,14 @@ becomes like an art form. Why did the artist choose this color and this shape? I
 performance, either. Python is a particularly _slow_ language, actually! But it's extremely easy to express ideas and
 iterate quickly, so it beats most of the competition. These kinds of compromises are what make programming an art to me.
 
-## Growing?
+## Facilitating growth
 
-We'll grow with the students, we have a broad base of experience involving: web dev, "hacking games," making games, and
+We'll encourage growth with the students, facilitating them to explore more complicated projects. It can be hard to keep going
+when you don't know what step to take next. Throughout the year we want to provide mentorship for students.
+ 
+We have a broad base of experience involving: web dev, "hacking games," making games, physics simulations, and
 all kinds of general programming things. We're hoping to inspire students to use programming as a tool for expression
-and growth, which can be a career or "strong plan b" if they ever need a trade to fall back on.
+and challenging themselves. At the very least these skills can be a "strong plan b" if they ever need a trade to fall back on.
 
 Everyone's path will be different, but even knowing what's possible or how to get there can be the tricky part. That's
 where we can help guide students to concepts as needed, instead of flooding them at all once and overwhelming them.
@@ -238,9 +264,10 @@ to grok programming concepts easily at a young age: there's a great chance for s
 Broadly, if I had a child with a high aptitude for programming, this is how I would structure that learning:
 
 1. Summer Camp
-2. Throughout the year small projects
-3. Christmas Camp
-4. Go back to 1, until college!
+    1. Five days a week, basics, like the schedule [here](#community)
+    1. Could occur 4 weeks in the summer
+1. Throughout the year small projects, monthly interaction with a mentor 
+1. Go back to 1, until college!
 
 In my case, when I arrived at college I knew almost all of the material or could very easily grasp new concepts, because
 of my strong fundamentals.

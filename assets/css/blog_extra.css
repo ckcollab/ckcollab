@@ -4,7 +4,7 @@ header {
 }
 .page-header {
     /*background-image: linear-gradient(120deg, rgb(94, 171, 214), rgb(231, 105, 119));*/
-    background-image: url("/assets/images/ckc_bg-min.png");
+    background-image: url("/assets/images/ckc_bg-min.jpg");
     background-color: #ffffff;
     background-size: cover;
 }

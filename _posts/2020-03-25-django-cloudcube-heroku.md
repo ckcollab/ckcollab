@@ -10,10 +10,6 @@ Almost certainly not, but read ahead if you'd like to see how to solve this prob
 
 <!--more-->
 
-### The problem
-
-### The solution
-
 [Cloudcube](https://elements.heroku.com/addons/cloudcube) is a storage addon that gives you an S3 bucket with 
 a 5mb limit in the free tier. Fairly generous! This is great because by default Heroku apps are ephemeral (storage
 is deleted when a new version is deployed). 

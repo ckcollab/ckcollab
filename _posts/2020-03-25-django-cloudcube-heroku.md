@@ -20,11 +20,9 @@ want to add `"cloudcube:free"` to your `addons` key in `app.json`:
 
 ```json
 {
-  ...
   "addons": [
     "cloudcube:free"
   ],
-  ...
 }
 ``` 
 

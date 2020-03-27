@@ -28,10 +28,10 @@ want to add `"cloudcube:free"` to your `addons` key in `app.json`:
 }
 ``` 
 
-Make sure you install `django-storages`:
+Make sure you install `django-storages` and `boto3`:
 
 ```bash
-$ pip install django-storages
+$ pip install django-storages boto3
 ```
 
 And add these to your settings:

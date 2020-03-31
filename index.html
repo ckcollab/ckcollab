@@ -15,6 +15,7 @@
           content="WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idaho -- We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it"/>
 
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 </head>
 <body>
 
@@ -23,14 +24,14 @@
     <div class="space-bg-overlay"></div>
     <img class="ckc-logo" src="./assets/images/ckclogo.svg" alt="ckclogo.svg"/>
     <img class="right-astronaut" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
-    <img class="left-astronaut" src="./assets/images/astro2.svg" alt="astro1.svg"/>
+    <img class="left-astronaut" src="./assets/images/astro-left.png" alt="astro-left.png"/>
 
     <div class="hero-text">Lorem ipsum dolor sit ame, con sectetur adipiscing el it, sed do</div>
 
     <div class="navigation-menu">
-        <a class="menu-link" href="#">HOME</a>
-        <a class="menu-link" href="#">ABOUT CKC</a>
-        <a class="menu-link" href="#">BLOG</a>
+        <a class="menu-link active" href=".">HOME</a>
+        <a class="menu-link" href="about_us.html">ABOUT CKC</a>
+        <a class="menu-link" href="blog.html">BLOG</a>
         <a class="menu-link contact-button" href="#">CONTACT US</a>
     </div>
 </div>
@@ -49,7 +50,7 @@
             <div class="icon-subheader">BACK END</div>
         </div>
         <div class="icon-container">
-            <div class="icon"></div>
+            <img class="icon" src="./assets/images/ckc_design.png" alt="ckc_design.png">
             <div class="icon-subheader">DESIGN</div>
         </div>
     </div>
@@ -72,12 +73,12 @@
                 </div>
             </div>
             <div class="step-image">
-                <img src="./assets/images/frontend.png" alt="placeholder.png">
+                <img src="./assets/images/ckc_wireframe.png" alt="ckc_wireframe.png">
             </div>
         </div>
         <div class="step-item">
             <div class="step-image">
-                <img src="./assets/images/frontend.png" alt="placeholder.png">
+                <img src="./assets/images/ckc_polish.png" alt="ckc_polish.png">
             </div>
             <div class="name-text-container">
                 <div class="step-name">STEP 2 : POLISH DESIGN</div>
@@ -94,7 +95,7 @@
                 </div>
             </div>
             <div class="step-image">
-                <img src="./assets/images/frontend.png" alt="placeholder.png">
+                <img src="./assets/images/ckc_magic.png" alt="ckc_magic.png">
             </div>
         </div>
     </div>
@@ -117,15 +118,16 @@
     </div>
 
     <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
-    <img class="left-astronaut-lower" src="./assets/images/astro2.svg" alt="astro1.svg"/>
+    <img class="left-astronaut-lower" src="./assets/images/astro-left.png" alt="astro-left.png"/>
 </section>
-<section class="footer">
+
+<section class="home-footer">
     <div class="pink-stripe-lower"></div>
     <div class="secondary-navigation">
         <a class="nav-item" href="#">services</a>
         <a class="nav-item" href="#">process</a>
-        <a class="nav-item" href="#">about</a>
-        <a class="nav-item" href="#">blog</a>
+        <a class="nav-item" href="./about_us.html">about</a>
+        <a class="nav-item" href="./blog.html">blog</a>
     </div>
 
     <div class="footer-contact-info">
@@ -142,34 +144,12 @@
             Coeur d'Alene, ID 83814
         </div>
     </div>
-
     <div class="blue-stripe-lower"></div>
 </section>
 </body>
 </html>
 
 <style>
-    .hero {
-        height: 100vh;
-        width: 100vw;
-    }
-
-    .space-bg {
-        z-index: -2;
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-        object-fit: cover;
-    }
-
-    .space-bg-overlay {
-        z-index: -1;
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(21, 61, 165, 0.17)
-    }
-
     .ckc-logo {
         z-index: 1;
         width: 450px;
@@ -180,8 +160,8 @@
     .left-astronaut {
         position: absolute;
         bottom: 100px;
-        left: -300px;
-        height: 600px;
+        left: 80px;
+        height: 450px;
     }
 
     .right-astronaut {
@@ -208,58 +188,6 @@
         padding: 40px;
         width: 100%;
         font-weight: 300;
-    }
-
-    .menu-link {
-        color: white;
-        text-decoration: none;
-        font-size: 25px;
-        padding: 10px;
-        margin: 20px 35px;
-    }
-
-    .menu-link:hover {
-        border-bottom: solid 2px white;
-    }
-
-    .contact-button {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 200px;
-        text-align: center;
-        background-color: #60AED9;
-        border-radius: 50px;
-    }
-
-    .contact-button:hover {
-        border-bottom: none;
-        background-color: #5d9ec8;
-    }
-
-    section {
-        display: block;
-    }
-
-    .pink-stripe {
-        margin-top: 100px;
-        width: 100%;
-        height: 6px;
-        background: linear-gradient(to right, #F06C7C, rgba(255, 255, 255, 0));
-    }
-
-    .header-text {
-        font-size: 63px;
-        font-weight: 300;
-        padding: 40px 50px;
-        color: #332859;
-    }
-
-    .blue-stripe {
-        margin-bottom: 100px;
-        width: 100%;
-        height: 6px;
-        background: linear-gradient(to right, #5FADD9, rgba(255, 255, 255, 0));
     }
 
     .section-body {
@@ -306,6 +234,7 @@
         display: flex;
         padding: 100px;
         font-weight: 100;
+        align-items: center;
     }
 
     .name-text-container {
@@ -331,9 +260,9 @@
 
     .left-astronaut-lower {
         position: relative;
-        bottom: 100px;
-        left: -520px;
-        height: 630px;
+        bottom: 50px;
+        left: -200px;
+        height: 550px;
         z-index: 1;
     }
 
@@ -365,18 +294,12 @@
         text-align: center;
     }
 
-    .footer {
+    .home-footer {
         background-color: white;
         z-index: 3;
         position: relative;
         height: 500px;
-    }
-
-    .pink-stripe-lower {
-        z-index: 2;
-        width: 100%;
-        height: 6px;
-        background: linear-gradient(to right, #F06C7C, rgba(255, 255, 255, 0));
+        color: #4F456F;
     }
 
     .drop-us-a-line {
@@ -397,64 +320,18 @@
     }
 
     .secondary-navigation {
-        display: flex;
-        width: 90%;
-        margin: 0 auto;
-        justify-content: space-evenly;
-        border-bottom: 1px solid #4F456F;;
+        border-bottom: 1px solid #4F456F;
     }
 
     .nav-item {
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 100;
         color: #4F456F;
-        text-decoration: none;
-        font-size: 30px;
-        margin: 70px;
-        text-align: center;
-    }
-
-    .blue-stripe-lower {
-        z-index: 2;
-        width: 100%;
-        height: 6px;
-        background: linear-gradient(to right, #5FADD9, rgba(255, 255, 255, 0));
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .logo-container {
-        height: 300px;
-        width: auto;
-    }
-
-    .logo-container .ckc-logo {
-        z-index: 1;
-        width: 300px;
-        margin: 0 auto;
-        display: flex;
     }
 
     .logo-subheader {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
         color: #4F456F;
-        margin-top: -40px;
-    }
-
-    .footer-contact-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .contact-info {
-        display: flex;
-        font-size: 24px;
         color: #4F456F;
-        font-weight: 100;
     }
 </style>

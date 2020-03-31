@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+</head>
+<body>
+<div class="navigation-menu">
+    <a class="menu-link" href=".">HOME</a>
+    <a class="menu-link" href="about_us.html">ABOUT CKC</a>
+    <a class="menu-link active" href="blog.html">BLOG</a>
+    <a class="menu-link contact-button" href="#">CONTACT US</a>
+</div>
+
+<section class="heading">
+    <div class="pink-stripe"></div>
+    <div class="header-text">CKC DEV BLOG</div>
+    <div class="blue-stripe"></div>
+</section>
+
+<section class="card-container">
+    <div class="blog-card">Blog Card</div>
+    <div class="blog-card">Blog Card</div>
+    <div class="blog-card">Blog Card</div>
+    <div class="blog-card">Blog Card</div>
+    <div class="blog-card">Blog Card</div>
+    <div class="blog-card">Blog Card</div>
+</section>
+
+<section class="footer">
+    <div class="pink-stripe-lower"></div>
+    <div class="secondary-navigation">
+        <a class="nav-item" href="#">services</a>
+        <a class="nav-item" href="#">process</a>
+        <a class="nav-item" href="./about_us.html">about</a>
+        <a class="nav-item" href="./blog.html">blog</a>
+    </div>
+
+    <div class="footer-contact-info">
+        <div class="logo-container">
+            <img class="ckc-logo" src="./assets/images/ckclogo.png"/>
+            <div class="logo-subheader">
+                > Your wish is our cmd
+            </div>
+        </div>
+        <div class="contact-info">
+            +1 208 . 918 . 3815 <br>
+            hello@ckcollab.com <br><br>
+            418 E Lakeside Ave <br>
+            Coeur d'Alene, ID 83814
+        </div>
+    </div>
+
+    <div class="blue-stripe-lower"></div>
+</section>
+</body>
+</html>
+
+<script>
+
+</script>
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation-menu {
+        position: absolute;
+        top: 0;
+        padding: 40px;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    .navigation-menu .menu-link {
+        color: #F06C7C;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 10px;
+        margin: 20px 35px;
+    }
+
+    .navigation-menu .menu-link:hover {
+        border-bottom: solid 2px #F06C7C;
+    }
+
+    .navigation-menu .menu-link.active {
+        color: #60AED9;
+        border-bottom: solid 2px #60AED9;
+    }
+
+    .navigation-menu .menu-link.active:hover {
+        color: #5192b6;
+        border-bottom: solid 2px #5192B6;
+    }
+
+    .navigation-menu .contact-button {
+        color: white;
+    }
+
+    .navigation-menu .contact-button:hover {
+        border-bottom: none;
+    }
+
+    section.heading {
+        padding: 75px 0 0;
+        display: block;
+    }
+
+    .footer {
+        background-image: url('assets/images/spacebg.jpg');
+        background-color: white;
+        z-index: 3;
+        position: relative;
+        height: 500px;
+    }
+
+    .pink-stripe-lower {
+        z-index: 2;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #F06C7C, rgba(255, 255, 255, 0));
+    }
+
+    .secondary-navigation {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        border-bottom: 1px solid white;;
+    }
+
+    .nav-item {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        margin: 70px;
+        text-align: center;
+    }
+
+    .blue-stripe-lower {
+        z-index: 2;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #5FADD9, rgba(255, 255, 255, 0));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .logo-container {
+        height: 300px;
+        width: auto;
+    }
+
+    .logo-container .ckc-logo {
+        z-index: 1;
+        width: 300px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .logo-subheader {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        margin-top: -40px;
+    }
+
+    .footer-contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-info {
+        display: flex;
+        font-size: 24px;
+        color: white;
+        font-weight: 100;
+    }
+
+    .card-container {
+        display:flex;
+        justify-content: center;
+        flex-flow: wrap;
+    }
+
+    .blog-card {
+        border: solid 1px gainsboro;
+        padding: 75px;
+        margin: 50px;
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+</style>

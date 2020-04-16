@@ -4,6 +4,7 @@ google_analytics: UA-128972978-1
 
 title: "CKC Blog"
 description: "WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idaho -- We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it"
+baseurl: https://ckcollab.com
 
 plugins:
   - jekyll-sitemap

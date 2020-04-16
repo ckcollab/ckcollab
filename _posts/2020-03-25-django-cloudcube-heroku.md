@@ -2,7 +2,7 @@
 title:  "CloudCube (S3) in Django on Heroku"
 date: 2020-03-25 00:00:00 +0800
 author: eric
-redirect_from: "/2019/12/12/django-cloudcube-heroku.html"
+redirect_from: /2019/12/12/django-cloudcube-heroku.html
 ---
 
 Have you ever wanted to have persistent storage for your Heroku app because ephemeral storage was _just not cutting it?_

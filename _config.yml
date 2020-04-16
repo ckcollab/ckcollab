@@ -19,6 +19,9 @@ excerpt_separator: <!--more-->
 collections:
   authors:
     output: true
+    
+whitelist:
+  - jekyll-redirect-from
 
 #defaults:
 #  - scope:

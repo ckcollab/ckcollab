@@ -16,6 +16,12 @@
 
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
 </head>
 <body>
 
@@ -36,7 +42,7 @@
     </div>
 </div>
 
-<section class="what-we-do">
+<section id="services">
     <div class="pink-stripe"></div>
     <div class="header-text">WHAT WE DO</div>
     <div class="blue-stripe"></div>
@@ -60,7 +66,7 @@
     </div>
 </section>
 
-<section class="how-we-do-it">
+<section id="process" class="how-we-do-it">
     <div class="pink-stripe"></div>
     <div class="header-text">HOW WE DO IT</div>
     <div class="blue-stripe"></div>
@@ -101,7 +107,7 @@
     </div>
 </section>
 
-<section class="lets-work-together">
+<section id="about-us" class="lets-work-together">
     <img class="space-bg" src="./assets/images/spacebg.jpg" alt="spacebg.png"/>
     <div class="space-bg-overlay"></div>
 
@@ -124,8 +130,8 @@
 <section class="home-footer">
     <div class="pink-stripe-lower"></div>
     <div class="secondary-navigation">
-        <a class="nav-item" href="#">services</a>
-        <a class="nav-item" href="#">process</a>
+        <a class="nav-item" href="#services">services</a>
+        <a class="nav-item" href="#process">process</a>
         <a class="nav-item" href="./about_us.html">about</a>
         <a class="nav-item" href="./blog.html">blog</a>
     </div>
@@ -148,6 +154,37 @@
 </section>
 </body>
 </html>
+
+<script>
+    $(document).ready(function () {
+        let right_timeline = new TimelineMax({repeat: -1})
+        let left_timeline = new TimelineMax({repeat: -1})
+        let lower_right_timeline = new TimelineMax({repeat: -1})
+        // let lower_left_timeline = new TimelineMax({repeat: -1})
+
+        right_timeline.to('.right-astronaut', {duration: 5, ease: "sine.inOut", y: -100})
+        right_timeline.to('.right-astronaut, .right-astronaut-lower', {duration: 4.5, ease: "sine.inOut", y: 0})
+        left_timeline.from('.left-astronaut, .left-astronaut-lower', {duration: 4, ease: "sine.inOut", y: -80})
+        left_timeline.from('.left-astronaut, .left-astronaut-lower', {duration: 5, ease: "sine.inOut", y: 0})
+
+        lower_right_timeline.to('.right-astronaut-lower', {duration: 5, ease: "sine.inOut", y: 100})
+        // lower_right_timeline.to('.right-astronaut-lower', {duration: 4.5, ease: "sine.inOut", y: 0})
+        // lower_left_timeline.from('.left-astronaut-lower', {duration: 4, ease: "sine.inOut", y: -80})
+        // lower_left_timeline.from('.left-astronaut-lower', {duration: 5, ease: "sine.inOut", y: 0})
+
+        $("a").on('click', function (event) {
+            if (this.hash !== "") {
+                event.preventDefault()
+                let hash = this.hash
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash
+                })
+            }
+        })
+    })
+</script>
 
 <style>
     .ckc-logo {

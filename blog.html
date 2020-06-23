@@ -1,3 +1,7 @@
+---
+# this is an empty front matter for Jekyll to parse
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,12 +25,38 @@
 </section>
 
 <section class="card-container">
-    <div class="blog-card">Blog Card</div>
-    <div class="blog-card">Blog Card</div>
-    <div class="blog-card">Blog Card</div>
-    <div class="blog-card">Blog Card</div>
-    <div class="blog-card">Blog Card</div>
-    <div class="blog-card">Blog Card</div>
+    <ul class="media-list">
+        {% for post in site.posts limit:6 %}
+        {% assign author = site.authors | where: 'short_name', post.author | first %}
+        <li class="media">
+            <div class="media-title">
+                <div class="blue-stripe"></div>
+                <h3 class="media-heading">
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h3>
+                <div class="pink-stripe"></div>
+            </div>
+            <div class="media-body">
+                <div class="media-left">
+                    {% if author %}
+                    <img class="media-object img-circle" src="{{ author.avatar }}">
+                    {% endif %}
+                </div>
+                <div class="media-text">
+                    {{ post.excerpt }}
+                    <a href="{{ post.url }}" class="btn pull-right btn-default">read more...</a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="text-center">
+        <a href="/blog/" class="btn btn-lg btn-primary">View all articles</a>
+    </div>
+
 </section>
 
 <section class="footer">
@@ -190,18 +220,78 @@
     }
 
     .card-container {
-        display:flex;
+        display: flex;
         justify-content: center;
         flex-flow: wrap;
     }
 
-    .blog-card {
+    .media-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: inherit;
+        justify-content: center;
+    }
+
+    .media {
         border: solid 1px gainsboro;
-        padding: 75px;
+        padding: 45px 0;
         margin: 50px;
-        width: 300px;
-        height: 150px;
+        width: 600px;
         display: flex;
         flex-direction: column;
+        border-radius: 20px;
+        box-shadow: grey 0 3px 5px -2px;
+    }
+
+    .media-object {
+        height: 100px;
+        width: 100px;
+    }
+
+    .media .blue-stripe {
+        margin-bottom: 0;
+        height: 2px;
+    }
+
+    .media-heading {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .media-heading a {
+        text-decoration: none;
+        color: #332859;
+        font-size: 32px;
+    }
+
+    .media .pink-stripe {
+        margin-top: 0;
+        height: 2px;
+    }
+
+    .media-left {
+        align-self: center;
+        padding: 10px;
+    }
+
+    .media-body {
+        display: flex;
+    }
+
+    .media-text {
+        padding: 20px;
+        line-height: 1.5em;
+        text-align: justify;
+        font-size: 12px;
+        color: #332859;
+    }
+
+    .img-bordered {
+        display: none !important;
+    }
+
+    .media-text img {
+        max-width: 100px;
+        display: none !important;
     }
 </style>

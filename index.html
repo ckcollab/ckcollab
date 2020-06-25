@@ -16,12 +16,12 @@
 
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 
@@ -32,7 +32,14 @@
     <img class="right-astronaut" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
     <img class="left-astronaut" src="./assets/images/astro-left.png" alt="astro-left.png"/>
 
-    <div class="hero-text">Lorem ipsum dolor sit ame, con sectetur adipiscing el it, sed do</div>
+    <div class="hero-text">
+        <div>
+            WE <i class="fa fa-heart-o" style="color: #ef6d7e;" aria-hidden="true"></i> DEVELOPMENT
+        </div>
+        <div>
+            > Your wish is our cmd _
+        </div>
+    </div>
 
     <div class="navigation-menu">
         <a class="menu-link active" href=".">HOME</a>
@@ -74,8 +81,7 @@
         </div>
     </div>
     <div class="section-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        From ideas on a napkin to products in your users hands, we can handle everything! We specialize in all things web development.
     </div>
 </section>
 
@@ -87,8 +93,8 @@
         <div class="step-item">
             <div class="name-text-container">
                 <div class="step-name">STEP 1 : WIREFRAME</div>
-                <div class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                <div class="step-text">
+                    Our approach to web development is holistic. We believe a good project requires a strong foundation with clear goals from the outset.
                 </div>
             </div>
             <div class="step-image">
@@ -101,16 +107,16 @@
             </div>
             <div class="name-text-container">
                 <div class="step-name">STEP 2 : POLISH DESIGN</div>
-                <div class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                <div class="step-text">
+                    After we've got your idea translated to paper, we want to bring in our ideas to see where we can improve upon those ideas.
                 </div>
             </div>
         </div>
         <div class="step-item">
             <div class="name-text-container">
                 <div class="step-name">STEP 3 : DO THE MAGIC</div>
-                <div class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                <div class="step-text">
+                    Programming, databases, deployment. After we've got everything how you want it, we make sure to bring it to life for you and your customers.
                 </div>
             </div>
             <div class="step-image">
@@ -128,8 +134,7 @@
         LET'S WORK TOGETHER!
     </div>
     <div class="subheader-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam,
+        We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it.
     </div>
 
     <div class="drop-us-a-line">
@@ -227,6 +232,7 @@
     .hero-text {
         display: flex;
         align-content: center;
+        flex-direction: column;
         font-size: 55px;
         color: white;
         margin: 0 auto;

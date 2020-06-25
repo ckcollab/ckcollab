@@ -2,82 +2,273 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title>About Us</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <!-- Vue and Vuetify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.0-beta.6/vuetify.js"></script>
+
+    <!-- Greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+
+    <!-- Vuetify and Material CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
 </head>
 <body>
-<div class="hero">
-    <img class="space-bg" src="./assets/images/spacebg.jpg" alt="spacebg.png"/>
-    <div class="space-bg-overlay"></div>
+<div id="app">
+    <v-app>
+        <div class="hero">
+            <img class="space-bg" src="./assets/images/spacebg.jpg" alt="spacebg.png"/>
+            <div class="space-bg-overlay"></div>
 
-    <div class="navigation-menu">
-        <a class="menu-link" href=".">HOME</a>
-        <a class="menu-link active" href="about_us.html">ABOUT CKC</a>
-        <a class="menu-link" href="blog.html">BLOG</a>
-        <a class="menu-link contact-button" href="#">CONTACT US</a>
-    </div>
-
-    <div class="carousel">
-        <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left-arrow.png">
-        <img class="computer" alt="computer.png" src="./assets/images/computer.png">
-        <img class="user" alt="user.png" src="./assets/images/avatars/ted1.png">
-
-        <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right-arrow.png">
-    </div>
-    <div class="description-bg">
-        <div class="name">Ya boi</div>
-        <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </div>
-        <div class="skills">
-            Skill |||<br>
-            Skill || <br>
-            Skill |||<br>
-            Skill |||<br>
-        </div>
-    </div>
-</div>
-
-<section class="content">
-    <div class="header-text">LET'S WORK TOGETHER!</div>
-    <div class="body-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    </div>
-    <div class="drop-us-a-line">DROP US A LINE!</div>
-</section>
-
-<section class="footer">
-    <div class="pink-stripe-lower"></div>
-    <div class="secondary-navigation">
-        <a class="nav-item" href="./#services">services</a>
-        <a class="nav-item" href="./#process">process</a>
-        <a class="nav-item" href="./about_us.html">about</a>
-        <a class="nav-item" href="./blog.html">blog</a>
-    </div>
-
-    <div class="footer-contact-info">
-        <div class="logo-container">
-            <img class="ckc-logo" src="./assets/images/ckclogo.png"/>
-            <div class="logo-subheader">
-                > Your wish is our cmd
+            <div class="navigation-menu">
+                <a class="menu-link" href=".">HOME</a>
+                <a class="menu-link active" href="about_us.html">ABOUT CKC</a>
+                <a class="menu-link" href="blog.html">BLOG</a>
+                <a class="menu-link contact-button" href="#">CONTACT US</a>
             </div>
-        </div>
-        <div class="contact-info">
-            +1 208 . 918 . 3815 <br>
-            hello@ckcollab.com <br><br>
-            418 E Lakeside Ave <br>
-            Coeur d'Alene, ID 83814
-        </div>
-    </div>
 
-    <div class="blue-stripe-lower"></div>
-</section>
+            <img class="computer" alt="computer.png" src="./assets/images/computer.png">
+            <div id="carousel">
+                <v-carousel
+                        :height="250"
+                        width="250"
+                        hide-delimiters
+                        :show-arrows="false"
+                        v-model="model">
+                    <v-carousel-item
+                            v-for="(slide, i) in slides"
+                            :key="i"
+                            width="250"
+                            :src="slide.src">
+                    </v-carousel-item>
+                </v-carousel>
+                <div @click="model--" class="arrow left">
+                    <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left-arrow.png">
+                </div>
+                <div @click="model++" class="arrow right">
+                    <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right-arrow.png">
+                </div>
+            </div>
+
+            <v-carousel :continuous="false"
+                        :show-arrows="false"
+                        hide-delimiters
+                        v-model="model"
+                        height="305"
+                        vertical
+                        class="description-bg">
+                <v-carousel-item v-for="(slide, i) in slides"
+                                 :key="i">
+                    <v-sheet height="100%">
+                        <v-row>
+                            <div class="name">
+                                {{slide.name}}
+                            </div>
+                        </v-row>
+                        <v-row>
+                            <div class="title">
+                                {{slide.title}}
+                            </div>
+                        </v-row>
+                        <v-row>
+                            <div class="description">
+                                {{slide.description}}
+                            </div>
+                        </v-row>
+                        <v-row>
+                            <div class="skills">
+                                <ul v-for="skill in slide.skills">
+                                    <li>{{skill.name}} : {{skill.power_level}}</li>
+                                </ul>
+                            </div>
+                        </v-row>
+                    </v-sheet>
+                </v-carousel-item>
+            </v-carousel>
+
+            <!--            <div class="description-bg" v-model="model">-->
+            <!--                <div v-for="(slide, i) in slides"-->
+            <!--                     :key="i">-->
+            <!--                    <div class="name">-->
+            <!--                        {{slides[i].name}}-->
+            <!--                    </div>-->
+            <!--                    <div class="description">-->
+            <!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
+            <!--                        labore-->
+            <!--                        et-->
+            <!--                        dolore magna aliqua. Ut enim ad minim veniam-->
+            <!--                    </div>-->
+            <!--                    <div class="skills">-->
+            <!--                        Skill |||<br>-->
+            <!--                        Skill || <br>-->
+            <!--                        Skill |||<br>-->
+            <!--                        Skill |||<br>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+        <section class="content">
+            <div class="header-text">LET'S WORK TOGETHER!</div>
+            <div class="body-text">
+                We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it.
+            </div>
+            <div class="drop-us-a-line">DROP US A LINE!</div>
+        </section>
+
+        <section class="footer">
+            <div class="pink-stripe-lower"></div>
+            <div class="secondary-navigation">
+                <a class="nav-item" href="./#services">services</a>
+                <a class="nav-item" href="./#process">process</a>
+                <a class="nav-item" href="./about_us.html">about</a>
+                <a class="nav-item" href="./blog.html">blog</a>
+            </div>
+
+            <div class="footer-contact-info">
+                <div class="logo-container">
+                    <img class="ckc-logo" src="./assets/images/ckclogo.png"/>
+                    <div class="logo-subheader">
+                        > Your wish is our cmd
+                    </div>
+                </div>
+                <div class="contact-info">
+                    +1 208 . 918 . 3815 <br>
+                    hello@ckcollab.com <br><br>
+                    418 E Lakeside Ave <br>
+                    Coeur d'Alene, ID 83814
+                </div>
+            </div>
+
+            <div class="blue-stripe-lower"></div>
+        </section>
+    </v-app>
+</div>
 </body>
 </html>
 
 <script>
+
+    $(document).ready(function () {
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: function () {
+                return {
+                    model: 0,
+                    slides: [
+                        {
+                            src: "./assets/images/avatars/eric1.png",
+                            name: "Eric Carmichael",
+                            title: "Owner, Lead Developer",
+                            description: "Lorem ipsum dolor sit amet.",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/bailey.png",
+                            name: "Bailey Trefts",
+                            title: "Developer",
+                            description: "Aspernatur culpa dicta harum possimus!",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/ted1.png",
+                            name: "Brendan Myers",
+                            title: "Developer",
+                            description: "Aspernatur libero mollitia sapiente temporibus!",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/wade1.png",
+                            name: "Wade Lutz",
+                            title: "Project Manager",
+                            description: "Aliquid eveniet reiciendis vitae voluptates?",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/jimmy1.png",
+                            name: "Brendon Lind",
+                            title: "Junior Developer",
+                            description: "Error excepturi maiores nostrum reiciendis?",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/tyler1.png",
+                            name: "Nic Trefts",
+                            title: "Junior Developer",
+                            description: "Beatae dolor error officiis tempore?",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
+                    ]
+                }
+            }
+        })
+    })
 
 </script>
 
@@ -86,6 +277,7 @@
     .space-bg,
     .space-bg-overlay {
         height: 110vh;
+        z-index: 0;
     }
 
     .navigation-menu {
@@ -96,7 +288,11 @@
         font-weight: 300;
     }
 
-    .carousel {
+    .v-application a {
+        color: white;
+    }
+
+    #carousel {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -104,17 +300,66 @@
         padding: 120px;
     }
 
-    .carousel .computer {
-        height: 500px;
+    .v-carousel {
+        width: 21%;
+        left: -30px;
+        top: 60px;
     }
 
-    .carousel .left-arrow,
-    .carousel .right-arrow {
+    .computer {
+        height: 500px;
+        position: absolute;
+        z-index: 0;
+        top: 150px;
+        left: 36.25%;
+    }
+
+    .image-holder {
+        position: absolute;
+        top: 137px;
+        left: 41%;
+    }
+
+    .user {
+        width: 265px;
+        z-index: 2;
+        position: relative;
+        top: 10px;
+    }
+
+    #carousel .left-arrow,
+    #carousel .right-arrow {
         height: 120px;
         width: 120px;
         padding: 15px;
         margin: 20px;
         cursor: pointer;
+    }
+
+    .right-arrow {
+        position: absolute;
+        z-index: 5;
+        right: 100px;
+        top: 100px;
+    }
+
+    .arrow {
+        position: absolute;
+    }
+
+    .arrow.left {
+        left: 200px;
+    }
+
+    .arrow.right {
+        right: 250px;
+    }
+
+    .left-arrow {
+        position: absolute;
+        z-index: 5;
+        left: 100px;
+        top: 100px;
     }
 
     section.content {
@@ -158,19 +403,28 @@
         background-color: rgba(1, 9, 15, 0.81);
         color: white;
         padding: 20px;
-        height: 275px;
+        height: 305px;
         width: 100%;
         position: relative;
-        top: -175px;
+        top: 45px;
         left: 0;
         bottom: 0;
         right: 0;
     }
 
+    .theme--dark.v-sheet {
+        background-color: transparent;
+    }
+
     .description-bg .name {
         color: #F06C7C;
         font-size: 24px;
-        padding: 20px;
+        padding: 10px 20px;
+    }
+
+    .description-bg .title {
+        font-size: 24px;
+        padding: 0 20px;
     }
 
     .description-bg .description {
@@ -183,4 +437,60 @@
         padding: 15px 20px;
     }
 
+    .image-holder .user {
+        display: none;
+    }
+
+    .image-holder .user.active {
+        display: block;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        .computer {
+            height: 60vh;
+            position: absolute;
+            z-index: 0;
+            top: 250px;
+            left: 9%;
+        }
+
+        .content .header-text {
+        font-size: 40px;
+    }
+
+        .drop-us-a-line {
+            font-size: 30px;
+            border-radius: 50px;
+            width: 350px;
+            font-weight: 600;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .drop-us-a-line:hover {
+            cursor: pointer;
+            background-color: #e26674;
+        }
+
+        .secondary-navigation {
+            flex-direction: column;
+            width: 90%;
+            border-bottom: 1px solid white;
+        }
+
+        .nav-item {
+            font-size: 30px;
+            margin: 40px;
+        }
+
+        .footer-contact-info {
+            flex-direction: column;
+        }
+
+        .footer-contact-info .contact-info {
+            color: #332859;
+        }
+    }
 </style>

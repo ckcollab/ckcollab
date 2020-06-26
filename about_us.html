@@ -51,7 +51,7 @@
                 <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
             </div>
 
-            <img class="computer" alt="computer.png" src="./assets/images/computer.png">
+            <img class="computer" alt="computer.png" src="./assets/images/compy.svg">
             <div id="carousel">
                 <v-carousel
                         :height="250"
@@ -67,10 +67,10 @@
                     </v-carousel-item>
                 </v-carousel>
                 <div @click="go_left" class="arrow left">
-                    <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left-arrow.png">
+                    <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left%20key.svg">
                 </div>
                 <div @click="slide_counter++" class="arrow right">
-                    <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right-arrow.png">
+                    <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                 </div>
             </div>
 
@@ -263,7 +263,7 @@
                         },
                         {
                             src: "./assets/images/avatars/harvey.png",
-                            name: "Harvey",
+                            name: "Harvey Hartwell",
                             title: "Junior Developer",
                             description: "Beatae dolor error officiis tempore?",
                             skills: [
@@ -369,6 +369,11 @@
         position: absolute;
     }
 
+    .right-arrow:hover,
+    .left-arrow:hover {
+        filter: brightness(0.9);
+    }
+
     .arrow.left {
         left: 200px;
     }
@@ -471,6 +476,7 @@
         .container {
             width: 0;
         }
+
         .navigation-menu {
             display: none;
         }

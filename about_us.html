@@ -35,7 +35,20 @@
                 <a class="menu-link" href=".">HOME</a>
                 <a class="menu-link active" href="about_us.html">ABOUT CKC</a>
                 <a class="menu-link" href="blog.html">BLOG</a>
-                <a class="menu-link contact-button" href="#">CONTACT US</a>
+                <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
+            </div>
+
+            <div class="container hamburger-button" onclick="open_menu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="hamburger-navigation-menu hidden">
+                <a class="menu-link" href=".">HOME</a>
+                <a class="menu-link" href="about_us.html">ABOUT CKC</a>
+                <a class="menu-link" href="blog.html">BLOG</a>
+                <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
             </div>
 
             <img class="computer" alt="computer.png" src="./assets/images/computer.png">
@@ -45,7 +58,7 @@
                         width="250"
                         hide-delimiters
                         :show-arrows="false"
-                        v-model="model">
+                        v-model="slide_counter">
                     <v-carousel-item
                             v-for="(slide, i) in slides"
                             :key="i"
@@ -53,10 +66,10 @@
                             :src="slide.src">
                     </v-carousel-item>
                 </v-carousel>
-                <div @click="model--" class="arrow left">
+                <div @click="go_left" class="arrow left">
                     <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left-arrow.png">
                 </div>
-                <div @click="model++" class="arrow right">
+                <div @click="slide_counter++" class="arrow right">
                     <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right-arrow.png">
                 </div>
             </div>
@@ -64,7 +77,7 @@
             <v-carousel :continuous="false"
                         :show-arrows="false"
                         hide-delimiters
-                        v-model="model"
+                        v-model="slide_counter"
                         height="305"
                         vertical
                         class="description-bg">
@@ -96,33 +109,13 @@
                     </v-sheet>
                 </v-carousel-item>
             </v-carousel>
-
-            <!--            <div class="description-bg" v-model="model">-->
-            <!--                <div v-for="(slide, i) in slides"-->
-            <!--                     :key="i">-->
-            <!--                    <div class="name">-->
-            <!--                        {{slides[i].name}}-->
-            <!--                    </div>-->
-            <!--                    <div class="description">-->
-            <!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut-->
-            <!--                        labore-->
-            <!--                        et-->
-            <!--                        dolore magna aliqua. Ut enim ad minim veniam-->
-            <!--                    </div>-->
-            <!--                    <div class="skills">-->
-            <!--                        Skill |||<br>-->
-            <!--                        Skill || <br>-->
-            <!--                        Skill |||<br>-->
-            <!--                        Skill |||<br>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
         </div>
 
         <section class="content">
             <div class="header-text">LET'S WORK TOGETHER!</div>
             <div class="body-text">
-                We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it.
+                We help startups and growing businesses create, improve, or fix their apps — you come to us with the
+                problem and we’ll find ways to solve it.
             </div>
             <div class="drop-us-a-line">DROP US A LINE!</div>
         </section>
@@ -144,8 +137,8 @@
                     </div>
                 </div>
                 <div class="contact-info">
-                    +1 208 . 918 . 3815 <br>
-                    hello@ckcollab.com <br><br>
+                    <a href="tel:+1-208-918-3815">+1 208 . 918 . 3815</a>
+                    <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a><br>
                     418 E Lakeside Ave <br>
                     Coeur d'Alene, ID 83814
                 </div>
@@ -159,6 +152,10 @@
 </html>
 
 <script>
+    function open_menu(target) {
+        target.classList.toggle("change");
+        $('.hamburger-navigation-menu').toggleClass("hidden")
+    }
 
     $(document).ready(function () {
         new Vue({
@@ -166,10 +163,10 @@
             vuetify: new Vuetify(),
             data: function () {
                 return {
-                    model: 0,
+                    slide_counter: 0,
                     slides: [
                         {
-                            src: "./assets/images/avatars/eric1.png",
+                            src: "./assets/images/avatars/eric.png",
                             name: "Eric Carmichael",
                             title: "Owner, Lead Developer",
                             description: "Lorem ipsum dolor sit amet.",
@@ -201,7 +198,7 @@
                             ]
                         },
                         {
-                            src: "./assets/images/avatars/ted1.png",
+                            src: "./assets/images/avatars/ted.png",
                             name: "Brendan Myers",
                             title: "Developer",
                             description: "Aspernatur libero mollitia sapiente temporibus!",
@@ -217,7 +214,7 @@
                             ]
                         },
                         {
-                            src: "./assets/images/avatars/wade1.png",
+                            src: "./assets/images/avatars/wade.png",
                             name: "Wade Lutz",
                             title: "Project Manager",
                             description: "Aliquid eveniet reiciendis vitae voluptates?",
@@ -233,7 +230,7 @@
                             ]
                         },
                         {
-                            src: "./assets/images/avatars/jimmy1.png",
+                            src: "./assets/images/avatars/brendon.png",
                             name: "Brendon Lind",
                             title: "Junior Developer",
                             description: "Error excepturi maiores nostrum reiciendis?",
@@ -249,7 +246,7 @@
                             ]
                         },
                         {
-                            src: "./assets/images/avatars/tyler1.png",
+                            src: "./assets/images/avatars/nic.png",
                             name: "Nic Trefts",
                             title: "Junior Developer",
                             description: "Beatae dolor error officiis tempore?",
@@ -264,7 +261,33 @@
                                 },
                             ]
                         },
+                        {
+                            src: "./assets/images/avatars/harvey.png",
+                            name: "Harvey",
+                            title: "Junior Developer",
+                            description: "Beatae dolor error officiis tempore?",
+                            skills: [
+                                {
+                                    name: "Python",
+                                    power_level: "|||||"
+                                },
+                                {
+                                    name: "VueJS",
+                                    power_level: "|||"
+                                },
+                            ]
+                        },
                     ]
+                }
+            },
+            methods: {
+                go_left() {
+                    // Resets slide_counter to the last slide.
+                    if (this.slide_counter === 0) {
+                        this.slide_counter = this.slides.length - 1
+                    } else {
+                        this.slide_counter -= 1
+                    }
                 }
             }
         })
@@ -302,7 +325,6 @@
 
     .v-carousel {
         width: 21%;
-        left: -30px;
         top: 60px;
     }
 
@@ -386,7 +408,7 @@
         color: white;
         font-size: 55px;
         background-color: #F06C7C;
-        border-radius: 50px;
+        border-radius: 100px;
         width: 600px;
         font-weight: 600;
         padding: 20px;
@@ -445,19 +467,42 @@
         display: block;
     }
 
-
     @media only screen and (max-width: 768px) {
+        .container {
+            width: 0;
+        }
+        .navigation-menu {
+            display: none;
+        }
+
+        .hamburger-button {
+            display: inline-block;
+        }
+
         .computer {
             height: 60vh;
             position: absolute;
             z-index: 0;
-            top: 250px;
+            top: 80px;
             left: 9%;
         }
 
+        #carousel {
+            padding: 120px 0;
+            top: -100px;
+            text-align: center;
+            position: relative;
+            left: 0;
+        }
+
+        .v-carousel {
+            width: 100%;
+
+        }
+
         .content .header-text {
-        font-size: 40px;
-    }
+            font-size: 40px;
+        }
 
         .drop-us-a-line {
             font-size: 30px;
@@ -491,6 +536,11 @@
 
         .footer-contact-info .contact-info {
             color: #332859;
+            padding: 20px;
+        }
+
+        .left-arrow {
+            left: 0;
         }
     }
 </style>

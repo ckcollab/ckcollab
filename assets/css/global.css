@@ -160,4 +160,65 @@
     font-size: 24px;
     color: white;
     font-weight: 100;
+    flex-direction: column;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hamburger button */
+
+.hamburger-navigation-menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 2;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hamburger-navigation-menu.hidden {
+    display: none;
+}
+
+.hamburger-button {
+    z-index: 3;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 7px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+    border: solid 1px #222d4e;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 10px);
+    transform: rotate(-45deg) translate(-9px, 10px);
+    border: none;
+}
+
+.change .bar2 {
+    opacity: 0;
+    border: none;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -9px);
+    transform: rotate(45deg) translate(-8px, -9px);
+    border: none;
 }

@@ -14,14 +14,36 @@
     <meta property="og:description"
           content="WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idaho -- We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it"/>
 
+
     <link rel="stylesheet" href="./assets/css/global.css">
+
+    <!--  Favicon  -->
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!--  jQuery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
+
+    <!--  GreensockJS (Animations)  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <!--  Font Awesome  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128972978-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128972978-1');
+    </script>
 </head>
 <body>
 
@@ -45,7 +67,7 @@
         <a class="menu-link active" href=".">HOME</a>
         <a class="menu-link" href="about_us.html">ABOUT CKC</a>
         <a class="menu-link" href="blog.html">BLOG</a>
-        <a class="menu-link contact-button" href="#">CONTACT US</a>
+        <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
     </div>
 
     <div class="container hamburger-button" onclick="open_menu(this)">
@@ -58,7 +80,7 @@
         <a class="menu-link" href=".">HOME</a>
         <a class="menu-link" href="about_us.html">ABOUT CKC</a>
         <a class="menu-link" href="blog.html">BLOG</a>
-        <a class="menu-link" href="#">CONTACT US</a>
+        <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
     </div>
 </div>
 
@@ -68,20 +90,21 @@
     <div class="blue-stripe"></div>
     <div class="section-body">
         <div class="icon-container">
-            <img class="icon" src="./assets/images/frontend.png" alt="frontend.png">
+            <img class="icon" src="./assets/images/frontend_icon.svg" alt="frontend.png">
             <div class="icon-subheader">FRONT END</div>
         </div>
         <div class="icon-container">
-            <img class="icon" src="./assets/images/backend.png" alt="backend.png">
+            <img class="icon" src="./assets/images/backend_icon.svg" alt="backend.png">
             <div class="icon-subheader">BACK END</div>
         </div>
         <div class="icon-container">
-            <img class="icon" src="./assets/images/ckc_design.png" alt="ckc_design.png">
+            <img class="icon" src="./assets/images/design_icon.svg" alt="ckc_design.png">
             <div class="icon-subheader">DESIGN</div>
         </div>
     </div>
     <div class="section-text">
-        From ideas on a napkin to products in your users hands, we can handle everything! We specialize in all things web development.
+        From ideas on a napkin to products in your users hands, we can handle everything! We specialize in all things
+        web development.
     </div>
 </section>
 
@@ -94,7 +117,8 @@
             <div class="name-text-container">
                 <div class="step-name">STEP 1 : WIREFRAME</div>
                 <div class="step-text">
-                    Our approach to web development is holistic. We believe a good project requires a strong foundation with clear goals from the outset.
+                    Our approach to web development is holistic. We believe a good project requires a strong foundation
+                    with clear goals from the outset.
                 </div>
             </div>
             <div class="step-image">
@@ -108,7 +132,8 @@
             <div class="name-text-container">
                 <div class="step-name">STEP 2 : POLISH DESIGN</div>
                 <div class="step-text">
-                    After we've got your idea translated to paper, we want to bring in our ideas to see where we can improve upon those ideas.
+                    After we've got your idea translated to paper, we want to bring in our ideas to see where we can
+                    improve upon those ideas.
                 </div>
             </div>
         </div>
@@ -116,11 +141,12 @@
             <div class="name-text-container">
                 <div class="step-name">STEP 3 : DO THE MAGIC</div>
                 <div class="step-text">
-                    Programming, databases, deployment. After we've got everything how you want it, we make sure to bring it to life for you and your customers.
+                    Programming, databases, deployment. After we've got everything how you want it, we make sure to
+                    bring it to life for you and your customers.
                 </div>
             </div>
             <div class="step-image">
-                <img src="./assets/images/ckc_magic.png" alt="ckc_magic.png">
+                <img src="./assets/images/hat-trick.png" alt="ckc_magic.png">
             </div>
         </div>
     </div>
@@ -134,11 +160,14 @@
         LET'S WORK TOGETHER!
     </div>
     <div class="subheader-text">
-        We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it.
+        We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and
+        we’ll find ways to solve it.
     </div>
 
     <div class="drop-us-a-line">
-        DROP US A LINE!
+        <a href="mailto:hello@ckcollab.com">
+            DROP US A LINE!
+        </a>
     </div>
 
     <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
@@ -162,8 +191,8 @@
             </div>
         </div>
         <div class="contact-info">
-            +1 208 . 918 . 3815 <br>
-            hello@ckcollab.com <br><br>
+            <a href="tel:+1-208-918-3815">+1 208 . 918 . 3815</a>
+            <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a><br>
             418 E Lakeside Ave <br>
             Coeur d'Alene, ID 83814
         </div>
@@ -261,7 +290,7 @@
     }
 
     .icon-container .icon {
-        height: 250px;
+        height: 200px;
     }
 
     .icon-container .icon-subheader {
@@ -269,17 +298,13 @@
         font-size: 40px;
     }
 
-    .icon {
-        background: linear-gradient(gray, #fff);
-    }
-
     .section-text {
         color: #332859;
-        font-size: 49px;
-        text-align: center;
+        font-size: 45px;
+        text-align: justify;
         font-family: Montserrat, sans-serif;
         font-weight: 100;
-        margin: 200px auto;
+        margin: 200px;
     }
 
     .how-we-do-it .section-body {
@@ -298,6 +323,7 @@
 
     .name-text-container {
         width: 700px;
+        padding: 0 100px;
     }
 
     .step-name {
@@ -362,15 +388,19 @@
     }
 
     .drop-us-a-line {
-        color: white;
         font-size: 55px;
         background-color: #F06C7C;
-        border-radius: 50px;
+        border-radius: 100px;
         width: 600px;
         font-weight: 800;
         padding: 20px;
         text-align: center;
         margin: 50px auto;
+    }
+
+    .drop-us-a-line a {
+        text-decoration: none;
+        color: white;
     }
 
     .drop-us-a-line:hover {
@@ -393,61 +423,7 @@
     .contact-info {
         color: #4F456F;
         padding: 20px;
-    }
-
-    /* Hamburger button */
-
-    .hamburger-navigation-menu {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.75);
-        color: white;
-        display: flex;
         flex-direction: column;
-        height: 100vh;
-        z-index: 2;
-        text-align: center;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .hamburger-navigation-menu.hidden {
-        display: none;
-    }
-
-    .hamburger-button {
-        z-index: 3;
-        display: none;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-    }
-
-    .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 7px;
-        background-color: #FFF;
-        margin: 6px 0;
-        transition: 0.4s;
-        border: solid 1px #222d4e;
-    }
-
-    .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 10px);
-        transform: rotate(-45deg) translate(-9px, 10px);
-        border: none;
-    }
-
-    .change .bar2 {
-        opacity: 0;
-        border: none;
-    }
-
-    .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -9px);
-        transform: rotate(45deg) translate(-8px, -9px);
-        border: none;
     }
 
     /*  Widescreen CSS Transformation */
@@ -486,7 +462,7 @@
         }
 
         .hero-text {
-            font-size: 35px;
+            font-size: 25px;
             margin: 0 auto;
             width: 100vw;
             font-weight: 100;

@@ -50,16 +50,20 @@
                 <a class="menu-link" href="blog.html">BLOG</a>
                 <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
             </div>
-            <section class="content-box">
+            <section class="content">
                 <div class="computer-container"></div>
                 <!--                <img class="computer" alt="computer.png" src="./assets/images/compy.svg">-->
                 <div id="carousel">
+                    <div class="left-arrow" @click="go_left">
+                        <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
+                    </div>
                     <v-carousel
                             :height="computer_image_height"
                             :width="computer_image_height"
                             hide-delimiters
                             :show-arrows="false"
-                            v-model="slide_counter">
+                            v-model="slide_counter"
+                            class="image-holder">
                         <v-carousel-item
                                 v-for="(slide, i) in slides"
                                 :key="i"
@@ -67,13 +71,8 @@
                                 :src="slide.src">
                         </v-carousel-item>
                     </v-carousel>
-                    <div class="arrow-container">
-                        <div @click="go_left" class="arrow left">
-                            <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left%20key.svg">
-                        </div>
-                        <div @click="slide_counter++" class="arrow right">
-                            <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right%20key.svg">
-                        </div>
+                    <div class="right-arrow" @click="slide_counter++">
+                        <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                     </div>
                 </div>
 
@@ -112,8 +111,8 @@
                         </v-sheet>
                     </v-carousel-item>
                 </v-carousel>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section class="content">
             <div class="header-text">LET'S WORK TOGETHER!</div>
@@ -319,7 +318,7 @@
     .hero,
     .space-bg,
     .space-bg-overlay {
-        height: 110vh;
+        height: 100vh;
         z-index: 0;
     }
 
@@ -356,17 +355,16 @@
     .computer-container {
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 600px;
         background-image: url("./assets/images/compy.svg");
         background-size: 400px;
         background-position: center;
         z-index: 0;
     }
 
+
     .image-holder {
-        position: absolute;
-        top: 100px;
-        left: 41%;
+        margin-bottom: calc(100vh - 915px);
     }
 
     .user {
@@ -375,44 +373,37 @@
         position: relative;
     }
 
-    #carousel .left-arrow,
-    #carousel .right-arrow {
+    #carousel {
+        top: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .arrow-img{
         height: 120px;
         width: 120px;
-        padding: 15px;
-        margin: 20px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: relative;
+        z-index: 5;
         cursor: pointer;
+        margin-top: 15vh;
     }
 
     .right-arrow {
-        position: absolute;
-        z-index: 5;
-        right: 100px;
-        top: 100px;
+        margin-left: calc(23vw - 125px);
     }
 
-    .arrow {
-        position: absolute;
+    .left-arrow {
+        margin-right: calc(23vw - 125px);
     }
+
 
     .right-arrow:hover,
     .left-arrow:hover {
         filter: brightness(0.9);
-    }
-
-    .arrow.left {
-        left: 200px;
-    }
-
-    .arrow.right {
-        right: 200px;
-    }
-
-    .left-arrow {
-        position: absolute;
-        z-index: 5;
-        left: 100px;
-        top: 100px;
     }
 
     section.content {
@@ -503,21 +494,20 @@
         display: block;
     }
 
-    #carousel {
-        top: 60px;
+
+    .computer-container {
+        background-position-y: 120px;
     }
 
-    .arrow {
-        top: 200px;
-    }
+    @media only screen and (max-height: 950px){
+        /*TODO: Hero breaks when the verticle resoltion goes below 950px.
+           Need to set any variables that are effected by this to a static number */
 
-    @media only screen and (max-width: 1500px) {
-        .computer-container {
-            background-position-y: 120px;
-        }
     }
+    /*@media only screen and (max-width: 1500px) {*/
+    /*}*/
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 850px) {
         .container {
             width: 0;
         }
@@ -540,7 +530,7 @@
 
         .computer-container {
             width: 100vw;
-            height: 100vh;
+            height: 600px;
             background-size: 240px;
             background-position-y: 100px;
         }
@@ -548,22 +538,6 @@
         .arrow-container {
             width: 100vw;
             position: absolute;
-        }
-
-        .arrow.left {
-            left: 0;
-        }
-
-        .arrow.right {
-            right: 0;
-        }
-
-        .left-arrow {
-            left: 0;
-        }
-
-        .right-arrow {
-            right: 0;
         }
 
         #carousel {
@@ -613,17 +587,15 @@
             padding: 20px;
         }
 
-        .left-arrow {
-            left: 0;
+        .left-arrow,
+        .right-arrow {
+            position: relative;
         }
 
-        #carousel .left-arrow,
-        #carousel .right-arrow {
-            height: 120px;
-            width: 120px;
-            padding: 30px;
-            margin: 20px;
-            cursor: pointer;
+        .left-arrow {
+        }
+
+        .right-arrow {
         }
     }
 
@@ -685,7 +657,7 @@
 
         .computer-container {
             width: 100vw;
-            height: 100vh;
+            height: 600px;
             background-size: 220px;
             background-position-y: 69px;
         }

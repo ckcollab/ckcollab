@@ -50,68 +50,70 @@
                 <a class="menu-link" href="blog.html">BLOG</a>
                 <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
             </div>
-            <div class="computer-container"></div>
-            <!--                <img class="computer" alt="computer.png" src="./assets/images/compy.svg">-->
-            <div id="carousel">
-                <v-carousel
-                        :height="computer_image_height"
-                        :width="computer_image_height"
-                        hide-delimiters
-                        :show-arrows="false"
-                        v-model="slide_counter">
-                    <v-carousel-item
-                            v-for="(slide, i) in slides"
-                            :key="i"
+            <section class="content-box">
+                <div class="computer-container"></div>
+                <!--                <img class="computer" alt="computer.png" src="./assets/images/compy.svg">-->
+                <div id="carousel">
+                    <v-carousel
+                            :height="computer_image_height"
                             :width="computer_image_height"
-                            :src="slide.src">
-                    </v-carousel-item>
-                </v-carousel>
-                <div class="arrow-container">
-                    <div @click="go_left" class="arrow left">
-                        <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left%20key.svg">
-                    </div>
-                    <div @click="slide_counter++" class="arrow right">
-                        <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right%20key.svg">
+                            hide-delimiters
+                            :show-arrows="false"
+                            v-model="slide_counter">
+                        <v-carousel-item
+                                v-for="(slide, i) in slides"
+                                :key="i"
+                                :width="computer_image_height"
+                                :src="slide.src">
+                        </v-carousel-item>
+                    </v-carousel>
+                    <div class="arrow-container">
+                        <div @click="go_left" class="arrow left">
+                            <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left%20key.svg">
+                        </div>
+                        <div @click="slide_counter++" class="arrow right">
+                            <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right%20key.svg">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <v-carousel :continuous="false"
-                        :show-arrows="false"
-                        hide-delimiters
-                        v-model="slide_counter"
-                        height="345"
-                        vertical
-                        class="description-bg">
-                <v-carousel-item v-for="(slide, i) in slides"
-                                 :key="i">
-                    <v-sheet height="100%">
-                        <v-row>
-                            <div class="name">
-                                {{slide.name}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="title">
-                                {{slide.title}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="description">
-                                {{slide.description}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="skills">
-                                <ul v-for="skill in slide.skills">
-                                    <li>{{skill.name}} : {{skill.power_level}}</li>
-                                </ul>
-                            </div>
-                        </v-row>
-                    </v-sheet>
-                </v-carousel-item>
-            </v-carousel>
-        </div>
+                <v-carousel :continuous="false"
+                            :show-arrows="false"
+                            hide-delimiters
+                            v-model="slide_counter"
+                            height="345"
+                            vertical
+                            class="description-bg">
+                    <v-carousel-item v-for="(slide, i) in slides"
+                                     :key="i">
+                        <v-sheet height="100%">
+                            <v-row>
+                                <div class="name">
+                                    {{slide.name}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="title">
+                                    {{slide.title}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="description">
+                                    {{slide.description}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="skills">
+                                    <ul v-for="skill in slide.skills">
+                                        <li>{{skill.name}} : {{skill.power_level}}</li>
+                                    </ul>
+                                </div>
+                            </v-row>
+                        </v-sheet>
+                    </v-carousel-item>
+                </v-carousel>
+            </div>
+        </section>
 
         <section class="content">
             <div class="header-text">LET'S WORK TOGETHER!</div>

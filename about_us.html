@@ -58,8 +58,7 @@
                         <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
                     </div>
                     <v-carousel
-                            :height="computer_image_height"
-                            :width="computer_image_height"
+                            height=""
                             hide-delimiters
                             :show-arrows="false"
                             v-model="slide_counter"
@@ -67,8 +66,8 @@
                         <v-carousel-item
                                 v-for="(slide, i) in slides"
                                 :key="i"
-                                :width="computer_image_height"
-                                :src="slide.src">
+                                :src="slide.src"
+                                class="carousel-item-img">
                         </v-carousel-item>
                     </v-carousel>
                     <div class="right-arrow" @click="slide_counter++">
@@ -79,8 +78,8 @@
                 <v-carousel :continuous="false"
                             :show-arrows="false"
                             hide-delimiters
+                            height=""
                             v-model="slide_counter"
-                            height="345"
                             vertical
                             class="description-bg">
                     <v-carousel-item v-for="(slide, i) in slides"
@@ -345,7 +344,7 @@
         text-align: center;
         top: 60px;
         position: relative;
-        padding: 100px;
+        padding: 100px 15px 100px 15px;
     }
 
     .v-carousel {
@@ -364,7 +363,10 @@
 
 
     .image-holder {
-        margin-bottom: calc(100vh - 915px);
+        display: block;
+        margin-bottom: calc(65vh - 425px);
+        width: 250px;
+        height: 250px;
     }
 
     .user {
@@ -373,15 +375,16 @@
         position: relative;
     }
 
-    #carousel {
-        top: 60px;
-        padding-left: 15px;
-        padding-right: 15px;
+    .carousel-item-img{
+        display: block;
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .arrow-img{
-        height: 120px;
-        width: 120px;
+        height: 150px;
+        width: 150px;
     }
 
     .left-arrow,
@@ -389,7 +392,7 @@
         position: relative;
         z-index: 5;
         cursor: pointer;
-        margin-top: 15vh;
+        margin-top: calc(65vh - 425px);
     }
 
     .right-arrow {
@@ -452,10 +455,10 @@
         background-color: rgba(1, 9, 15, 0.81);
         color: white;
         padding: 20px;
-        height: 355px;
+        height: 345px;
         width: 100%;
-        position: relative;
-        top: 45px;
+        position: absolute;
+        top: calc(100vh - 345px);
         left: 0;
         bottom: 0;
         right: 0;
@@ -516,6 +519,14 @@
             display: none;
         }
 
+        #carousel {
+            padding: 25px 0;
+            top: 15px;
+            text-align: center;
+            position: relative;
+            left: 0;
+        }
+
         .hamburger-button {
             display: inline-block;
         }
@@ -531,21 +542,42 @@
         .computer-container {
             width: 100vw;
             height: 600px;
-            background-size: 240px;
-            background-position-y: 100px;
+            background-size: 280px;
+            background-position-y: 20px;
         }
 
-        .arrow-container {
-            width: 100vw;
+        .image-holder {
+            display: block;
+            margin-bottom: 0;
+            width:  175px;
+            height: 175px;
+        }
+
+        .carousel-item-img{
+            display: block;
+            width: 175px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .left-arrow,
+        .right-arrow {
             position: absolute;
+            margin: 0;
+            top: calc(100vh/2 - 125px);
         }
 
-        #carousel {
-            padding: 120px 0;
-            top: 25px;
-            text-align: center;
-            position: relative;
-            left: 0;
+        .left-arrow {
+            left: 15vw;
+        }
+
+        .right-arrow {
+            right: 15vw;
+        }
+
+        .arrow-img {
+            height: 120px;
+            width: 120px;
         }
 
         .content .header-text {
@@ -586,22 +618,11 @@
             color: #332859;
             padding: 20px;
         }
-
-        .left-arrow,
-        .right-arrow {
-            position: relative;
-        }
-
-        .left-arrow {
-        }
-
-        .right-arrow {
-        }
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
         #carousel {
-            top: -40px;
+            top: -10px;
         }
 
         .computer {
@@ -609,57 +630,54 @@
             left: 15%;
         }
 
-        .arrow-container {
-            display: flex;
-            flex-direction: column-reverse;
-            top: 250px;
-        }
-
-        .arrow {
-            position: absolute;
-            top: 80%;
-        }
-
-        #carousel .left-arrow,
-        #carousel .right-arrow {
-            height: 120px;
-            width: 120px;
-            padding: 30px;
-            margin: 20px;
-            cursor: pointer;
-        }
-
-        .right-arrow {
-            position: absolute;
-            z-index: 5;
-            right: 0;
-            top: 100px;
-        }
-
-        .arrow {
-            position: absolute;
-        }
-
-        .arrow.left {
-            left: 0;
-        }
-
-        .arrow.right {
-            right: 0;
-        }
-
-        .left-arrow {
-            position: absolute;
-            z-index: 5;
-            left: 0;
-            top: 100px;
-        }
-
         .computer-container {
             width: 100vw;
             height: 600px;
-            background-size: 220px;
-            background-position-y: 69px;
+            background-size: 190px;
+            background-position-y: -0px;
         }
+
+        .image-holder {
+            display: block;
+            margin-bottom: 0;
+            width:  120px;
+            height: 120px;
+        }
+
+        .carousel-item-img{
+            display: block;
+            width: 120px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            margin: 0;
+            top: calc(100vh/2 - 115px);
+        }
+
+        .left-arrow {
+            left: 15vw;
+        }
+
+        .right-arrow {
+            right: 15vw;
+        }
+
+        .arrow-img {
+            height: 105px;
+            width: 105px;
+        }
+
+        .description-bg {
+            padding: 15px;
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            top: calc(100vh - 300px);
+        }
+
     }
 </style>

@@ -354,11 +354,12 @@
     .computer-container {
         position: absolute;
         width: 100vw;
-        height: 600px;
+        height: 800px;
         background-image: url("./assets/images/compy.svg");
         background-size: 400px;
         background-position: center;
         z-index: 0;
+        background-position-y: 120px;
     }
 
 
@@ -497,14 +498,74 @@
         display: block;
     }
 
-
-    .computer-container {
-        background-position-y: 120px;
-    }
-
-    @media only screen and (max-height: 950px){
+    @media only screen and (max-height: 1050px){
         /*TODO: Hero breaks when the verticle resoltion goes below 950px.
            Need to set any variables that are effected by this to a static number */
+
+        .hero,
+        .space-bg,
+        .space-bg-overlay {
+            height: calc(72.222vh + 291.666px);
+            z-index: 0;
+        }
+
+        #carousel {
+            /*top: 160px at 1050vh*/
+            /*top: calc(23.3333vh - 85px);*/
+            top: calc(21.111vh + -61.667px);
+            padding: 0px 15px 0px 15px;
+        }
+
+        .computer-container {
+            /*background-size: 400px;*/
+            background-size: calc(22.222vh + 166.667px);
+            /*y-position: 120px at 1050vh*/
+            background-position-y: calc(17.778vh + -66.667px);
+        }
+
+
+        .image-holder {
+            /*marg-bot: 257.5 @ 1050vh*/
+            margin-bottom: 0px;
+            width: calc(13.889vh + 104.167px);
+            height: calc(13.889vh + 104.167px);
+        }
+
+        .carousel-item-img{
+            /*width: 250px;*/
+            width: calc(13.889vh + 104.167px);
+        }
+
+        .arrow-img{
+            height: calc(5.556vh + 91.667px);
+            width: calc(5.556vh + 91.667px);
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            margin-top: 0px;
+            top: calc(17.333vh + 121.000px);
+        }
+
+        .right-arrow {
+            margin-left: 0px;
+            /*margin-left: calc(23vw - 125px);*/
+            right: calc(23vw - 100px);
+        }
+
+        .left-arrow {
+            margin-right: 0px;
+            left: calc(23vw - 100px);
+        }
+
+
+        .description-bg {
+            padding: calc(2.22vh - 3.333px);
+            height: calc(27.778vh + 53.333px);
+            top: calc((72.222vh + 291.666px) - (27.778vh + 53.333px));
+        }
 
     }
     /*@media only screen and (max-width: 1500px) {*/

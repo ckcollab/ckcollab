@@ -91,7 +91,7 @@
                                 </div>
                             </v-row>
                             <v-row>
-                                <div class="title">
+                                <div class="desc-title">
                                     {{slide.title}}
                                 </div>
                             </v-row>
@@ -475,7 +475,7 @@
         padding: 10px 20px;
     }
 
-    .description-bg .title {
+    .description-bg .desc-title {
         font-size: 24px;
         padding: 0 20px;
     }
@@ -498,9 +498,83 @@
         display: block;
     }
 
+    @media screen and (min-height: 1050px) and (min-aspect-ratio: 4/3){
+
+        #carousel {
+            /*top: 160px at 1050vh*/
+            top: 260px;
+            padding: 0 15px;
+        }
+
+        .computer-container {
+            background-size: 1000px;
+            height: 2400px;
+            /*y-position: 120px at 1050vh*/
+            background-position-y: 180px;
+        }
+
+
+        .image-holder {
+            margin-bottom: 0px;
+            width: 600px;
+            height: 600px;
+        }
+
+        .carousel-item-img{
+            /*width: 250px;*/
+            width: 600px;
+        }
+
+        .arrow-img{
+            height: 325px;
+            width: 325px;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            margin-top: 0px;
+            top: 900px;
+        }
+
+        .right-arrow {
+            margin-left: 0px;
+            right: calc(23vw - 100px);
+        }
+
+        .left-arrow {
+            margin-right: 0px;
+            left: calc(23vw - 100px);
+        }
+
+
+        .description-bg {
+            height: 435px;
+            top: calc(100vh - 435px);
+        }
+        .description-bg .name {
+            font-size: 36px;
+            /*padding: 10px 20px;*/
+        }
+
+        .description-bg .desc-title {
+            font-size: 32px;
+            /*padding: 0 20px;*/
+        }
+
+        .description-bg .description {
+            font-size: 30px;
+            /*padding: 0 20px;*/
+        }
+
+        .description-bg .skills {
+            font-size: 30px;
+            /*padding: 15px 20px;*/
+        }
+    }
+
     @media only screen and (max-height: 1050px){
-        /*TODO: Hero breaks when the verticle resoltion goes below 950px.
-           Need to set any variables that are effected by this to a static number */
 
         .hero,
         .space-bg,
@@ -568,8 +642,6 @@
         }
 
     }
-    /*@media only screen and (max-width: 1500px) {*/
-    /*}*/
 
     @media only screen and (max-width: 850px) {
         .container {

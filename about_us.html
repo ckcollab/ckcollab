@@ -497,36 +497,36 @@
         display: block;
     }
 
-    @media screen and (min-height: 1050px) and (min-aspect-ratio: 4/3){
+    @media screen and (min-height: 1050px) and (min-aspect-ratio: 1/1){
 
         #carousel {
             /*top: 160px at 1050vh*/
-            top: 260px;
+            top: calc(9.009vh + 65.405px);
             padding: 0 15px;
         }
 
         .computer-container {
-            background-size: 1000px;
+            background-size: calc(54.054vh + -167.568px);
             height: 2400px;
             /*y-position: 120px at 1050vh*/
-            background-position-y: 180px;
+            background-position-y: calc(5.405vh + 63.243px);
         }
 
 
         .image-holder {
             margin-bottom: 0px;
-            width: 600px;
-            height: 600px;
+            width: calc(31.532vh + -81.081px);
+            height: calc(31.532vh + -81.081px);
         }
 
         .carousel-item-img{
             /*width: 250px;*/
-            width: 600px;
+            width: calc(31.532vh + -81.081px);
         }
 
         .arrow-img{
-            height: 325px;
-            width: 325px;
+            height: calc(15.766vh + -15.541px);
+            width: calc(15.766vh + -15.541px);
         }
 
         .left-arrow,
@@ -534,7 +534,7 @@
             position: absolute;
             cursor: pointer;
             margin-top: 0px;
-            top: 900px;
+            top: calc(53.874vh + -263.676px);
         }
 
         .right-arrow {
@@ -549,27 +549,21 @@
 
 
         .description-bg {
-            height: 435px;
-            top: calc(100vh - 435px);
+            height: calc(9.009vh + 250.405px);
+            top: calc(100vh - (9.009vh + 250.405px));
         }
+
         .description-bg .name {
             font-size: 36px;
-            /*padding: 10px 20px;*/
         }
 
         .description-bg .desc-title {
             font-size: 32px;
-            /*padding: 0 20px;*/
         }
 
-        .description-bg .description {
-            font-size: 30px;
-            /*padding: 0 20px;*/
-        }
-
+        .description-bg .description,
         .description-bg .skills {
             font-size: 30px;
-            /*padding: 15px 20px;*/
         }
     }
 

@@ -91,6 +91,7 @@
     z-index: 3;
     position: relative;
     height: 500px;
+    background-size: cover;
 }
 
 .pink-stripe-lower {

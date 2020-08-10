@@ -50,67 +50,66 @@
                 <a class="menu-link" href="blog.html">BLOG</a>
                 <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
             </div>
-            <div class="computer-container"></div>
-            <!--                <img class="computer" alt="computer.png" src="./assets/images/compy.svg">-->
-            <div id="carousel">
-                <v-carousel
-                        :height="computer_image_height"
-                        :width="computer_image_height"
-                        hide-delimiters
-                        :show-arrows="false"
-                        v-model="slide_counter">
-                    <v-carousel-item
-                            v-for="(slide, i) in slides"
-                            :key="i"
-                            :width="computer_image_height"
-                            :src="slide.src">
-                    </v-carousel-item>
-                </v-carousel>
-                <div class="arrow-container">
-                    <div @click="go_left" class="arrow left">
-                        <img class="left-arrow" alt="left-arrow.png" src="./assets/images/left%20key.svg">
+            <section class="content">
+                <div class="computer-container"></div>
+                <div id="carousel">
+                    <div class="left-arrow" @click="go_left">
+                        <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
                     </div>
-                    <div @click="slide_counter++" class="arrow right">
-                        <img class="right-arrow" alt="right-arrow.png" src="./assets/images/right%20key.svg">
+                    <v-carousel
+                            height=""
+                            hide-delimiters
+                            :show-arrows="false"
+                            v-model="slide_counter"
+                            class="image-holder">
+                        <v-carousel-item
+                                v-for="(slide, i) in slides"
+                                :key="i"
+                                :src="slide.src"
+                                class="carousel-item-img">
+                        </v-carousel-item>
+                    </v-carousel>
+                    <div class="right-arrow" @click="slide_counter++">
+                        <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                     </div>
                 </div>
-            </div>
 
-            <v-carousel :continuous="false"
-                        :show-arrows="false"
-                        hide-delimiters
-                        v-model="slide_counter"
-                        height="345"
-                        vertical
-                        class="description-bg">
-                <v-carousel-item v-for="(slide, i) in slides"
-                                 :key="i">
-                    <v-sheet height="100%">
-                        <v-row>
-                            <div class="name">
-                                {{slide.name}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="title">
-                                {{slide.title}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="description">
-                                {{slide.description}}
-                            </div>
-                        </v-row>
-                        <v-row>
-                            <div class="skills">
-                                <ul v-for="skill in slide.skills">
-                                    <li>{{skill.name}} : {{skill.power_level}}</li>
-                                </ul>
-                            </div>
-                        </v-row>
-                    </v-sheet>
-                </v-carousel-item>
-            </v-carousel>
+                <v-carousel :continuous="false"
+                            :show-arrows="false"
+                            hide-delimiters
+                            height=""
+                            v-model="slide_counter"
+                            vertical
+                            class="description-bg">
+                    <v-carousel-item v-for="(slide, i) in slides"
+                                     :key="i">
+                        <v-sheet height="100%">
+                            <v-row>
+                                <div class="name">
+                                    {{slide.name}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="desc-title">
+                                    {{slide.title}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="description">
+                                    {{slide.description}}
+                                </div>
+                            </v-row>
+                            <v-row>
+                                <div class="skills">
+                                    <ul v-for="skill in slide.skills">
+                                        <li>{{skill.name}} : {{skill.power_level}}</li>
+                                    </ul>
+                                </div>
+                            </v-row>
+                        </v-sheet>
+                    </v-carousel-item>
+                </v-carousel>
+            </section>
         </div>
 
         <section class="content">
@@ -317,7 +316,7 @@
     .hero,
     .space-bg,
     .space-bg-overlay {
-        height: 110vh;
+        height: 100vh;
         z-index: 0;
     }
 
@@ -344,7 +343,7 @@
         text-align: center;
         top: 60px;
         position: relative;
-        padding: 100px;
+        padding: 100px 15px;
     }
 
     .v-carousel {
@@ -354,17 +353,20 @@
     .computer-container {
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 800px;
         background-image: url("./assets/images/compy.svg");
         background-size: 400px;
         background-position: center;
         z-index: 0;
+        background-position-y: 120px;
     }
 
+
     .image-holder {
-        position: absolute;
-        top: 100px;
-        left: 41%;
+        display: block;
+        margin-bottom: calc(65vh - 425px);
+        width: 250px;
+        height: 250px;
     }
 
     .user {
@@ -373,44 +375,38 @@
         position: relative;
     }
 
-    #carousel .left-arrow,
-    #carousel .right-arrow {
-        height: 120px;
-        width: 120px;
-        padding: 15px;
-        margin: 20px;
+    .carousel-item-img{
+        display: block;
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .arrow-img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: relative;
+        z-index: 5;
         cursor: pointer;
+        margin-top: calc(65vh - 425px);
     }
 
     .right-arrow {
-        position: absolute;
-        z-index: 5;
-        right: 100px;
-        top: 100px;
+        margin-left: calc(23vw - 125px);
     }
 
-    .arrow {
-        position: absolute;
+    .left-arrow {
+        margin-right: calc(23vw - 125px);
     }
+
 
     .right-arrow:hover,
     .left-arrow:hover {
         filter: brightness(0.9);
-    }
-
-    .arrow.left {
-        left: 200px;
-    }
-
-    .arrow.right {
-        right: 200px;
-    }
-
-    .left-arrow {
-        position: absolute;
-        z-index: 5;
-        left: 100px;
-        top: 100px;
     }
 
     section.content {
@@ -459,10 +455,10 @@
         background-color: rgba(1, 9, 15, 0.81);
         color: white;
         padding: 20px;
-        height: 355px;
+        height: 345px;
         width: 100%;
-        position: relative;
-        top: 45px;
+        position: absolute;
+        top: calc(100vh - 345px);
         left: 0;
         bottom: 0;
         right: 0;
@@ -478,7 +474,7 @@
         padding: 10px 20px;
     }
 
-    .description-bg .title {
+    .description-bg .desc-title {
         font-size: 24px;
         padding: 0 20px;
     }
@@ -501,27 +497,150 @@
         display: block;
     }
 
-    #carousel {
-        top: 60px;
-    }
+    @media screen and (min-height: 1050px) and (min-aspect-ratio: 1/1){
 
-    .arrow {
-        top: 200px;
-    }
+        #carousel {
+            top: calc(9.009vh + 65.405px);
+            padding: 0 15px;
+        }
 
-    @media only screen and (max-width: 1500px) {
         .computer-container {
-            background-position-y: 120px;
+            background-size: calc(54.054vh + -167.568px);
+            height: 2400px;
+            background-position-y: calc(5.405vh + 63.243px);
+        }
+
+
+        .image-holder {
+            margin-bottom: 0;
+            width: calc(31.532vh + -81.081px);
+            height: calc(31.532vh + -81.081px);
+        }
+
+        .carousel-item-img{
+            width: calc(31.532vh + -81.081px);
+        }
+
+        .arrow-img{
+            height: calc(15.766vh + -15.541px);
+            width: calc(15.766vh + -15.541px);
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            margin-top: 0;
+            top: calc(53.874vh + -263.676px);
+        }
+
+        .right-arrow {
+            margin-left: 0;
+            right: calc(23vw - 100px);
+        }
+
+        .left-arrow {
+            margin-right: 0;
+            left: calc(23vw - 100px);
+        }
+
+
+        .description-bg {
+            height: calc(9.009vh + 250.405px);
+            top: calc(100vh - (9.009vh + 250.405px));
+        }
+
+        .description-bg .name {
+            font-size: 36px;
+        }
+
+        .description-bg .desc-title {
+            font-size: 32px;
+        }
+
+        .description-bg .description,
+        .description-bg .skills {
+            font-size: 30px;
         }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-height: 1050px){
+
+        .hero,
+        .space-bg,
+        .space-bg-overlay {
+            height: calc(72.222vh + 291.666px);
+            z-index: 0;
+        }
+
+        #carousel {
+            top: calc(21.111vh + -61.667px);
+            padding: 0 15px;
+        }
+
+        .computer-container {
+            background-size: calc(22.222vh + 166.667px);
+            background-position-y: calc(17.778vh + -66.667px);
+        }
+
+
+        .image-holder {
+            margin-bottom: 0;
+            width: calc(13.889vh + 104.167px);
+            height: calc(13.889vh + 104.167px);
+        }
+
+        .carousel-item-img{
+            width: calc(13.889vh + 104.167px);
+        }
+
+        .arrow-img{
+            height: calc(5.556vh + 91.667px);
+            width: calc(5.556vh + 91.667px);
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            margin-top: 0;
+            top: calc(17.333vh + 121.000px);
+        }
+
+        .right-arrow {
+            margin-left: 0;
+            right: calc(23vw - 100px);
+        }
+
+        .left-arrow {
+            margin-right: 0;
+            left: calc(23vw - 100px);
+        }
+
+
+        .description-bg {
+            padding: calc(2.22vh - 3.333px);
+            height: calc(27.778vh + 53.333px);
+            top: calc((72.222vh + 291.666px) - (27.778vh + 53.333px));
+        }
+
+    }
+
+    @media only screen and (max-width: 850px) {
         .container {
             width: 0;
         }
 
         .navigation-menu {
             display: none;
+        }
+
+        #carousel {
+            padding: 25px 0;
+            top: 15px;
+            text-align: center;
+            position: relative;
+            left: 0;
         }
 
         .hamburger-button {
@@ -538,38 +657,43 @@
 
         .computer-container {
             width: 100vw;
-            height: 100vh;
-            background-size: 240px;
-            background-position-y: 100px;
+            height: 600px;
+            background-size: 280px;
+            background-position-y: 20px;
         }
 
-        .arrow-container {
-            width: 100vw;
+        .image-holder {
+            display: block;
+            margin-bottom: 0;
+            width:  175px;
+            height: 175px;
+        }
+
+        .carousel-item-img{
+            display: block;
+            width: 175px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .left-arrow,
+        .right-arrow {
             position: absolute;
-        }
-
-        .arrow.left {
-            left: 0;
-        }
-
-        .arrow.right {
-            right: 0;
+            margin: 0;
+            top: calc(100vh/2 - 125px);
         }
 
         .left-arrow {
-            left: 0;
+            left: 15vw;
         }
 
         .right-arrow {
-            right: 0;
+            right: 15vw;
         }
 
-        #carousel {
-            padding: 120px 0;
-            top: 25px;
-            text-align: center;
-            position: relative;
-            left: 0;
+        .arrow-img {
+            height: 120px;
+            width: 120px;
         }
 
         .content .header-text {
@@ -610,24 +734,15 @@
             color: #332859;
             padding: 20px;
         }
-
-        .left-arrow {
-            left: 0;
-        }
-
-        #carousel .left-arrow,
-        #carousel .right-arrow {
-            height: 120px;
-            width: 120px;
-            padding: 30px;
-            margin: 20px;
-            cursor: pointer;
+        
+        .footer-contact-info .contact-info a {
+            color: #332859;
         }
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
         #carousel {
-            top: -40px;
+            top: -10px;
         }
 
         .computer {
@@ -635,57 +750,53 @@
             left: 15%;
         }
 
-        .arrow-container {
-            display: flex;
-            flex-direction: column-reverse;
-            top: 250px;
+        .computer-container {
+            width: 100vw;
+            height: 600px;
+            background-size: 190px;
+            background-position-y: 0;
         }
 
-        .arrow {
-            position: absolute;
-            top: 80%;
-        }
-
-        #carousel .left-arrow,
-        #carousel .right-arrow {
+        .image-holder {
+            display: block;
+            margin-bottom: 0;
+            width:  120px;
             height: 120px;
-            width: 120px;
-            padding: 30px;
-            margin: 20px;
-            cursor: pointer;
         }
 
+        .carousel-item-img{
+            display: block;
+            width: 120px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .left-arrow,
         .right-arrow {
             position: absolute;
-            z-index: 5;
-            right: 0;
-            top: 100px;
-        }
-
-        .arrow {
-            position: absolute;
-        }
-
-        .arrow.left {
-            left: 0;
-        }
-
-        .arrow.right {
-            right: 0;
+            margin: 0;
+            top: calc(100vh/2 - 115px);
         }
 
         .left-arrow {
-            position: absolute;
-            z-index: 5;
-            left: 0;
-            top: 100px;
+            left: 15vw;
         }
 
-        .computer-container {
-            width: 100vw;
-            height: 100vh;
-            background-size: 220px;
-            background-position-y: 69px;
+        .right-arrow {
+            right: 15vw;
+        }
+
+        .arrow-img {
+            height: 105px;
+            width: 105px;
+        }
+
+        .description-bg {
+            padding: 15px;
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            top: calc(100vh - 300px);
         }
     }
 </style>

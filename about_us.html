@@ -82,29 +82,37 @@
                             vertical
                             class="description-bg">
                     <v-carousel-item v-for="(slide, i) in slides"
-                                     :key="i">
+                                        :key="i">
                         <v-sheet height="100%">
                             <v-row>
-                                <div class="name">
-                                    {{slide.name}}
-                                </div>
-                            </v-row>
-                            <v-row>
-                                <div class="desc-title">
-                                    {{slide.title}}
-                                </div>
-                            </v-row>
-                            <v-row>
-                                <div class="description">
-                                    {{slide.description}}
-                                </div>
-                            </v-row>
-                            <v-row>
-                                <div class="skills">
-                                    <ul v-for="skill in slide.skills">
-                                        <li>{{skill.name}} : {{skill.power_level}}</li>
-                                    </ul>
-                                </div>
+                                <v-col cols="6" style="text-align: left;">
+                                    <div class="name">
+                                        {{slide.name}}
+                                    </div>
+                                    <div class="desc-title">
+                                        {{slide.title}}
+                                    </div>
+                                    <div class="desc-title">
+                                        Top Skills:
+                                    </div>
+                                    <div class="skills">
+                                        <ul style="list-style-type: none">
+                                            <li v-for="skill in slide.skills"><b>{{skill.type}}</b>{{skill.skills}}</li>
+                                        </ul>
+                                    </div>
+                                </v-col>
+                                <v-col style="text-align: left;" cols="6">
+                                    <div class="desc-links">
+                                        <a href="#"><span class="mdi mdi-link"></span></a>
+                                        <a href="#"><span class="mdi mdi-linkedin"></span></a>
+                                        <a href="#"><span class="mdi mdi-blogger"></span></a>
+                                    </div>
+                                    <div class="description">
+                                        <div v-for="line in slide.description">
+                                            <span>{{line}}</span><br>
+                                        </div>
+                                    </div>
+                                </v-col>
                             </v-row>
                         </v-sheet>
                     </v-carousel-item>
@@ -174,112 +182,182 @@
                             src: "./assets/images/avatars/eric.png",
                             name: "Eric Carmichael",
                             title: "Owner, Lead Developer",
-                            description: "Lorem ipsum dolor sit amet.",
+                            description: ["Eric started programming at a young age. At the age of 15, he fell in love with it when hacked his school’s school stock exchange. CKC was founded in 2012 so Eric could have the flexibility to work and take care of his mother’s health. Since then we’ve had the opportunity to work with some of the largest Django shops and run projects from wireframes to millions in funding.",
+                                    "",
+                                    "In his free time he loves StarCraft, jiu jitsu, hunting, fishing, and has 2 state records in powerlifting!"],
                             skills: [
                                 {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type:"",
+                                    skills: "Architecting and Project Management",
+
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
+                                    type: "Languages: ",
+                                    skills: "Python, JavaScript, C#",
+                                },
+                                {
+                                    type: "Frameworks: ",
+                                    skills: "Django, VueJS, Angular, Knockout, jQuery"
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/allen.png",
+                            name: "Allen Carmichael",
+                            title: "Marketing and Sales",
+                            description: ["Born in Eugene Oregon, Allen moved to Coeur d'Alene Idaho in 2003 and graduated from Lake City High school. Studied At Boise State university and graduated with a degree in Business Administration.",
+                                "",
+                                "Started his career in restaurant management and customer service before moving to the tech industry.  Skilled in customer relations and marketing from his past restaurant career and now is transferring those skills into the tech business.",],
+                            skills: [
+                                {
+                                    type: "",
+                                    skills: "Organization of projects and tasks.",
+                                },
+                                {
+                                    type: "",
+                                    skills: "Customer service and relationship building.",
+                                },
+                                {
+                                    type: "",
+                                    skills: "Experience with time management of employees.",
                                 },
                             ]
                         },
                         {
                             src: "./assets/images/avatars/bailey.png",
                             name: "Bailey Trefts",
-                            title: "Developer",
-                            description: "Aspernatur culpa dicta harum possimus!",
+                            title: "Senior Developer",
+                            description: ["Bailey’s experience in software ranges from full-stack engineering to the development of numerical simulations and control algorithms.",
+                                "He is a recent graduate of U of I, where he studied mechanical engineering and computer science.  He completed a summer internship at NASA Ames where he contributed to the development of a hybrid rocket motor for small satellites.",
+                                "",
+                                "Downhill mountain biking and personal engineering projects fill Bailey’s free time.",
+                                "Fave quote: “I’m not superstitious, but I am a little stitious.”",
+                            ],
                             skills: [
                                 {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type: "Development Tools: ",
+                                    skills: "Linux, Git, Docker, AWS"
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
+                                    type: "Languages: ",
+                                    skills: "Python, JavaScript, MATLAB, C++"
+                                },
+                                {
+                                    type: "Frameworks: ",
+                                    skills: "Numpy, TensorFlow, Django, React, Riot.js"
                                 },
                             ]
                         },
                         {
                             src: "./assets/images/avatars/ted.png",
                             name: "Brendan Myers",
-                            title: "Developer",
-                            description: "Aspernatur libero mollitia sapiente temporibus!",
+                            title: "Web Developer",
+                            description: ["Brendan aka Ted, graduated from U of I with a degree in Recreation and transitioned into programming in 2017. He specializes in frontend development and design.",
+                                "",
+                                "In his free time he plays a Retribution Paladin in World of Warcraft as well as a variety of other video games, dungeons and dragons, mountain bikes, and plays with his golden retriever Russell.",],
                             skills: [
                                 {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type:"",
+                                    skills: "Front End Development",
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
-                                },
-                            ]
-                        },
-                        {
-                            src: "./assets/images/avatars/wade.png",
-                            name: "Wade Lutz",
-                            title: "Project Manager",
-                            description: "Aliquid eveniet reiciendis vitae voluptates?",
-                            skills: [
-                                {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type:"Languages: ",
+                                    skills: "JavaScript, HTML, CSS, Python",
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
-                                },
-                            ]
-                        },
-                        {
-                            src: "./assets/images/avatars/brendon.png",
-                            name: "Brendon Lind",
-                            title: "Junior Developer",
-                            description: "Error excepturi maiores nostrum reiciendis?",
-                            skills: [
-                                {
-                                    name: "Python",
-                                    power_level: "|||||"
-                                },
-                                {
-                                    name: "VueJS",
-                                    power_level: "|||"
+                                    type:"Frameworks/Libraries: ",
+                                    skills: "VueJS, Django, jQuery",
                                 },
                             ]
                         },
                         {
                             src: "./assets/images/avatars/nic.png",
                             name: "Nic Trefts",
-                            title: "Junior Developer",
-                            description: "Beatae dolor error officiis tempore?",
+                            title: "Junior Web Developer",
+                            description: ["Nic has been into computer-related shenanigans since middle school, and started programming casually in high school. His interest in programming skyrocketed when he started college, and he'll be graduating North Idaho College with an AS in Computer science in the fall of 2020.",
+                            "In his free time he trains for and competes in local Super Smash Brothers Melee tournaments.",
+                            "",
+                            'There is so much more melee to be played." - Mang0'],
                             skills: [
                                 {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type:"Languages: ",
+                                    skills: "Python, C++, Javascript, HTML",
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
+                                    type:"Frameworks: ",
+                                    skills: "Django, TensorFlow, Vue.js, Riot.js",
+                                },
+                                {
+                                    type:"",
+                                    skills: "Artificial Intelligence",
                                 },
                             ]
                         },
                         {
                             src: "./assets/images/avatars/harvey.png",
                             name: "Harvey Hartwell",
-                            title: "Junior Developer",
-                            description: "Beatae dolor error officiis tempore?",
+                            title: "Junior Web Developer",
+                            description: ["Harvey graduated from Gonzaga University with a degree in Computer Science and an Emphasis in Communication Studies. He has experience with android app development, web development, and database management.",
+                            "",
+                            "He also cooks a mean boeuf bourguignon"],
                             skills: [
                                 {
-                                    name: "Python",
-                                    power_level: "|||||"
+                                    type:"Development Tools: ",
+                                    skills: "Git, Docker, Android Studios",
                                 },
                                 {
-                                    name: "VueJS",
-                                    power_level: "|||"
+                                    type:"Languages: ",
+                                    skills: "Python, Javascript, Java, PHP, SQL",
                                 },
+                                {
+                                    type:"Frameworks: ",
+                                    skills: "Vue.js, Django, Chart.js, p5.js, Google Play",
+                                },
+                            ]
+                        },
+                        {
+                            src: "./assets/images/avatars/logan.png",
+                            name: "Logan Ruf",
+                            title: "Junior Web Developer",
+                            description: ["Logan is a long time tech enthusiast. In high school he did computer repair , IT, and Networking for local businesses. In college Logan switched his focus to cloud computing and software. He currently is AWS certified and will graduate from WGU with a BS in Computer Science in the fall of 2021.",
+                                "He enjoys many thing, but some favorite hobbies include biking, independent software projects, trading options, and gaming.",
+                                "",
+                                '"Be curious. A skeptic is a wanderer."'],
+                            skills: [
+                                {
+                                    type:"",
+                                    skills: "AWS Cloud Certified, Cisco Networking",
+                                },
+                                {
+                                    type:"Languages: ",
+                                    skills: "Python, C++, Java",
+                                },
+                                {
+                                    type:"Frameworks: ",
+                                    skills: "Vue.js, Riot.js, Django",
+                                },
+                            ]
+                        },
+                       {
+                            src: "./assets/images/avatars/wade.png",
+                            name: "Wade Lutz",
+                            title: "Graphic Designer",
+                            description: ["Wade Lutz is a lifelong student of the arts, in both form and function. He has worked with CKC since 2012.",
+                                    "",
+                                    "He enjoys reading, arting and table top role playing games in his time away from the screens."],
+                            skills: [
+                                {
+                                    type:"Design: ",
+                                    skills: "UI/UX, Ads, Logos, Fliers"
+                                },
+                                {
+                                    type: "Adobe Tools: ",
+                                    skills: "Illustrator, Photoshop, Xd"
+                                },
+                                {
+                                    type: "",
+                                    skills: "Business Development"
+                                }
                             ]
                         },
                     ]
@@ -470,8 +548,8 @@
 
     .description-bg .name {
         color: #F06C7C;
-        font-size: 24px;
-        padding: 10px 20px;
+        font-size: 36px;
+        padding: 0px 20px;
     }
 
     .description-bg .desc-title {
@@ -479,14 +557,34 @@
         padding: 0 20px;
     }
 
-    .description-bg .description {
-        font-size: 20px;
-        padding: 0 20px;
-    }
-
     .description-bg .skills {
         font-size: 20px;
-        padding: 15px 20px;
+        padding: 0px 20px;
+        text-align: left;
+    }
+
+    .description-bg .desc-links {
+        min-height: 45px;
+        text-align: right;
+        padding-right: 6px;
+    }
+
+    .description-bg .description {
+        text-align: justify;
+        font-size: 16px;
+        padding: 6px;
+        position: absolute;
+        top: 62px;
+        line-height: 1.3;
+    }
+
+    .desc-links .mdi{
+        font-size: 30px;
+        padding-left: .33em;
+    }
+
+    .mdi::after {
+        height: 300px;
     }
 
     .image-holder .user {
@@ -551,16 +649,24 @@
         }
 
         .description-bg .name {
-            font-size: 36px;
+            font-size: calc(1.622vh + 18.973px);
         }
 
         .description-bg .desc-title {
-            font-size: 32px;
+            font-size: calc(1.441vh + 8.865px);
         }
 
-        .description-bg .description,
         .description-bg .skills {
-            font-size: 30px;
+            font-size: calc(1.261vh + 6.757px);
+        }
+
+        .description-bg .description {
+            top: calc(1.802vh + 43.081px);
+            font-size: calc(.7vh + .4vw + 4px);
+        }
+
+        .desc-links .mdi {
+            font-size: calc(1.351vh + 15.811px);
         }
     }
 
@@ -617,13 +723,11 @@
             left: calc(23vw - 100px);
         }
 
-
         .description-bg {
             padding: calc(2.22vh - 3.333px);
             height: calc(27.778vh + 53.333px);
             top: calc((72.222vh + 291.666px) - (27.778vh + 53.333px));
         }
-
     }
 
     @media only screen and (max-width: 850px) {

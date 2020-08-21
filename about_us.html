@@ -84,8 +84,8 @@
                     <v-carousel-item v-for="(slide, i) in slides"
                                         :key="i">
                         <v-sheet height="100%">
-                            <v-row>
-                                <v-col cols="6" style="text-align: left;">
+                            <v-row class="description-row">
+                                <v-col cols="12" md="6" style="text-align: left;">
                                     <div class="name">
                                         {{slide.name}}
                                     </div>
@@ -101,7 +101,7 @@
                                         </ul>
                                     </div>
                                 </v-col>
-                                <v-col style="text-align: left;" cols="6">
+                                <v-col style="text-align: left" cols="12" md="6">
                                     <div class="desc-links">
                                         <a href="#"><span class="mdi mdi-link"></span></a>
                                         <a href="#"><span class="mdi mdi-linkedin"></span></a>
@@ -227,8 +227,7 @@
                             src: "./assets/images/avatars/bailey.png",
                             name: "Bailey Trefts",
                             title: "Senior Developer",
-                            description: ["Bailey’s experience in software ranges from full-stack engineering to the development of numerical simulations and control algorithms.",
-                                "He is a recent graduate of U of I, where he studied mechanical engineering and computer science.  He completed a summer internship at NASA Ames where he contributed to the development of a hybrid rocket motor for small satellites.",
+                            description: ["Bailey’s experience in software ranges from full-stack engineering to the development of numerical simulations and control algorithms. He is a recent graduate of U of I, where he studied mechanical engineering and computer science.  He completed a summer internship at NASA Ames where he contributed to the development of a hybrid rocket motor for small satellites.",
                                 "",
                                 "Downhill mountain biking and personal engineering projects fill Bailey’s free time.",
                                 "Fave quote: “I’m not superstitious, but I am a little stitious.”",
@@ -529,14 +528,18 @@
         background-color: #e26674;
     }
 
+    .description-row {
+       height: calc(4.505vh + 297.703px);
+    }
+
     .description-bg {
         background-color: rgba(1, 9, 15, 0.81);
         color: white;
         padding: 20px;
-        height: 345px;
+        height: calc(345px + 50px);
         width: 100%;
         position: absolute;
-        top: calc(100vh - 345px);
+        top: calc(100vh - 345px  - 50px);
         left: 0;
         bottom: 0;
         right: 0;
@@ -595,6 +598,32 @@
         display: block;
     }
 
+    .description-bg {
+        height: calc(9.009vh + 250.405px);
+        top: calc(100vh - (9.009vh + 250.405px));
+    }
+
+    .description-bg .name {
+        font-size: calc(1.622vh + 18.973px);
+    }
+
+    .description-bg .desc-title {
+        font-size: calc(1.441vh + 8.865px);
+    }
+
+    .description-bg .skills {
+        font-size: calc(1.261vh + 6.757px);
+    }
+
+    .description-bg .description {
+        top: calc(1.802vh + 43.081px);
+        font-size: calc(.7vh + .4vw + 4px);
+    }
+
+    .desc-links .mdi {
+        font-size: calc(1.351vh + 15.811px);
+    }
+
     @media screen and (min-height: 1050px) and (min-aspect-ratio: 1/1){
 
         #carousel {
@@ -642,7 +671,6 @@
             left: calc(23vw - 100px);
         }
 
-
         .description-bg {
             height: calc(9.009vh + 250.405px);
             top: calc(100vh - (9.009vh + 250.405px));
@@ -670,7 +698,13 @@
         }
     }
 
-    @media only screen and (max-height: 1050px){
+    @media screen and (max-height: 1050px){
+        .description-row {
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-height: 1050px) and (min-width: 960px){
 
         .hero,
         .space-bg,
@@ -730,7 +764,7 @@
         }
     }
 
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 959px) {
         .container {
             width: 0;
         }
@@ -798,6 +832,46 @@
         .arrow-img {
             height: 120px;
             width: 120px;
+        }
+
+        .description-bg .name {
+            font-size: 36px;
+        }
+
+        .description-bg .desc-title {
+            font-size: 24px;
+        }
+
+        .description-bg .skills {
+            font-size: 20px;
+        }
+
+        .description-bg .desc-links {
+            padding-right: 6px;
+        }
+
+        .description-bg .description {
+            font-size: 16px;
+            padding: 6px;
+            position: relative;
+            top: 0;
+            line-height: 1.3;
+        }
+
+        .desc-links .mdi{
+            font-size: 30px;
+        }
+
+        .hero,
+        .space-bg,
+        .space-bg-overlay {
+            height: calc(-39.370vw + 1602.559px);
+        }
+
+        .description-bg {
+            padding: calc(2.22vh - 3.333px);
+            height: calc(-39.370vw + 847.559px);
+            top: calc((-39.370vw + 1602.559px) - (-39.370vw + 847.559px));
         }
 
         .content .header-text {
@@ -879,7 +953,7 @@
         .right-arrow {
             position: absolute;
             margin: 0;
-            top: calc(100vh/2 - 115px);
+            top: 275px;
         }
 
         .left-arrow {
@@ -895,12 +969,16 @@
             width: 105px;
         }
 
+        .hero,
+        .space-bg,
+        .space-bg-overlay {
+            height: calc(-39.370vw + 1402.559px);
+        }
+
         .description-bg {
-            padding: 15px;
-            height: 300px;
-            width: 100%;
-            position: absolute;
-            top: calc(100vh - 300px);
+            padding: calc(2.22vh - 3.333px);
+            height: calc(-39.370vw + 907.559px);
+            top: calc((-39.370vw + 1402.559px) - (-39.370vw + 907.559px));
         }
 
     }

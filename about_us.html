@@ -20,8 +20,8 @@
 
 
     <!-- Vuetify and Material CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -85,7 +85,7 @@
                                         :key="i">
                         <v-sheet height="100%">
                             <v-row class="description-row">
-                                <v-col cols="12" md="6" style="text-align: left;">
+                                <v-col class="description-sizer" cols="12" md="6" style="text-align: left;">
                                     <div class="name">
                                         {{slide.name}}
                                     </div>
@@ -101,16 +101,39 @@
                                         </ul>
                                     </div>
                                 </v-col>
-                                <v-col style="text-align: left" cols="12" md="6">
-                                    <div class="desc-links">
-                                        <a href="#"><span class="mdi mdi-link"></span></a>
-                                        <a href="#"><span class="mdi mdi-linkedin"></span></a>
-                                        <a href="#"><span class="mdi mdi-blogger"></span></a>
+                                <v-col class="description-sizer" style="text-align: left" cols="12" md="6">
+                                    <div class="desc-links desc-links-before">
+                                        <template v-if="slide.website != ''">
+                                            <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
+                                        </template>
+                                        <template v-if="slide.linkedin != ''">
+                                            <a :href="slide.linkedin" target="new"><span class="mdi mdi-linkedin"></span></a>
+                                        </template>
+                                        <template v-if="slide.blog != ''">
+                                            <a :href="slide.blog" target="new"><span class="mdi mdi-blogger"></span></a>
+                                        </template>
+                                        <template v-if="slide.github != ''">
+                                            <a :href="slide.github" target="new"><span class="mdi mdi-github"></span></a>
+                                        </template>
                                     </div>
                                     <div class="description">
                                         <div v-for="line in slide.description">
                                             <span>{{line}}</span><br>
                                         </div>
+                                    </div>
+                                    <div class="desc-links desc-links-after">
+                                        <template v-if="slide.website != ''">
+                                            <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
+                                        </template>
+                                        <template v-if="slide.linkedin != ''">
+                                            <a :href="slide.linkedin" target="new"><span class="mdi mdi-github"></span></a>
+                                        </template>
+                                        <template v-if="slide.blog != ''">
+                                            <a :href="slide.blog" target="new"><span class="mdi mdi-blogger"></span></a>
+                                        </template>
+                                        <template v-if="slide.github != ''">
+                                            <a :href="slide.github" target="new"><span class="mdi mdi-github"></span></a>
+                                        </template>
                                     </div>
                                 </v-col>
                             </v-row>
@@ -199,7 +222,11 @@
                                     type: "Frameworks: ",
                                     skills: "Django, VueJS, Angular, Knockout, jQuery"
                                 },
-                            ]
+                            ],
+                            website: "https://ericcarmichael.com",
+                            linkedin: "https://www.linkedin.com/in/ericatckcollab/",
+                            blog: "https://ckcollab.com/2020/03/24/django-cloudcube-heroku.html",
+                            github: "https://github.com/ckcollab",
                         },
                         {
                             src: "./assets/images/avatars/allen.png",
@@ -221,7 +248,11 @@
                                     type: "",
                                     skills: "Experience with time management of employees.",
                                 },
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "",
+                            blog: "",
+                            github: "",
                         },
                         {
                             src: "./assets/images/avatars/bailey.png",
@@ -245,7 +276,11 @@
                                     type: "Frameworks: ",
                                     skills: "Numpy, TensorFlow, Django, React, Riot.js"
                                 },
-                            ]
+                            ],
+                            website: "https://www.treftstechnologies.com/",
+                            linkedin: "https://www.linkedin.com/in/bailey-lind-trefts/",
+                            blog: "https://www.treftstechnologies.com/articles/perlin-noise-1/",
+                            github: "https://github.com/gibsonbailey",
                         },
                         {
                             src: "./assets/images/avatars/ted.png",
@@ -267,7 +302,11 @@
                                     type:"Frameworks/Libraries: ",
                                     skills: "VueJS, Django, jQuery",
                                 },
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "https://www.linkedin.com/in/brendan-myers-7409a6180/",
+                            blog: "",
+                            github: "https://github.com/BrendanMyers88",
                         },
                         {
                             src: "./assets/images/avatars/nic.png",
@@ -290,7 +329,11 @@
                                     type:"",
                                     skills: "Artificial Intelligence",
                                 },
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "",
+                            blog: "",
+                            github: "https://github.com/dde6khkg",
                         },
                         {
                             src: "./assets/images/avatars/harvey.png",
@@ -312,7 +355,11 @@
                                     type:"Frameworks: ",
                                     skills: "Vue.js, Django, Chart.js, p5.js, Google Play",
                                 },
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "",
+                            blog: "",
+                            github: "https://github.com/hhartwell",
                         },
                         {
                             src: "./assets/images/avatars/logan.png",
@@ -335,7 +382,11 @@
                                     type:"Frameworks: ",
                                     skills: "Vue.js, Riot.js, Django",
                                 },
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "https://www.linkedin.com/in/logan-ruf/",
+                            blog: "",
+                            github: "https://github.com/Logan-Ruf",
                         },
                        {
                             src: "./assets/images/avatars/wade.png",
@@ -357,7 +408,11 @@
                                     type: "",
                                     skills: "Business Development"
                                 }
-                            ]
+                            ],
+                            website: "",
+                            linkedin: "https://www.linkedin.com/in/wade-lutz-28a5559/",
+                            blog: "",
+                            github: "",
                         },
                     ]
                 }
@@ -572,6 +627,14 @@
         padding-right: 6px;
     }
 
+    .description-bg .desc-links-before {
+        display: block;
+    }
+
+    .description-bg .desc-links-after {
+        display: none;
+    }
+
     .description-bg .description {
         text-align: justify;
         font-size: 16px;
@@ -588,6 +651,10 @@
 
     .mdi::after {
         height: 300px;
+    }
+
+    .mdi-github::before {
+        content: "\F2A4";
     }
 
     .image-holder .user {
@@ -640,12 +707,12 @@
 
         .image-holder {
             margin-bottom: 0px;
-            width: calc(31.532vh + -81.081px);
-            height: calc(31.532vh + -81.081px);
+            width: calc(31vh + -80.081px);
+            height: calc(31vh + -80.081px);
         }
 
         .carousel-item-img{
-            width: calc(31.532vh + -81.081px);
+            width: calc(31vh + -80.081px);
         }
 
         .arrow-img{
@@ -858,6 +925,17 @@
             line-height: 1.3;
         }
 
+        .description-bg .desc-links-before {
+            display: none;
+        }
+
+        .description-bg .desc-links-after {
+            display: block;
+            position: absolute;
+            bottom:  20px;
+            right: 15px;
+        }
+
         .desc-links .mdi{
             font-size: 30px;
         }
@@ -872,6 +950,9 @@
             padding: calc(2.22vh - 3.333px);
             height: calc(-39.370vw + 847.559px);
             top: calc((-39.370vw + 1602.559px) - (-39.370vw + 847.559px));
+        }
+        .description-sizer{
+            height: calc((-39.370vw + 847.559px)/2);
         }
 
         .content .header-text {
@@ -979,6 +1060,9 @@
             padding: calc(2.22vh - 3.333px);
             height: calc(-39.370vw + 907.559px);
             top: calc((-39.370vw + 1402.559px) - (-39.370vw + 907.559px));
+        }
+        .description-sizer {
+            height: calc((-39.370vw + 907.559px)/2);
         }
 
     }

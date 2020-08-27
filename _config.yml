@@ -8,6 +8,7 @@ description: "WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idah
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect
 
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -16,6 +17,9 @@ excerpt_separator: <!--more-->
 collections:
   authors:
     output: true
+
+whitelist:
+  - jekyll-redirect-from
 
 #defaults:
 #  - scope:

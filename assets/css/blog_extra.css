@@ -27,6 +27,9 @@
 .main-content p {
     text-align: justify;
     word-wrap: break-word;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #90a0a7;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
@@ -59,4 +62,12 @@ img.img-bordered, .img-bordered img {
 .author-link{
     padding-left: 60px;
     padding-top: 10px;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .main-content p {
+        /* Make font slightly larger to get rid of Google 'mobile font size too small' nag */
+        font-size: 1.2em;
+    }
 }

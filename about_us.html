@@ -23,6 +23,9 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
 
+    <!-- About Us Details -->
+    <script src="./assets/js/about_us/about_us.js"></script>
+
 </head>
 <body>
 <div id="app">
@@ -200,221 +203,7 @@
             data: function () {
                 return {
                     slide_counter: 0,
-                    slides: [
-                        {
-                            src: "./assets/images/avatars/eric.png",
-                            name: "Eric Carmichael",
-                            title: "Owner, Lead Developer",
-                            description: ["Eric started programming at a young age. At the age of 15, he fell in love with it when hacked his school’s school stock exchange. CKC was founded in 2012 so Eric could have the flexibility to work and take care of his mother’s health. Since then we’ve had the opportunity to work with some of the largest Django shops and run projects from wireframes to millions in funding.",
-                                    "",
-                                    "In his free time he loves StarCraft, jiu jitsu, hunting, fishing, and has 2 state records in powerlifting!"],
-                            skills: [
-                                {
-                                    type:"",
-                                    skills: "Architecting and Project Management",
-
-                                },
-                                {
-                                    type: "Languages: ",
-                                    skills: "Python, JavaScript, C#",
-                                },
-                                {
-                                    type: "Frameworks: ",
-                                    skills: "Django, VueJS, Angular, Knockout, jQuery"
-                                },
-                            ],
-                            website: "https://ericcarmichael.com",
-                            linkedin: "https://www.linkedin.com/in/ericatckcollab/",
-                            blog: "https://ckcollab.com/2020/03/24/django-cloudcube-heroku.html",
-                            github: "https://github.com/ckcollab",
-                        },
-                        {
-                            src: "./assets/images/avatars/allen.png",
-                            name: "Allen Carmichael",
-                            title: "Marketing and Sales",
-                            description: ["Born in Eugene Oregon, Allen moved to Coeur d'Alene Idaho in 2003 and graduated from Lake City High school. Studied At Boise State university and graduated with a degree in Business Administration.",
-                                "",
-                                "Started his career in restaurant management and customer service before moving to the tech industry.  Skilled in customer relations and marketing from his past restaurant career and now is transferring those skills into the tech business.",],
-                            skills: [
-                                {
-                                    type: "",
-                                    skills: "Organization of projects and tasks.",
-                                },
-                                {
-                                    type: "",
-                                    skills: "Customer service and relationship building.",
-                                },
-                                {
-                                    type: "",
-                                    skills: "Experience with time management of employees.",
-                                },
-                            ],
-                            website: "",
-                            linkedin: "https://www.linkedin.com/in/allen-carmichael-654a8219b/",
-                            blog: "",
-                            github: "",
-                        },
-                        {
-                            src: "./assets/images/avatars/bailey.png",
-                            name: "Bailey Trefts",
-                            title: "Senior Developer",
-                            description: ["Bailey’s experience in software ranges from full-stack engineering to the development of numerical simulations and control algorithms. He is a recent graduate of U of I, where he studied mechanical engineering and computer science.  He completed a summer internship at NASA Ames where he contributed to the development of a hybrid rocket motor for small satellites.",
-                                "",
-                                "Downhill mountain biking and personal engineering projects fill Bailey’s free time.",
-                                "Fave quote: “I’m not superstitious, but I am a little stitious.”",
-                            ],
-                            skills: [
-                                {
-                                    type: "Development Tools: ",
-                                    skills: "Linux, Git, Docker, AWS"
-                                },
-                                {
-                                    type: "Languages: ",
-                                    skills: "Python, JavaScript, MATLAB, C++"
-                                },
-                                {
-                                    type: "Frameworks: ",
-                                    skills: "Numpy, TensorFlow, Django, React, Riot.js"
-                                },
-                            ],
-                            website: "https://www.treftstechnologies.com/",
-                            linkedin: "https://www.linkedin.com/in/bailey-lind-trefts/",
-                            blog: "https://www.treftstechnologies.com/articles/perlin-noise-1/",
-                            github: "https://github.com/gibsonbailey",
-                        },
-                        {
-                            src: "./assets/images/avatars/ted.png",
-                            name: "Brendan Myers",
-                            title: "Web Developer",
-                            description: ["Brendan aka Ted, graduated from U of I with a degree in Recreation and transitioned into programming in 2017. He specializes in frontend development and design.",
-                                "",
-                                "In his free time he plays a Retribution Paladin in World of Warcraft as well as a variety of other video games, dungeons and dragons, mountain bikes, and plays with his golden retriever Russell.",],
-                            skills: [
-                                {
-                                    type:"",
-                                    skills: "Front End Development",
-                                },
-                                {
-                                    type:"Languages: ",
-                                    skills: "JavaScript, HTML, CSS, Python",
-                                },
-                                {
-                                    type:"Frameworks/Libraries: ",
-                                    skills: "VueJS, Django, jQuery",
-                                },
-                            ],
-                            website: "",
-                            linkedin: "https://www.linkedin.com/in/brendan-myers-7409a6180/",
-                            blog: "",
-                            github: "https://github.com/BrendanMyers88",
-                        },
-                        {
-                            src: "./assets/images/avatars/nic.png",
-                            name: "Nic Trefts",
-                            title: "Junior Web Developer",
-                            description: ["Nic has been into computer-related shenanigans since middle school, and started programming casually in high school. His interest in programming skyrocketed when he started college, and he'll be graduating North Idaho College with an AS in Computer science in the fall of 2020.",
-                            "In his free time he trains for and competes in local Super Smash Brothers Melee tournaments.",
-                            "",
-                            'There is so much more melee to be played." - Mang0'],
-                            skills: [
-                                {
-                                    type:"Languages: ",
-                                    skills: "Python, C++, Javascript, HTML",
-                                },
-                                {
-                                    type:"Frameworks: ",
-                                    skills: "Django, TensorFlow, Vue.js, Riot.js",
-                                },
-                                {
-                                    type:"",
-                                    skills: "Artificial Intelligence",
-                                },
-                            ],
-                            website: "",
-                            linkedin: "",
-                            blog: "",
-                            github: "https://github.com/dde6khkg",
-                        },
-                        {
-                            src: "./assets/images/avatars/harvey.png",
-                            name: "Harvey Hartwell",
-                            title: "Junior Web Developer",
-                            description: ["Harvey graduated from Gonzaga University with a degree in Computer Science and an Emphasis in Communication Studies. He has experience with android app development, web development, and database management.",
-                            "",
-                            "He also cooks a mean boeuf bourguignon"],
-                            skills: [
-                                {
-                                    type:"Development Tools: ",
-                                    skills: "Git, Docker, Android Studios",
-                                },
-                                {
-                                    type:"Languages: ",
-                                    skills: "Python, Javascript, Java, PHP, SQL",
-                                },
-                                {
-                                    type:"Frameworks: ",
-                                    skills: "Vue.js, Django, Chart.js, p5.js, Google Play",
-                                },
-                            ],
-                            website: "",
-                            linkedin: "",
-                            blog: "",
-                            github: "https://github.com/hhartwell",
-                        },
-                        {
-                            src: "./assets/images/avatars/logan.png",
-                            name: "Logan Ruf",
-                            title: "Junior Web Developer",
-                            description: ["Logan is a long time tech enthusiast. In high school he did computer repair , IT, and Networking for local businesses. In college Logan switched his focus to cloud computing and software. He currently is AWS certified and will graduate from WGU with a BS in Computer Science in the fall of 2021.",
-                                "He enjoys many thing, but some favorite hobbies include biking, independent software projects, trading options, and gaming.",
-                                "",
-                                '"Be curious. A skeptic is a wanderer."'],
-                            skills: [
-                                {
-                                    type:"",
-                                    skills: "AWS Cloud Certified, Cisco Networking",
-                                },
-                                {
-                                    type:"Languages: ",
-                                    skills: "Python, C++, Java",
-                                },
-                                {
-                                    type:"Frameworks: ",
-                                    skills: "Vue.js, Riot.js, Django",
-                                },
-                            ],
-                            website: "",
-                            linkedin: "https://www.linkedin.com/in/logan-ruf/",
-                            blog: "",
-                            github: "https://github.com/Logan-Ruf",
-                        },
-                       {
-                            src: "./assets/images/avatars/wade.png",
-                            name: "Wade Lutz",
-                            title: "Graphic Designer",
-                            description: ["Wade Lutz is a lifelong student of the arts, in both form and function. He has worked with CKC since 2012.",
-                                    "",
-                                    "He enjoys reading, arting and table top role playing games in his time away from the screens."],
-                            skills: [
-                                {
-                                    type:"Design: ",
-                                    skills: "UI/UX, Ads, Logos, Fliers"
-                                },
-                                {
-                                    type: "Adobe Tools: ",
-                                    skills: "Illustrator, Photoshop, Xd"
-                                },
-                                {
-                                    type: "",
-                                    skills: "Business Development"
-                                }
-                            ],
-                            website: "",
-                            linkedin: "https://www.linkedin.com/in/wade-lutz-28a5559/",
-                            blog: "",
-                            github: "",
-                        },
-                    ]
+                    slides: slides,
                 }
             },
             methods: {
@@ -1022,7 +811,7 @@
             color: #332859;
             padding: 20px;
         }
-        
+
         .footer-contact-info .contact-info a {
             color: #332859;
         }

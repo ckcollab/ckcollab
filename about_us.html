@@ -85,7 +85,7 @@
                                         :key="i">
                         <v-sheet height="100%">
                             <v-row class="description-row">
-                                <v-col class="description-sizer" cols="12" md="6" style="text-align: left;">
+                                <v-col class="description-sizer" cols="12" md="6">
                                     <div class="name">
                                         {{slide.name}}
                                     </div>
@@ -96,23 +96,23 @@
                                         Top Skills:
                                     </div>
                                     <div class="skills">
-                                        <ul style="list-style-type: none">
-                                            <li v-for="skill in slide.skills"><b>{{skill.type}}</b>{{skill.skills}}</li>
+                                        <ul>
+                                            <li v-for="skill in slide.skills"><strong>{{skill.type}}</strong>{{skill.skills}}</li>
                                         </ul>
                                     </div>
                                 </v-col>
-                                <v-col class="description-sizer" style="text-align: left" cols="12" md="6">
+                                <v-col class="description-sizer" cols="12" md="6">
                                     <div class="desc-links desc-links-before">
-                                        <template v-if="slide.website != ''">
+                                        <template v-if="slide.website">
                                             <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
                                         </template>
-                                        <template v-if="slide.linkedin != ''">
+                                        <template v-if="slide.linkedin">
                                             <a :href="slide.linkedin" target="new"><span class="mdi mdi-linkedin"></span></a>
                                         </template>
-                                        <template v-if="slide.blog != ''">
+                                        <template v-if="slide.blog">
                                             <a :href="slide.blog" target="new"><span class="mdi mdi-blogger"></span></a>
                                         </template>
-                                        <template v-if="slide.github != ''">
+                                        <template v-if="slide.github">
                                             <a :href="slide.github" target="new"><span class="mdi mdi-github"></span></a>
                                         </template>
                                     </div>
@@ -585,6 +585,7 @@
 
     .description-row {
        height: calc(4.505vh + 297.703px);
+        text-align: left;
     }
 
     .description-bg {
@@ -619,6 +620,7 @@
         font-size: 20px;
         padding: 0px 20px;
         text-align: left;
+        list-style-type: none;
     }
 
     .description-bg .desc-links {
@@ -669,6 +671,10 @@
     .description-bg {
         height: calc(9.009vh + 250.405px);
         top: calc(100vh - (9.009vh + 250.405px));
+    }
+
+    .description-sizer {
+        height: calc(9.009vh + 250.405px);
     }
 
     .description-bg .name {
@@ -742,6 +748,10 @@
         .description-bg {
             height: calc(9.009vh + 250.405px);
             top: calc(100vh - (9.009vh + 250.405px));
+        }
+
+        .description-sizer{
+            height: calc(9.009vh + 250.405px);
         }
 
         .description-bg .name {

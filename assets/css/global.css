@@ -76,6 +76,13 @@
     color: #332859;
 }
 
+.header .fa-heart-o {
+    color: #ef6d7e;
+}
+
+.sub-header{
+    font-family: 'IBM Plex Mono', monospace";
+}
 .blue-stripe {
     margin-bottom: 100px;
     width: 100%;
@@ -225,45 +232,21 @@
     border: none;
 }
 
-.btn {
+.btn-primary {
     display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.btn-lg {
     padding: 10px 16px;
     font-size: 25px;
     line-height: 1.3333333;
-    border-radius: 6px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-}
-
-.btn-primary {
+    text-align: center;
+    white-space: nowrap;
     color: white;
     bottom: 10px;
-    width: 200px;
     text-align: center;
     background-color: #60AED9;
-    border-radius: 50px
+    border-radius: 50px;
+    text-decoration: none;
 }
 
 .btn-primary:hover {

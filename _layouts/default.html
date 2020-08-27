@@ -5,17 +5,17 @@
     <meta property="og:image" content="https://ckcollab.com/assets/images/ckclogo.png"/>
 
     {% if site.google_analytics %}
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-            gtag('js', new Date());
-            gtag('config', '{{ site.google_analytics }}');
-        </script>
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
     {% endif %}
 
     <meta charset="UTF-8">
@@ -25,23 +25,32 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet"
+          href="{{ '/assets/css/blog_extra.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet"
+          href="{{ '/assets/bootstrap-for-blog/css/bootstrap.iso.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <link rel="shortcut icon" type="image/png" href="/assets/images/ckcollab_16x16.png"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-    <header class="page-header" role="banner">
-        <h1 class="project-name"><a href="/">CKC</a></h1>
-        <h2 class="project-tagline">we ♡ web development</h2>
-    </header>
+<header class="page-header" role="banner">
+<!--    <h1 class="project-name">CKC</h1>-->
+    <a href="/">
+        <img class="ckc-logo" src="/assets/images/ckclogo.svg" alt="ckclogo.svg"/>
+    </a>
+    <h2 class="project-tagline">
+        WE <i class="fa fa-heart-o" style="color: #ef6d7e;" aria-hidden="true"></i> DEVELOPMENT
+    </h2>
+</header>
 
-    <main id="content" class="main-content" role="main">
-        {{ content }}
+<main id="content" class="main-content" role="main">
+    {{ content }}
 
-        <footer class="site-footer">
-            <p class="drop-us-a-line">drop us a line, <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a></p>
-        </footer>
-    </main>
+    <footer class="site-footer">
+        <p class="drop-us-a-line">drop us a line, <a href="mailto:hello@ckcollab.com">hello@ckcollab.com</a></p>
+    </footer>
+</main>
 </body>
 </html>

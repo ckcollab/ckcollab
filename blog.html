@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>Blog</title>
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/blog-landing.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 </head>
 <body style="background-color: rgb(245,245,250)">
@@ -56,7 +57,7 @@
             <div class="media-body">
                 <div class="media-left">
                     {% if author %}
-                    <img class="media-object img-circle" src="{{ author.avatar }}">
+                    <img class="img-circle" src="{{ author.avatar }}">
                     {% endif %}
                 </div>
                 <div class="media-text">
@@ -69,7 +70,7 @@
     </ul>
 
     <div class="text-center">
-        <a href="/blog/" class="btn btn-lg btn-primary">View all articles</a>
+        <a href="/blog/" class="btn-primary">VIEW ALL ARTICLES</a>
     </div>
 
 </section>

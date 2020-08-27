@@ -54,7 +54,7 @@
     width: 200px;
     text-align: center;
     background-color: #60AED9;
-    border-radius: 50px;
+    border-radius: 50px
 }
 
 .contact-button:hover {
@@ -83,6 +83,13 @@
     background-image: url("../../assets/images/spacebg.jpg");
 }
 
+.header .fa-heart-o {
+    color: #ef6d7e;
+}
+
+.sub-header{
+    font-family: 'IBM Plex Mono', monospace";
+}
 .blue-stripe {
     margin-bottom: 100px;
     width: 100%;
@@ -100,6 +107,7 @@
     height: 500px;
     background-size: cover;
     background-attachment: fixed;
+    margin-top: 1.5em;
 }
 
 .pink-stripe-lower {

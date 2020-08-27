@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 </head>
-<body>
+<body style="background-color: rgb(245,245,250)">
 <div class="navigation-menu">
     <a class="menu-link" href=".">HOME</a>
     <a class="menu-link" href="about_us.html">ABOUT CKC</a>
@@ -44,7 +44,7 @@
         {% for post in site.posts limit:6 %}
         {% assign author = site.authors | where: 'short_name', post.author | first %}
         <li class="media">
-            <div class="media-title">
+            <div class="media-title banner">
                 <div class="blue-stripe"></div>
                 <h3 class="media-heading">
                     <a href="{{ post.url }}">
@@ -115,6 +115,7 @@
     }
 
     .navigation-menu {
+        background-color: white;
         position: absolute;
         top: 0;
         padding: 40px;
@@ -153,6 +154,7 @@
     }
 
     section.heading {
+        background-color: white;
         padding: 75px 0 0;
         display: block;
     }
@@ -249,13 +251,13 @@
 
     .media {
         border: solid 1px gainsboro;
-        padding: 45px 0;
+        background-color: white;
+        padding-bottom: 10px;
         margin: 50px;
         width: 600px;
+        height: 325px;
         display: flex;
         flex-direction: column;
-        border-radius: 20px;
-        box-shadow: grey 0 3px 5px -2px;
     }
 
     .media-object {
@@ -275,7 +277,7 @@
 
     .media-heading a {
         text-decoration: none;
-        color: #332859;
+        color: white;
         font-size: 32px;
     }
 

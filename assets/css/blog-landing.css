@@ -207,7 +207,15 @@ section.heading {
     font-size: 18px;
     color: #94929d;
 }
+.media-text a {
+    /*color: #F06C7C;*/
+    color: #60AED9;
+}
 
+.media-text a:visited {
+    color: #F06C7C;
+    /*color: #60AED9;*/
+}
 .img-bordered {
     display: none !important;
 }

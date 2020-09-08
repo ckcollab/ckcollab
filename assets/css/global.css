@@ -92,7 +92,9 @@
 }
 
 .sub-header{
-    font-family: 'IBM Plex Mono', "monospace";
+    padding-top: 15px;
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
 }
 .blue-stripe {
     margin-bottom: 100px;

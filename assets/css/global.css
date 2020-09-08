@@ -73,7 +73,7 @@
     font-size: 63px;
     font-weight: 300;
     padding: 40px 50px;
-    color: white;
+    color: #332859;
 }
 
 .banner {
@@ -81,6 +81,10 @@
     background-position-y: -50px;
     background-attachment: fixed;
     background-image: url("../../assets/images/spacebg.jpg");
+}
+
+.banner .header-text {
+    color: white;
 }
 
 .header .fa-heart-o {

@@ -80,7 +80,7 @@
     color: white;
     background-position-y: -50px;
     background-attachment: fixed;
-    background-image: url("../../assets/images/spacebg.jpg");
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
 }
 
 .banner .header-text {
@@ -106,7 +106,7 @@
 /* Footer CSS */
 
 .footer {
-    background-image: url('../../assets/images/spacebg.jpg');
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
     background-color: white;
     z-index: 3;
     position: relative;

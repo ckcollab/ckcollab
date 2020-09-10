@@ -155,7 +155,7 @@
 </section>
 
 <section id="about-us" class="lets-work-together">
-    <img class="space-bg" src="./assets/images/spacebg.jpg" alt="spacebg.png"/>
+<!--    <img class="space-bg" src="./assets/images/spacebg.jpg" alt="spacebg.png"/>-->
     <div class="space-bg-overlay"></div>
 
     <div class="header-text">
@@ -347,8 +347,8 @@
 
     .left-astronaut-lower {
         position: relative;
-        bottom: 50px;
-        left: -200px;
+        bottom: 80px;
+        left: calc(-375px + 15vw);
         height: 550px;
         z-index: 1;
     }
@@ -357,10 +357,12 @@
         position: relative;
         left: 80%;
         height: 380px;
-        top: -370px;
+        top: -320px;
     }
 
     .lets-work-together {
+        background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
+        background-position-y: -50px;
         height: 100vh;
     }
 
@@ -376,7 +378,7 @@
         font-size: 27px;
         margin: 0 auto;
         font-weight: 300;
-        width: 75%;
+        width: 960px;
         line-height: 2em;
         color: white;
         text-align: center;
@@ -635,6 +637,12 @@
             left: 80%;
             height: 80px;
             top: -80px;
+        }
+    }
+
+    @media only screen and (min-height: 960px) {
+        .lets-work-together {
+            height: 960px;
         }
     }
 </style>

@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title>About Us</title>
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/scss/about_us.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -55,10 +56,10 @@
             </div>
             <section class="content">
                 <div class="computer-container"></div>
+                <div class="left-arrow" @click="go_left">
+                    <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
+                </div>
                 <div id="carousel">
-                    <div class="left-arrow" @click="go_left">
-                        <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
-                    </div>
                     <v-carousel
                             height=""
                             hide-delimiters
@@ -72,9 +73,9 @@
                                 class="carousel-item-img">
                         </v-carousel-item>
                     </v-carousel>
-                    <div class="right-arrow" @click="slide_counter++">
-                        <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
-                    </div>
+                </div>
+                <div class="right-arrow" @click="slide_counter++">
+                    <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                 </div>
 
                 <v-carousel :continuous="false"
@@ -274,7 +275,7 @@
     .computer-container {
         position: absolute;
         width: 100vw;
-        height: 800px;
+        height: 100vh;
         background-image: url("./assets/images/compy.svg");
         background-size: 400px;
         background-position: center;
@@ -301,33 +302,6 @@
         width: 250px;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    .arrow-img{
-        height: 150px;
-        width: 150px;
-    }
-
-    .left-arrow,
-    .right-arrow {
-        position: relative;
-        z-index: 5;
-        cursor: pointer;
-        margin-top: calc(65vh - 425px);
-    }
-
-    .right-arrow {
-        margin-left: calc(23vw - 125px);
-    }
-
-    .left-arrow {
-        margin-right: calc(23vw - 125px);
-    }
-
-
-    .right-arrow:hover,
-    .left-arrow:hover {
-        filter: brightness(0.9);
     }
 
     section.content {
@@ -378,9 +352,9 @@
     }
 
     .description-bg {
-        background-color: rgba(1, 9, 15, 0.81);
+        background-color: rgba(1, 9, 15, 0.55);
         color: white;
-        padding: 20px;
+        padding: 20px 55px;
         height: calc(345px + 50px);
         width: 100%;
         position: absolute;
@@ -496,7 +470,7 @@
 
         .computer-container {
             background-size: calc(54.054vh + -167.568px);
-            height: 2400px;
+            height: 100vh;
             background-position-y: calc(5.405vh + 63.243px);
         }
 
@@ -509,29 +483,6 @@
 
         .carousel-item-img{
             width: calc(31vh + -80.081px);
-        }
-
-        .arrow-img{
-            height: calc(15.766vh + -15.541px);
-            width: calc(15.766vh + -15.541px);
-        }
-
-        .left-arrow,
-        .right-arrow {
-            position: absolute;
-            cursor: pointer;
-            margin-top: 0;
-            top: calc(53.874vh + -263.676px);
-        }
-
-        .right-arrow {
-            margin-left: 0;
-            right: calc(23vw - 100px);
-        }
-
-        .left-arrow {
-            margin-right: 0;
-            left: calc(23vw - 100px);
         }
 
         .description-bg {
@@ -570,17 +521,6 @@
             height: auto;
         }
 
-        .right-arrow {
-            margin-left: 0;
-            right: calc(23vw - 100px);
-        }
-
-        .left-arrow {
-            margin-right: 0;
-            left: calc(23vw - 100px);
-        }
-
-
         .description-bg {
             padding: calc(2.22vh - 3.333px);
             height: calc(27.778vh + 53.333px);
@@ -617,29 +557,6 @@
 
         .carousel-item-img{
             width: calc(13.889vh + 104.167px);
-        }
-
-        .arrow-img{
-            height: calc(5.556vh + 91.667px);
-            width: calc(5.556vh + 91.667px);
-        }
-
-        .left-arrow,
-        .right-arrow {
-            position: absolute;
-            cursor: pointer;
-            margin-top: 0;
-            top: calc(17.333vh + 121.000px);
-        }
-
-        .right-arrow {
-            margin-left: 0;
-            right: calc(23vw - 100px);
-        }
-
-        .left-arrow {
-            margin-right: 0;
-            left: calc(23vw - 100px);
         }
 
         .description-bg {
@@ -680,7 +597,7 @@
 
         .computer-container {
             width: 100vw;
-            height: 600px;
+            height: 100vh;
             background-size: 280px;
             background-position-y: 20px;
         }
@@ -697,26 +614,6 @@
             width: 175px;
             margin-right: auto;
             margin-left: auto;
-        }
-
-        .left-arrow,
-        .right-arrow {
-            position: absolute;
-            margin: 0;
-            top: calc(100vh/2 - 125px);
-        }
-
-        .left-arrow {
-            left: 15vw;
-        }
-
-        .right-arrow {
-            right: 15vw;
-        }
-
-        .arrow-img {
-            height: 120px;
-            width: 120px;
         }
 
         .description-bg .name {
@@ -829,7 +726,7 @@
 
         .computer-container {
             width: 100vw;
-            height: 600px;
+            height: 100vh;
             background-size: 190px;
             background-position-y: 0;
         }
@@ -847,27 +744,6 @@
             margin-right: auto;
             margin-left: auto;
         }
-
-        .left-arrow,
-        .right-arrow {
-            position: absolute;
-            margin: 0;
-            top: 275px;
-        }
-
-        .left-arrow {
-            left: 15vw;
-        }
-
-        .right-arrow {
-            right: 15vw;
-        }
-
-        .arrow-img {
-            height: 105px;
-            width: 105px;
-        }
-
         .hero,
         .space-bg,
         .space-bg-overlay {

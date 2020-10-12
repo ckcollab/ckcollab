@@ -1,4 +1,5 @@
-@import url("//fonts.googleapis.com/css?family=Montserrat:400");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
@@ -72,7 +73,7 @@
 }
 
 .header-text {
-    font-size: 63px;
+    font-size: 60px;
     font-weight: 300;
     padding: 40px 50px;
     color: #332859;
@@ -82,7 +83,7 @@
     color: white;
     background-position-y: -50px;
     background-attachment: fixed;
-    background-image: url("../../assets/images/spacebg.jpg");
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
 }
 
 .banner .header-text {
@@ -94,7 +95,9 @@
 }
 
 .sub-header{
-    font-family: 'IBM Plex Mono', monospace;
+    padding-top: 15px;
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
 }
 .blue-stripe {
     margin-bottom: 100px;
@@ -106,7 +109,7 @@
 /* Footer CSS */
 
 .footer {
-    background-image: url('../../assets/images/spacebg.jpg');
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
     background-color: white;
     z-index: 3;
     position: relative;

@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +83,7 @@
     color: white;
     background-position-y: -50px;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
 }
 
 .banner .header-text {

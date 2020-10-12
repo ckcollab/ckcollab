@@ -18,7 +18,7 @@ const slides = [
             },
             {
                 type: "Frameworks: ",
-                skills: "Django, VueJS, Angular, Knockout, jQuery"
+                skills: "Django, Vue.js, Angular, Knockout, jQuery"
             },
         ],
         website: "https://ericcarmichael.com",
@@ -81,12 +81,12 @@ const slides = [
         github: "https://github.com/gibsonbailey",
     },
     {
-        src: "./assets/images/avatars/ted.png",
-        name: "Brendan Myers",
-        title: "Web Developer",
-        description: ["Brendan aka Ted, graduated from U of I with a degree in Recreation and transitioned into programming in 2017. He specializes in frontend development and design.",
+        src: "./assets/images/avatars/sam.png",
+        name: "Sam Wood",
+        title: "Junior Web Developer",
+        description: ["Sam, who usually focuses on the frontend of that stack, has gained a solid understanding of many tools that exist at the forefront of web development today. He has helped teach coding bootcamps and develop industry-leading products. Along with this, Sam currently runs a SaaS website on the side.",
             "",
-            "In his free time he plays a Retribution Paladin in World of Warcraft as well as a variety of other video games, dungeons and dragons, mountain bikes, and plays with his golden retriever Russell.",],
+            "In his free time, he enjoys hiking with his dog, attempting to cook, and playing guitar.",],
         skills: [
             {
                 type: "",
@@ -98,7 +98,7 @@ const slides = [
             },
             {
                 type: "Frameworks/Libraries: ",
-                skills: "VueJS, Django, jQuery",
+                skills: "Node, Express, React Native, React, Vue.js,",
             },
         ],
         website: "",

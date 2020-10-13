@@ -38,6 +38,19 @@
     border-bottom: solid 2px transparent;
 
 }
+.drop-us-a-line {
+    font-size: 35px;
+    background-color: #F06C7C;
+    border-radius: 100px;
+    width: 350px;
+    font-weight: 800;
+    padding: 10px;
+    text-align: center;
+    margin: 50px auto;
+}
+.no-margin-top {
+    margin-top: 0 !important;
+}
 .no-margin-left {
     margin-left: 0 !important;
 }

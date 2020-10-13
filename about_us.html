@@ -74,7 +74,10 @@
                         </v-carousel-item>
                     </v-carousel>
                 </div>
-                <div class="right-arrow" @click="slide_counter++">
+                <div
+                    @click="slide_counter++"
+                    class="right-arrow"
+                >
                     <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                 </div>
 
@@ -314,26 +317,14 @@
     .content .header-text {
         font-size: 75px;
         font-weight: 600;
-        padding: 40px 50px;
+        padding: 0px 50px 40px 50px;
     }
 
     .content .body-text {
-        padding: 60px;
-        font-size: 45px;
+        margin: 20px 200px;
+        font-size: 25px;
         line-height: 2em;
         font-weight: 200;
-    }
-
-    .drop-us-a-line {
-        color: white;
-        font-size: 55px;
-        background-color: #F06C7C;
-        border-radius: 100px;
-        width: 600px;
-        font-weight: 600;
-        padding: 20px;
-        text-align: center;
-        margin: 50px auto;
     }
 
     .drop-us-a-line a {
@@ -352,8 +343,6 @@
     }
 
     .description-bg {
-        display:flex;
-        justify-content: center;
         background-color: rgba(1, 9, 15, 0.55);
         color: white;
         padding: 20px 55px;
@@ -365,9 +354,7 @@
         bottom: 0;
         right: 0;
     }
-    .description-bg > .v-window__container {
-        width: calc(100% - 400px);
-    }
+
     .theme--dark.v-sheet {
         background-color: transparent;
     }
@@ -463,6 +450,15 @@
 
     .desc-links .mdi {
         font-size: calc(1.351vh + 15.811px);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .content .body-text {
+            margin: 20px 10px;
+        }
+        .drop-us-a-line {
+            width: calc(100% - 10px) !important;
+        }
     }
 
     @media screen and (min-height: 1050px) and (min-aspect-ratio: 1/1){

@@ -62,7 +62,7 @@
     </div>
 
     <div class="navigation-menu">
-        <a class="menu-link active" href=".">HOME</a>
+        <a class="menu-link active no-margin-left" href=".">HOME</a>
         <a class="menu-link" href="about_us.html">ABOUT CKC</a>
         <a class="menu-link" href="blog.html">BLOG</a>
         <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
@@ -110,7 +110,7 @@
     <div class="pink-stripe"></div>
     <div class="header-text">HOW WE DO IT</div>
     <div class="blue-stripe"></div>
-    <div class="section-body">
+    <div class="section-body no-margin">
         <div class="step-item">
             <div class="name-text-container">
                 <div class="step-name">STEP 1 : WIREFRAME</div>
@@ -123,9 +123,9 @@
                 <img src="./assets/images/rocketbuild.svg" alt="ckc_wireframe.png">
             </div>
         </div>
-        <div class="step-item reverse-column">
+        <div class="step-item reverse-column half-margin-bottom">
             <div class="step-image">
-                <img src="./assets/images/polish.svg" alt="ckc_polish.png">
+                <img class="no-margin-left" src="./assets/images/polish.svg" alt="ckc_polish.png">
             </div>
             <div class="name-text-container">
                 <div class="step-name">STEP 2 : POLISH DESIGN</div>
@@ -152,7 +152,7 @@
 
 <section id="about-us" class="lets-work-together">
 
-    <div class="header-text">
+    <div class="header-text no-margin-left">
         LET'S WORK TOGETHER!
     </div>
     <div class="subheader-text">
@@ -270,15 +270,21 @@
         position: absolute;
         bottom: 0;
         padding: 40px;
-        width: 100%;
+        padding-left: 0px; /* This is because we added a margin-left */
+        width: calc(100% - 200px) ;
         font-weight: 300;
+        margin-left: 200px;
+
     }
 
     .section-body {
         display: flex;
-        width: 100%;
         text-align: center;
         justify-content: space-evenly;
+        margin: 0px 200px;
+    }
+    .no-margin {
+        margin: 0 !important;
     }
 
     .icon-container {
@@ -286,6 +292,7 @@
     }
 
     .icon-container .icon {
+        max-width: 100%;
         height: 200px;
     }
 
@@ -300,7 +307,7 @@
         text-align: justify;
         font-family: Montserrat, sans-serif;
         font-weight: 100;
-        margin: 200px;
+        margin: 100px 200px;
     }
 
     .how-we-do-it .section-body {
@@ -312,15 +319,19 @@
 
     .step-item {
         display: flex;
-        padding: 100px;
+        margin: 0px 200px;
+        margin-bottom: 100px;
         font-weight: 100;
         align-items: center;
         align-self: center;
     }
 
+    .half-margin-bottom {
+        margin-bottom: 50px;
+    }
     .name-text-container {
-        width: 700px;
-        padding: 0 100px;
+        /*width: 700px;*/
+        /*padding: 0 100px;*/
     }
 
     .step-name {
@@ -360,7 +371,6 @@
         background-position-y: -50px;
         height: 100vh;
     }
-
     .lets-work-together .header-text {
         padding: 100px 40px 50px 40px;
         font-size: 60px;
@@ -469,45 +479,34 @@
             text-align: center;
         }
 
-        .header-text {
-            font-size: 30px;
-        }
-
-        .section-body {
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
-        }
-
         .icon-container {
             width: 100%;
+            margin: 20px 0px;
         }
 
         .icon-container .icon {
             height: 150px;
             background: none;
         }
-
+        .section-body {
+            flex-direction: column;
+        }
         .section-text {
             font-size: 30px;
             font-family: Montserrat, sans-serif;
             font-weight: 100;
-            margin: 20px;
+            margin: 20px !important;
         }
 
         .step-item {
             flex-direction: column;
             padding: 0;
             align-items: start;
+            margin: 0 30px !important;
         }
 
         .reverse-column {
             flex-direction: column-reverse;
-        }
-
-        .name-text-container {
-            width: 100vw;
-            padding: 20px;
         }
 
         .step-name {
@@ -527,6 +526,7 @@
         .step-image img {
             padding: 5px 10px 20px 10px;
             max-width: 100vw;
+            width: 200px !important;
             margin: 20px auto;
         }
 
@@ -640,9 +640,35 @@
         }
     }
 
+    @media only screen and (max-width: 1100px) {
+        .right-astronaut {
+            z-index: -1;
+        }
+        .navigation-menu {
+            margin-left: 30px;
+        }
+        .header-text {
+            margin-left: 30px;
+        }
+        .section-body {
+            margin: 0 30px;
+        }
+        .section-text {
+            margin: 100px 30px;
+        }
+        .step-item {
+            margin: 30px 0 30px 30px;
+        }
+        .step-image img {
+            width: 300px;
+        }
+    }
+
     @media only screen and (min-height: 960px) {
+
         .lets-work-together {
             height: 960px;
         }
+
     }
 </style>

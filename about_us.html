@@ -148,7 +148,7 @@
         </div>
 
         <section class="content">
-            <div class="header-text">LET'S WORK TOGETHER!</div>
+            <div class="header-text no-margin-left">LET'S WORK TOGETHER!</div>
             <div class="body-text">
                 We help startups and growing businesses create, improve, or fix their apps — you come to us with the
                 problem and we’ll find ways to solve it.
@@ -352,6 +352,8 @@
     }
 
     .description-bg {
+        display:flex;
+        justify-content: center;
         background-color: rgba(1, 9, 15, 0.55);
         color: white;
         padding: 20px 55px;
@@ -363,7 +365,9 @@
         bottom: 0;
         right: 0;
     }
-
+    .description-bg > .v-window__container {
+        width: calc(100% - 400px);
+    }
     .theme--dark.v-sheet {
         background-color: transparent;
     }

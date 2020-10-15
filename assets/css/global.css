@@ -35,8 +35,25 @@
     font-size: 25px;
     padding: 10px;
     margin: 20px 35px;
-}
+    border-bottom: solid 2px transparent;
 
+}
+.drop-us-a-line {
+    font-size: 35px;
+    background-color: #F06C7C;
+    border-radius: 100px;
+    width: 350px;
+    font-weight: 800;
+    padding: 10px;
+    text-align: center;
+    margin: 50px auto;
+}
+.no-margin-top {
+    margin-top: 0 !important;
+}
+.no-margin-left {
+    margin-left: 0 !important;
+}
 .menu-link:hover {
     border-bottom: solid 2px white;
 }
@@ -76,7 +93,9 @@
     font-size: 60px;
     font-weight: 300;
     padding: 40px 50px;
+    padding-left: 0px; /* This is because we added a margin-left */
     color: #332859;
+    margin-left: 200px;
 }
 
 .banner {
@@ -98,6 +117,8 @@
     padding-top: 15px;
     font-size: 40px;
     font-family: 'Press Start 2P', cursive;
+    z-index: 1;
+    text-shadow: 2px 2px #332859;
 }
 .blue-stripe {
     margin-bottom: 100px;

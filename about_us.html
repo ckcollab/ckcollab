@@ -65,7 +65,9 @@
                             hide-delimiters
                             :show-arrows="false"
                             v-model="slide_counter"
-                            class="image-holder">
+                            class="image-holder"
+                            :reverse="reversed"
+                    >
                         <v-carousel-item
                                 v-for="(slide, i) in slides"
                                 :key="i"
@@ -208,14 +210,17 @@
                 return {
                     slide_counter: 0,
                     slides: slides,
+                    reversed: false,
                 }
             },
             methods: {
                 go_left() {
                     // Resets slide_counter to the last slide.
                     if (this.slide_counter === 0) {
+                        this.reversed = true
                         this.slide_counter = this.slides.length - 1
                     } else {
+                        this.reversed = false
                         this.slide_counter -= 1
                     }
                 }

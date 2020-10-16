@@ -154,7 +154,7 @@
     <div class="pink-stripe"></div>
     <div class="header-text">What we use</div>
     <div class="blue-stripe no-margin-bottom"></div>
-    <div class="section-body">
+    <div class="section-body  no-margin">
         <div class="tech-body">
             <div class="tech-container">
                 <img class="tech" src="./assets/images/logos/python-logo-full.png" alt="python-logo.png">
@@ -170,10 +170,8 @@
             <div class="tech-container">
                 <img class="tech" src="./assets/images/logos/heroku-logo-full.png" alt="heroku-logo.png">
             </div>
-            <div class="tech-container">
-                <div class="padding-container">
-                    <img class="tech" src="./assets/images/logos/aws-logo-full.png" alt="aws-logo.png">
-                </div>
+            <div class="tech-container aws-logo">
+                <img class="tech" src="./assets/images/logos/aws-logo-full.png" alt="aws-logo.png">
             </div>
         </div>
     </div>
@@ -371,8 +369,12 @@
     .tech-container .tech {
         max-width: 250px;
     }
+    .aws-logo > .tech {
+        max-width: 150px;
+    }
     .tech-body {
-        margin: 50px 0px;
+        width:100%;
+        margin: 50px 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;

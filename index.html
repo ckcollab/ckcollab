@@ -86,7 +86,7 @@
     <div class="pink-stripe no-margin-top"></div>
     <div class="header-text">WHAT WE DO</div>
     <div class="blue-stripe"></div>
-    <div class="section-body">
+    <div class="section-body" id="wwdBody">
         <div class="icon-container">
             <img class="icon" src="./assets/images/frontend_icon.svg" alt="frontend.png">
             <div class="icon-subheader">FRONT END</div>
@@ -100,7 +100,7 @@
             <div class="icon-subheader">DESIGN</div>
         </div>
     </div>
-    <div class="section-text">
+    <div class="section-text" id="wwdText">
         From ideas on a napkin to products in your users hands, we can handle everything! We specialize in all things
         web development.
     </div>
@@ -111,8 +111,8 @@
     <div class="header-text">HOW WE DO IT</div>
     <div class="blue-stripe"></div>
     <div class="section-body no-margin">
-        <div class="step-item">
-            <div class="name-text-container">
+        <div class="step-item" id="step1">
+            <div class="name-text-container" >
                 <div class="step-name">STEP 1 : WIREFRAME</div>
                 <div class="step-text">
                     Our approach to web development is holistic. We believe a good project requires a strong foundation
@@ -123,7 +123,7 @@
                 <img src="./assets/images/rocketbuild.svg" alt="ckc_wireframe.png">
             </div>
         </div>
-        <div class="step-item reverse-column half-margin-bottom">
+        <div class="step-item reverse-column half-margin-bottom" id="step2">
             <div class="step-image">
                 <img class="no-margin-left" src="./assets/images/polish.svg" alt="ckc_polish.png">
             </div>
@@ -135,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="step-item">
+        <div class="step-item" id="step3">
             <div class="name-text-container">
                 <div class="step-name">STEP 3 : DO THE MAGIC</div>
                 <div class="step-text">
@@ -203,7 +203,32 @@
         target.classList.toggle("change");
         $('.hamburger-navigation-menu').toggleClass("hidden")
     }
-
+    function isInViewport(el) {
+        // adapted from https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+        // this checks for partial visibility
+        if (el){
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight)-100 &&
+                rect.left >= 0 &&
+                rect.bottom >= 300 &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    }
+    function setOpacity(els){
+        els.forEach((item)=>{
+            const el = $(item)
+            if (isInViewport(el[0])) {
+                el.css('opacity', 1)
+                return
+            }
+            else {
+                //this makes it disappear as it leaves viewport
+                el.css('opacity', 0)
+            }
+        })
+    }
     $(document).ready(function () {
         // Timelines for our astronaut animations
         let right_timeline = new TimelineMax({repeat: -1})
@@ -229,10 +254,21 @@
                 })
             }
         })
+
+        const fadeInElements = ['#step1', '#step2', '#step3', '#wwdText', '#wwdBody']
+        setOpacity(fadeInElements) //set's the initial opacity on page load/reload
+
+        $(document).scroll(function() {
+            setOpacity(fadeInElements)
+        });
     })
 </script>
 
 <style>
+    #step1, #step2, #step3, #wwdText, #wwdBody {
+        transition: 1s;
+        opacity: 0;
+    }
     .ckc-logo {
         z-index: 1;
         width: 450px;

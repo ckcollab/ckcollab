@@ -16,6 +16,7 @@
 }
 
 body {
+    background-color: #1e2642;
     animation: fadeIn 1 .2s linear;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -26,6 +27,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+
+.bg-white {
+    background-color: white;
 }
 
 .hero {

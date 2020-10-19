@@ -65,7 +65,9 @@
                             hide-delimiters
                             :show-arrows="false"
                             v-model="slide_counter"
-                            class="image-holder">
+                            class="image-holder"
+                            :reverse="reversed"
+                    >
                         <v-carousel-item
                                 v-for="(slide, i) in slides"
                                 :key="i"
@@ -208,14 +210,17 @@
                 return {
                     slide_counter: 0,
                     slides: slides,
+                    reversed: false,
                 }
             },
             methods: {
                 go_left() {
                     // Resets slide_counter to the last slide.
                     if (this.slide_counter === 0) {
+                        this.reversed = true
                         this.slide_counter = this.slides.length - 1
                     } else {
+                        this.reversed = false
                         this.slide_counter -= 1
                     }
                 }
@@ -315,26 +320,16 @@
     }
 
     .content .header-text {
-        font-size: 75px;
+        font-size: 60px;
         font-weight: 600;
         padding: 0px 50px 40px 50px;
     }
 
     .content .body-text {
         margin: 20px 200px;
-        font-size: 25px;
+        font-size: 27px;
         line-height: 2em;
         font-weight: 200;
-    }
-
-    .drop-us-a-line a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .drop-us-a-line:hover {
-        cursor: pointer;
-        background-color: #e26674;
     }
 
     .description-row {
@@ -360,7 +355,7 @@
     }
 
     .description-bg .name {
-        color: #F06C7C;
+        color: var(--brand-pink);
         font-size: 36px;
         padding: 0 20px;
     }
@@ -668,25 +663,6 @@
         }
         .description-sizer{
             height: calc((-39.370vw + 847.559px)/2);
-        }
-
-        .content .header-text {
-            font-size: 40px;
-        }
-
-        .drop-us-a-line {
-            font-size: 30px;
-            border-radius: 50px;
-            width: 350px;
-            font-weight: 600;
-            padding: 20px;
-            text-align: center;
-            margin: 20px auto;
-        }
-
-        .drop-us-a-line:hover {
-            cursor: pointer;
-            background-color: #e26674;
         }
 
         .secondary-navigation {

@@ -84,7 +84,7 @@
 
 <section id="services">
     <div class="pink-stripe no-margin-top"></div>
-    <div class="header-text">WHAT WE DO</div>
+    <div class="header-text">What we do</div>
     <div class="blue-stripe"></div>
     <div class="section-body">
         <div class="icon-container">
@@ -108,7 +108,7 @@
 
 <section id="process" class="how-we-do-it">
     <div class="pink-stripe"></div>
-    <div class="header-text">HOW WE DO IT</div>
+    <div class="header-text">How we do it</div>
     <div class="blue-stripe"></div>
     <div class="section-body no-margin">
         <div class="step-item">
@@ -150,6 +150,33 @@
     </div>
 </section>
 
+<section>
+    <div class="pink-stripe"></div>
+    <div class="header-text">What we use</div>
+    <div class="blue-stripe no-margin-bottom"></div>
+    <div class="section-body  no-margin">
+        <div class="tech-body">
+            <div class="tech-container">
+                <img class="tech" src="./assets/images/logos/python-logo-full.png" alt="python-logo.png">
+            </div>
+            <div class="tech-container">
+                <div class="padding-container">
+                    <img class="tech" src="./assets/images/logos/django-logo-full.png" alt="django-logo.png">
+                </div>
+            </div>
+            <div class="tech-container">
+                <img class="tech" src="./assets/images/logos/heroku-logo-full.png" alt="heroku-logo.png">
+            </div>
+            <div class="tech-container">
+                <img class="tech" src="./assets/images/logos/vue-logo-full.png" alt="vue-logo.png">
+            </div>
+            <div class="tech-container aws-logo">
+                <img class="tech" src="./assets/images/logos/aws-logo-full.png" alt="aws-logo.png">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="about-us" class="lets-work-together">
 
     <div class="header-text no-margin-left">
@@ -165,7 +192,6 @@
             DROP US A LINE!
         </a>
     </div>
-
     <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
     <img class="left-astronaut-lower" src="./assets/images/astro-left.png" alt="astro-left.png"/>
 </section>
@@ -292,17 +318,18 @@
     }
 
     .icon-container .icon-subheader {
-        color: #F06C7C;
+        color:  var(--brand-pink);
         font-size: 40px;
     }
 
     .section-text {
         color: #332859;
-        font-size: 45px;
-        text-align: justify;
         font-family: Montserrat, sans-serif;
         font-weight: 100;
         margin: 100px 200px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 2em;
     }
 
     .how-we-do-it .section-body {
@@ -324,20 +351,50 @@
     .half-margin-bottom {
         margin-bottom: 50px;
     }
-    .name-text-container {
-        /*width: 700px;*/
-        /*padding: 0 100px;*/
-    }
 
+    .padding-container > img {
+        height: 100%;
+        width: 100%;
+        min-width: 150px;
+    }
+    .padding-container {
+        padding: 25px;
+    }
+    .tech-container {
+        min-width: 300px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     @media only screen and (max-width: 2250px) and (min-width: 1300px){
+         .tech-container {
+            min-width: 30%!important;
+         }
+     }
+    .tech-container .tech {
+        max-width: 250px;
+    }
+    .aws-logo > .tech {
+        max-width: 150px;
+    }
+    .tech-body {
+        width: calc(100% - 100px);
+        margin: 50px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     .step-name {
         font-size: 36px;
-        color: #F06C7C;
+        color:  var(--brand-pink);
     }
 
     .step-text {
         align-self: center;
         color: #332859;
-        font-size: 28px;
+        font-size: 25px;
         line-height: 2em;
     }
 
@@ -365,6 +422,7 @@
         background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("./assets/images/spacebg.jpg");
         background-position-y: -50px;
         height: 100vh;
+        overflow: hidden;
     }
     .lets-work-together .header-text {
         padding: 100px 40px 50px 40px;
@@ -392,25 +450,11 @@
         color: #4F456F;
     }
 
-    .drop-us-a-line a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .drop-us-a-line:hover {
-        cursor: pointer;
-        background-color: #e26674;
-    }
-
     .secondary-navigation {
         border-bottom: 1px solid #4F456F;
     }
 
     .nav-item {
-        color: #4F456F;
-    }
-
-    .logo-subheader {
         color: #4F456F;
     }
 
@@ -554,7 +598,7 @@
 
         .right-astronaut-lower {
             position: relative;
-            left: 80%;
+            left: 70%;
             height: 180px;
             top: -50px;
         }

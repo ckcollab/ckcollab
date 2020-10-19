@@ -236,15 +236,20 @@ section.heading {
     color: white;
     bottom: 10px;
     text-align: center;
-    background-color: #60AED9;
+    background-color: var(--brand-blue);
     border-radius: 50px;
     text-decoration: none;
 }
 
 .btn-primary:hover {
-    background-color: #5d9ec8;
+    background-color: var(--blue-dark);
 }
-
+.btn-primary-pink {
+    background-color: var(--brand-pink);
+}
+.btn-primary-pink:hover {
+    background-color: var(--pink-dark);
+}
 .img-circle {
     height: 100px;
     width: 100px;

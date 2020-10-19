@@ -65,6 +65,9 @@
 .no-margin-top {
     margin-top: 0 !important;
 }
+.no-margin-bottom {
+    margin-bottom: 0 !important;;
+}
 .no-margin-left {
     margin-left: 0 !important;
 }
@@ -106,6 +109,7 @@
 .header-text {
     font-size: 45px;
     font-weight: 300;
+    text-transform: uppercase;
     padding: 40px 50px;
     padding-left: 0px; /* This is because we added a margin-left */
     color: #332859;

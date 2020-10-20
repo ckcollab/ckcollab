@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+
 :root {
     --brand-pink: #F06C7C;
     --brand-blue: #60AED9;
@@ -7,11 +8,29 @@
     --blue-dark: #5d9ec8;
 }
 
+@keyframes fadeIn {
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: #1e2642;
+    animation: fadeIn 1 .2s linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+}
+
+.bg-white {
+    background-color: white;
 }
 
 .hero {

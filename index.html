@@ -155,24 +155,62 @@
     <div class="header-text">What we use</div>
     <div class="blue-stripe no-margin-bottom"></div>
     <div class="section-body  no-margin">
-        <div class="tech-body">
-            <div class="tech-container">
-                <img class="tech" src="./assets/images/logos/python-logo-full.png" alt="python-logo.png">
+        <div class="logos-body">
+            <div class="img-container">
+                <img class="logo-img" src="./assets/images/tech-logos/python-logo-full.png" alt="python-logo.png">
             </div>
-            <div class="tech-container">
+            <div class="img-container">
                 <div class="padding-container">
-                    <img class="tech" src="./assets/images/logos/django-logo-full.png" alt="django-logo.png">
+                    <img class="logo-img" src="./assets/images/tech-logos/django-logo-full.png" alt="django-logo.png">
                 </div>
             </div>
-            <div class="tech-container">
-                <img class="tech" src="./assets/images/logos/heroku-logo-full.png" alt="heroku-logo.png">
+            <div class="img-container">
+                <img class="logo-img" src="./assets/images/tech-logos/heroku-logo-full.png" alt="heroku-logo.png">
             </div>
-            <div class="tech-container">
-                <img class="tech" src="./assets/images/logos/vue-logo-full.png" alt="vue-logo.png">
+            <div class="img-container">
+                <img class="logo-img" src="./assets/images/tech-logos/vue-logo-full.png" alt="vue-logo.png">
             </div>
-            <div class="tech-container aws-logo">
-                <img class="tech" src="./assets/images/logos/aws-logo-full.png" alt="aws-logo.png">
+            <div class="img-container aws-logo">
+                <img class="logo-img" src="./assets/images/tech-logos/aws-logo-full.png" alt="aws-logo.png">
             </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="pink-stripe"></div>
+    <div class="header-text">Who we've helped</div>
+    <div class="blue-stripe no-margin-bottom"></div>
+    <div class="section-body  no-margin">
+        <div class="logos-body">
+            <a class="img-container" href="https://www.mgmresorts.com/en.html" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/mgm-logo.svg" alt="mgm-logo.svg">
+            </a>
+            <a class="img-container medcurio" href="https://www.medcurio.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/medcurio-logo.webp" alt="med-curio-logo.webp">
+                <span>Med</span>curio
+            </a>
+            <a class="img-container trailhead" href="https://www.trailheadai.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/trailhead-logo.png" alt="trailhead-logo.png">
+            </a>
+            <a class="img-container" href="https://findagame.io/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img find-a-game" src="./assets/images/client-logos/findagame-logo.png" alt="find-a-game.png">
+            </a>
+            <a class="img-container" href="https://coeurholdings.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/coeur-logo.svg" alt="coeur-logo.svg">
+            </a>
+            <a class="img-container" href="https://codalab.org/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/codalab-logo.png" alt="codalab-logo.png">
+            </a>
+            <a class="img-container" href="https://www.hagadonemediagroup.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img hagadone" src="./assets/images/client-logos/hagadone-logo.png" alt="hagadone-digital-logo.png">
+            </a>
+            <a class="img-container" href="https://www.draper.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img draper" src="./assets/images/client-logos/draper-logo.png" alt="draper-logo.png">
+            </a>
+            <a class="img-container" href="http://www.chalearn.org/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img" src="./assets/images/client-logos/chalearn-logo.png" alt="chalearn-logo.png">
+            </a>
         </div>
     </div>
 </section>
@@ -361,7 +399,7 @@
     .padding-container {
         padding: 25px;
     }
-    .tech-container {
+    .img-container {
         min-width: 300px;
         height: 150px;
         display: flex;
@@ -369,17 +407,17 @@
         align-items: center;
     }
      @media only screen and (max-width: 2250px) and (min-width: 1300px){
-         .tech-container {
+         .img-container {
             min-width: 30%!important;
          }
      }
-    .tech-container .tech {
+    .img-container .logo-img {
         max-width: 250px;
     }
-    .aws-logo > .tech {
+    .aws-logo > .logo-img {
         max-width: 150px;
     }
-    .tech-body {
+    .logos-body {
         width: calc(100% - 100px);
         margin: 50px 50px;
         display: flex;
@@ -387,6 +425,48 @@
         justify-content: space-evenly;
         align-items: center;
     }
+
+    /*Who we've helped */
+
+    .img-container .draper {
+        background: black;
+        border-radius: 4px;
+    }
+
+    .img-container .hagadone {
+        max-width: 350px;
+    }
+    .img-container .find-a-game {
+        max-width: 200px;
+    }
+    .trailhead {
+        position: relative;
+    }
+    .trailhead img {
+        z-index: 1;
+    }
+    .trailhead::before {
+        position: absolute;
+        content: '';
+        height: 100px;
+        width: 220px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #f47e57 150px, transparent);
+    }
+    .medcurio img {
+        max-width: 100px !important;
+    }
+    .medcurio {
+        font-size: 22px;
+        font-weight: lighter;
+        color: #1D488B;
+        text-transform: uppercase;
+    }
+    .medcurio span {
+        font-weight: 900;
+    }
+
+    /* How we do it */
     .step-name {
         font-size: 36px;
         color:  var(--brand-pink);

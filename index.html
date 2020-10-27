@@ -182,7 +182,7 @@
     <div class="header-text">Who we've helped</div>
     <div class="blue-stripe no-margin-bottom"></div>
     <div class="section-body  no-margin">
-        <div class="logos-body">
+        <div class="logos-body clients-body">
             <a class="img-container" href="https://www.mgmresorts.com/en.html" target="_blank" rel="noreferrer noopener">
                 <img class="logo-img" src="./assets/images/client-logos/mgm-logo.svg" alt="mgm-logo.svg">
             </a>
@@ -202,11 +202,11 @@
             <a class="img-container" href="https://codalab.org/" target="_blank" rel="noreferrer noopener">
                 <img class="logo-img" src="./assets/images/client-logos/codalab-logo.png" alt="codalab-logo.png">
             </a>
-            <a class="img-container" href="https://www.hagadonemediagroup.com/" target="_blank" rel="noreferrer noopener">
-                <img class="logo-img hagadone" src="./assets/images/client-logos/hagadone-logo.png" alt="hagadone-digital-logo.png">
-            </a>
             <a class="img-container" href="https://www.draper.com/" target="_blank" rel="noreferrer noopener">
                 <img class="logo-img draper" src="./assets/images/client-logos/draper-logo.png" alt="draper-logo.png">
+            </a>
+            <a class="img-container" href="https://www.hagadonemediagroup.com/" target="_blank" rel="noreferrer noopener">
+                <img class="logo-img hagadone" src="./assets/images/client-logos/hagadone-logo.png" alt="hagadone-digital-logo.png">
             </a>
             <a class="img-container" href="http://www.chalearn.org/" target="_blank" rel="noreferrer noopener">
                 <img class="logo-img" src="./assets/images/client-logos/chalearn-logo.png" alt="chalearn-logo.png">
@@ -419,7 +419,7 @@
     }
     .logos-body {
         width: calc(100% - 100px);
-        margin: 50px 50px;
+        margin: 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -427,6 +427,10 @@
     }
 
     /*Who we've helped */
+    .clients-body {
+        width: calc(100% - 200px);
+        margin: 50px 100px;
+    }
     a.img-container {
         position: relative;
         transition: 1s;
@@ -439,6 +443,7 @@
         height: 100%;
         border-radius: 10px;
         background: linear-gradient(145deg, #e7e7e7 0px, transparent 140px);
+        /*box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.75);*/
         opacity: 0;
         z-index: 1;
         transition: .3s;

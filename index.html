@@ -427,7 +427,28 @@
     }
 
     /*Who we've helped */
-
+    a.img-container {
+        position: relative;
+        transition: 1s;
+    }
+    a.img-container::after {
+         position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #e7e7e7 0px, transparent 140px);
+        opacity: 0;
+        z-index: 1;
+        transition: .3s;
+    }
+    a.img-container:hover::after{
+        opacity: 1
+    }
+    a.img-container .logo-img {
+        z-index: 2;
+    }
     .img-container .draper {
         background: black;
         border-radius: 4px;
@@ -443,7 +464,7 @@
         position: relative;
     }
     .trailhead img {
-        z-index: 1;
+        z-index: 2;
     }
     .trailhead::before {
         position: absolute;
@@ -452,6 +473,7 @@
         width: 220px;
         border-radius: 4px;
         background: linear-gradient(135deg, #f47e57 150px, transparent);
+        z-index: 2;
     }
     .medcurio img {
         max-width: 100px !important;

@@ -4,6 +4,9 @@ date: 2020-10-26 00:00:00 +0800
 author: allen
 ---
 
+<div style="text-align: center;">
+    <img src="/assets/images/articles/10-28-2020/upwork-web.jpg" class="img-bordered">
+</div>
 
 
 Upwork, I would consider, is the best place for a Software/Web Development company based out of North Idaho to find new clients and jobs. If you are okay with a lot of rejection and getting your hopes up of finding the perfect client then it is the place for you.

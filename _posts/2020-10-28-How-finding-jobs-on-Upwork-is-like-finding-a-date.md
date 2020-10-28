@@ -19,10 +19,19 @@ Upwork, I would consider, is the best place for a Software/Web Development compa
 
 The first thing would be to grow your profile. Even if you would consider yourself an expert in your field, when hiring freelancers in the past, I would ignore profiles that had no work history or very little. This means you will have to take some work below what you would like to charge in order for your profile to grow. Even having a few jobs with 100% satisfaction can mean the difference between getting an interview or being ignored. You might have to lose some money in order to boost your profile but in the long run, you will be able to get more interviews or even have jobs come to you with extensive work history. 
 
+
+<div style="text-align: center;">
+    <img src="/assets/images/articles/10-28-2020/ckc-overview.png" class="img-bordered">
+    <small><i>Upwork Profile</i></small>
+</div>
+
 # Early Bird Catches the worm (Importance of being first)
 
 The next most important thing would be to be one of the first people to apply to the job. I have set up a RSS feed to know right when a job is posted. Software is one of the most applied to job postings on Upwork and it is normal to see 20-50 proposals for one job within an hour. Other job postings for attorneys and others will have better luck since there aren’t as many searching for that kind of work on Upwork. Being first or within the first 10 will greatly increase your chances for an interview. With the RSS feed, don’t feel like you will see all the jobs for you. Some jobs are worded differently so searching Upwork often is a must as well. One potential large client worded her posting as a RFP for her website that she needed built and we were able to get an interview. This would have had over 50 proposals if it was worded better but it had under 10 from that one change.
 
+<div style="text-align: center;">
+    <img src="/assets/images/articles/10-28-2020/ckc-messages.png" class="img-bordered">
+</div>
 
 # Show don't Tell
 

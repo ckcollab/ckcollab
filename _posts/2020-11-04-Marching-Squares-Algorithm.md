@@ -26,17 +26,17 @@ and link it locally in your HTML.
 
 ## What is Marching Squares
 
-Alright, so unless you an ultra-nerd like me you've probably never of the algorithm before. So let me explain the problem we 
-are trying to solve a bit. We have as grid of values we want to separate these points 2 groups, and to make it simple we 
-will be using just be using 0's and 1's. If we just draw these points it would look something like this.
+Alright, so unless you an ultra-nerd like me you've probably never heard of the algorithm before. So let me explain the problem we 
+are trying to solve. We have a grid of values we want to separate into points 2 groups, and to make it simple we 
+will be using just be using 0's and 1's. If we just draw these points as squares it would look something like this.
 
 <div style="text-align: center;">
     <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/no-lines-example.png" class="img-bordered" style="max-height: 300px">
 </div>
-Just looking at that image I bet you immediately the image into 2 groups. Pretty amazing how our brain does that, but 
+Just looking at that image I bet you immediately separate the image into 2 groups. Pretty amazing how our brain does that,
 but unfortunately computers aren't as straightforward.\
-What we want the computer to do is draw a line separating the 2 groups. No gaps, and it needs to be done fast enough to
-see live like the animation above. This is where the Marching Squares algorithm. If you looked at each group of 4 squares,
+What we want the computer to do the same thing by drawing a line separating the 2 groups. No gaps allowed, and it needs to be done fast enough to
+see live, like the animation above. This is the goal of the Marching Squares algorithm. If you looked at each group of 4 squares,
 and drew a line according to the this guide, you would come out with a perfect separation between the 2 groups.
 
 
@@ -67,7 +67,7 @@ function getNoise(x, y) {
 We will store our gid of data in `scalar_array`, and `SPACE_BETWEEN` will be used to change the resolution of the points
 on the screen. If you have troubles with performance you can try increasing `Space_between`, just make sure it can divide
 into the resolution of the canvas we set later on.\
-`generate_noise` is a function of the Perlin noise code I referenced earlier. To use this you need to give it a seed,
+`generate_noise` is a function of the Perlin noise code that I referenced earlier. To use this you need to give it a seed,
 `Math.random()` will do just fine. Next we need to pass in x, y, and z coordinates to get a value between -1 to 1.
 We will pass in x and y to the function `getNoise(x,y)` and the current time will be our z coordinate.
 Just use `generate_noise.perlin3(x, y, z)` from above, and we add 1 to the value so we only get postive values between 0 and 2.
@@ -113,7 +113,7 @@ function draw() {
 
 Ok, now we run our code all we get is a blank canvas. Let's change that!
 
-## Get to the point
+## Get to the Point
 
 Let's start getting some points on the screen. First, lets add one more line of code to the beginning of `setup()`
 
@@ -151,9 +151,9 @@ for(let x = 0; x < scalar_array.length; x++){
     }
 }
 ```
-*When I mention adding more code to the main loop later, put it where that comment is*
+*When I mention adding more code to the main loop later, put it where that comment is.*
 <br>
-Ok this a bit of a bit of code to get though, but bear with me. `square_size` is pretty self-explanatory. The Main Loop
+Ok this a bit of to get though, but bear with me. `square_size` is pretty self-explanatory. The Main Loop
 just integrates though each entry in the `scalar_array`. Then we assign each position an object. The most important thing
 to notice here is the `.data` info. Here we are getting our random value and rounding it down to 0 or 1. *Technically* 
 we could get 2 as well, but it won't cause any problems so we will ignore that.\
@@ -163,7 +163,7 @@ draw a square on the canvas. It draws the the top left corner at the x and y coo
 will move that by half of the size of the square to center it.\
 You're code should draw a canvas similar to the photo from before.
 
-## Drawing a line in the... square?
+## Drawing a Line in the... Square?
 
 Now for the hard part. We need to come up with an algorithm to draw the lines for each square. We are going to define a
 square as a point and it's neighbors up 1 position, left 1 position, and both.
@@ -177,7 +177,7 @@ if(x > 0 && y > 0){
 }
 ```
 We could write a case for every combination of points in a square, and for each case draw a different line.
-But I'm lazy so I tried to do the same thing in as little lines of code as possible. Let's see how this goes.\
+However, I'm lazy so I tried to do the same thing in as little lines of code as possible. Let's see how this goes.\
 Now that we are only checking the correct position we can now collect all the points of the square into one array.
 After we do that, we can filter that array down to just the points are active so we can know how many there are.\
 Put this inside the if statement block.
@@ -196,7 +196,7 @@ Let's break this problem down step by step. We will start with squares that only
 
 If you look at the image you might notice a pattern. A line is just a connection of 2 vectors on the canvas. If you look
 at the diagram you will notice whenever one of the top two corners are active, one of the vectors is in the top middle
-of the square. The opposite is true. The same pattern arises when you look at the left vs the right. Since there is a
+of the square. The opposite is true. The same pattern arises when you look at the left vs. the right. Since there is a
 pattern with a little bit of Math we handle this with just a few lines of code. Add this function to the bottom of your
 Javascript code.
 

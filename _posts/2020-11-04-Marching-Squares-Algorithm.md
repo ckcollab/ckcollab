@@ -12,6 +12,41 @@ but first mess around with demo, and see if you can figure out how it is done!
 <div id="container"></div>
 <span id="slider"></span>
 
+## What is Marching Squares
+
+Alright, so unless you an ultra-nerd like me you've probably never heard of the algorithm before. So let me explain the problem we 
+are trying to solve. Let's start with a real world example that you have probably familiar with. If you wanted to tell a
+computer to draw a line on a map that separated all areas above 100 feet from all areas below 100 feet, how would you do it?
+
+<div style="text-align: center;">
+    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/Topographic_map_example.png" class="img-bordered" style="max-height: 450px">
+    <br>
+    <small><i><a href="https://commons.wikimedia.org/wiki/File:Topographic_map_example.png">United States Geological Survey (Public Domain)</a></i></small>
+</div>
+
+We can see how useful it is to draw distinctions between groups in data, but trying to come up with a efficient way to
+solve this problem is not a trivial problem. Let's simplify this a little more. 
+Now we have a grid of values we want to separate into 2 groups, and to make it simple we 
+will be using be using 0's and 1's. If we draw these points as squares it would look something like this.
+
+<div style="text-align: center;">
+    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/no-lines-example.png" class="img-bordered" style="max-height: 300px">
+</div>
+
+Just looking at that image I bet you immediately separate the image into 2 groups. Pretty amazing how our brain does that,
+but unfortunately computers aren't as straightforward.\
+What we want the computer to do the same thing by drawing a line separating the 2 groups. No gaps allowed, and it needs to be done fast enough to
+see live, like the animation above. This is the goal of the Marching Squares algorithm. If you looked at each group of 4 points,
+and drew a line according to the this guide, you would come out with a perfect separation between the 2 groups.
+
+
+<div style="text-align: center;">
+    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/marching-squares-example.png" class="img-bordered" style="max-height: 450px">
+    <br>
+    <small><i><a href="https://en.wikipedia.org/wiki/Marching_squares#/media/File:Marching-squares-isoline.png">Credit: Mikhailfranco</a></i></small>
+</div>
+
+
 ## Prerequisites
 
 This animation was written using [p5.js](https://p5js.org/). I would recommend looking at getting started [guide](https://p5js.org/get-started/)
@@ -23,29 +58,6 @@ if you want to start making animations that you can share on the web! So to get 
 
 I will also be using this [Perlin noise](https://github.com/josephg/noisejs) code to generate our data. Just download it
 and link it locally in your HTML.
-
-## What is Marching Squares
-
-Alright, so unless you an ultra-nerd like me you've probably never heard of the algorithm before. So let me explain the problem we 
-are trying to solve. We have a grid of values we want to separate into points 2 groups, and to make it simple we 
-will be using just be using 0's and 1's. If we just draw these points as squares it would look something like this.
-
-<div style="text-align: center;">
-    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/no-lines-example.png" class="img-bordered" style="max-height: 300px">
-</div>
-Just looking at that image I bet you immediately separate the image into 2 groups. Pretty amazing how our brain does that,
-but unfortunately computers aren't as straightforward.\
-What we want the computer to do the same thing by drawing a line separating the 2 groups. No gaps allowed, and it needs to be done fast enough to
-see live, like the animation above. This is the goal of the Marching Squares algorithm. If you looked at each group of 4 squares,
-and drew a line according to the this guide, you would come out with a perfect separation between the 2 groups.
-
-
-<div style="text-align: center;">
-    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/marching-squares-example.png" class="img-bordered" style="max-height: 450px">
-    <br>
-    <small><i><a href="https://en.wikipedia.org/wiki/Marching_squares#/media/File:Marching-squares-isoline.png">Credit: Mikhailfranco</a></i></small>
-</div>
-
 
 ## Set-up
 
@@ -65,7 +77,7 @@ function getNoise(x, y) {
 ```
 
 We will store our gid of data in `scalar_array`, and `SPACE_BETWEEN` will be used to change the resolution of the points
-on the screen. If you have troubles with performance you can try increasing `Space_between`, just make sure it can divide
+on the screen. If you have troubles with performance you can try increasing `Space_between`,  make sure it can divide
 into the resolution of the canvas we set later on.\
 `generate_noise` is a function of the Perlin noise code that I referenced earlier. To use this you need to give it a seed,
 `Math.random()` will do just fine. Next we need to pass in x, y, and z coordinates to get a value between -1 to 1.
@@ -121,7 +133,7 @@ Let's start getting some points on the screen. First, lets add one more line of 
 scalar_array = Array(CANVAS_WIDTH/SPACE_BETWEEN + 1).fill(0).map(() => Array(CANVAS_HEIGHT/SPACE_BETWEEN + 1).fill(0))
 ```
 
-This just creates a 2d array for `scalar_array` based off our environment variables we made earlier. New we can iterate
+This creates a 2d array for `scalar_array` based off our environment variables we made earlier. New we can iterate
 over each entry in the array to generate a point on the screen.\
 Now add this next piece of code to the end of `draw()`
 
@@ -154,10 +166,10 @@ for(let x = 0; x < scalar_array.length; x++){
 *When I mention adding more code to the main loop later, put it where that comment is.*
 <br>
 Ok this a bit of to get though, but bear with me. `square_size` is pretty self-explanatory. The Main Loop
-just integrates though each entry in the `scalar_array`. Then we assign each position an object. The most important thing
+integrates though each entry in the `scalar_array`. Then we assign each position an object. The most important thing
 to notice here is the `.data` info. Here we are getting our random value and rounding it down to 0 or 1. *Technically* 
 we could get 2 as well, but it won't cause any problems so we will ignore that.\
-The next important part is where we actually draw the squares. [`fill(r,g,b)`](https://p5js.org/reference/#/p5/fill) just sets the
+The next important part is where we actually draw the squares. [`fill(r,g,b)`](https://p5js.org/reference/#/p5/fill) sets the
 color we want to use to *fill* our squares. The [`square(x, y, SIZE)`](https://p5js.org/reference/#/p5/square) lets a
 draw a square on the canvas. It draws the the top left corner at the x and y coordinate we pass to the function, so we
 will move that by half of the size of the square to center it.\
@@ -197,7 +209,7 @@ Let's break this problem down step by step. We will start with squares that only
 If you look at the image you might notice a pattern. A line is just a connection of 2 vectors on the canvas. If you look
 at the diagram you will notice whenever one of the top two corners are active, one of the vectors is in the top middle
 of the square. The opposite is true. The same pattern arises when you look at the left vs. the right. Since there is a
-pattern with a little bit of Math we handle this with just a few lines of code. Add this function to the bottom of your
+pattern with a little bit of Math we handle this with a few lines of code. Add this function to the bottom of your
 Javascript code.
 
 ```javascript
@@ -223,7 +235,7 @@ First, we need to know what corner is active for the current square. This is the
 will be 0 if the active corner is on the right or -1 if it is on the left.
 <br>
 We then use these values to make 2 vectors. `x1` and `y1` make up the vector on the top or bottom the square. `x2` and `y2`
-make up the left or right vector. Now we just plug that into the [`line()`](https://p5js.org/reference/#/p5/line) function
+make up the left or right vector. Now we plug that into the [`line()`](https://p5js.org/reference/#/p5/line) function
 and we are good to go!
 <br>
 Now we need to pass a point to this function each time we only have one active point. Add this to our if block from earlier.
@@ -275,8 +287,8 @@ function twoPointsActive(active_corners, x, y){
 }
 ```
 
-This one isn't too complicated compared to the last one. We are just checking the corners if we should draw a vertical
-or horizontal line. Then we just draw the line.
+This one isn't too complicated compared to the last one. We are checking the corners if we should draw a vertical
+or horizontal line. Then we draw the line.
 
 Now we should be getting something like this.
 
@@ -293,7 +305,7 @@ Ok, so that actually wasn't all the combinations for points. If you noticed what
     <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/missing-two-point-squares.png" class="img-bordered">
 </div>
 
-There's actually a couple of ways we could handle opposite active corners. To make things simple lets just pretend they
+There's actually a couple of ways we could handle opposite active corners. To make things simple lets pretend they
 each a single active point. It's a pretty uncommon occurrence anyways. Plus we get to reuse our code from earlier! Add
 this to the end of `twoPointsActive` function from earlier.
 
@@ -322,7 +334,7 @@ else if(active_corners.length === 3){
     onePointActive(inactive_corners[0], x, y)
 }
 ```
-Here we just filter out the active corners instead and pass the one inactive corner to our function.
+Here we filter out the active corners instead and pass the one inactive corner to our function.
 
 ## End
 

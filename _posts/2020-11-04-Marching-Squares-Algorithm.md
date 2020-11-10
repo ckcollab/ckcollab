@@ -15,7 +15,7 @@ but first mess around with demo, and see if you can figure out how it is done!
 ## What is Marching Squares
 
 Alright, so unless you an ultra-nerd like me you've probably never heard of the algorithm before. So let me explain the problem we 
-are trying to solve. Let's start with a real world example that you have probably familiar with. If you wanted to tell a
+are trying to solve. Let's start with a real world example that you are probably familiar with. If you wanted to tell a
 computer to draw a line on a map that separated all areas above 100 feet from all areas below 100 feet, how would you do it?
 
 <div style="text-align: center;">

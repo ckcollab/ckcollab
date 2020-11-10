@@ -107,14 +107,15 @@ body {
     position: absolute;
     right: 0;
     bottom: 10px;
-    width: 200px;
+    padding: 8px 40px !important;
     text-align: center;
     background-color: var(--brand-blue);
-    border-radius: 50px
+    border-radius: 50px;
+    border-bottom: none;
 }
 
 .contact-button:hover {
-    border-bottom: none;
+
     background-color: #5d9ec8;
 }
 
@@ -305,4 +306,8 @@ body {
     -webkit-transform: rotate(45deg) translate(-8px, -9px);
     transform: rotate(45deg) translate(-8px, -9px);
     border: none;
+}
+
+.btn-default {
+    padding: 8px 30px !important;
 }

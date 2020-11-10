@@ -33,7 +33,7 @@ will be using be using 0's and 1's. If we draw these points as squares it would 
     <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/no-lines-example.png" class="img-bordered" style="max-height: 300px">
 </div>
 
-Just looking at that image I bet you immediately separate the image into 2 groups. Pretty amazing how our brain does that,
+Just looking at that image I bet you immediately separate the image into 2 groups, foreground and background. Pretty amazing how our brain does that,
 but unfortunately computers aren't as straightforward.\
 What we want the computer to do the same thing by drawing a line separating the 2 groups. No gaps allowed, and it needs to be done fast enough to
 see live, like the animation above. This is the goal of the Marching Squares algorithm. If you looked at each group of 4 points,
@@ -265,7 +265,7 @@ else if(active_corners.length === 2){
 Let's take a peek at the our guide again.
 
 <div style="text-align: center;">
-    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/single-point-squares.png" class="img-bordered">
+    <img src="/assets/blog/2020-11-04-Marching_Squares-Algorithm/two-point-squares.png" class="img-bordered">
 </div>
 
 This one look even easier. If both points are on the left or right, we draw a vertical line.

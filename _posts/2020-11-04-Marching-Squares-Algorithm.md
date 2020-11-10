@@ -1,6 +1,6 @@
 ---
-title:  "Marching Squares Algorithm"
-date: 2020-11-04 00:00:00 +0800
+title:  Marching Squares Algorithm
+date: 2020-11-09 00:00:00 +0800
 author: logan
 ---
 

@@ -25,8 +25,8 @@ computer to draw a line on a map that separated all areas above 100 feet from al
 </div>
 
 We can see how useful it is to draw distinctions between groups in data, but trying to come up with a efficient way to
-solve this problem is not a trivial problem. Let's simplify this a little more. 
-Now we have a grid of values we want to separate into 2 groups, and to make it simple we 
+solve this is not a trivial problem. Let's simplify this a little more. 
+Say we have a grid of values we want to separate into 2 groups, and to make it simple we 
 will be using be using 0's and 1's. If we draw these points as squares it would look something like this.
 
 <div style="text-align: center;">

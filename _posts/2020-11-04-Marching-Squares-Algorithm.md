@@ -1,5 +1,5 @@
 ---
-title:  Marching Squares Algorithm
+title:  Marching Squares Algorithm - Tutorial
 date: 2020-11-09 00:00:00 +0800
 author: logan
 ---

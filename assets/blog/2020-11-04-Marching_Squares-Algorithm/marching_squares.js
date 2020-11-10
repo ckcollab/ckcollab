@@ -44,7 +44,6 @@ function setup() {
 function draw() {
     // If window scrolls away from the Canvas, do not render animation
     if(!isInViewport(box)){
-        console.log("paused")
         return
     }
     let bias = (slider.value()/1000) ** 3

@@ -64,15 +64,15 @@ and link it locally in your HTML.
 First, we need to set some environment variables.
 
 ```javascript
-var scalar_array;
-var SPACE_BETWEEN = 10;
-var CANVAS_HEIGHT = 500;
-var CANVAS_WIDTH = 500;
+var scalar_array
+var SPACE_BETWEEN = 10
+var CANVAS_HEIGHT = 500
+var CANVAS_WIDTH = 500
 
 generate_noise.seed(Math.random())
 function getNoise(x, y) {
     let d = new Date()
-    return generate_noise.perlin3(x/12,y/12, d.getTime() / 3000)+1
+    return generate_noise.perlin3(x / 12, y / 12, d.getTime() / 3000)+1
 }
 ```
 
@@ -118,8 +118,8 @@ things in the canvas here.
 
 ```javascript
 function draw() {
-    clear();
-    background(0);
+    clear()
+    background(0)
 }
 ```
 
@@ -130,7 +130,8 @@ Ok, now we run our code all we get is a blank canvas. Let's change that!
 Let's start getting some points on the screen. First, lets add one more line of code to the beginning of `setup()`
 
 ```javascript
-scalar_array = Array(CANVAS_WIDTH/SPACE_BETWEEN + 1).fill(0).map(() => Array(CANVAS_HEIGHT/SPACE_BETWEEN + 1).fill(0))
+scalar_array = Array(CANVAS_WIDTH / SPACE_BETWEEN + 1).fill(0).map(() =>
+               Array(CANVAS_HEIGHT / SPACE_BETWEEN + 1).fill(0))
 ```
 
 This creates a 2d array for `scalar_array` based off our environment variables we made earlier. New we can iterate
@@ -138,7 +139,7 @@ over each entry in the array to generate a point on the screen.\
 Now add this next piece of code to the end of `draw()`
 
 ```javascript
-let square_size = Math.floor(SPACE_BETWEEN/3)
+let square_size = Math.floor(SPACE_BETWEEN / 3)
 
 // Main Loop
 for(let x = 0; x < scalar_array.length; x++){
@@ -156,7 +157,7 @@ for(let x = 0; x < scalar_array.length; x++){
         // If point is active draw a square
         fill(0, 255, 0)
         if(scalar_array[x][y].data !== 0){
-            square(scalar_array[x][y].xpos - square_size/2, scalar_array[x][y].ypos -square_size/2, square_size)
+            square(scalar_array[x][y].xpos - square_size / 2, scalar_array[x][y].ypos - square_size / 2, square_size)
         }
 
         // WE WILL BE ADDING MORE CODE HERE LATER
@@ -194,7 +195,7 @@ Now that we are only checking the correct position we can now collect all the po
 After we do that, we can filter that array down to just the points are active so we can know how many there are.\
 Put this inside the if statement block.
 ```javascript
-let current_square = [scalar_array[x-1][y-1], scalar_array[x][y-1], scalar_array[x][y], scalar_array[x-1][y]]
+let current_square = [scalar_array[x - 1][y - 1], scalar_array[x][y - 1], scalar_array[x][y], scalar_array[x - 1][y]]
 let active_corners = current_square.filter(point => point.data >= 1)
 ```
 
@@ -219,10 +220,10 @@ function onePointActive(point, x, y){
     let xval = point.x - x
     let yval = point.y - y
     let line_vector = {
-        x1: x*SPACE_BETWEEN - SPACE_BETWEEN/2,
+        x1: x*SPACE_BETWEEN - SPACE_BETWEEN / 2,
         y1: (y + yval) * SPACE_BETWEEN,
         x2: (x + xval) * SPACE_BETWEEN,
-        y2: y*SPACE_BETWEEN - SPACE_BETWEEN/2,
+        y2: y*SPACE_BETWEEN - SPACE_BETWEEN / 2,
     }
     line(line_vector.x1, line_vector.y1, line_vector.x2, line_vector.y2)
 }
@@ -274,14 +275,14 @@ Go ahead and slap this function below the `onePointActive` function.
 ```javascript
 function twoPointsActive(active_corners, x, y){
     noFill()
-    stroke(color(0,255,0))
+    stroke(color(0, 255, 0))
     // If points are complements treat them both as solo points
     if (active_corners[0].x === active_corners[1].x){
-        xval = x * SPACE_BETWEEN - SPACE_BETWEEN/2
+        xval = x * SPACE_BETWEEN - SPACE_BETWEEN / 2
         line(xval, y * SPACE_BETWEEN, xval, (y - 1) * SPACE_BETWEEN)
     }
     else if (active_corners[0].y === active_corners[1].y){
-        yval = y * SPACE_BETWEEN - SPACE_BETWEEN/2
+        yval = y * SPACE_BETWEEN - SPACE_BETWEEN / 2
         line(x * SPACE_BETWEEN, yval, (x - 1) * SPACE_BETWEEN, yval)
     }
 }

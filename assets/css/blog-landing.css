@@ -149,17 +149,16 @@ section.heading {
     padding-bottom: 10px;
     margin: 50px;
     width: 600px;
-    height: 325px;
+    /*height: 325px;*/
     display: flex;
     flex-direction: column;
 }
 
 .media .btn-primary {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    color: #efefef;
     font-size: 20px;
     padding: 5px 12px;
+    float: right;
 }
 
 .media-object {
@@ -210,10 +209,15 @@ section.heading {
 .media-text a {
     color: #60AED9;
 }
-
 .media-text a:visited {
     color: #F06C7C;
 }
+.media-text p {
+    text-align: justify;
+    word-break: break-word;
+    padding-bottom: 15px;
+}
+
 .img-bordered {
     display: none !important;
 }

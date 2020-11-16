@@ -12,7 +12,7 @@ I attempted to setup one of our client's projects on this new platform to give i
 <!--more-->
 
 
-# Pros and cons vs Heroku
+# Digital Ocean vs Heroku
 
 <div style="text-align: center;">
     <img src="/assets/images/articles/digital-ocean.png">
@@ -54,4 +54,3 @@ To get a [dyno](https://www.heroku.com/dynos#:~:text=The%20containers%20used%20a
 # Final thoughts
 
 I'm excited to see how this pans out, but what I'd really, _really,_ like to see is some [docker-compose](https://docs.docker.com/compose/) support! It'd be so neat to throw up a server and have new processes managed automatically with nice defaults. Our main concern is business logic, would love to not have to worry so much about configuring yet-another-new-thing :)
-

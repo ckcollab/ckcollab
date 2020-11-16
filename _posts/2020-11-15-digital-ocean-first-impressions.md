@@ -11,12 +11,12 @@ I attempted to setup one of our client's projects on this new platform to give i
 
 <!--more-->
 
-<div style="text-align: center;">
-    <img src="/assets/images/articles/do-app-platform.png" class="img-bordered">
-</div>
 
 # Pros and cons vs Heroku
 
+<div style="text-align: center;">
+    <img src="/assets/images/articles/digital-ocean.png">
+</div>
 
 | Pros | Cons |
 |------|------|
@@ -26,6 +26,11 @@ I attempted to setup one of our client's projects on this new platform to give i
 | | Similar to Heroku, has a [cli](https://www.digitalocean.com/docs/app-platform/concepts/doctl/) but not nearly as many features |
 | | In its infancy still |
 
+
+<div style="text-align: center;">
+    <img src="/assets/images/articles/do-app-platform.png" class="img-bordered">
+    <small><i>Creating an app</i></small>
+</div>
 
 # Add on support
 

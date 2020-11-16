@@ -51,6 +51,12 @@ Scaling, though, Digital Ocean looks more interesting.
 
 To get a [dyno](https://www.heroku.com/dynos#:~:text=The%20containers%20used%20at%20Heroku,based%20on%20its%20resource%20demands.) with >= 2gb memory on Heroku you need to spend a minimum of **$250/mo**. On Digital Ocean you only need to spend **$20/mo**! 
 
+# More reading
+
+[Heroku vs AWS]({% post_url 2019-03-15-heroku-vs-aws %})
+
+[Django + Cloudcube on Heroku]({% post_url 2020-03-25-django-cloudcube-heroku %})
+
 # Final thoughts
 
 I'm excited to see how this pans out, but what I'd really, _really,_ like to see is some [docker-compose](https://docs.docker.com/compose/) support! It'd be so neat to throw up a server and have new processes managed automatically with nice defaults. Our main concern is business logic, would love to not have to worry so much about configuring yet-another-new-thing :)

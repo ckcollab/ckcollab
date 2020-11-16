@@ -152,6 +152,7 @@ section.heading {
     /*height: 325px;*/
     display: flex;
     flex-direction: column;
+    align-self: end;
 }
 
 .media .btn-primary {
@@ -209,9 +210,7 @@ section.heading {
 .media-text a {
     color: #60AED9;
 }
-.media-text a:visited {
-    color: #F06C7C;
-}
+
 .media-text p {
     text-align: justify;
     word-break: break-word;

@@ -149,17 +149,18 @@ section.heading {
     padding-bottom: 10px;
     margin: 50px;
     width: 600px;
-    /*height: 325px;*/
+    height: 375px;
     display: flex;
     flex-direction: column;
-    align-self: end;
 }
 
 .media .btn-primary {
     color: #efefef;
     font-size: 20px;
     padding: 5px 12px;
-    float: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 .media-object {

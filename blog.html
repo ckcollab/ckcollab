@@ -63,8 +63,9 @@
                     </div>
                     <div class="media-text">
                         {{ post.excerpt }}
+
+                        <a href="{{ post.url }}" class="btn-primary btn-default">Continue...</a>
                     </div>
-                    <a href="{{ post.url }}" class="btn-primary btn-default">Continue...</a>
                 </div>
             </li>
             {% endfor %}

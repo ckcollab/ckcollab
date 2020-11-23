@@ -16,13 +16,14 @@ Here at CKC, we have an unofficial, somewhat-hobby project that we work on spora
 
 ---
 
-There are several techniques to wield the power of WebSockets. The method we chose for this project is relatively simple: we use a standard REST API to make changes on the backend, then we send a message through to the WebSocket to indicate what data has changed. Furthermore, to make changes, we can call a PATCH/PUT/POST method to the API, and once that resolves, we send a message up to the WebSocket. We then forward the message to the other clients that are listening. To reiterate, the message dictates what data needs updating. So once a client receives a message from it's WebSocket connection, it triggers a GET request to fetch the newly updated data. This is not the typical way to set up a WebSocket and has its cons. It would be more efficient and responsive for the client to send/receive data straight through the socket's connection instead of pairing it with a REST architecture. While we may change this in the future, we were going for simplicity in this initial stage. WebSockets are fairly new to the team so having a simple implementation helps new dev's jump on the project and understand it quicker.
+There are several techniques to wield the power of WebSockets. The method we chose for this project is relatively simple: we use a standard REST API to make changes on the backend, then we send a message through to the WebSocket to indicate what data has changed. Furthermore, to make changes, we can call a PATCH/PUT/POST method to the API, and once that resolves, we send a message up to the WebSocket. We then forward the message to the other clients that are listening. To reiterate, the message dictates what data needs updating. So once a client receives a message from it's WebSocket connection, it triggers a GET request to fetch the newly updated data. This is not the typical way to set up a WebSocket and has its cons. It would be more efficient and responsive for the client to send/receive data straight through the socket's connection instead of pairing it with a REST architecture. While we may change this in the future, we were going for simplicity in this initial stage. 
 
 # Let's get to work
 
 I recently implemented our existing WebSocket for CKC Management into a barebones React Native app. Our web app is built with Vue.js, but I'll be going over the React Native implementation. We are assuming that you already have a backend running at this point; I will not be covering that.
 
-This process is relatively straightforward, but I will assume you have a React Native project up and running at this point. 
+
+This process is relatively straightforward, but I will assume you have a React Native project up and running at this point. If you're unsure on how to get started with React Native, you can refer [to this guide](https://itnext.io/set-up-react-native-with-expo-1e63a82d01ac).
 
 To start, we need to initialize the connection to our WebSocket:
 

@@ -12,15 +12,15 @@ WebSockets are great. They provide a bi-directional, real-time data flow between
 
 # CKC Management
 
-Here at CKC we have an unofficial, somewhat-hobby project that we work on sporadically. The app is a project management tool that is still in quite a premature phase, but it was a great excuse for us to delve into the world of WebSockets. One of the main features as of now is a Kanban board. WebSockets pair quite seamlessly with Kanban boards. They allow multiple team members to edit the board at the same time while keeping all users up to date in real time. 
+Here at CKC we have an unofficial, somewhat-hobby project that we work on sporadically. The app is a project management tool that is still in quite a premature phase, but it was a great excuse for us to delve into the world of WebSockets. One of the main features as of now is a Kanban board. WebSockets pair quite seamlessly with Kanban boards. They allow multiple users to edit the board unanimously while keeping all users up to date in real time. 
 
 ---
 
-There are several techniques to wield the power of WebSockets. The method we chose for this project was fairly simple: we used a standard REST API to make changes on the backend, then we send a message through to the WebSocket to indicate that specific data has changed. Furthermore, to make changes, we can call a PATCH method to the API, and once that resolves, we send a message up to the WebSocket. This message is then sent to the other clients that are listening. The message dictates what data needs updated. So once a client receives a message from it’s WebSocket connection, it triggers a GET request to fetch the newly updated data. This is a, somewhat, nontraditional way to set up a WebSocket and definitely has its cons. It would be more efficient and responsive for the client to send/receive data straight through the socket’s connection instead of pairing it with a REST architecture. While we may change this in the future, we were going for simple with this initial usage. WebSockets are fairly new to the team so having a simple implementation helps new dev's jump on the project and understand it quicker.
+There are several techniques to wield the power of WebSockets. The method we chose for this project was fairly simple: we use a standard REST API to make changes on the backend, then we send a message through to the WebSocket to indicate specificly what data has changed. Furthermore, to make changes, we can call a PATCH/PUT/POST method to the API, and once that resolves, we send a message up to the WebSocket. This message is then sent to the other clients that are listening. To reiterate, the message dictates what data needs updated. So once a client receives a message from it’s WebSocket connection, it triggers a GET request to fetch the newly updated data. This is a, somewhat, nontraditional way to set up a WebSocket and definitely has its cons. It would be more efficient and responsive for the client to send/receive data straight through the socket’s connection instead of pairing it with a REST architecture. While we may change this in the future, we were going for simplicity in this initial stage. WebSockets are fairly new to the team so having a simple implementation helps new dev's jump on the project and understand it quicker.
 
 # Let's get to work
 
-I recently implemented a WebSocket connection in a barebones React Native app. Our web app is built with Vue.js but I’ll be going over the React Native implementation. We are assuming that you already have a backend running at this point that I will not be covered in this article. 
+I recently implemented our existing WebSocket for CKC Management into a barebones React Native app. Our web app is built with Vue.js but I’ll be going over the React Native implementation. We are assuming that you already have a backend running at this point that I will not be covered in this article. 
 
 This whole thing is fairly straightforward but I assume you have a React Native project up and running at this point. 
 
@@ -34,7 +34,7 @@ const ws = new WebSocket("<websocket_endpoint>")
 ...
 ```
 
-From there, in the top level component of the app, let's add an event listener to this connection. To initialize this listener once when the app loads and never again, we can utilize React’s ```useEffect``` hook. useEffect is handy here because we need to set up this event listener when the app first loads rather than reinitializing it every render:
+From there, in the top level component of the app, let's add an event listener to this connection. To initialize this listener once when the app loads and never again, we can utilize React’s ```useEffect``` hook. ```useEffect``` is handy here because we need to set up this event listener when the app first loads rather than reinitializing it every render:
 
 ```js
 const ws = new WebSocket("<websocket_endpoint>")
@@ -53,7 +53,7 @@ function App() {
 
 
 ```
-So now that we have the event listener up and running, our function `handleWsMessage`, will fire every time something comes through our socket. If you recall, we will just be receiving a simple message and make some API calls based on that message.  Our function `handleWsMessage` will handle this message and decide what to do. In this case we’ll just run a simple GET request to our API whenever we get a message that indicates new data exists on the server. To keep things simple, we’ll just read down data and not write any message back up to the socket. Our web app will do the writing for now. Our GET request will fetch data and then we can store that data in our state variable `tasks`:
+So now that we have the event listener up and running, our function, `handleWsMessage`, will fire every time something comes through our socket. If you recall, we will just be receiving a simple message and make some API calls based on that message. Our function, `handleWsMessage`, will handle this message and decide how to proceed. In this case we’ll just run a simple GET request to our API whenever we receive a message that indicates new data exists on the server. To keep things simple for now, we’ll read down data and not write any message back up to the socket. Our web app will do the writing for now. Our GET request will fetch data and then we can store that data in our state variable `tasks`:
 
 ```js
 ...
@@ -96,7 +96,7 @@ And there you have it: an entry level approach to working with WebSockets. These
 
 ## Full Example
 
-I've added a bit more code to perfect things a bit. 
+I've added a bit more code to clean things up a bit. 
 
 ```jsx
 import React, { useEffect, useState } from 'react';
@@ -117,7 +117,7 @@ function App() {
     const [tasks, setTasks] = useState([])
 
     const fetchTasks = async () => {
-        const tasks = await getTasks()
+        const tasks = await getTasks() // our GET request
         setTasks(tasks)
     }
 
@@ -133,27 +133,25 @@ function App() {
         ws.onmessage = handleWsMessage
 
         async function getTasks() {
-            // This local scoped function allows us to use async inside our useEffect hook
+            // This allows us to use async inside useEffect
             await fetchTasks()
         }
         getTasks()
 
-        // this cleans up the useEffect hook
+        // cleans up the useEffect hook
         return getTasks
     }, [])
 
     return (
-        <View>
-            <TaskContainer>
-                {
-                    tasks.map((task, i)=>{
-                        return (
-                            <Task key={i} task={task}/>
-                        )
-                    })
-                }
-            </TaskContainer>
-        </View>
+        <Container>
+            {
+                tasks.map((task, i)=>{
+                    return (
+                        <Task key={i} task={task}/>
+                    )
+                })
+            }
+        </Container>
     );
 }
 
@@ -161,7 +159,7 @@ export default App
 
 
 // Simple styled-component usage
-const TaskContainer = styled.View` 
+const Container = styled.View` 
   justify-content: center;
   align-content: center;
 `

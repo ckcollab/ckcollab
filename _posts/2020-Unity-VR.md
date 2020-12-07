@@ -1,0 +1,38 @@
+---
+title: building virtual space
+date: 2020-12-07 00:00:00 +0800
+author: Harvey
+---
+
+# Introduction
+The discipline of computer science is typically likened to varying types of engineering such as mechanical, civil, electrical and so on. In terms of planning, this makes a lot of sense. A software developers process is similar to an engineer’s “development loop” in the early stages in the sense that a developer (usually) plans out a broad architecture and then fine tunes the pieces within to make up the whole. The major difference between the two tends to revolve around execution and product delivery. While this is not always the case, an engineer typically has a physical object to show for their work whereas a software developer has a file. This notion is challenged with virtual reality.
+
+# Unity and the Oculus Quest 
+Recently I have been experimenting with the Oculus Quest 2 and Unity. After a few hiccups with incompatible assets, packages, and versions of unity, I was able to visit my virtual world for the first time. Interacting with my work with six degrees of freedom was a completely new experience for me. My first pass at the virtual space used the oculus integration asset and the XR Legacy Input Helpers.
+<div>
+    <img src="/assets/blog/2020-12-07/ball_play.gif">
+</div>
+
+This worked really great for dipping my toes in the waters, but the oculus integration only works with Oculus headsets (surprise), and the XR Legacy Input Helpers is no longer supported. Furthermore, straight out of the box, these tools did not have super great physics interactions.
+<div>
+    <img src="/assets/blog/2020-12-07/hit_ball_bad.gif">
+</div>
+
+For my second pass, I decided to go with Unity XR via the XR Plugin Management package and the XR Interactions package. This seems to be one of the better options at the moment, since it works with a few pcvr headsets as well as all Oculus platforms. The icing on the cake is that the codebase is maintained by Unity and the documentation is detailed and extensive. The only caveat is that these libraries are updated so frequently, that most 3rd party resources and tutorials are rendered frequently rendered obsolete. Here are a few interactions using these systems.
+
+
+<div>
+    <img src="/assets/blog/2020-12-07/pick_up_ball.gif.gif">
+</div>
+
+<div>
+    <img src="/assets/blog/2020-12-07/hit_ball.gif">
+</div>
+
+# Looking Ahead
+
+I believe the chances of monetizing a VR program is much higher than it has been in the past. The standalone Oculus Quest 2 headset can be purchased for around $300 making the barrier for entry much lower. This in conjunction with Facebook’s current aggressive ad campaign suggests that many more people will be experimenting with the VR platform as consumers. The VR development loop is also immensely satisfying due to how I can interact with it. For these reasons, I want to continue developing and improving my skills in VR development.
+	
+<div>
+    <img src="/assets/blog/2020-11-22/websocket-example.gif">
+</div>

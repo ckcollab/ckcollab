@@ -1,6 +1,6 @@
 ---
 title: Harvey
-avatar: /assets/images/avatars/harvey.jpg
+avatar: /assets/images/avatars/harvey.png
 email: Harvey@ckcollab.com
 short_name: Harvey
 github: hhartwell

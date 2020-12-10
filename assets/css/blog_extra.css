@@ -45,6 +45,16 @@ img.img-bordered, .img-bordered img {
     padding: 2px;
 }
 
+.video-bordered {
+    border: 1px solid rgba(248, 214, 235, 0.8);
+    padding: 2px;
+}
+
+.video-bordered video {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* footer */
 .drop-us-a-line {
     font-style: italic;

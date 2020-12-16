@@ -58,7 +58,7 @@
     </script>
 </head>
 <body>
-<div class="hero space-parallax-bg centered-flex-container">
+<div class="hero space-parallax-bg hero-container">
     <img class="ckc-logo" src="./assets/images/ckclogo.svg" alt="ckclogo.svg"/>
     <img class="right-astronaut" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
     <img class="left-astronaut" src="./assets/images/astro-left.png" alt="astro-left.png"/>
@@ -73,8 +73,8 @@
         <a class="menu-link active no-margin-left" href=".">HOME</a>
         <a class="menu-link" href="about_us.html">ABOUT CKC</a>
         <a class="menu-link" href="blog.html">BLOG</a>
-        <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
     </div>
+    <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
 
     <div class="container hamburger-button" onclick="open_menu(this)">
         <div class="bar1"></div>
@@ -308,11 +308,12 @@
 </script>
 
 <style>
-    .centered-flex-container {
+    .hero-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     .ckc-logo {
         z-index: 1;
@@ -326,11 +327,12 @@
         bottom: 100px;
         left: 80px;
         height: 450px;
+        z-index: 2;
     }
 
     .right-astronaut {
         position: absolute;
-        top: 100px;
+        top: 300px;
         right: 75px;
         height: 300px;
     }
@@ -424,7 +426,7 @@
     }
      @media only screen and (max-width: 2250px) and (min-width: 1300px){
          .img-container {
-            min-width: 30%!important;
+            min-width: 30% !important;
          }
      }
     .img-container .logo-img {
@@ -588,50 +590,61 @@
         flex-direction: column;
     }
 
-    /*  Widescreen CSS Transformation */
-    /*@media only screen and (min-width: 1981px) {*/
-    /*    .section-body, .section-text {*/
-    /*        margin-left: 30%;*/
-    /*        margin-right: 30%;*/
-    /*    }*/
-    /*}*/
 
 
-    @media only screen and (max-width: 615px) {
-        .sub-header {
-            width: 70%;
-            font-size: 25px;
-            margin-top: 50px;
+
+    @media only screen and (max-width: 1035px) {
+        .contact-button {
+            top: 0;
+            bottom: auto;
         }
+        .navigation-menu {
+            margin-left: 0;
+            text-align: center;
+            padding: 40px;
+            width: 100%;
+        }
+        .navigation-menu > .menu-link {
+            margin-left: 35px !important;
+        }
+
     }
+
     /*  Mobile CSS Transformation */
     @media only screen and (max-width: 768px) {
-        .centered-flex-container {
-            justify-content: flex-start;
-        }
+        .hero-container {
+            overflow: hidden;
 
+        }
+        .sub-header {
+            font-size: 1em;
+            width: 90%;
+            white-space: nowrap;
+            z-index: 2;
+        }
         .navigation-menu {
             display: none;
         }
-
         .hamburger-button {
             display: inline-block;
         }
 
         .ckc-logo {
             width: 70%;
+            margin-top: 50px;
         }
 
         .left-astronaut {
-            left: 40px;
+            top: calc(20vh + 200px);
+            left: 20px;
             height: 200px;
+            z-index: 2;
         }
 
         .right-astronaut {
-            top: 500px;
-            right: 25px;
-            height: 150px;
-            z-index: 2;
+            top: calc(20vh + 90px);
+            right: 20px;
+            height: 100px;
         }
 
         .hero-text {
@@ -695,10 +708,7 @@
             width: 200px !important;
             margin: 20px auto;
         }
-        .sub-header {
-            width: 100%;
-            font-size: 25px;
-        }
+
         .pink-stripe {
             margin-top: 50px;
         }
@@ -760,20 +770,20 @@
         }
     }
 
+     @media only screen and (max-width: 650px) {
+         .contact-button {
+             font-size: 15px;
+
+         }
+        .sub-header {
+            width: 90%;
+            font-size: 15px;
+            margin-top: 50px;
+            white-space: initial;
+        }
+    }
+
     @media only screen and (max-width: 374px) {
-        .left-astronaut {
-            bottom: 0;
-            left: 40px;
-            height: 100px;
-        }
-
-        .right-astronaut {
-            top: 475px;
-            right: 25px;
-            height: 80px;
-            z-index: 2;
-        }
-
         .lets-work-together .header-text {
             font-size: 30px;
         }
@@ -810,9 +820,7 @@
     }
 
     @media only screen and (max-width: 1100px) {
-        .navigation-menu {
-            margin-left: 30px;
-        }
+
         .header-text {
             margin-left: 30px;
         }

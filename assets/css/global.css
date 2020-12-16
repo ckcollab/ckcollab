@@ -39,7 +39,7 @@ body {
 }
 
 .space-parallax-bg {
-    background-position-y: -50px;
+    background-size: auto 100%;
     background-attachment: fixed;
     background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
 }
@@ -118,6 +118,7 @@ body {
     background-color: var(--brand-blue);
     border-radius: 50px;
     border-bottom: none;
+    transition: .2s;
 }
 
 .contact-button:hover {

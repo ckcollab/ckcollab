@@ -184,6 +184,15 @@ body {
     margin-top: 1.5em;
 }
 
+.footer-bottom-row {
+    width: 100%;
+    text-align: center;
+}
+.footer-bottom-row > a {
+    text-align: center;
+    font-size: 25px;
+}
+
 .pink-stripe-lower {
     z-index: 2;
     width: 100%;

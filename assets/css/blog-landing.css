@@ -57,7 +57,7 @@ section.heading {
     background-color: white;
     z-index: 3;
     position: relative;
-    height: 500px;
+    height: 550px;
 }
 
 .pink-stripe-lower {
@@ -254,10 +254,11 @@ section.heading {
 .btn-primary-pink:hover {
     background-color: var(--pink-dark);
 }
-.img-circle {
+.avatar-circle {
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    max-width: none;
 }
 
 .read-more {

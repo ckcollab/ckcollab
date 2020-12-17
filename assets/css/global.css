@@ -185,6 +185,15 @@ body {
     margin-top: 1.5em;
 }
 
+.footer-bottom-row {
+    width: 100%;
+    text-align: center;
+}
+.footer-bottom-row > a {
+    text-align: center;
+    font-size: 25px;
+}
+
 .pink-stripe-lower {
     z-index: 2;
     width: 100%;
@@ -317,4 +326,33 @@ body {
 
 .btn-default {
     padding: 8px 30px !important;
+}
+
+.cookie-consent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999999;
+    background-color: var(--blue-dark);
+    width: 100%;
+    color: white;
+    padding: 10px;
+}
+
+.cookie-consent > button {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 25px;
+
+}
+
+.cookie-consent > button:hover {
+    color: #d7d7d7;
 }

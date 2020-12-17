@@ -42,6 +42,7 @@ function addConsentBar() {
     btn.classList.add("fa-close");
     btn.classList.add("fa");
     btn.addEventListener('click', ()=>setCookie('cookie-consent', true, 365))
+    container.addEventListener('click', ()=>setCookie('cookie-consent', true, 365))
     container.classList.add("cookie-consent");
     container.setAttribute('id', 'cookie-consent')
 

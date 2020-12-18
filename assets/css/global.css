@@ -122,8 +122,8 @@ body {
 }
 
 .contact-button:hover {
-
-    background-color: #5d9ec8;
+    background-color: var(--blue-dark);
+    border: none !important;
 }
 
 .pink-stripe {

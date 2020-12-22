@@ -328,6 +328,10 @@
         font-size: 60px;
         font-weight: 600;
         padding: 0px 50px 40px 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .content .body-text {
@@ -673,7 +677,7 @@
         .secondary-navigation {
             flex-direction: column;
             width: 90%;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid transparent;
         }
 
         .nav-item {
@@ -683,16 +687,12 @@
 
         .footer-contact-info {
             flex-direction: column;
+            text-align: center;
+        }
+        .footer-bottom-row {
+            margin-top: 20px;
         }
 
-        .footer-contact-info .contact-info {
-            color: #332859;
-            padding: 20px;
-        }
-
-        .footer-contact-info .contact-info a {
-            color: #332859;
-        }
     }
 
     @media only screen and (max-width: 750px) {

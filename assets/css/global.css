@@ -188,6 +188,8 @@ body {
 .footer-bottom-row {
     width: 100%;
     text-align: center;
+    text-decoration: underline;
+
 }
 .footer-bottom-row > a {
     text-align: center;

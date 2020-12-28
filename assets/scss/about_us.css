@@ -5,14 +5,15 @@
 .left-arrow,
 .right-arrow {
   position: absolute;
-  z-index: 5;
+  z-index: 1;
+  top: calc(17.333vh + 121.000px);
   cursor: pointer; }
 
 .right-arrow:hover,
 .left-arrow:hover {
   filter: brightness(0.9); }
 
-@media screen and (min-height: 1050px) and (min-aspect-ratio: 1 / 1) {
+@media screen and (min-height: 1050px) {
   .arrow-img {
     height: calc(15.766vh + -15.541px);
     width: calc(15.766vh + -15.541px); }
@@ -66,7 +67,7 @@
   .arrow-img {
     height: 120px;
     width: 120px; } }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 750px) {
   .left-arrow,
   .right-arrow {
     top: 340px; }

@@ -8,7 +8,7 @@ $lg_screen_height: 1050px;
 
 $xlg_screen_width: 2160px;
 $md_screen_width: 960px;
-$sm_screen_width: 450px;
+$sm_screen_width: 750px;
 
 
 
@@ -20,7 +20,8 @@ $sm_screen_width: 450px;
 .left-arrow,
 .right-arrow {
   position: absolute;
-  z-index: 5;
+  z-index: 1;
+  top: calc(17.333vh + 121.000px);
   cursor: pointer;
 }
 
@@ -29,7 +30,7 @@ $sm_screen_width: 450px;
   filter: brightness(0.9);
 }
 
-@media screen and (min-height: $lg_screen_height) and (min-aspect-ratio: 1/1) {
+@media screen and (min-height: $lg_screen_height) {
 
   .arrow-img{
     height: calc(15.766vh + -15.541px);

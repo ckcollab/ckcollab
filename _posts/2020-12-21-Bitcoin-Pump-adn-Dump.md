@@ -1,6 +1,6 @@
 ---
 title:  Is Bitcoin a pump and dump scam?
-date: 2020-12-21 00:00:00 +0800
+date: 2020-12-30 00:00:00 +0800
 author: allen
 ---
 

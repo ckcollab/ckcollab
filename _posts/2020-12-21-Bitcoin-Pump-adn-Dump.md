@@ -17,6 +17,10 @@ We all remember the Bitconnect scammer yelling "BITCONNECT!!" before that crypto
 If you remember the early days of Bitcoin, and I’m not talking about 2017 when Bitcoin first became popular, you will remember hearing “Bitcoin is dead.” There were many ups and crashes in the price and with every crash everyone would forget about Bitcoin and move on.\
 The early days had many more crashes and people thinking this cryptocurrency thing was an interesting idea but wouldn’t be worth it in the long run. We have all heard the stories of people trading thousands of Bitcoins for pizza or something else. Many who worked in software didn’t sell, they bought more. 
 
+<div style="text-align: center;">
+    <img src="/assets/blog/2020-12-21/holding-bitcoins.jpg" class="img-bordered">
+</div>
+
 # Is it a scam?
 I think Bitcoin is the currency of the future but I’m afraid it is being used as a pump and dump scam. People aren’t using bitcoin as a currency at this moment but more of an investment.\
 When is the last time you used Bitcoin to buy something?\

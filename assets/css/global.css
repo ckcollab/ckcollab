@@ -87,6 +87,9 @@ body {
     cursor: pointer;
     background-color: var(--pink-dark);
 }
+.no-margin {
+    margin: 0 !important;
+}
 .no-margin-top {
     margin-top: 0 !important;
 }

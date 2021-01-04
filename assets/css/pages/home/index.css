@@ -1,0 +1,26 @@
+@import './header.css';
+@import 'what_we_do.css';
+@import 'who_we_helped.css';
+@import 'how_we_do_it.css';
+@import 'what_we_use.css';
+@import 'lets_work_together.css';
+@import 'footer.css';
+
+
+/* Used across the whole page */
+@media only screen and (max-width: 1100px) {
+
+    .header-text {
+        margin-left: 30px;
+    }
+
+    .section-body {
+        margin: 0 30px;
+    }
+
+    .section-text {
+        margin: 100px 30px;
+    }
+
+}
+

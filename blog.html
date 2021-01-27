@@ -7,8 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/blog-landing.css">
+    <link rel="stylesheet" href="assets/css/pages/blog-landing/index.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 
  <!--  Font Awesome  -->
@@ -51,7 +53,7 @@
             {% for post in site.posts limit:6 %}
             {% assign author = site.authors | where: 'short_name', post.author | first %}
             <li class="media">
-                <div class="media-title banner">
+                <div class="banner">
                     <div class="blue-stripe"></div>
                     <h3 class="media-heading">
                         <a href="{{ post.url }}">

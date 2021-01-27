@@ -1,0 +1,48 @@
+@import "about_us.css";
+@import "header.css";
+
+
+/* Main Content */
+@media only screen and (max-width: 768px) {
+    .content .body-text {
+        margin: 20px 10px;
+    }
+
+    .content .header-text {
+        font-size: 40px;
+    }
+
+    .content .body-text {
+        font-size: 20px;
+    }
+
+    .drop-us-a-line {
+        font-size: 15px;
+        width: calc(100% - 50px) !important;
+    }
+}
+
+
+
+/* Footer */
+@media only screen and (max-width: 959px) {
+    .secondary-navigation {
+        flex-direction: column;
+        width: 90%;
+        border-bottom: 1px solid transparent;
+    }
+
+    .nav-item {
+        font-size: 30px;
+        margin: 40px;
+    }
+
+    .footer-contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-row {
+        padding: 20px 0;
+    }
+}

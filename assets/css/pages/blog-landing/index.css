@@ -53,7 +53,7 @@ section.heading {
 }
 
 .footer {
-    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
+    background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("/assets/images/spacebg.jpg");
     background-color: white;
     z-index: 3;
     position: relative;

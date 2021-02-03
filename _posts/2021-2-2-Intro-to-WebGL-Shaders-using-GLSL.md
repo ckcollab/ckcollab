@@ -2,6 +2,7 @@
 title:  Intro to Shaders in WebGL using GLSL
 date: 2021-2-2
 author: logan
+image: assets/blog/2020-2-2-Webgl/mesh-gradient.png
 ---
 
 WebGL gives the freedom to create unique projects in the web-browser. Utilizing the GPU's power through GLSL lets you

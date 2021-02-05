@@ -2,7 +2,7 @@
 title:  Tailwind CSS vs. Bootstrap vs. Semantic UI
 date: 2021-2-2
 author: logan
-image: assets/blog/2020-2-2-Webgl/mesh-gradient.png
+image: assets/blog/2020-2-5-tailwindcss/4wsata.jpg
 ---
 
 Trying to choose a library to handle styling of a website? A few top contenders in 2021 are Bootstrap, Semantic UI, and

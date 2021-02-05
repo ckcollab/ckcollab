@@ -267,38 +267,3 @@ forward as Bootstrap.
 Tailwind is one of the best options for creating modern looking production websites and plays well with other libraries
 like Vue and React. If you want to get a functional website up and running quickly and don't mind looking a little
 cookie-cutter, Semantic-UI is a good choice. 
-
-<!-- Tailwind 
-- Utility CSS allows you to make any kind of component from the ground up.
-Allowing you to customize your site to have it's unique feel.
-- Pruned CSS in production reduces the size of TailwindCSS by only shipping what you use.
-Allowing you to have the best of both worlds when it comes to functionality and network performance.
-- Built in pseudo classes allows you to build functional responsive designs
-- Long and Messy HTML can be simplified by using a component system like React or Vue
-- Built-in Dark Mode support
-- Hover States
-- Animation, Transform, and Gradient Built-ins
-- Support for adding new utilities
-- Support for Plugins
-
-Bootstrap
-- Component CSS system makes a simple and fast process for making a website UI
-- Grid Column system changes the relative size of elements depending on screen size category
-- Responsive Utility class shows or hides elements depending on screen size
-- Bootstrap templates makes it easy for developers to hit the ground running
-- Con: Because of popularity of simplicity of bootstrap is has become very easy to notice when it is being using on a website
-This has caused website to have that "Bootstrap Feel". You wouldn't want to use this on a production website, unless it was 
-heavily customized, and at that point you might as well not use it.
-
-Semantic UI
-- Another Component CSS system
-- Includes a Javascript API to add functionality to things like dropdowns, forms, and modals
-- Animation API
-- Theming System to create a unique feel for your site
-- Responsive Grid system
-- Can be locked into a bit of a cookie cutter feel. Theming helps mix up the aesthetic feel of a website, but you
-still use the same grid and component system. It's kind of like having same cookie, but with different colors of frosting.
-For some websites this is actually a good thing, since Semantic-UI focuses on making a intuitive design. But you will be hindered
-if you are trying to make a unique experience. -->
-
-

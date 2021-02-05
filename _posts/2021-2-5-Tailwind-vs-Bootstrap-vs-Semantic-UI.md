@@ -20,15 +20,15 @@ Let's look at some CSS libraries I like that have much popularity going into 202
 ## > Bootstrap
 Bootstrap is currently the most popular CSS framework out there. 
 It makes sense that Bootstrap is the most popular CSS framework, given it has been around for a decade.
-Initially, Twitter developers used it as something to be used internally to keep design intuitive and consistent.
+Initially, Twitter developers used it as an internal tool to keep design intuitive and consistent, since then it
+has been released as it's own fully fledged open-source project.
 Bootstrap's straight forward component design system is popular among beginners. Most components can be used simply by
 added a class or two to HTML tags. While simple, this also means there isn't a whole lot of customization and has lead
 to websites using the framework to have a "Bootstrap look."
 
 ## > Semantic UI
 Semantic UI is another web framework but doesn't shy away from the Javascript side of things. Semantic UI is similar to
-Bootstrap in that it uses a component design system but gives you more granular control of the components. You will
-typically find yourself adding a couple of classes to container tags and even around 4 or 5 classes to other tags. You
+Bootstrap in that it uses a component design system but gives you more granular control of the components. You
 tend to have more modifying classes in Semantic Ui to switch up the styles and looks, and on top of that, Semantic
 has good support for theming. This feature allows you to set global CSS style changes, making it easy to style an site.
 Using themes, you can customize things like default colors, font, shadows, and padding.
@@ -45,7 +45,7 @@ If you have ever encountered Tailwind before you have read this line,
 
 If you never really understood what this fancy piece of tech-talk means, but never asked, don't worry, I'll explain it.
 What makes Bootstrap and Semantic UI component frameworks is that they do the heavy lifting by doing most of the design
-work for you. If you want a button, you need to add the button class and an optional modifier class. You don't have
+work for you. If you want a button, you need to add the button class and an optional modifier classes. You don't have
 to think in terms of CSS, just in terms of the library you are using.
 
 Tailwind works differently by not providing components but by offering classes that let you build your components.
@@ -72,7 +72,7 @@ no shortage of blogs and tutorials on using Bootstrap out there.
 
 ### Semantic UI
 I would describe Semantic UI as more of a niche community. While the docs are very well written, total users only come
-up to 12,500. I haven't had any problem finding Stack Overflow solutions to complex problems using Semantic, but you
+up to 12,500. That being said, I haven't had any problem finding Stack Overflow solutions to complex problems using Semantic, but you
 won't be seeing a lot of beginner material out there. Updates have also come out less frequently, so there are some
 concerns on if Semantic UI will continue to be relevant.
 
@@ -122,8 +122,7 @@ mobile and desktop, but it ends up being a lot of work coding for desktop and mo
 
 ### Semantic UI
 Semantic UI uses a similar grid system to Bootstrap, but with a couple of extras for things like padding, margins, and float
-build into the grid system. All stuff still does in Boostrap with a couple of extra steps. Here's an example of using the grid
-in Semantic.
+build into the grid system. The example below achieves a similar result as the Bootstrap example.
 ```html
 <div class="ui centered grid">
   <div class="six wide tablet eight wide computer column">1</div>
@@ -173,8 +172,7 @@ And a fully-fledged card container would look something like this.
 ```
 You can see this in action in the <a href="https://tailwindcss.com/docs/responsive-design#overview">Tailwindcss docs</a>
 
-This system does give you much more control, but you run into the same problem of having some messy code. I'll show you
-a way to combat this for Tailwind in the next section.
+This system does give you much more control, but you run into the same problem of having some messy code.
 
 
 >### TLDR
@@ -193,7 +191,7 @@ Looks are good and all, but what if you make a web app and need some more advanc
 
 ### Bootstrap
 Bootstrap does not come with much functionality. You can use it with jQuery, but integration with a back-end needs to be
-written manually or need to be accomplished with server-side rendering. 
+written manually, done through a 3rd party library, or needs to be accomplished with server-side rendering. 
 
 ### Semantic UI
 Semantic is much more friendly for adding functionality to the website. Components like search bars, modals, forms have
@@ -202,13 +200,13 @@ for features quickly using Semantic.
 
 ### Tailwind
 One of Tailwind's hidden strengths is that it has no functionality. It's only adds styling. Meaning you can easily combine
-Tailwind with popular frameworks like Vue or React. The level of detail plus the component system from a framework makes
-this one of the most robust web-stacks you can work on.
+Tailwind with popular frameworks like Vue or React. The level of detail plus the component system from a frameworks like those
+make it one of the most robust web-stacks you can work on.
 
 ---
 ## > Network Performance
 Studies show if your website takes more than 3 seconds to load, you will lose about 50% of your viewers. So file sizes
-are critical, especially in a world where a significant portion of people is using mobile data.
+are critical, especially in a world where a significant portion of people are using mobile data.
 
 
 File Sizes
@@ -220,7 +218,7 @@ File Sizes
 |Tailwindcss|3739.4kB|3020.7kB|
 
 Wow! Tailwind is not looking good here, but not to worry. There's an ace up the sleeve of Tailwind, and that is PurgeCSS.
-This tool automatically goes through cleans up unused classes from Tailwind. Using this, you can get expect to get where
+This tool automatically goes through cleans up unused classes from Tailwind. Using this, you can get expect to get somewhere
 around 150kb to 250kb. Updating the list with these numbers, it would look like this. (Keep in mind Semantic also includes
 a sizeable Javascript library.)
 
@@ -236,15 +234,16 @@ Anything that makes a library stand out on it's own.
 
 ### Bootstrap
 There isn't much in the way of features that Bootstrap has, and others don't, but what it does have is an extensive library of
-examples and templates to choose from. If you are looking for some guidance, there plenty of open-source example projects to
-look through. If you are in a hurry and willing to drop $50 to have most of the set-up done for you, then you could look
-through the pre-made themes.
+examples and templates to choose from. If you are looking for some guidance, there plenty of open-source 
+<a href="https://getbootstrap.com/docs/5.0/examples/">example projects</a> to look through. If you are in a hurry and
+willing to drop $50 to have most of the set-up done for you, then you could look through the pre-made
+<a href="https://themes.getbootstrap.com">themes.</a>
 
 ### Semantic UI
 Semantic UI does well with AJAX webpages. It has classes and components for loaders and placeholders while requests
-await data. Forms have a built-in validator that supports connecting with a back-end validator. Included callback functions make adding
-logic to a webpage pretty straightforward. There is also a Semantic-Vue project to combine them into one framework to
-take things a step further.
+await data. Forms have a built-in validator that supports connecting with a back-end validator. Included callback
+functions make adding logic to a webpage pretty straightforward. There is also a Semantic-Vue project to combine them
+into one framework to take things a step further.
 
 ### Tailwind
 Tailwind comes packed with some pretty cool built-in features to make your page pop. Built-in dark mode support lets
@@ -259,8 +258,9 @@ Tailwind has the advantage of having a large amount of control over the details 
 for beginner developers, anyone with experience in front-end development should be able to pick it up very quickly.
 For something more streamlined, Semantic-UI would be the next best thing. With a combination of CSS and JS in one package,
 you can quickly get web apps up and running. While you lose some control of the finer details of the page's look,
-a lot less time is required to get the page functional. In 2021, I would ever use Bootstrap for a production website,
-but if you a student or just trying to get an MVP up and running as quickly as possible, it's not a terrible option.
+a lot less time is required to get the page functional. In 2021, I would never use Bootstrap for a production website,
+but if you a student or just trying to get an MVP up and running as quickly as possible, you find a library as straight
+forward as Bootstrap.
 
 
 # TLDR

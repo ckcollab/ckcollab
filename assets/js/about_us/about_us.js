@@ -229,7 +229,7 @@ const slides = [
                 skills: "C#, Java"
             },
             {
-                type: "Toolsets",
+                type: "Toolsets: ",
                 skills: "Unity, 3dsMax, Photoshop, Zbrush"
             }
         ],

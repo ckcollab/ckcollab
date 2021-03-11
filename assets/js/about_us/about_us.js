@@ -23,7 +23,7 @@ const slides = [
         ],
         website: "https://ericcarmichael.com",
         linkedin: "https://www.linkedin.com/in/ericatckcollab/",
-        blog: "https://ckcollab.com/2020/03/24/django-cloudcube-heroku.html",
+        blog: "/authors/eric.html",
         github: "https://github.com/ckcollab",
     },
     {
@@ -49,7 +49,7 @@ const slides = [
         ],
         website: "",
         linkedin: "https://www.linkedin.com/in/allen-carmichael-654a8219b/",
-        blog: "",
+        blog: "/authors/allen.html",
         github: "",
     },
     {
@@ -156,7 +156,7 @@ const slides = [
         ],
         website: "",
         linkedin: "",
-        blog: "",
+        blog: "/authors/harvey.html",
         github: "https://github.com/hhartwell",
     },
     {
@@ -183,7 +183,7 @@ const slides = [
         ],
         website: "",
         linkedin: "https://www.linkedin.com/in/logan-ruf/",
-        blog: "",
+        blog: "/authors/logan.html",
         github: "https://github.com/Logan-Ruf",
     },
     {
@@ -209,6 +209,32 @@ const slides = [
         ],
         website: "",
         linkedin: "https://www.linkedin.com/in/wade-lutz-28a5559/",
+        blog: "",
+        github: "",
+    },
+    {
+        src: "./assets/images/avatars/toby.png",
+        name: "Tobias Phelps",
+        title: "Lead Game Designer",
+        description: ["Tobias has wanted to make video games as long as he can remember, and has been working towards that through pursuing a BS in Virtual Technologies from the University of Idaho. A late joiner to the CKC team, he joined in 2020 and has been leading the game design elements of CKC since!",
+            "",
+            "In his free time, Toby makes music (guitar, bass, and chiptunes mostly), draws, and plays, like, a lot of video games."],
+        skills: [
+            {
+                type: "",
+                skills: "Game Development and Design, Illustration, Pixel Art"
+            },
+            {
+                type: "Languages: ",
+                skills: "C#, Java"
+            },
+            {
+                type: "Toolsets",
+                skills: "Unity, 3dsMax, Photoshop, Zbrush"
+            }
+        ],
+        website: "",
+        linkedin: "",
         blog: "",
         github: "",
     },

@@ -2,13 +2,11 @@ theme: jekyll-theme-cayman
 
 google_analytics: UA-128972978-1
 
-title: "CKC Blog"
-description: "WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idaho -- We help startups and growing businesses create, improve, or fix their apps — you come to us with the problem and we’ll find ways to solve it"
-
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-redirect
+  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -20,6 +18,29 @@ collections:
 
 whitelist:
   - jekyll-redirect-from
+
+
+# SEO
+
+title: "CK Collab - Web Development Agency in CDA, North Idaho"
+tagline: "We help businesses create and improve their app, website, business tools."
+description: "Need Software? We help businesses create and improve their app, website, business tools. Come to us with the problem and we’ll find ways to solve it."
+
+twitter:
+  card: summary_large_image
+  username: CKCollab
+
+image: assets/images/ckclogo.png
+
+social:
+  name: CK Collab
+  links:
+    - https://www.facebook.com/ckcollab/
+    - https://twitter.com/ckcollab/
+    - https://www.linkedin.com/company/33456525/
+    - https://github.com/orgs/ckc-org/
+    - https://clutch.co/profile/ckc
+
 
 #defaults:
 #  - scope:

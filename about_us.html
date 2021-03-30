@@ -1,11 +1,13 @@
+---
+title: "About Us"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>About Us</title>
 
-
+    {% seo %}
 
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     <!-- jQuery -->
@@ -105,17 +107,17 @@
                                 <v-row class="description-row">
                                     <v-col class="description-sizer" cols="12" md="6">
                                         <div class="name">
-                                            {{slide.name}}
+                                            <%slide.name%>
                                         </div>
                                         <div class="desc-title">
-                                            {{slide.title}}
+                                            <%slide.title%>
                                         </div>
                                         <div class="desc-title">
                                             Top Skills:
                                         </div>
                                         <div class="skills">
                                             <ul>
-                                                <li v-for="skill in slide.skills"><strong>{{skill.type}}</strong>{{skill.skills}}</li>
+                                                <li v-for="skill in slide.skills"><strong><%skill.type%></strong><%skill.skills%></li>
                                             </ul>
                                         </div>
                                     </v-col>
@@ -136,7 +138,7 @@
                                         </div>
                                         <div class="description">
                                             <div v-for="line in slide.description">
-                                                <span>{{line}}</span><br>
+                                                <span><%line%></span><br>
                                             </div>
                                         </div>
                                         <div class="desc-links desc-links-after">
@@ -222,6 +224,7 @@
         new Vue({
             el: '#app',
             vuetify: new Vuetify(),
+            delimiters: ["<%", "%>" ],
             data: function () {
                 return {
                     slide_counter: 0,

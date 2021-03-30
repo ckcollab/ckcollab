@@ -6,4 +6,5 @@ short_name: logan
 github: Logan-Ruf
 website: ckcollab.com
 layout: author
+twitter: Logan-Ruf
 ---

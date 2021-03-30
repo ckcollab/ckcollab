@@ -2,7 +2,7 @@
 title:  Blog Post Title
 description: This description describes what the post is about
 author: author
-image: assets/blog/2020-2-5-tailwindcss/4wsata.jpg
+image: assets/blog/2020-1-1-blog-post-name/image.jpg
 categories: blog
 ---
 

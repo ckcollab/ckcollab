@@ -67,13 +67,14 @@ Skeletor leverages Django + Python on the backend.
  * Pytest for testing (xdist, sugar, etc. ooo ya!)
  * Base classes for functional testing (selenium, cypress, detox)
  * All kinds of neat helpers to make running/writing tests pleasant
- * 
 
 ### Frontend
 
-Skeletor uses VueJS behind NuxtJS (awesome hotrelaoding, yay!) on the frontend.
+And we use VueJS behind NuxtJS on the frontend.
 
  * Vuetify for styling and amazing base components
+ * NuxtJS packs things up nicely for you by default
+ * Awesome hotrelaoding, yay! 
 
 # How to use it?
 

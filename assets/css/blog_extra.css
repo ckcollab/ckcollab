@@ -74,6 +74,18 @@ img.img-bordered, .img-bordered img {
     padding-top: 10px;
 }
 
+/* Inline images */
+.inline-image {
+    float: left;
+    width: 50%;
+}
+@media (max-width: 767px) {
+    .inline-image {
+        float: none;
+        width: 100%;
+    }
+}
+
 /* mobile */
 @media (max-width: 767px) {
     .main-content p {

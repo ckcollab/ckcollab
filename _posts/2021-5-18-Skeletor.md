@@ -75,7 +75,7 @@ And we use VueJS behind NuxtJS on the frontend.
 
  * Vuetify for styling and amazing base components
  * NuxtJS packs things up nicely for you by default
- * Awesome hotrelaoding, yay! 
+ * Awesome hot reloading, yay! 
 
 <div class="img-bordered">
     <img src="/assets/blog/2021-05-skeletor/skeletor_install.png">

@@ -42,8 +42,8 @@ All of those little gotchas that set development back, like:
 
 ### Onboarding new devs
 
-One of the biggest benefits is consistency across CKC projects and web dev best practices in general. Anyone
-who has done a reasonable Python or Docker project can spin up our repo in seconds. All a new developer
+Skeletor projects benefit from consistent architecture and implementation of development best practices across the board. 
+Anyone who has a bit of experience with Python or Docker can spin up our repo in seconds. All a new developer
 needs to do (assuming they have Docker) is:
 
 ```bash
@@ -53,8 +53,8 @@ $ make
 .. and you're done! This spins up the database, makes a dummy user for testing and any requisite test data
 for your project.
 
-With Skeletor you get consistency, speed, and efficiency when onboarding new folks. Also, as we bring on new
-developers they may have great new pieces of knowledge/experience which get compounded back into Skeletor! It
+With Skeletor, you get consistency, speed, and efficiency when onboarding new folks. Also, as we bring on new
+developers, they may have great new pieces of knowledge/experience which get compounded back into Skeletor! It
 is always improving.
 
 

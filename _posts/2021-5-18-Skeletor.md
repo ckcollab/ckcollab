@@ -85,16 +85,16 @@ And we use VueJS behind NuxtJS on the frontend.
 
 ## Heroku over AWS or Digital Ocean Apps
 
-Heroku works well for small-to-medium sized apps without much need for custom backend setups.
+Heroku works well for small-to-medium-sized apps without much need for custom backend setups.
 
-Sometimes we move projects to AWS setups for production or for the entire lifecycle, this
+Sometimes we move projects to AWS setups for production or the entire lifecycle. This
 depends on the project. However, we've used Heroku to put apps in production and support them
-for > 5 years, we love the simplicity!
+for over 5 years. We love the simplicity!
 
-With Heroku you have to follow their opinions, "put this file here" or "use only > version 3 of this package."
+With Heroku, you have to follow their requirements, like putting files in specific directories or only supporting certain packages.
 
-These opinions are usually great, so it's not a huge deal. It becomes a problem when a client _requires_
-some old version of a package or nonstandard way of running things.
+These requirements are usually done for a good reason, so it's not a huge deal. It becomes a problem when 
+a client _requires_ an old version of a package or a nonstandard way of running things.
 
 [Read more about what CKC thinks of Heroku vs AWS!](https://ckcollab.com/2019/03/15/heroku-vs-aws.html)
 

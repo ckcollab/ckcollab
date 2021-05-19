@@ -36,7 +36,7 @@ All of those little gotchas that set development back, like:
 1. Basic features not working right, like password reset or emails
 1. Setting up staging/development environments for the umpteenth time
 1. Get an image of all the schema/models in the database and show how they're connected 
-1. We have to onboard _yet another_ developer, how do we teach them all this stuff?!
+1. If we have to onboard another developer, how do we teach them all this stuff?!
 1. Are all of our licenses open source/free to use?
 1. It's so "annoying" to do Test Driven Development (not with Skeletor setting up everything for you!)
 
@@ -62,12 +62,12 @@ is always improving.
 
 ### Backend
 
-Skeletor leverages Django + Python on the backend. 
+Skeletor leverages Django + Python on the backend with a suite of libraries for testing.
 
  * We use Celery + RabbitMQ (or Redis) for asynchronous tasks like mass emails or resizing large images.
  * Pytest for testing (xdist, sugar, etc. ooo ya!)
  * Base classes for functional testing (selenium, cypress, detox)
- * All kinds of neat helpers to make running/writing tests pleasant
+ * And more helpers to make Test Driven Development easy to implement, something that saves many headaches for developers and money for clients.
 
 ### Frontend
 
@@ -80,6 +80,30 @@ And we use VueJS behind NuxtJS on the frontend.
 <div class="img-bordered">
     <img src="/assets/blog/2021-05-skeletor/skeletor_install.png">
 </div>
+
+# Why these specific choices?
+
+## Heroku over AWS or Digital Ocean Apps
+
+Heroku works well for small-to-medium sized apps without much need for custom backend setups.
+
+Sometimes we move projects to AWS setups for production or for the entire lifecycle, this
+depends on the project. However, we've used Heroku to put apps in production and support them
+for > 5 years, we love the simplicity!
+
+With Heroku you have to follow their opinions, "put this file here" or "use only > version 3 of this package."
+
+These opinions are usually great, so it's not a huge deal. It becomes a problem when a client _requires_
+some old version of a package or nonstandard way of running things.
+
+[Read more about what CKC thinks of Heroku vs AWS!](https://ckcollab.com/2019/03/15/heroku-vs-aws.html)
+
+## VueJS over React
+
+We prefer VueJS over React for the ease of use, integration with old libraries (jQuery), 
+and the mass amount of support the VueJS project has. It is quite a bit easier to spin
+new folks up on Vue, React has many more specific paradigms. Like, you can't just add a
+class in React but you can in Vue.
 
 # How to use it?
 

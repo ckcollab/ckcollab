@@ -102,4 +102,4 @@ $ make
 
 # Let us setup a project for you!
 
-We love crafting beautiful solutions to our client's problems, shoot us an email at [hello@ckcollab.com](mailto:hello@ckcollab.com)
+We love crafting beautiful solutions to our client's problems. Send us an email at [hello@ckcollab.com](mailto:hello@ckcollab.com)

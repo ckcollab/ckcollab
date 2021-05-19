@@ -31,7 +31,7 @@ put into place to solve the same problems you've encountered dozens of times. Wh
 in the morning: already laid out for you. On your way to work, but the car won't start? No worries, 
 there's a battery booster behind the seat. Forgot your office key? Hide-a-key rock ready to go.
 
-All of those little gotchyas that set development back, like:
+All of those little gotchas that set development back, like:
 1. New requirements from client/stakeholders, how do we implement these quickly without breaking everything?! (great tests)
 1. Basic features not working right, like password reset or emails
 1. Setting up staging/development environments for the umpteenth time

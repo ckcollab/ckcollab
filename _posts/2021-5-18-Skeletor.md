@@ -28,7 +28,7 @@ It may not seem all that impressive from an outside perspective, but maybe to he
 
 Imagine that your entire day is put together and ran _perfectly._ Tools and best practices are meticulously 
 put into place to solve the same problems you've encountered dozens of times. When you go to pick out a shirt
-in the morning: already laid out for you. On your way to work but the car won't start? No worries, 
+in the morning: already laid out for you. On your way to work, but the car won't start? No worries, 
 there's a battery booster behind the seat. Forgot your office key? Hide-a-key rock ready to go.
 
 All of those little gotchyas that set development back, like:

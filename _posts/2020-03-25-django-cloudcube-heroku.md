@@ -72,8 +72,10 @@ want to use a `"public-read"` setting, like so:
 
 ```python
 # custom settings class in yourapp/storages.py
-from storages.backends.s3boto3 import S3Boto3Storage
-class PublicStorage(S3Boto3Storage):
+from django.core.files.storage import get_storage_class
+
+
+class PublicStorage(get_storage_class()):
     default_acl = "public-read"
 
 
@@ -92,6 +94,7 @@ class MyModel(models.Model):
     <img src="/assets/images/articles/cloudcube_screenshots.png" class="img-bordered"><br>
     <small><i>CloudCube interface</i></small>
 </div>
+
 
 ### Conclusion
 

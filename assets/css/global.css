@@ -15,6 +15,15 @@
     }
 }
 
+/* Vuetify Overrides */
+.v-application {
+    line-height: 1.2 !important;
+}
+html {
+    /*Pycharm doesn't think auto is a valid value, but it is.*/
+    -webkit-font-smoothing: auto !important;
+}
+/*---------------*/
 body {
     background-color: #1e2642;
     animation: fadeIn 1 .2s linear;
@@ -76,7 +85,7 @@ body {
 }
 
 .menu-link {
-    color: white;
+    color: white !important;
     text-decoration: none;
     font-size: 25px;
     padding: 10px;
@@ -96,7 +105,7 @@ body {
 }
 .drop-us-a-line a {
     text-decoration: none;
-    color: white;
+    color: white !important;
 }
 .drop-us-a-line:hover {
     cursor: pointer;

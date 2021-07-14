@@ -39,11 +39,26 @@ body {
 }
 
 .space-parallax-bg {
-    background-size: auto 100%;
+    background-size: 100% 100%;
     background-attachment: fixed;
     background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
 }
 
+.space-parallax-bg .header-text {
+    padding: 100px 40px 50px 40px;
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.space-parallax-bg .subheader-text {
+    font-size: 27px;
+    margin: 0 auto;
+    font-weight: 300;
+    width: 960px;
+    line-height: 2em;
+    color: white;
+}
 .space-bg {
     z-index: -2;
     position: absolute;

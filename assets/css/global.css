@@ -19,9 +19,6 @@
 .v-application {
     line-height: 1.2 !important;
 }
-/*.v-application a {*/
-/*    cursor: default;*/
-/*}*/
 html {
     scroll-behavior: smooth;
     /*Pycharm doesn't think auto is a valid value, but it is.*/
@@ -44,6 +41,9 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+.cursor-default{
+    cursor: default !important;
+}
 .bg-white {
     background-color: white;
 }

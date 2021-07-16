@@ -49,30 +49,30 @@ image: "assets/images/ckclogo.png"
 
 
     <script>
-		window.dataLayer = window.dataLayer || []
+        window.dataLayer = window.dataLayer || []
 
-		function gtag() {
-			dataLayer.push(arguments)
-		}
+        function gtag() {
+            dataLayer.push(arguments)
+        }
 
-		gtag('js', new Date())
+        gtag('js', new Date())
 
-		gtag('config', 'UA-128972978-1')
+        gtag('config', 'UA-128972978-1')
     </script>
 
     <!-- Hotjar Tracking Code for ckcollab.com -->
     <script>
-		(function (h, o, t, j, a, r) {
-			h.hj = h.hj || function () {
-				(h.hj.q = h.hj.q || []).push(arguments)
-			}
-			h._hjSettings = { hjid: 2066955, hjsv: 6 }
-			a = o.getElementsByTagName('head')[0]
-			r = o.createElement('script')
-			r.async = 1
-			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
-			a.appendChild(r)
-		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            }
+            h._hjSettings = { hjid: 2066955, hjsv: 6 }
+            a = o.getElementsByTagName('head')[0]
+            r = o.createElement('script')
+            r.async = 1
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
+            a.appendChild(r)
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
     </script>
 
 </head>
@@ -209,7 +209,7 @@ image: "assets/images/ckclogo.png"
             <!-- Styles at css/pages/home/clutch_award.css -->
             <section class="space-parallax-bg">
                 <div class="subheader-text text-center pa-16 clutch-award-container mt-16" id="clutch-award">
-<!--                    <div class="award-pink-stripe"></div>-->
+                    <!--                    <div class="award-pink-stripe"></div>-->
                     <div class="my-10">
                         Named in Idaho's Top 10 Tech Firms by
                         <a
@@ -221,7 +221,7 @@ image: "assets/images/ckclogo.png"
                             <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"/>
                         </a>
                     </div>
-<!--                    <div class="award-blue-stripe no-margin-bottom"></div>-->
+                    <!--                    <div class="award-blue-stripe no-margin-bottom"></div>-->
                 </div>
             </section>
 
@@ -375,80 +375,80 @@ image: "assets/images/ckclogo.png"
 
 <script>
 
-	new Vue({
-		//todo - run vue in production mode before merging into develop
-		el: '#app',
-		vuetify: new Vuetify(),
-		data: () => ({
-			show_mobile_navigation: false
-		}),
-		mounted() {
-			this.animate_astronaut()
-			this.scroll_magic()
-			this.set_up_confetti()
-		},
-		methods: {
-			set_up_confetti() {
-				const my_canvas = document.createElement('canvas')
-				document.appendChild(my_canvas)
-				confetti.create(my_canvas, {
-					resize: true,
-					useWorker: true
-				})
-			},
-			scroll_magic() {
-				const controller = new ScrollMagic.Controller()
-				// create a scene
-				const scene = new ScrollMagic.Scene({
-					triggerElement: "#clutch-award",
-					reverse: false // Allows confetti to only fire once
-				})
+    new Vue({
+        //todo - run vue in production mode before merging into develop
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: () => ({
+            show_mobile_navigation: false
+        }),
+        mounted() {
+            this.animate_astronaut()
+            this.scroll_magic()
+            this.set_up_confetti()
+        },
+        methods: {
+            set_up_confetti() {
+                const my_canvas = document.createElement('canvas')
+                document.appendChild(my_canvas)
+                confetti.create(my_canvas, {
+                    resize: true,
+                    useWorker: true
+                })
+            },
+            scroll_magic() {
+                const controller = new ScrollMagic.Controller()
+                // create a scene
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#clutch-award",
+                    reverse: false // Allows confetti to only fire once
+                })
 
-				scene.on("start", function (event) {
-					confetti({
-						particleCount: 100,
-						startVelocity: 30,
-						spread: 360,
-						origin: {
-							x: (Math.random() * (0.2 - 0.5) + 0.5).toFixed(8)
-						}
-					})
-					confetti({
-						particleCount: 100,
-						startVelocity: 30,
-						spread: 360,
-						origin: {
-							x: (Math.random() * (0.5 - 0.8) + 0.8).toFixed(8)
-						}
-					})
-				})
+                scene.on("start", function (event) {
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: (Math.random() * (0.2 - 0.5) + 0.5).toFixed(8)
+                        }
+                    })
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: (Math.random() * (0.5 - 0.8) + 0.8).toFixed(8)
+                        }
+                    })
+                })
 
-				controller.addScene(scene)
-			},
-			animate_astronaut() {
-				// Timelines for our astronaut animations (Greensock
-				const right_timeline = new TimelineMax({ repeat: -1 })
-				const left_timeline = new TimelineMax({ repeat: -1 })
-				const lower_right_timeline = new TimelineMax({ repeat: -1 })
+                controller.addScene(scene)
+            },
+            animate_astronaut() {
+                // Timelines for our astronaut animations (Greensock
+                const right_timeline = new TimelineMax({ repeat: -1 })
+                const left_timeline = new TimelineMax({ repeat: -1 })
+                const lower_right_timeline = new TimelineMax({ repeat: -1 })
 
-				right_timeline.to('.right-astronaut', { duration: 5, ease: "sine.inOut", y: -100 })
-				right_timeline.to('.right-astronaut, .right-astronaut-lower', {
-					duration: 4.5,
-					ease: "sine.inOut",
-					y: 0
-				})
-				left_timeline.from('.left-astronaut, .left-astronaut-lower', {
-					duration: 4,
-					ease: "sine.inOut",
-					y: -80
-				})
-				left_timeline.from('.left-astronaut, .left-astronaut-lower', { duration: 5, ease: "sine.inOut", y: 0 })
+                right_timeline.to('.right-astronaut', { duration: 5, ease: "sine.inOut", y: -100 })
+                right_timeline.to('.right-astronaut, .right-astronaut-lower', {
+                    duration: 4.5,
+                    ease: "sine.inOut",
+                    y: 0
+                })
+                left_timeline.from('.left-astronaut, .left-astronaut-lower', {
+                    duration: 4,
+                    ease: "sine.inOut",
+                    y: -80
+                })
+                left_timeline.from('.left-astronaut, .left-astronaut-lower', { duration: 5, ease: "sine.inOut", y: 0 })
 
-				lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
-				lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })
-			},
-		},
+                lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
+                lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })
+            },
+        },
 
-	})
+    })
 </script>
 

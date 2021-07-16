@@ -221,47 +221,47 @@ image: "assets/images/ckclogo.png"
 <script src="/assets/js/cookie-consent.js" type="text/javascript"></script>
 
 <script>
-	function open_menu(target) {
-		target.classList.toggle("change")
-		$('.hamburger-navigation-menu').toggleClass("hidden")
-	}
+    function open_menu(target) {
+        target.classList.toggle("change")
+        $('.hamburger-navigation-menu').toggleClass("hidden")
+    }
 
-	$(document).ready(function () {
-		new Vue({
-			el: '#app',
-			vuetify: new Vuetify(),
-			delimiters: ["<%", "%>"],
-			data: function () {
-				return {
-					slide_counter: 0,
-					slides: slides,
-					reversed: false,
-				}
-			},
-			methods: {
-				go_left() {
-					// Resets slide_counter to the last slide.
-					if (this.slide_counter === 0) {
-						this.reversed = true
-						this.slide_counter = this.slides.length - 1
-					} else {
-						this.reversed = false
-						this.slide_counter -= 1
-					}
-				}
-			},
-			computed: {
-				computer_image_height() {
-					if (window.innerWidth > 756) {
-						return 250
-					} else if (window.innerWidth > 375) {
-						return 160
-					} else {
-						return 150
-					}
-				}
-			}
-		})
-	})
+    $(document).ready(function () {
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            delimiters: ["<%", "%>"],
+            data: function () {
+                return {
+                    slide_counter: 0,
+                    slides: slides,
+                    reversed: false,
+                }
+            },
+            methods: {
+                go_left() {
+                    // Resets slide_counter to the last slide.
+                    if (this.slide_counter === 0) {
+                        this.reversed = true
+                        this.slide_counter = this.slides.length - 1
+                    } else {
+                        this.reversed = false
+                        this.slide_counter -= 1
+                    }
+                }
+            },
+            computed: {
+                computer_image_height() {
+                    if (window.innerWidth > 756) {
+                        return 250
+                    } else if (window.innerWidth > 375) {
+                        return 160
+                    } else {
+                        return 150
+                    }
+                }
+            }
+        })
+    })
 
 </script>

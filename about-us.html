@@ -17,7 +17,7 @@ image: "assets/images/ckclogo.png"
             crossorigin="anonymous"></script>
 
     <!-- Vue and Vuetify JS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.0-beta.6/vuetify.js"></script>
 
     <!-- Greensock -->
@@ -89,8 +89,8 @@ image: "assets/images/ckclogo.png"
                     </v-carousel>
                 </div>
                 <div
-                    @click="slide_counter++"
-                    class="right-arrow"
+                        @click="slide_counter++"
+                        class="right-arrow"
                 >
                     <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
                 </div>
@@ -103,7 +103,7 @@ image: "assets/images/ckclogo.png"
                             vertical
                             class="description-bg">
                     <v-carousel-item v-for="(slide, i) in slides"
-                                        :key="i">
+                                     :key="i">
                         <v-sheet height="100%">
                             <v-row class="description-row">
                                 <v-col class="description-sizer" cols="12" md="6">
@@ -118,7 +118,8 @@ image: "assets/images/ckclogo.png"
                                     </div>
                                     <div class="skills">
                                         <ul>
-                                            <li v-for="skill in slide.skills"><strong><%skill.type%></strong><%skill.skills%></li>
+                                            <li v-for="skill in slide.skills"><strong><%skill.type%></strong><%skill.skills%>
+                                            </li>
                                         </ul>
                                     </div>
                                 </v-col>
@@ -128,13 +129,15 @@ image: "assets/images/ckclogo.png"
                                             <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
                                         </template>
                                         <template v-if="slide.linkedin">
-                                            <a :href="slide.linkedin" target="new"><span class="mdi mdi-linkedin"></span></a>
+                                            <a :href="slide.linkedin" target="new"><span
+                                                    class="mdi mdi-linkedin"></span></a>
                                         </template>
                                         <template v-if="slide.blog">
                                             <a :href="slide.blog" target="new"><span class="mdi mdi-blogger"></span></a>
                                         </template>
                                         <template v-if="slide.github">
-                                            <a :href="slide.github" target="new"><span class="mdi mdi-github"></span></a>
+                                            <a :href="slide.github" target="new"><span
+                                                    class="mdi mdi-github"></span></a>
                                         </template>
                                     </div>
                                     <div class="description">
@@ -147,13 +150,15 @@ image: "assets/images/ckclogo.png"
                                             <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
                                         </template>
                                         <template v-if="slide.linkedin != ''">
-                                            <a :href="slide.linkedin" target="new"><span class="mdi mdi-linkedin"></span></a>
+                                            <a :href="slide.linkedin" target="new"><span
+                                                    class="mdi mdi-linkedin"></span></a>
                                         </template>
                                         <template v-if="slide.blog != ''">
                                             <a :href="slide.blog" target="new"><span class="mdi mdi-blogger"></span></a>
                                         </template>
                                         <template v-if="slide.github != ''">
-                                            <a :href="slide.github" target="new"><span class="mdi mdi-github"></span></a>
+                                            <a :href="slide.github" target="new"><span
+                                                    class="mdi mdi-github"></span></a>
                                         </template>
                                     </div>
                                 </v-col>
@@ -216,47 +221,47 @@ image: "assets/images/ckclogo.png"
 <script src="/assets/js/cookie-consent.js" type="text/javascript"></script>
 
 <script>
-    function open_menu(target) {
-        target.classList.toggle("change");
-        $('.hamburger-navigation-menu').toggleClass("hidden")
-    }
+	function open_menu(target) {
+		target.classList.toggle("change")
+		$('.hamburger-navigation-menu').toggleClass("hidden")
+	}
 
-    $(document).ready(function () {
-        new Vue({
-            el: '#app',
-            vuetify: new Vuetify(),
-            delimiters: ["<%", "%>" ],
-            data: function () {
-                return {
-                    slide_counter: 0,
-                    slides: slides,
-                    reversed: false,
-                }
-            },
-            methods: {
-                go_left() {
-                    // Resets slide_counter to the last slide.
-                    if (this.slide_counter === 0) {
-                        this.reversed = true
-                        this.slide_counter = this.slides.length - 1
-                    } else {
-                        this.reversed = false
-                        this.slide_counter -= 1
-                    }
-                }
-            },
-            computed: {
-                computer_image_height() {
-                    if (window.innerWidth > 756) {
-                        return 250
-                    } else if (window.innerWidth > 375) {
-                        return 160
-                    } else {
-                        return 150
-                    }
-                }
-            }
-        })
-    })
+	$(document).ready(function () {
+		new Vue({
+			el: '#app',
+			vuetify: new Vuetify(),
+			delimiters: ["<%", "%>"],
+			data: function () {
+				return {
+					slide_counter: 0,
+					slides: slides,
+					reversed: false,
+				}
+			},
+			methods: {
+				go_left() {
+					// Resets slide_counter to the last slide.
+					if (this.slide_counter === 0) {
+						this.reversed = true
+						this.slide_counter = this.slides.length - 1
+					} else {
+						this.reversed = false
+						this.slide_counter -= 1
+					}
+				}
+			},
+			computed: {
+				computer_image_height() {
+					if (window.innerWidth > 756) {
+						return 250
+					} else if (window.innerWidth > 375) {
+						return 160
+					} else {
+						return 150
+					}
+				}
+			}
+		})
+	})
 
 </script>

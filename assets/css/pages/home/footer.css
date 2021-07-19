@@ -4,7 +4,7 @@
     z-index: 3;
     position: relative;
     height: 500px;
-    color: #4F456F;
+    color: #4F456F !important;
 }
 
 .secondary-navigation {
@@ -12,11 +12,11 @@
 }
 
 .nav-item {
-    color: #4F456F;
+    color: #4F456F !important;
 }
 
 .contact-info {
-    color: #4F456F;
+    color: #4F456F !important;
     padding: 20px;
     flex-direction: column;
 }

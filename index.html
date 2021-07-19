@@ -25,16 +25,10 @@ image: "assets/images/ckclogo.png"
     <!--  GreensockJS (Animations)  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
-    <!--  Confetti JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
     <!--  Font Awesome  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Scroll Magic-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <!-- Vue and Vuetify JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -209,7 +203,6 @@ image: "assets/images/ckclogo.png"
             <!-- Styles at css/pages/home/clutch_award.css -->
             <section class="space-parallax-bg">
                 <div class="subheader-text text-center pa-16 clutch-award-container mt-16" id="clutch-award">
-                    <!--                    <div class="award-pink-stripe"></div>-->
                     <div class="my-10">
                         Named in Idaho's Top 10 Tech Firms by
                         <a
@@ -221,7 +214,6 @@ image: "assets/images/ckclogo.png"
                             <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"/>
                         </a>
                     </div>
-                    <!--                    <div class="award-blue-stripe no-margin-bottom"></div>-->
                 </div>
             </section>
 
@@ -376,7 +368,6 @@ image: "assets/images/ckclogo.png"
 <script>
 
     new Vue({
-        //todo - run vue in production mode before merging into develop
         el: '#app',
         vuetify: new Vuetify(),
         data: () => ({
@@ -384,47 +375,8 @@ image: "assets/images/ckclogo.png"
         }),
         mounted() {
             this.animate_astronaut()
-            this.scroll_magic()
-            this.set_up_confetti()
         },
         methods: {
-            set_up_confetti() {
-                const my_canvas = document.createElement('canvas')
-                document.appendChild(my_canvas)
-                confetti.create(my_canvas, {
-                    resize: true,
-                    useWorker: true
-                })
-            },
-            scroll_magic() {
-                const controller = new ScrollMagic.Controller()
-                // create a scene
-                const scene = new ScrollMagic.Scene({
-                    triggerElement: "#clutch-award",
-                    reverse: false // Allows confetti to only fire once
-                })
-
-                scene.on("start", function (event) {
-                    confetti({
-                        particleCount: 100,
-                        startVelocity: 30,
-                        spread: 360,
-                        origin: {
-                            x: (Math.random() * (0.2 - 0.5) + 0.5).toFixed(8)
-                        }
-                    })
-                    confetti({
-                        particleCount: 100,
-                        startVelocity: 30,
-                        spread: 360,
-                        origin: {
-                            x: (Math.random() * (0.5 - 0.8) + 0.8).toFixed(8)
-                        }
-                    })
-                })
-
-                controller.addScene(scene)
-            },
             animate_astronaut() {
                 // Timelines for our astronaut animations (Greensock
                 const right_timeline = new TimelineMax({ repeat: -1 })

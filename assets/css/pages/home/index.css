@@ -8,6 +8,10 @@
 @import 'clutch_award.css';
 
 
+.space-parallax-bg > .subheader-text {
+    max-width: 90%;
+}
+
 /* Used across the whole page */
 @media only screen and (max-width: 1100px) {
 

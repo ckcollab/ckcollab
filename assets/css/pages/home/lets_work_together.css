@@ -21,20 +21,10 @@
 }
 
 .lets-work-together .header-text {
-    padding: 100px 40px 50px 40px;
-    font-size: 60px;
-    font-weight: 600;
-    color: white;
     text-align: center;
 }
 
 .lets-work-together .subheader-text {
-    font-size: 27px;
-    margin: 0 auto;
-    font-weight: 300;
-    width: 960px;
-    line-height: 2em;
-    color: white;
     text-align: center;
 }
 

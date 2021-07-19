@@ -24,6 +24,14 @@ image: "assets/images/ckclogo.png"
 
     <!--  GreensockJS (Animations)  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <!--  Confetti JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Scroll Magic-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
     <!--  Font Awesome  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -32,15 +40,15 @@ image: "assets/images/ckclogo.png"
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128972978-1"></script>
 
     <script>
-        window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || []
 
         function gtag() {
-            dataLayer.push(arguments);
+            dataLayer.push(arguments)
         }
 
-        gtag('js', new Date());
+        gtag('js', new Date())
 
-        gtag('config', 'UA-128972978-1');
+        gtag('config', 'UA-128972978-1')
     </script>
 
     <!-- Hotjar Tracking Code for ckcollab.com -->
@@ -48,14 +56,14 @@ image: "assets/images/ckclogo.png"
         (function (h, o, t, j, a, r) {
             h.hj = h.hj || function () {
                 (h.hj.q = h.hj.q || []).push(arguments)
-            };
-            h._hjSettings = {hjid: 2066955, hjsv: 6};
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script');
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+            }
+            h._hjSettings = { hjid: 2066955, hjsv: 6 }
+            a = o.getElementsByTagName('head')[0]
+            r = o.createElement('script')
+            r.async = 1
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
+            a.appendChild(r)
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
     </script>
 
 </head>
@@ -166,6 +174,24 @@ image: "assets/images/ckclogo.png"
                 <div class="step-image">
                     <img src="./assets/images/hat-trick.png" alt="ckc_magic.png">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Styles at css/pages/home/clutch_award.css -->
+
+    <section class="space-parallax-bg">
+        <div class="subheader-text text-center pa-16 clutch-award-container mt-16" id="clutch-award">
+            <div class="my-10 clutch-text">
+                Named in Idaho's Top 10 Tech Firms by
+                <a
+                        href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="clutch-award"
+                >
+                    <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"/>
+                </a>
             </div>
         </div>
     </section>
@@ -311,36 +337,81 @@ image: "assets/images/ckclogo.png"
 <script src="/assets/js/cookie-consent.js" type="text/javascript"></script>
 
 <script>
-    function open_menu(target) {
-        target.classList.toggle("change");
-        $('.hamburger-navigation-menu').toggleClass("hidden")
-    }
 
-    $(document).ready(function () {
-        // Timelines for our astronaut animations
-        let right_timeline = new TimelineMax({repeat: -1})
-        let left_timeline = new TimelineMax({repeat: -1})
-        let lower_right_timeline = new TimelineMax({repeat: -1})
-
-        right_timeline.to('.right-astronaut', {duration: 5, ease: "sine.inOut", y: -100})
-        right_timeline.to('.right-astronaut, .right-astronaut-lower', {duration: 4.5, ease: "sine.inOut", y: 0})
-        left_timeline.from('.left-astronaut, .left-astronaut-lower', {duration: 4, ease: "sine.inOut", y: -80})
-        left_timeline.from('.left-astronaut, .left-astronaut-lower', {duration: 5, ease: "sine.inOut", y: 0})
-
-        lower_right_timeline.to('.right-astronaut-lower', {duration: 6, ease: "sine.inOut", y: 100})
-        lower_right_timeline.to('.right-astronaut-lower', {duration: 6, ease: "sine.inOut", y: 0})
-
-        $("a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault()
-                let hash = this.hash
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-                    window.location.hash = hash
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: () => ({
+            show_mobile_navigation: false
+        }),
+        mounted() {
+            this.animate_astronaut()
+            this.scroll_magic()
+            this.set_up_confetti()
+        },
+        methods: {
+            set_up_confetti() {
+                const my_canvas = document.createElement('canvas')
+                document.appendChild(my_canvas)
+                confetti.create(my_canvas, {
+                    resize: true,
+                    useWorker: true
                 })
-            }
-        })
+            },
+            scroll_magic() {
+                const controller = new ScrollMagic.Controller()
+                // create a scene
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#clutch-award",
+                    triggerHook: 'onLeave',
+                    reverse: false // Allows confetti to only fire once
+                })
+                scene.on("start", function () {
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .1
+                        }
+                    })
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .9
+                        }
+                    })
+
+                })
+
+                controller.addScene(scene)
+            },
+
+            animate_astronaut() {
+                // Timelines for our astronaut animations (Greensock
+                const right_timeline = new TimelineMax({ repeat: -1 })
+                const left_timeline = new TimelineMax({ repeat: -1 })
+                const lower_right_timeline = new TimelineMax({ repeat: -1 })
+
+                right_timeline.to('.right-astronaut', { duration: 5, ease: "sine.inOut", y: -100 })
+                right_timeline.to('.right-astronaut, .right-astronaut-lower', {
+                    duration: 4.5,
+                    ease: "sine.inOut",
+                    y: 0
+                })
+                left_timeline.from('.left-astronaut, .left-astronaut-lower', {
+                    duration: 4,
+                    ease: "sine.inOut",
+                    y: -80
+                })
+                left_timeline.from('.left-astronaut, .left-astronaut-lower', { duration: 5, ease: "sine.inOut", y: 0 })
+
+                lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
+                lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })
+            },
+        },
     })
 </script>
 

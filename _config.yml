@@ -7,6 +7,8 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect
   - jekyll-seo-tag
+  - jekyll-minifier
+  - jerkyl-brotli
 
 paginate: 5
 paginate_path: "/blog/page:num/"

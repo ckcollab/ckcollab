@@ -61,6 +61,7 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('CLOUDCUBE_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = cloudcube_bucket
 AWS_DEFAULT_ACL = os.environ.get('AWS_DEFAULT_ACL', 'private')
 AWS_QUERYSTRING_AUTH = False
+AWS_S3_SIGNATURE_VERSION = "s3v4"
 ```
 
 We want everything by default to be private, so we've set the `AWS_DEFAULT_ACL` setting 
@@ -68,15 +69,25 @@ to `"private"`. If we want to override this private setting, we can subclass
 `S3Boto3Storage` and change the setting.
 
 For example, static file storage or user image uploads should be public. We'll 
-want to use a `"public-read"` setting, like so:
+want to use a `"public-read"` setting.
 
+
+Example demonstrating public and private styles:
 ```python
 # custom settings class in yourapp/storages.py
 from django.core.files.storage import get_storage_class
 
 
 class PublicStorage(get_storage_class()):
-    default_acl = "public-read"
+    default_acl = 'public-read'
+    
+
+class PrivateStorage(Storage):
+    """When you call file.url using this storage, URLs are automatically appended with
+    SAS (Signed Access Signature) parameters."""
+    default_acl = 'private'
+    secure_urls = True
+    querystring_auth = True
 
 
 # static files in settings/base.py
@@ -87,6 +98,7 @@ STATICFILES_STORAGE = 'yourapp.storages.PublicStorage'
 from yourapp.storages import PublicStorage
 class MyModel(models.Model):
     logo = models.ImageField(upload_to='logos', storage=PublicStorage())
+    private_upload = models.FileField(upload_to='private', storage=PrivateStorage())
 ```
 
 

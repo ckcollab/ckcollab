@@ -1,139 +1,138 @@
 .hero-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .ckc-logo {
-    z-index: 1;
-    width: 450px;
-    margin: 0 auto;
-    display: flex;
+  z-index: 1;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
 }
 
 .left-astronaut {
-    position: absolute;
-    bottom: 100px;
-    left: 80px;
-    height: 450px;
-    z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  height: 450px;
+  z-index: 2;
 }
 
 .right-astronaut {
-    position: absolute;
-    top: 300px;
-    right: 75px;
-    height: 300px;
+  position: absolute;
+  top: 300px;
+  right: 75px;
+  height: 300px;
 }
 
 .hero-text {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    font-size: 55px;
-    color: white;
-    margin: 0 auto;
-    width: 700px;
-    font-weight: 100;
-    text-align: center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  font-size: 55px;
+  color: white;
+  margin: 0 auto;
+  width: 700px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .navigation-menu {
-    position: absolute;
-    bottom: 0;
-    padding: 40px;
-    padding-left: 0px; /* This is because we added a margin-left */
-    width: calc(100% - 200px);
-    font-weight: 300;
-    margin-left: 200px;
-
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 40px;
+  width: 580px;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1035px) {
-    .contact-button {
-        top: 0;
-        bottom: auto;
-    }
+  .contact-button {
+    top: 0;
+    bottom: auto;
+  }
 
-    .navigation-menu {
-        margin-left: 0;
-        text-align: center;
-        padding: 40px;
-        width: 100%;
-    }
+  .navigation-menu {
+    margin-left: 0;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+  }
 
-    .navigation-menu > .menu-link {
-        margin-left: 35px !important;
-    }
-
+  .navigation-menu > .menu-link {
+    margin-left: 35px !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .hero-container {
-        overflow: hidden;
-    }
+  .hero-container {
+    overflow: hidden;
+  }
 
-    .sub-header {
-        font-size: 1em;
-        width: 90%;
-        white-space: nowrap;
-        z-index: 2;
-    }
+  .sub-header {
+    font-size: 1em;
+    width: 90%;
+    white-space: nowrap;
+    z-index: 2;
+  }
 
-    .navigation-menu {
-        display: none;
-    }
+  .navigation-menu {
+    display: none;
+  }
 
-    .hamburger-button {
-        display: inline-block;
-    }
+  .hamburger-button {
+    display: inline-block;
+  }
 
-    .ckc-logo {
-        width: 70%;
-        margin-top: 50px;
-    }
+  .ckc-logo {
+    width: 70%;
+    margin-top: 50px;
+  }
 
-    .left-astronaut {
-        top: calc(20vh + 200px);
-        left: 20px;
-        height: 200px;
-        z-index: 2;
-    }
+  .left-astronaut {
+    top: calc(20vh + 200px);
+    left: 20px;
+    height: 200px;
+    z-index: 2;
+  }
 
-    .right-astronaut {
-        top: calc(20vh + 90px);
-        right: 20px;
-        height: 100px;
-    }
+  .right-astronaut {
+    top: calc(20vh + 90px);
+    right: 20px;
+    height: 100px;
+  }
 
-    .hero-text {
-        font-size: 25px;
-        margin: 0 auto;
-        width: 100vw;
-        font-weight: 100;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
+  .hero-text {
+    font-size: 25px;
+    margin: 0 auto;
+    width: 100vw;
+    font-weight: 100;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 @media only screen and (max-width: 650px) {
-    .contact-button {
-        font-size: 15px;
-    }
+  .contact-button {
+    font-size: 15px;
+  }
 
-    .menu-link {
-        color: white;
-        margin: 15px !important;
-    }
+  .menu-link {
+    color: white;
+    margin: 15px !important;
+  }
 
-    .sub-header {
-        width: 90%;
-        font-size: 15px;
-        margin-top: 50px;
-        white-space: initial;
-    }
+  .sub-header {
+    width: 90%;
+    font-size: 15px;
+    margin-top: 50px;
+    white-space: initial;
+  }
 }

@@ -109,17 +109,6 @@ image: "assets/images/ckclogo.png"
                                     <div class="desc-title">
                                         <%slide.title%>
                                     </div>
-                                    <div class="desc-title">
-                                        Top Skills:
-                                    </div>
-                                    <div class="skills">
-                                        <ul>
-                                            <li v-for="skill in slide.skills"><strong><%skill.type%></strong><%skill.skills%>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </v-col>
-                                <v-col class="description-sizer" cols="12" md="6">
                                     <div class="desc-links desc-links-before">
                                         <template v-if="slide.website">
                                             <a :href="slide.website" target="new"><span class="mdi mdi-link"></span></a>
@@ -136,6 +125,17 @@ image: "assets/images/ckclogo.png"
                                                     class="mdi mdi-github"></span></a>
                                         </template>
                                     </div>
+                                    <div class="desc-title">
+                                        Top Skills:
+                                    </div>
+                                    <div class="skills">
+                                        <ul>
+                                            <li v-for="skill in slide.skills"><strong><%skill.type%></strong><%skill.skills%>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </v-col>
+                                <v-col class="description-sizer" cols="12" md="6">
                                     <div class="description">
                                         <div v-for="line in slide.description">
                                             <span><%line%></span><br>

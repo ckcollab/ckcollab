@@ -64,8 +64,8 @@ image: "assets/images/ckclogo.png"
             </div>
             <section class="content">
                 <div class="computer-container"></div>
-                <div class="left-arrow" @click="go_left">
-                    <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg">
+                <div class="arrow-key left-arrow" @click="go_left">
+                    <!-- <img class="arrow-img" alt="left-arrow.png" src="./assets/images/left%20key.svg"> -->
                 </div>
                 <div id="carousel">
                     <v-carousel
@@ -84,12 +84,7 @@ image: "assets/images/ckclogo.png"
                         </v-carousel-item>
                     </v-carousel>
                 </div>
-                <div
-                        @click="slide_counter++"
-                        class="right-arrow"
-                >
-                    <img class="arrow-img" alt="right-arrow.png" src="./assets/images/right%20key.svg">
-                </div>
+                <div class="arrow-key right-arrow" @click="slide_counter++"></div>
 
                 <v-carousel :continuous="false"
                             :show-arrows="false"
@@ -259,3 +254,28 @@ image: "assets/images/ckclogo.png"
         })
 
 </script>
+
+<style lang="stylus" scoped>
+.arrow-key {
+    display: inline-block;
+    width: 144px;
+    height: 144px;
+    background-size: cover;
+}
+
+.left-arrow {
+    background-image: url(./assets/images/left%20key.svg);
+}
+
+.right-arrow {
+    background-image: url(./assets/images/right%20key.svg);
+}
+
+.left-arrow:active {
+    background-image: url(./assets/images/left%20key%20pressed.svg);
+}
+
+.right-arrow:active {
+    background-image: url(./assets/images/right%20key%20pressed.svg);
+}
+</style>

@@ -11,7 +11,7 @@
 
 .right-arrow:hover,
 .left-arrow:hover {
-  filter: brightness(0.9); }
+  filter: brightness(0.95); }
 
 @media screen and (min-height: 1050px) {
   .arrow-img {

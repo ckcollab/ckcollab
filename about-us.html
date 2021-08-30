@@ -22,7 +22,7 @@ image: "assets/images/ckclogo.png"
     <link rel="prefetch" href="./assets/images/avatars/harvey.png">
     <link rel="prefetch" href="./assets/images/avatars/logan.png">
     <link rel="prefetch" href="./assets/images/avatars/wade.png">
-    <link rel="prefetch" href="./assets/images/avatars/tobias.png">
+    <link rel="prefetch" href="./assets/images/avatars/toby.png">
     <link rel="prefetch" href="./assets/images/right key.svg">
     <link rel="prefetch" href="./assets/images/left key.svg">
     <link rel="prefetch" href="./assets/images/right key pressed.svg">
@@ -113,7 +113,7 @@ image: "assets/images/ckclogo.png"
                                      :key="i">
                         <v-sheet height="100%">
                             <v-row class="description-row">
-                                <v-col class="description-sizer" cols="12" md="6">
+                                <v-col class="description-sizer" cols="12" md="6" style="width: 515px; max-width: 515px;">
                                     <div class="name">
                                         <%slide.name%>
                                     </div>
@@ -277,6 +277,13 @@ image: "assets/images/ckclogo.png"
     width: 144px;
     height: 144px;
     background-size: cover;
+}
+
+@media only screen and (max-width: 750px) {
+    .arrow-key {
+        width: 105px;
+        height: 105px;
+    }
 }
 
 .left-arrow {

@@ -78,9 +78,9 @@ section.content {
 }
 
 .content .header-text {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 600;
-  padding: 0px 50px 40px 50px;
+  padding: 0px 50px 0px 50px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -89,15 +89,20 @@ section.content {
 
 .content .body-text {
   margin: 20px auto;
-  max-width: 1280px;
-  font-size: 40px;
-  line-height: 61px;
+  max-width: 70%;
+  font-size: 30px;
+  line-height: 41px;
   font-weight: 200;
 }
 
 .description-row {
+  justify-content: center;
   height: calc(4.505vh + 297.703px);
   text-align: left;
+  top: -23px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .description-bg {
@@ -120,17 +125,14 @@ section.content {
 .description-bg .name {
   color: var(--brand-pink);
   font-size: 36px;
-  padding: 0 20px;
 }
 
 .description-bg .desc-title {
   font-size: 24px;
-  padding: 0 20px;
 }
 
 .description-bg .skills {
   font-size: 20px;
-  padding: 0 20px;
   text-align: left;
   list-style-type: none;
 }
@@ -138,8 +140,6 @@ section.content {
 .description-bg .desc-links {
   margin-bottom: 31px;
   min-height: 45px;
-  padding-right: 6px;
-  padding: 0 9px;
 }
 
 .description-bg .desc-links-before {
@@ -151,11 +151,11 @@ section.content {
 }
 
 .description-bg .description {
+  position: relative;
+  top: 10px;
   font-size: 19px;
   line-height: 24px;
   padding: 6px;
-  position: absolute;
-  top: 62px;
   line-height: 1.3;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -168,9 +168,9 @@ section.content {
   margin-bottom: 8px;
 }
 
-.desc-links .mdi {
+.desc-links .mdi:not(:first-child) {
   font-size: 30px;
-  padding-left: 0.33em;
+  padding-left: 10px;
 }
 
 .mdi::after {
@@ -212,9 +212,9 @@ section.content {
 }
 
 .description-bg .description {
-  top: 13px;
-  font-size: 19px;
-  line-height: 24px;
+  top: 23px;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .desc-links .mdi {
@@ -374,14 +374,17 @@ section.content {
 
   .description-bg .name {
     font-size: 36px;
+    margin: 20px 0 7px;
   }
 
   .description-bg .desc-title {
-    font-size: 24px;
+    font-size: 19px;
+    line-height: 27px;
   }
 
   .description-bg .skills {
-    font-size: 20px;
+    font-size: 15px;
+    line-height: 17px;
   }
 
   .description-bg .desc-links {
@@ -395,17 +398,6 @@ section.content {
     position: relative;
     top: 0;
     line-height: 1.3;
-  }
-
-  .description-bg .desc-links-before {
-    display: none;
-  }
-
-  .description-bg .desc-links-after {
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
   }
 
   .desc-links .mdi {
@@ -473,6 +465,6 @@ section.content {
   }
 
   .description-sizer {
-    height: calc((-39.37vw + 907.559px) / 2);
+    height: auto;
   }
 }

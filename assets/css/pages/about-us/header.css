@@ -151,11 +151,13 @@ section.content {
 }
 
 .description-bg .description {
-  font-size: 16px;
+  font-size: 19px;
+  line-height: 24px;
   padding: 6px;
   position: absolute;
   top: 62px;
   line-height: 1.3;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .skills ul {
@@ -198,20 +200,21 @@ section.content {
 
 .description-bg .name {
   margin-top: 20px;
-  font-size: calc(1.622vh + 18.973px);
+  font-size: calc(1.4vh + 18.973px);
 }
 
 .description-bg .desc-title {
-  font-size: calc(1.441vh + 8.865px);
+  font-size: calc(1.2vh + 8.865px);
 }
 
 .description-bg .skills {
-  font-size: calc(1.261vh + 6.757px);
+  font-size: calc(1vh + 6.757px);
 }
 
 .description-bg .description {
-  top: calc(1.802vh + 43.081px);
-  font-size: calc(0.7vh + 0.4vw + 4px);
+  top: 13px;
+  font-size: 19px;
+  line-height: 24px;
 }
 
 .desc-links .mdi {
@@ -250,20 +253,21 @@ section.content {
   }
 
   .description-bg .name {
-    font-size: calc(1.622vh + 18.973px);
+    font-size: calc(1.4vh + 18.973px);
   }
 
   .description-bg .desc-title {
-    font-size: calc(1.441vh + 8.865px);
+    font-size: calc(1.2vh + 8.865px);
   }
 
   .description-bg .skills {
-    font-size: calc(1.261vh + 6.757px);
+    font-size: calc(1vh + 6.757px);
   }
 
   .description-bg .description {
-    top: calc(1.802vh + 43.081px);
-    font-size: calc(0.7vh + 0.4vw + 4px);
+    top: 13px;
+    font-size: 19px;
+    line-height: 24px;
   }
 
   .desc-links .mdi {
@@ -385,7 +389,8 @@ section.content {
   }
 
   .description-bg .description {
-    font-size: 16px;
+    font-size: 19px;
+    line-height: 24px;
     padding: 6px;
     position: relative;
     top: 0;

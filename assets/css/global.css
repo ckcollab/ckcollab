@@ -13,29 +13,26 @@
   }
 }
 
-/* Vuetify Overrides */
-.v-application {
-  line-height: 1.2 !important;
-}
 html {
   scroll-behavior: smooth;
   /*Pycharm doesn't think auto is a valid value, but it is.*/
   -webkit-font-smoothing: auto !important;
 }
 /*---------------*/
-body {
+body .v-application {
   background-color: #1e2642;
   animation: fadeIn 1 0.2s linear;
   animation-fill-mode: forwards;
   opacity: 0;
   scroll-behavior: smooth;
+  line-height: 1.2 !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 .cursor-default {

@@ -4,23 +4,25 @@
 
 /* Main Content */
 @media only screen and (max-width: 768px) {
-    .content .body-text {
-        margin: 20px 10px;
-    }
-
     .content .header-text {
-        font-size: 40px;
+        font-size: 34px;
     }
-
-    .content .body-text {
-        font-size: 20px;
-    }
-
     .drop-us-a-line {
         font-size: 15px;
         width: calc(100% - 50px) !important;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .description-row {
+        width: 100%;
+        margin: 0;      
+    }
+    .content .body-text {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}  
 
 
 

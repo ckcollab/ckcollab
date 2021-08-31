@@ -1,7 +1,14 @@
-.clutch-award-container {
-    /* this will be used very soon*/
+#clutch-award {
+  font-weight: bold;
+  font-size: 36px;
 }
 
 .clutch-award:hover {
-    opacity: .7;
+  opacity: 0.7;
+}
+
+.clutch-logo {
+  position: relative;
+  top: 1px;
+  width: 111px;
 }

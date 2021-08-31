@@ -22,7 +22,39 @@ body, html {
     opacity: 0.9;
 }
 
-.post-title {
+.back-button {
+    position: absolute;
+    top: 16px;
+    left: 13px;
+    display: inline-block;
+    background-color: #eb6c7d;
+    color: #ffffff !important;
+    border-radius: 40px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Press Start 2P", cursive;
+}
+
+.back-button:hover {
+    background-color: #bf4958;
+    text-decoration: none;
+}
+
+.back-button:active {
+    background-color: #eb6c7d;
+}
+
+.back-arrow-icon {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 17px;
+}
+
+h1.post-title {
+    margin-top: 0;
     text-align: center;
     color: #eb6c7d !important;
 }
@@ -97,3 +129,4 @@ img.img-bordered, .img-bordered img {
         font-size: 1.2em;
     }
 }
+

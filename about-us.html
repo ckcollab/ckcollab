@@ -113,7 +113,7 @@ image: "assets/images/ckclogo.png"
                                      :key="i">
                         <v-sheet height="100%">
                             <v-row class="description-row">
-                                <v-col class="description-sizer" cols="12" md="6" style="width: 515px; max-width: 515px;">
+                                <v-col class="description-size col-constrain" cols="12" md="6">
                                     <div class="name">
                                         <%slide.name%>
                                     </div>
@@ -300,5 +300,10 @@ image: "assets/images/ckclogo.png"
 
 .right-arrow:active {
     background-image: url(./assets/images/right%20key%20pressed.svg);
+}
+
+.col-constrain {
+    width: 515px;
+    max-width: 515px;
 }
 </style>

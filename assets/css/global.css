@@ -96,15 +96,17 @@ body .v-application {
   border-bottom: solid 2px transparent;
 }
 .drop-us-a-line {
-  font-size: 35px;
+  font-size: 26px;
   background-color: var(--brand-pink);
-  border-radius: 100px;
+  border-radius: 8px;
   width: 350px;
   font-weight: 800;
-  padding: 10px;
+  padding: 18px;
   text-align: center;
+  font-weight: bold;
   margin: 50px auto;
 }
+
 .drop-us-a-line a {
   text-decoration: none;
   color: white !important;

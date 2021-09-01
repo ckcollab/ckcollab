@@ -22,7 +22,41 @@ body, html {
     opacity: 0.9;
 }
 
-.post-title {
+.back-button {
+    position: absolute;
+    top: 16px;
+    left: 13px;
+    display: inline-block;
+    background-color: #2b4e61;
+    color: #ffffff !important;
+    border-radius: 40px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Press Start 2P", cursive;
+    opacity: 1;
+}
+
+.back-button:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.back-button:active {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.back-arrow-icon {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 17px;
+}
+
+h1.post-title {
+    margin-top: 0;
     text-align: center;
     color: #eb6c7d !important;
 }
@@ -96,7 +130,6 @@ img.img-bordered, .img-bordered img {
         /* Make font slightly larger to get rid of Google 'mobile font size too small' nag */
         font-size: 1.2em;
     }
-
     .main-content img {
         max-width: 95% !important;
     }

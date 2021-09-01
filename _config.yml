@@ -7,6 +7,8 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect
   - jekyll-seo-tag
+  - jekyll-minifier
+  - jerkyl-brotli
 
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -22,9 +24,9 @@ whitelist:
 
 # SEO
 
-title: "CK Collab - Web Development Agency in CDA, North Idaho"
+title: "CKC - Web Dev Shop in Coeur d'Alene (CDA) Idaho"
 tagline: "We help businesses create and design their app, website, business tools."
-description: "Need Software? We help businesses create and design their app, website, business tools. Come to us with the problem and we’ll find ways to solve it."
+description: "Need Software? We're rockstar software developers: django, python, vue, react. Web and mobile. Spokane Coeur d'Alene area."
 
 twitter:
   card: summary_large_image

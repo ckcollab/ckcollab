@@ -6,7 +6,8 @@ image: "assets/images/ckclogo.png"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WE ♡ DEVELOPMENT! Specializing with Python + Django in CDA, Idaho">
+    <meta name="description"
+          content="Need Software? We're rockstar software developers: django, python, vue, react. Web and mobile. Spokane Coeur d'Alene area.">
 
     {% seo %}
 
@@ -17,20 +18,22 @@ image: "assets/images/ckclogo.png"
     <!--  Favicon  -->
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
 
-    <!--  jQuery  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-
     <!--  GreensockJS (Animations)  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
-    <!--  Confetti JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <!--  ScrollMagic (Animations)  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Scroll Magic-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+    <!--FOR DEV ONLY. Remove before deploy-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+
+    <!--  CanvasConfetti (Animations)  -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
     <!--  Font Awesome  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -77,6 +80,7 @@ image: "assets/images/ckclogo.png"
 
 </head>
 <body>
+
 <div id="app">
     <v-app>
 
@@ -110,7 +114,8 @@ image: "assets/images/ckclogo.png"
             </div>
 
             <v-fade-transition>
-                <div class="hamburger-navigation-menu" v-if="show_mobile_navigation">
+                <div :class="`hamburger-navigation-menu ${!show_mobile_navigation ? 'hidden' : ''}`"
+                     v-if="show_mobile_navigation">
                     <a class="menu-link" href=".">HOME</a>
                     <a class="menu-link" href="about-us.html">ABOUT CKC</a>
                     <a class="menu-link" href="blog.html">BLOG</a>
@@ -143,7 +148,8 @@ image: "assets/images/ckclogo.png"
                         </div>
                     </div>
                     <div class="section-text">
-                        From ideas on a napkin to products in your users hands, we can handle everything! We specialize
+                        From ideas on a napkin to products in your users hands, we can handle everything! We
+                        specialize
                         in
                         all
                         things
@@ -158,29 +164,31 @@ image: "assets/images/ckclogo.png"
                     <div class="pink-stripe"></div>
                     <div class="header-text">How we do it</div>
                     <div class="blue-stripe"></div>
-                    <div class="section-body no-margin">
+                    <div class="section-body">
                         <div class="step-item">
                             <div>
                                 <div class="step-name">STEP 1 : WIREFRAME</div>
                                 <div class="step-text">
-                                    Our approach to web development is holistic. We believe a good project requires a
+                                    Our approach to web development is holistic. We believe a good project
+                                    requires a
                                     strong
                                     foundation
                                     with clear goals from the outset.
                                 </div>
                             </div>
                             <div class="step-image">
-                                <img src="./assets/images/rocketbuild.svg" alt="ckc_wireframe.png">
+                                <img src="./assets/images/ckc_wireframe.png">
                             </div>
                         </div>
                         <div class="step-item reverse-column half-margin-bottom">
                             <div class="step-image">
-                                <img class="no-margin-left" src="./assets/images/polish.svg" alt="ckc_polish.png">
+                                <img class="no-margin-left" src="./assets/images/ckc_polish.png">
                             </div>
                             <div>
                                 <div class="step-name">STEP 2 : POLISH DESIGN</div>
                                 <div class="step-text">
-                                    After we've got your idea translated to paper, we want to bring in our ideas to see
+                                    After we've got your idea translated to paper, we want to bring in our ideas
+                                    to see
                                     where we
                                     can
                                     improve upon those ideas.
@@ -191,7 +199,8 @@ image: "assets/images/ckclogo.png"
                             <div>
                                 <div class="step-name">STEP 3 : DO THE MAGIC</div>
                                 <div class="step-text">
-                                    Programming, databases, deployment. After we've got everything how you want it, we
+                                    Programming, databases, deployment. After we've got everything how you want
+                                    it, we
                                     make
                                     sure
                                     to
@@ -205,61 +214,91 @@ image: "assets/images/ckclogo.png"
                     </div>
                 </section>
             </a>
+            <div id="scroll-magic-screens" class="scroll-magic-container space-parallax-bg">
+                <div class="screen-container">
 
-            <!-- Styles at css/pages/home/clutch_award.css -->
-            <section class="space-parallax-bg">
-                <div class="subheader-text text-center pa-16 clutch-award-container mt-16" id="clutch-award">
-                    <div class="my-10 clutch-text">
-                        Named in Idaho's Top 10 Tech Firms by
-                        <a
-                                href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                class="clutch-award"
-                        >
-                            <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"/>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Styles at css/pages/home/what_we_user.css -->
-            <section>
-                <div class="pink-stripe mt-0"></div>
-                <div class="header-text">What we use</div>
-                <div class="blue-stripe no-margin-bottom"></div>
-                <div class="section-body no-margin">
-                    <div class="logos-body">
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/python-logo-full.png"
-                                 alt="python-logo.png">
-                        </div>
-                        <div class="img-container">
-                            <div class="padding-container">
-                                <img class="logo-img" src="./assets/images/tech-logos/django-logo-full.png"
-                                     alt="django-logo.png">
+                    <!-- Styles at css/pages/home/clutch_award.css -->
+                    <section class="clutch-award-container" id="clutch-award-container" ref="scroll-panel-award">
+                        <div class="subheader-text text-center fill-height" id="clutch-award">
+                            <div class="my-10 message-container">
+                                <div class="clutch-award-message">
+                                    Named in Idaho's Top 10 Tech Firms by
+                                    <a
+                                            href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                            class="clutch-award"
+                                    >
+                                        <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"
+                                             class="clutch-logo"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/heroku-logo-full.png"
-                                 alt="heroku-logo.png">
+                    </section>
+
+                    <!-- Styles at css/pages/home/what_we_user.css -->
+                    <section id="what-we-use" class="what-we-use" ref="scroll-panel-wwu">
+                        <div class="pink-stripe mt-0"></div>
+                        <div class="header-text">What we use</div>
+                        <div class="blue-stripe no-margin-bottom"></div>
+                        <div class="section-body">
+                            <div class="logos-body">
+                                <div class="img-container">
+                                    <img class="logo-img mr-3" src="./assets/images/tech-logos/react-logo.svg"
+                                         alt="react-logo.png" width="100px">
+                                    <span class="react-title">
+                                React
+                            </span>
+                                </div>
+                                <div class="img-container">
+                                    <div class="react-native-phone">
+                                        <img class="logo-img" src="./assets/images/tech-logos/react-logo.svg"
+                                             alt="react-logo.png">
+                                    </div>
+                                    <span class="react-title react-native-title">
+                                React Native
+                            </span>
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/python-logo-full.png"
+                                         alt="python-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <div class="padding-container">
+                                        <img class="logo-img" src="./assets/images/tech-logos/django-logo-full.png"
+                                             alt="django-logo.png">
+                                    </div>
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/heroku-logo-full.png"
+                                         alt="heroku-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/vue-logo-full.png"
+                                         alt="vue-logo.png">
+                                </div>
+                                <div class="img-container aws-logo">
+                                    <img class="logo-img" src="./assets/images/tech-logos/aws-logo-full.png"
+                                         alt="aws-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/figma-vector-logo.svg"
+                                         alt="figma-logo.png">
+                                </div>
+                            </div>
                         </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/vue-logo-full.png" alt="vue-logo.png">
-                        </div>
-                        <div class="img-container aws-logo">
-                            <img class="logo-img" src="./assets/images/tech-logos/aws-logo-full.png" alt="aws-logo.png">
-                        </div>
-                    </div>
+                    </section>
                 </div>
-            </section>
+
+            </div>
 
             <!-- Styles at css/pages/home/who_we_helped.css -->
             <section>
                 <div class="pink-stripe"></div>
                 <div class="header-text">Who we've helped</div>
                 <div class="blue-stripe no-margin-bottom"></div>
-                <div class="section-body  no-margin">
+                <div class="section-body">
                     <div class="logos-body clients-body">
 
                         <a class="img-container" href="https://coeurholdings.com/" target="_blank"
@@ -278,15 +317,19 @@ image: "assets/images/ckclogo.png"
                             <img class="logo-img" src="./assets/images/client-logos/trailhead-logo.png"
                                  alt="trailhead-logo.png">
                         </a>
-                        <a class="img-container" href="https://findagame.io/" target="_blank" rel="noreferrer noopener">
-                            <img class="logo-img find-a-game" src="./assets/images/client-logos/findagame-logo.png"
+                        <a class="img-container" href="https://findagame.io/" target="_blank"
+                           rel="noreferrer noopener">
+                            <img class="logo-img find-a-game"
+                                 src="./assets/images/client-logos/findagame-logo.png"
                                  alt="find-a-game.png">
                         </a>
                         <a class="img-container" href="https://www.mgmresorts.com/en.html" target="_blank"
                            rel="noreferrer noopener">
-                            <img class="logo-img" src="./assets/images/client-logos/mgm-logo.svg" alt="mgm-logo.svg">
+                            <img class="logo-img" src="./assets/images/client-logos/mgm-logo.svg"
+                                 alt="mgm-logo.svg">
                         </a>
-                        <a class="img-container" href="https://codalab.org/" target="_blank" rel="noreferrer noopener">
+                        <a class="img-container" href="https://codalab.org/" target="_blank"
+                           rel="noreferrer noopener">
                             <img class="logo-img" src="./assets/images/client-logos/codalab-logo.png"
                                  alt="codalab-logo.png">
                         </a>
@@ -317,7 +360,8 @@ image: "assets/images/ckclogo.png"
                     LET'S WORK TOGETHER!
                 </div>
                 <div class="subheader-text">
-                    We help startups and growing businesses create, improve, or fix their apps — you come to us with the
+                    We help startups and growing businesses create, improve, or fix their apps — you come to us
+                    with the
                     problem
                     and
                     we’ll find ways to solve it.
@@ -328,8 +372,9 @@ image: "assets/images/ckclogo.png"
                         DROP US A LINE!
                     </a>
                 </div>
-                <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
-                <img class="left-astronaut-lower" src="./assets/images/astro-left.png" alt="astro-left.png"/>
+                <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png"
+                     alt="new-astronaut.png"/>
+                <img class="left-astronaut-lower" src="./assets/images/astro-left-large.png" alt="astro left"/>
             </section>
 
             <!-- Styles at css/pages/home/footer.css -->
@@ -372,58 +417,27 @@ image: "assets/images/ckclogo.png"
 <script src="/assets/js/cookie-consent.js" type="text/javascript"></script>
 
 <script>
-
+    // Main app state stuff
     new Vue({
         el: '#app',
         vuetify: new Vuetify(),
         data: () => ({
-            show_mobile_navigation: false
+            show_mobile_navigation: false,
+            award_controller: null
         }),
+
         mounted() {
             this.animate_astronaut()
-            this.scroll_magic()
             this.set_up_confetti()
+            this.set_up_award_section()
+            this.on_resize()
+            window.addEventListener('resize', this.on_resize)
+        },
+        beforeDestroy() {
+            // Unregister the event listener before destroying this Vue instance
+            window.removeEventListener('resize', this.on_resize)
         },
         methods: {
-            set_up_confetti() {
-                const my_canvas = document.createElement('canvas')
-                document.appendChild(my_canvas)
-                confetti.create(my_canvas, {
-                    resize: true,
-                    useWorker: true
-                })
-            },
-            scroll_magic() {
-                const controller = new ScrollMagic.Controller()
-                // create a scene
-                const scene = new ScrollMagic.Scene({
-                    triggerElement: "#clutch-award",
-                    triggerHook: 'onLeave',
-                    reverse: false // Allows confetti to only fire once
-                })
-                scene.on("start", function () {
-                    confetti({
-                        particleCount: 100,
-                        startVelocity: 30,
-                        spread: 360,
-                        origin: {
-                            x: .1
-                        }
-                    })
-                    confetti({
-                        particleCount: 100,
-                        startVelocity: 30,
-                        spread: 360,
-                        origin: {
-                            x: .9
-                        }
-                    })
-
-                })
-
-                controller.addScene(scene)
-            },
-
             animate_astronaut() {
                 // Timelines for our astronaut animations (Greensock
                 const right_timeline = new TimelineMax({ repeat: -1 })
@@ -446,7 +460,89 @@ image: "assets/images/ckclogo.png"
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })
             },
+            set_up_confetti() {
+                const controller = new ScrollMagic.Controller()
+                // create a scene
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#clutch-award",
+                    triggerHook: 'onLeave',
+                    reverse: false // Allows confetti to only fire once
+                })
+
+                scene.on("start", function () {
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .1
+                        }
+                    })
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .9
+                        }
+                    })
+
+                })
+                controller.addScene(scene)
+
+                const my_canvas = document.createElement('canvas')
+
+                confetti.create(my_canvas, {
+                    resize: true,
+                    useWorker: true
+                })
+            },
+            set_z_index() {
+                document.getElementById('clutch-award-container').style.zIndex = '0'
+            },
+            set_up_award_section() {
+                this.award_controller = new ScrollMagic.Controller()
+                const tl = new TimelineMax()
+                tl.fromTo("#clutch-award-container", 1, { opacity: 0 }, {
+                        opacity: 1,
+                        ease: Power1.easeInOut,
+                        onComplete: this.set_z_index,
+                    },
+                )
+                tl.fromTo("#what-we-use2",
+                    1,
+                    { opacity: 0 },
+                    { opacity: 1, ease: Power1.easeInOut },
+                )
+                tl.fromTo("#what-we-use",
+                    1,
+                    { opacity: 0 },
+                    { opacity: 1, ease: Power1.easeInOut },
+                )
+
+
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#scroll-magic-screens",
+                    triggerHook: "onLeave",
+                    duration: "150%"
+                })
+                    .setPin("#scroll-magic-screens")
+                    .setTween(tl)
+
+
+                this.award_controller.addScene(scene)
+
+
+            },
+            on_resize() {
+                if (window.innerWidth < 1100 && this.award_controller.enabled()) {
+                    // this.award_controller.enabled(false)
+                } else if (!this.award_controller.enabled()) {
+                    // this.award_controller.enabled(true)
+                }
+            }
+
         },
+
     })
 </script>
-

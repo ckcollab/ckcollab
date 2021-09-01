@@ -13,22 +13,22 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 20%;
     z-index: 1;
-}
-
-.clutch-award-message {
-    position: sticky;
-    /*background: red;*/
-    top: 30%;
 }
 
 .message-container {
     height: 50%;
-    /*background: green;*/
 }
 
 .clutch-award:hover {
     opacity: .7;
+}
+
+.clutch-trophy {
+    max-width: 80%;
+    width: 200px;
+    margin-top: 20px;
 }
 
 .award-pink-stripe {

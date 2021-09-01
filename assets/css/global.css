@@ -183,8 +183,14 @@ body .v-application {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.85px;
+  letter-spacing: 2px;
 }
+
+@media (max-width: 480px) {
+    .header-text {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
 }
 
 .banner {

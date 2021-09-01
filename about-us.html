@@ -47,8 +47,8 @@ image: "assets/images/ckclogo.png"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!--    Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pages/about-us/about_us.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pages/about-us/index.css">
 
 </head>
@@ -230,7 +230,7 @@ image: "assets/images/ckclogo.png"
 <script>
     function open_menu(target) {
         target.classList.toggle("change")
-        $('.hamburger-navigation-menu').toggleClass("hidden")
+        document.querySelector('.hamburger-navigation-menu').classList.toggle("hidden")
     }
 
     new Vue({

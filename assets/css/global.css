@@ -220,7 +220,6 @@ body .v-application {
   background-color: white;
   z-index: 3;
   position: relative;
-  height: 500px;
   background-size: cover;
   background-attachment: fixed;
   margin-top: 1.5em;
@@ -308,7 +307,11 @@ body .v-application {
 
 .contact-info a {
   text-decoration: none;
-  color: inherit;
+  color: #ffffff;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 /* Hamburger button */
@@ -372,6 +375,7 @@ body .v-application {
 }
 
 .cookie-consent {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;

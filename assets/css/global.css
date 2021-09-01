@@ -414,3 +414,10 @@ body .v-application {
 .cookie-consent > button:hover {
   color: #d7d7d7;
 }
+
+.v-tooltip__content {
+  font-family: "Helvetica";
+  font-size: 16px !important;
+  width: 50% !important;
+  text-align: center;
+}

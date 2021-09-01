@@ -121,7 +121,401 @@
 
 @media only screen and (max-width: 650px) {
   .contact-button {
-    font-size: 15px;
+    fon
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+    
+    :root {
+        --brand-pink: #F06C7C;
+        --brand-blue: #60AED9;
+        --pink-dark: #e26674;
+        --blue-dark: #5d9ec8;
+    }
+    
+    @keyframes fadeIn {
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Vuetify Overrides */
+    .v-application {
+        line-height: 1.2 !important;
+    }
+    html {
+        scroll-behavior: smooth;
+        /*Pycharm doesn't think auto is a valid value, but it is.*/
+        -webkit-font-smoothing: auto !important;
+    
+    }
+    /*---------------*/
+    body {
+        background-color: #1e2642;
+        animation: fadeIn 1 .2s linear;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        scroll-behavior: smooth;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .cursor-default{
+        cursor: default !important;
+    }
+    .bg-white {
+        background-color: white;
+    }
+    
+    .hero {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .space-parallax-bg {
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
+    }
+    
+    .space-parallax-bg .header-text {
+        padding: 100px 40px 50px 40px;
+        font-size: 60px;
+        font-weight: 600;
+        color: white;
+    }
+    
+    .space-parallax-bg .subheader-text {
+        font-size: 27px;
+        margin: 0 auto;
+        font-weight: 300;
+        width: 960px;
+        line-height: 2em;
+        color: white;
+    }
+    .space-bg {
+        z-index: -2;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .space-bg-overlay {
+        z-index: -1;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(21, 61, 165, 0.17)
+    }
+    
+    .menu-link {
+        color: white !important;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 10px;
+        margin: 20px 35px;
+        border-bottom: solid 2px transparent;
+    
+    }
+    .drop-us-a-line {
+        font-size: 35px;
+        background-color: var(--brand-pink);
+        border-radius: 100px;
+        width: 350px;
+        font-weight: 800;
+        padding: 10px;
+        text-align: center;
+        margin: 50px auto;
+    }
+    .drop-us-a-line a {
+        text-decoration: none;
+        color: white !important;
+    }
+    .drop-us-a-line:hover {
+        cursor: pointer;
+        background-color: var(--pink-dark);
+    }
+    .no-margin {
+        margin: 0 !important;
+    }
+    .no-margin-top {
+        margin-top: 0 !important;
+    }
+    .no-margin-bottom {
+        margin-bottom: 0 !important;;
+    }
+    .no-margin-left {
+        margin-left: 0 !important;
+    }
+    .menu-link:hover {
+        border-bottom: solid 2px white;
+    }
+    
+    .menu-link.active {
+        border-bottom: solid 2px white;
+    }
+    
+    .menu-link.active:hover {
+        border-bottom: solid 2px white;
+    }
+    
+    .contact-button {
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        /* margin: 0; */
+        padding: 10px 32px 12px !important;
+        text-align: center;
+        background-color: #2674a0;
+        border: 1px solid #299ad9;
+        border-radius: 5px;
+        transition: 0.2s;
+        font-weight: 700;
+    }
+    
+    .contact-button:hover {
+        background-color: var(--blue-dark);
+        border: none !important;
+    }
+    
+    .pink-stripe {
+        margin-top: 100px;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #F06C7C, rgba(255, 255, 255, 0));
+    }
+    
+    .header-text {
+        font-size: 45px;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 40px 50px;
+        padding-left: 0px; /* This is because we added a margin-left */
+        color: #332859;
+        margin-left: 200px;
+    }
+    
+    .banner {
+        color: white;
+        background-position-y: -50px;
+        background-attachment: fixed;
+        background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
+    }
+    
+    .banner .header-text {
+        color: white;
+    }
+    
+    .header .fa-heart-o {
+        color: #ef6d7e;
+    }
+    
+    .sub-header{
+        padding-top: 15px;
+        font-size: 40px;
+        font-family: 'Press Start 2P', cursive;
+        z-index: 1;
+        text-shadow: 2px 2px #332859;
+    }
+    .blue-stripe {
+        margin-bottom: 100px;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #5FADD9, rgba(255, 255, 255, 0));
+    }
+    
+    /* Footer CSS */
+    
+    .footer {
+        background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../../assets/images/spacebg.jpg");
+        background-color: white;
+        z-index: 3;
+        position: relative;
+        height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-top: 1.5em;
+    }
+    
+    .footer-bottom-row {
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+    
+    }
+    .footer-bottom-row > a {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .pink-stripe-lower {
+        z-index: 2;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #F06C7C, rgba(255, 255, 255, 0));
+    }
+    
+    .secondary-navigation {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        border-bottom: 1px solid white;
+    }
+    
+    .nav-item {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        margin: 30px;
+        text-align: center;
+    }
+    
+    .blue-stripe-lower {
+        z-index: 2;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(to right, #5FADD9, rgba(255, 255, 255, 0));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .logo-container {
+        height: 300px;
+        width: auto;
+    }
+    
+    .logo-container .ckc-logo {
+        z-index: 1;
+        width: 300px;
+        margin: 0 auto;
+        display: flex;
+    }
+    
+    .logo-subheader {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        margin-top: -40px;
+    }
+    
+    .footer-contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact-info {
+        display: flex;
+        font-size: 24px;
+        color: white;
+        font-weight: 100;
+        flex-direction: column;
+    }
+    
+    .contact-info a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    /* Hamburger button */
+    
+    .hamburger-navigation-menu {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        z-index: 2;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+    
+    }
+    .hamburger-navigation-menu.hidden {
+        display: none;
+    }
+    
+    .hamburger-button {
+        z-index: 3;
+        display: none;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 7px;
+        background-color: #FFF;
+        margin: 6px 0;
+        transition: 0.4s;
+        border: solid 1px #222d4e;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 10px);
+        transform: rotate(-45deg) translate(-9px, 10px);
+        border: none;
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+        border: none;
+    }
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -9px);
+        transform: rotate(45deg) translate(-8px, -9px);
+        border: none;
+    }
+    
+    .btn-default {
+        padding: 8px 30px !important;
+    }
+    
+    .cookie-consent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        position: fixed;
+        bottom: 0;
+        z-index: 9999999999;
+        background-color: var(--blue-dark);
+        width: 100%;
+        color: white;
+        padding: 10px;
+    }
+    
+    .cookie-consent > button {
+        background: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        margin-left: 10px;
+        font-size: 25px;
+    
+    }
+    
+    .cookie-consent > button:hover {
+        color: #d7d7d7;
+    }t-size: 15px;
   }
 
   .menu-link {

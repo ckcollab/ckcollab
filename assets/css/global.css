@@ -48,7 +48,7 @@ body .v-application {
 }
 
 .space-parallax-bg {
-  background-size: 100% 100%;
+  background-size: cover;
   background-attachment: fixed;
   background-image: linear-gradient(
       rgba(21, 61, 165, 0.17),
@@ -96,15 +96,17 @@ body .v-application {
   border-bottom: solid 2px transparent;
 }
 .drop-us-a-line {
-  font-size: 35px;
+  font-size: 26px;
   background-color: var(--brand-pink);
-  border-radius: 100px;
+  border-radius: 8px;
   width: 350px;
   font-weight: 800;
-  padding: 10px;
+  padding: 18px;
   text-align: center;
+  font-weight: bold;
   margin: 50px auto;
 }
+
 .drop-us-a-line a {
   text-decoration: none;
   color: white !important;
@@ -140,19 +142,29 @@ body .v-application {
 .contact-button {
   color: white;
   position: absolute;
-  right: 0;
-  top: 10px;
-  padding: 8px 40px !important;
+  right: 20px;
+  top: 20px;
+  margin: 0 !important;
+  padding: 10px 32px 12px !important;
   text-align: center;
-  background-color: var(--brand-blue);
-  border-radius: 50px;
-  border-bottom: none;
-  transition: 0.2s;
+  background-color: #2674a0;
+  border: 1px solid #299ad9;
+  border-radius: 5px;
+  transition: filter 150ms ease-out, transform 100ms ease-out;
+  transform: scale(100%);
+  font-weight: 700;
 }
 
 .contact-button:hover {
-  background-color: var(--blue-dark);
-  border: none !important;
+  filter: brightness(105%);
+  transform: scale(99%);
+  border: 1px solid transparent;
+}
+
+.contact-button:active {
+  filter: brightness(100%);
+  transform: scale(100%);
+  border: 1px solid #299ad9;
 }
 
 .pink-stripe {

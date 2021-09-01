@@ -96,4 +96,8 @@ img.img-bordered, .img-bordered img {
         /* Make font slightly larger to get rid of Google 'mobile font size too small' nag */
         font-size: 1.2em;
     }
+
+    .main-content img {
+        max-width: 95% !important;
+    }
 }

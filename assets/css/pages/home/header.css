@@ -177,7 +177,7 @@
     }
     
     .space-parallax-bg {
-        background-size: 100% 100%;
+        background-size: cover;
         background-attachment: fixed;
         background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
     }

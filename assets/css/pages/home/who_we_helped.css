@@ -5,6 +5,10 @@
     margin: 50px 100px;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 a.img-container {
     position: relative;
     transition: 1s;

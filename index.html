@@ -329,6 +329,46 @@ image: "assets/images/ckclogo.png"
                 </div>
             </section>
 
+            <section>
+                <div class="pink-stripe"></div>
+                <div class="header-text">Strategic Partners</div>
+                <div class="blue-stripe no-margin-bottom"></div>
+                <div class="section-body">
+                    <div class="logos-body clients-body strategic-partnerships-body flex-column">
+                        <h2>As one of the most established software development shops in Coeur d'Alene/Spokane, we’ve cultivated great relationships with local experts in artificial intelligence, machine learning, and digital marketing.</h2>
+                        <a class="img-container" href="https://www.attenuex.com/" target="_blank"
+                           rel="noreferrer noopener">
+                           <v-tooltip top color="#000000" transition="scroll-y-transition">
+                            <template v-slot:activator="{ on, attrs }">
+                                <img
+                                    v-bind="attrs"
+                                    v-on="on"
+                                    class="logo-img"
+                                    src="./assets/images/client-logos/attenuex-logo.png"
+                                    alt="attenuex-logo.png"
+                                />
+                            </template>
+                            <span>Attenuex is a subject matter expert on AI/ML topics, and uses their talents to solve uniquely modern issues related to Big Data</span>
+                        </v-tooltip>                          
+                    </a>
+                        <a class="img-container" href="http://enquiredigital.com/" target="_blank" rel="noreferrer noopener">
+                            <v-tooltip top color="#000000" transition="scroll-y-transition">
+                                <template v-slot:activator="{ on, attrs }">
+                                    <img
+                                        v-bind="attrs"
+                                        v-on="on"
+                                        class="logo-img"
+                                        src="./assets/images/client-logos/enquire-digital-logo.png"
+                                        alt="enquire-digital-logo.png"
+                                    />
+                                </template>
+                                <span>EnquireDigital is a full-service marketing agency specializing in SEO, PPC, and marketing campaign management</span>
+                            </v-tooltip>                          
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             <!-- Styles at css/pages/home/lets_work_together.css -->
 
             <section id="about-us" class="lets-work-together space-parallax-bg">
@@ -440,4 +480,23 @@ image: "assets/images/ckclogo.png"
   -o-user-drag: none;
   user-drag: none;
 }
+
+h2 {
+    max-width: 700px;
+    color: #7e95a3;
+    font-size: 24px;
+    line-height: 125%;
+    margin-bottom: 17px;
+}
+
+.logos-body.clients-body.strategic-partnerships-body {
+    flex-wrap: nowrap !important;
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+}
+
 </style>

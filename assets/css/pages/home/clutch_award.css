@@ -2,6 +2,12 @@
     height: 100vh;
 }
 
+.scroll-panel {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
 .screen-container {
     width: 100%;
     min-height: 100%;
@@ -10,15 +16,17 @@
 }
 
 .clutch-award-container {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     top: 20%;
     z-index: 1;
 }
 
 .message-container {
     height: 50%;
+    width: 960px;
+    line-height: 2em;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .clutch-award:hover {
@@ -44,10 +52,6 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #5FADD9, rgba(255, 255, 255, 0));
 }
 
-#clutch-award {
-    font-weight: bold;
-    font-size: 36px;
-}
 
 .clutch-award:hover {
     opacity: 0.7;
@@ -57,4 +61,20 @@
     position: relative;
     top: 1px;
     width: 111px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .scroll-panel {
+        position: static;
+        opacity: 1 !important;
+        min-height: 0;
+    }
+
+    .scroll-magic-container {
+        height: auto;
+    }
+    .scrollmagic-pin-spacer {
+        padding-bottom: 0 !important;
+    }
 }

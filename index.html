@@ -218,32 +218,33 @@ image: "assets/images/ckclogo.png"
                 <div class="screen-container">
 
                     <!-- Styles at css/pages/home/clutch_award.css -->
-                    <section class="clutch-award-container" id="clutch-award-container" ref="scroll-panel-award">
-                        <div class="subheader-text text-center fill-height" id="clutch-award">
+                    <section class="clutch-award-container scroll-panel" id="clutch-award-container">
+                        <div class="text-center fill-height d-flex justify-center" id="clutch-award">
                             <div class="my-10 message-container">
+                                <div class="d-flex justify-center">
                                     <span>
-
-                                    Named in Idaho's Top 10 Tech Firms by
-                                    <a
-                                            href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
-                                            target="_blank"
-                                            rel="noreferrer noopener"
-                                            class="clutch-award"
-                                    >
-                                        <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"
-                                             class="clutch-logo"/>
-                                    </a>
+                                        Named in Idaho's Top 10 Tech Firms by
+                                        <a
+                                                href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                class="clutch-award"
+                                        >
+                                            <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"
+                                                 class="clutch-logo"/>
+                                        </a>
                                     </span>
-                                    <img
-                                            class="clutch-trophy"
-                                            src="./assets/images/tech-logos/clutch-trophy.png" alt="Cluck Trophy"
-                                    />
+                                </div>
+                                <img
+                                        class="clutch-trophy"
+                                        src="./assets/images/tech-logos/clutch-trophy.png" alt="Cluck Trophy"
+                                />
                             </div>
                         </div>
                     </section>
 
                     <!-- Styles at css/pages/home/what_we_user.css -->
-                    <section id="what-we-use" class="what-we-use" ref="scroll-panel-wwu">
+                    <section id="what-we-use" class="what-we-use scroll-panel">
                         <div class="pink-stripe mt-0"></div>
                         <div class="header-text">What we use</div>
                         <div class="blue-stripe no-margin-bottom"></div>
@@ -470,7 +471,7 @@ image: "assets/images/ckclogo.png"
                 // create a scene
                 const scene = new ScrollMagic.Scene({
                     triggerElement: "#clutch-award",
-                    triggerHook: 'onLeave',
+                    triggerHook: .1,
                     reverse: false // Allows confetti to only fire once
                 })
 
@@ -529,7 +530,7 @@ image: "assets/images/ckclogo.png"
                 const scene = new ScrollMagic.Scene({
                     triggerElement: "#scroll-magic-screens",
                     triggerHook: "onLeave",
-                    duration: "150%"
+                    duration: "100%"
                 })
                     .setPin("#scroll-magic-screens")
                     .setTween(tl)
@@ -541,9 +542,9 @@ image: "assets/images/ckclogo.png"
             },
             on_resize() {
                 if (window.innerWidth < 1100 && this.award_controller.enabled()) {
-                    // this.award_controller.enabled(false)
+                    this.award_controller.enabled(false)
                 } else if (!this.award_controller.enabled()) {
-                    // this.award_controller.enabled(true)
+                    this.award_controller.enabled(true)
                 }
             }
 

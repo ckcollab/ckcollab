@@ -18,6 +18,7 @@ html {
   /*Pycharm doesn't think auto is a valid value, but it is.*/
   -webkit-font-smoothing: auto !important;
 }
+
 /*---------------*/
 body .v-application {
   background-color: #1e2642;

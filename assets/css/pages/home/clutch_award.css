@@ -1,14 +1,80 @@
-#clutch-award {
-  font-weight: bold;
-  font-size: 36px;
+.scroll-magic-container {
+    height: 100vh;
+}
+
+.scroll-panel {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.screen-container {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.clutch-award-container {
+    top: 20%;
+    z-index: 1;
+}
+
+.message-container {
+    height: 50%;
+    width: 960px;
+    line-height: 2em;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .clutch-award:hover {
-  opacity: 0.7;
+    opacity: .7;
+}
+
+.clutch-trophy {
+    max-width: 80%;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.award-pink-stripe {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F06C7C, rgba(255, 255, 255, 0));
+}
+
+.award-blue-stripe {
+    margin-bottom: 100px;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #5FADD9, rgba(255, 255, 255, 0));
+}
+
+
+.clutch-award:hover {
+    opacity: 0.7;
 }
 
 .clutch-logo {
-  position: relative;
-  top: 1px;
-  width: 111px;
+    position: relative;
+    top: 1px;
+    width: 111px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .scroll-panel {
+        position: static;
+        opacity: 1 !important;
+        min-height: 0;
+    }
+
+    .scroll-magic-container {
+        height: auto;
+    }
+    .scrollmagic-pin-spacer {
+        padding-bottom: 0 !important;
+    }
 }

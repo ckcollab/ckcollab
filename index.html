@@ -6,7 +6,8 @@ image: "assets/images/ckclogo.png"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Need Software? We're rockstar software developers: django, python, vue, react. Web and mobile. Spokane Coeur d'Alene area.">
+    <meta name="description"
+          content="Need Software? We're rockstar software developers: django, python, vue, react. Web and mobile. Spokane Coeur d'Alene area.">
 
     {% seo %}
 
@@ -16,10 +17,23 @@ image: "assets/images/ckclogo.png"
 
     <!--  Favicon  -->
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
-    
+
     <!--  GreensockJS (Animations)  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
+    <!--  ScrollMagic (Animations)  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+    <!--FOR DEV ONLY. Remove before deploy-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+
+    <!--  CanvasConfetti (Animations)  -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
     <!--  Font Awesome  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -100,7 +114,8 @@ image: "assets/images/ckclogo.png"
             </div>
 
             <v-fade-transition>
-                <div :class="`hamburger-navigation-menu ${!show_mobile_navigation ? 'hidden' : ''}`" v-if="show_mobile_navigation">
+                <div :class="`hamburger-navigation-menu ${!show_mobile_navigation ? 'hidden' : ''}`"
+                     v-if="show_mobile_navigation">
                     <a class="menu-link" href=".">HOME</a>
                     <a class="menu-link" href="about-us.html">ABOUT CKC</a>
                     <a class="menu-link" href="blog.html">BLOG</a>
@@ -199,76 +214,90 @@ image: "assets/images/ckclogo.png"
                     </div>
                 </section>
             </a>
+            <div id="scroll-magic-screens" class="scroll-magic-container space-parallax-bg">
+                <div class="screen-container">
 
-            <!-- Styles at css/pages/home/clutch_award.css -->
-            <section class="space-parallax-bg">
-                <div class="subheader-text text-center pa-16 clutch-award-container mt-16" id="clutch-award">
-                    <div class="my-10" class="clutch-award-container">
-                        Named in Idaho's Top 10 Tech Firms by
-                        <a
-                                href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                class="clutch-award"
-                        >
-                            <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo" class="clutch-logo"/>
-                        </a>
-                    </div>
-                </div>
-            </section>
+                    <!-- Styles at css/pages/home/clutch_award.css -->
+                    <section class="clutch-award-container scroll-panel" id="clutch-award-container">
+                        <div class="text-center fill-height d-flex justify-center" id="clutch-award">
+                            <div class="my-10 message-container">
+                                <div class="d-flex justify-center">
+                                    <span>
+                                        Named in Idaho's Top 10 Tech Firms by
+                                        <a
+                                                href="https://clutch.co/press-releases/announces-top-b2b-companies-idaho-2021"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                class="clutch-award"
+                                        >
+                                            <img src="./assets/images/tech-logos/clutch.svg" alt="Clutch Logo"
+                                                 class="clutch-logo"/>
+                                        </a>
+                                    </span>
+                                </div>
+                                <img
+                                        class="clutch-trophy"
+                                        src="./assets/images/tech-logos/clutch-trophy.png" alt="Cluck Trophy"
+                                />
+                            </div>
+                        </div>
+                    </section>
 
-            <!-- Styles at css/pages/home/what_we_user.css -->
-            <section>
-                <div class="pink-stripe mt-0"></div>
-                <div class="header-text">What we use</div>
-                <div class="blue-stripe no-margin-bottom"></div>
-                <div class="section-body">
-                    <div class="logos-body">
-                        <div class="img-container">
-                            <img class="logo-img mr-3" src="./assets/images/tech-logos/react-logo.svg"
-                                 alt="react-logo.png" width="100px">
-                            <span class="react-title">
+                    <!-- Styles at css/pages/home/what_we_user.css -->
+                    <section id="what-we-use" class="what-we-use scroll-panel">
+                        <div class="pink-stripe mt-0"></div>
+                        <div class="header-text">What we use</div>
+                        <div class="blue-stripe no-margin-bottom"></div>
+                        <div class="section-body">
+                            <div class="logos-body">
+                                <div class="img-container">
+                                    <img class="logo-img mr-3" src="./assets/images/tech-logos/react-logo.svg"
+                                         alt="react-logo.png" width="100px">
+                                    <span class="react-title">
                                 React
                             </span>
-                        </div>
-                        <div class="img-container">
-                            <div class="react-native-phone">
-                                <img class="logo-img" src="./assets/images/tech-logos/react-logo.svg"
-                                     alt="react-logo.png">
-                            </div>
-                            <span class="react-title react-native-title">
+                                </div>
+                                <div class="img-container">
+                                    <div class="react-native-phone">
+                                        <img class="logo-img" src="./assets/images/tech-logos/react-logo.svg"
+                                             alt="react-logo.png">
+                                    </div>
+                                    <span class="react-title react-native-title">
                                 React Native
                             </span>
-                        </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/python-logo-full.png"
-                                 alt="python-logo.png">
-                        </div>
-                        <div class="img-container">
-                            <div class="padding-container">
-                                <img class="logo-img" src="./assets/images/tech-logos/django-logo-full.png"
-                                     alt="django-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/python-logo-full.png"
+                                         alt="python-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <div class="padding-container">
+                                        <img class="logo-img" src="./assets/images/tech-logos/django-logo-full.png"
+                                             alt="django-logo.png">
+                                    </div>
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/heroku-logo-full.png"
+                                         alt="heroku-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/vue-logo-full.png"
+                                         alt="vue-logo.png">
+                                </div>
+                                <div class="img-container aws-logo">
+                                    <img class="logo-img" src="./assets/images/tech-logos/aws-logo-full.png"
+                                         alt="aws-logo.png">
+                                </div>
+                                <div class="img-container">
+                                    <img class="logo-img" src="./assets/images/tech-logos/figma-vector-logo.svg"
+                                         alt="figma-logo.png">
+                                </div>
                             </div>
                         </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/heroku-logo-full.png"
-                                 alt="heroku-logo.png">
-                        </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/vue-logo-full.png"
-                                 alt="vue-logo.png">
-                        </div>
-                        <div class="img-container aws-logo">
-                            <img class="logo-img" src="./assets/images/tech-logos/aws-logo-full.png"
-                                 alt="aws-logo.png">
-                        </div>
-                        <div class="img-container">
-                            <img class="logo-img" src="./assets/images/tech-logos/figma-vector-logo.svg"
-                                 alt="figma-logo.png">
-                        </div>
-                    </div>
+                    </section>
                 </div>
-            </section>
+
+            </div>
 
             <!-- Styles at css/pages/home/who_we_helped.css -->
             <section>
@@ -335,35 +364,38 @@ image: "assets/images/ckclogo.png"
                 <div class="blue-stripe no-margin-bottom"></div>
                 <div class="section-body">
                     <div class="logos-body clients-body strategic-partnerships-body flex-column">
-                        <h2>As one of the most established software development shops in Coeur d'Alene/Spokane, we’ve cultivated great relationships with local experts in artificial intelligence, machine learning, and digital marketing.</h2>
+                        <h2>As one of the most established software development shops in Coeur d'Alene/Spokane, we’ve
+                            cultivated great relationships with local experts in artificial intelligence, machine
+                            learning, and digital marketing.</h2>
                         <a class="img-container" href="https://www.attenuex.com/" target="_blank"
                            rel="noreferrer noopener">
-                           <v-tooltip top color="#000000" transition="scroll-y-transition">
-                            <template v-slot:activator="{ on, attrs }">
-                                <img
-                                    v-bind="attrs"
-                                    v-on="on"
-                                    class="logo-img"
-                                    src="./assets/images/client-logos/attenuex-logo.png"
-                                    alt="attenuex-logo.png"
-                                />
-                            </template>
-                            <span>Attenuex is a subject matter expert on AI/ML topics, and uses their talents to solve uniquely modern issues related to Big Data</span>
-                        </v-tooltip>                          
-                    </a>
-                        <a class="img-container" href="http://enquiredigital.com/" target="_blank" rel="noreferrer noopener">
                             <v-tooltip top color="#000000" transition="scroll-y-transition">
                                 <template v-slot:activator="{ on, attrs }">
                                     <img
-                                        v-bind="attrs"
-                                        v-on="on"
-                                        class="logo-img"
-                                        src="./assets/images/client-logos/enquire-digital-logo.png"
-                                        alt="enquire-digital-logo.png"
+                                            v-bind="attrs"
+                                            v-on="on"
+                                            class="logo-img"
+                                            src="./assets/images/client-logos/attenuex-logo.png"
+                                            alt="attenuex-logo.png"
+                                    />
+                                </template>
+                                <span>Attenuex is a subject matter expert on AI/ML topics, and uses their talents to solve uniquely modern issues related to Big Data</span>
+                            </v-tooltip>
+                        </a>
+                        <a class="img-container" href="http://enquiredigital.com/" target="_blank"
+                           rel="noreferrer noopener">
+                            <v-tooltip top color="#000000" transition="scroll-y-transition">
+                                <template v-slot:activator="{ on, attrs }">
+                                    <img
+                                            v-bind="attrs"
+                                            v-on="on"
+                                            class="logo-img"
+                                            src="./assets/images/client-logos/enquire-digital-logo.png"
+                                            alt="enquire-digital-logo.png"
                                     />
                                 </template>
                                 <span>EnquireDigital is a full-service marketing agency specializing in SEO, PPC, and marketing campaign management</span>
-                            </v-tooltip>                          
+                            </v-tooltip>
                         </a>
                     </div>
                 </div>
@@ -439,10 +471,20 @@ image: "assets/images/ckclogo.png"
         el: '#app',
         vuetify: new Vuetify(),
         data: () => ({
-            show_mobile_navigation: false
+            show_mobile_navigation: false,
+            award_controller: null
         }),
+
         mounted() {
             this.animate_astronaut()
+            this.set_up_confetti()
+            this.set_up_award_section()
+            this.on_resize()
+            window.addEventListener('resize', this.on_resize)
+        },
+        beforeDestroy() {
+            // Unregister the event listener before destroying this Vue instance
+            window.removeEventListener('resize', this.on_resize)
         },
         methods: {
             animate_astronaut() {
@@ -467,36 +509,118 @@ image: "assets/images/ckclogo.png"
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })
             },
+            set_up_confetti() {
+                const controller = new ScrollMagic.Controller()
+                // create a scene
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#clutch-award",
+                    triggerHook: .1,
+                    reverse: false // Allows confetti to only fire once
+                })
+
+                scene.on("start", function () {
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .1
+                        }
+                    })
+                    confetti({
+                        particleCount: 100,
+                        startVelocity: 30,
+                        spread: 360,
+                        origin: {
+                            x: .9
+                        }
+                    })
+
+                })
+                controller.addScene(scene)
+
+                const my_canvas = document.createElement('canvas')
+
+                confetti.create(my_canvas, {
+                    resize: true,
+                    useWorker: true
+                })
+            },
+            set_z_index() {
+                document.getElementById('clutch-award-container').style.zIndex = '0'
+            },
+            set_up_award_section() {
+                this.award_controller = new ScrollMagic.Controller()
+                const tl = new TimelineMax()
+                tl.fromTo("#clutch-award-container", 1, { opacity: 0 }, {
+                        opacity: 1,
+                        ease: Power1.easeInOut,
+                        onComplete: this.set_z_index,
+                    },
+                )
+                tl.fromTo("#what-we-use2",
+                    1,
+                    { opacity: 0 },
+                    { opacity: 1, ease: Power1.easeInOut },
+                )
+                tl.fromTo("#what-we-use",
+                    1,
+                    { opacity: 0 },
+                    { opacity: 1, ease: Power1.easeInOut },
+                )
+
+
+                const scene = new ScrollMagic.Scene({
+                    triggerElement: "#scroll-magic-screens",
+                    triggerHook: "onLeave",
+                    duration: "100%"
+                })
+                    .setPin("#scroll-magic-screens")
+                    .setTween(tl)
+
+
+                this.award_controller.addScene(scene)
+
+
+            },
+            on_resize() {
+                if (window.innerWidth < 1100 && this.award_controller.enabled()) {
+                    this.award_controller.enabled(false)
+                } else if (!this.award_controller.enabled()) {
+                    this.award_controller.enabled(true)
+                }
+            }
+
         },
 
     })
 </script>
 
 <style lang="stylus" scoped>
-.ckc-logo {
-    -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-}
-
-h2 {
-    max-width: 700px;
-    color: #7e95a3;
-    font-size: 24px;
-    line-height: 125%;
-    margin-bottom: 17px;
-}
-
-.logos-body.clients-body.strategic-partnerships-body {
-    flex-wrap: nowrap !important;
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 18px;
+    .ckc-logo {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
     }
-}
+
+    h2 {
+        max-width: 700px;
+        color: #7e95a3;
+        font-size: 24px;
+        line-height: 125%;
+        margin-bottom: 17px;
+    }
+
+    .logos-body.clients-body.strategic-partnerships-body {
+        flex-wrap: nowrap !important;
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 18px;
+        }
+    }
 
 </style>

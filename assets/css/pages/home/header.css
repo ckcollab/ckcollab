@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.left-astronaut {
+.astro-right {
   position: absolute;
   bottom: 100px;
   left: 80px;
@@ -94,7 +94,7 @@
     margin-top: 50px;
   }
 
-  .left-astronaut {
+  .astro-right {
     top: calc(20vh + 200px);
     left: 20px;
     height: 200px;
@@ -122,9 +122,7 @@
 @media only screen and (max-width: 650px) {
 
   .contact-button {
-    fon
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
-    
+        
     :root {
         --brand-pink: #F06C7C;
         --brand-blue: #60AED9;
@@ -182,7 +180,7 @@
         background-attachment: fixed;
         background-image: linear-gradient(rgba(21, 61, 165, .17), rgba(21, 61, 165, .17)), url("../images/spacebg.jpg");
     }
-    
+
     .space-parallax-bg .header-text {
         padding: 100px 40px 50px 40px;
         font-size: 60px;

@@ -87,8 +87,8 @@ image: "assets/images/ckclogo.png"
         <!-- Styles at css/pages/home/header.css -->
         <div class="hero space-parallax-bg hero-container">
             <img class="ckc-logo" src="./assets/images/ckclogo.svg" alt="ckclogo.svg"/>
-            <img class="right-astronaut" src="./assets/images/new-astronaut.png" alt="new-astronaut.png"/>
-            <img class="left-astronaut" src="./assets/images/astro-left.png" alt="astro-left.png"/>
+            <img class="right-astronaut" src="./assets/images/astro-right.png" alt="astro-right.png"/>
+            <img class="astro-right" src="./assets/images/astro-left.png" alt="astro-left.png"/>
 
             <div class="hero-text">
                 <div class="sub-header">
@@ -99,7 +99,7 @@ image: "assets/images/ckclogo.png"
             <div class="navigation-menu">
                 <a class="menu-link active no-margin-left">HOME</a>
                 <a class="menu-link" href="about-us.html">ABOUT CKC</a>
-                <a class="menu-link" href="blog.html">BLOG</a>
+                <a class="menu-link" href="careers.html">CAREERS</a>
             </div>
             <a class="menu-link contact-button" href="mailto:hello@ckcollab.com">CONTACT US</a>
 
@@ -118,7 +118,7 @@ image: "assets/images/ckclogo.png"
                      v-if="show_mobile_navigation">
                     <a class="menu-link" href=".">HOME</a>
                     <a class="menu-link" href="about-us.html">ABOUT CKC</a>
-                    <a class="menu-link" href="blog.html">BLOG</a>
+                    <a class="menu-link" href="careers.html">CAREERS</a>
                     <a class="menu-link" href="mailto:hello@ckcollab.com">CONTACT US</a>
                 </div>
             </v-fade-transition>
@@ -421,9 +421,9 @@ image: "assets/images/ckclogo.png"
                         DROP US A LINE!
                     </a>
                 </div>
-                <img class="right-astronaut-lower" src="./assets/images/new-astronaut.png"
-                     alt="new-astronaut.png"/>
-                <img class="left-astronaut-lower" src="./assets/images/astro-left-large.png" alt="astro left"/>
+                <img class="right-astronaut-lower" src="./assets/images/astro-right.png"
+                     alt="astro-right.png"/>
+                <img class="astro-right-lower" src="./assets/images/astro-left-large.png" alt="astro left"/>
             </section>
 
             <!-- Styles at css/pages/home/footer.css -->
@@ -499,12 +499,12 @@ image: "assets/images/ckclogo.png"
                     ease: "sine.inOut",
                     y: 0
                 })
-                left_timeline.from('.left-astronaut, .left-astronaut-lower', {
+                left_timeline.from('.astro-right, .astro-right-lower', {
                     duration: 4,
                     ease: "sine.inOut",
                     y: -80
                 })
-                left_timeline.from('.left-astronaut, .left-astronaut-lower', { duration: 5, ease: "sine.inOut", y: 0 })
+                left_timeline.from('.astro-right, .astro-right-lower', { duration: 5, ease: "sine.inOut", y: 0 })
 
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 100 })
                 lower_right_timeline.to('.right-astronaut-lower', { duration: 6, ease: "sine.inOut", y: 0 })

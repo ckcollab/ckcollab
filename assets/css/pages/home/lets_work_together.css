@@ -1,5 +1,5 @@
 
-.left-astronaut-lower {
+.astro-right-lower {
     position: relative;
     bottom: 80px;
     left: calc(-375px + 15vw);
@@ -55,7 +55,7 @@
         background-color: #e26674;
     }
 
-    .left-astronaut-lower {
+    .astro-right-lower {
         position: relative;
         bottom: -80px;
         left: 0;
@@ -96,7 +96,7 @@
         background-color: #e26674;
     }
 
-    .left-astronaut-lower {
+    .astro-right-lower {
         position: relative;
         bottom: 0px;
         left: -60px;
@@ -134,7 +134,7 @@
         background-color: #e26674;
     }
 
-    .left-astronaut-lower {
+    .astro-right-lower {
         position: relative;
         bottom: -80px;
         left: 0;

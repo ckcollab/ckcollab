@@ -1,0 +1,159 @@
+.splash-careers {
+  position: relative;
+  z-index: 3;
+  margin: 82px 0 0;
+  padding: 115px 0 0;
+  min-height: 330px;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(21, 61, 165, 0.07),
+      rgba(21, 61, 165, 0.1)
+    ),
+    url("../../../images/splash-careers.jpg");
+}
+
+.splash-careers h1 {
+  margin: 0 0 9px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.splash-careers .blurb {
+  margin: 0 auto 15px;
+  padding: 12px;
+  width: 340px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  font-family: "Helvetica", sans-serif;
+}
+
+.splash-careers .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 2rem 1rem;
+}
+
+.button-wrapper .button-apply-now {
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: "Helvetica", sans-serif;
+  background-color: #3ba7fd;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-wrapper .button-apply-now .subheading {
+  font-weight: normal;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+section {
+  color: #d6e5f1;
+  background-color: #1c253f;
+}
+
+.footer.no-margin {
+  margin-top: 0;
+}
+
+#photo-gallery {
+  margin-bottom: 2rem;
+  border: 9px solid #214059;
+  border-radius: 4px;
+}
+
+.job-position h1 {
+  font-size: 20px;
+}
+
+.job-position h2 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-position .job-description {
+  padding: 1rem 0 3.5rem;
+  font-size: 13px;
+}
+
+.job-position .job-description ul {
+  margin: 1rem 0;
+}
+
+.internships-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.internships-wrapper .internships {
+  min-width: 270px;
+  max-width: 270px;
+  background-color: rgba(65, 35, 39, 20%);
+  border: 1px dotted #963641;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.internships-wrapper .internships h1 {
+  color: #f58e9a;
+  font-size: 20px;
+}
+.internships-wrapper .internships h2 {
+  color: #f58e9a;
+  font-size: 13px;
+  margin: 0 0 1rem;
+}
+.internships-wrapper .internships .text {
+  color: #f4b6bd;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: "Helvetica", sans-serif;
+}
+
+.internships-wrapper .internships .href-link {
+  background-color: #220408;
+  font-size: 11px;
+  font-family: "Helvetica", sans-serif;
+  color: #f58e9a !important;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 7px;
+  border-radius: 11px;
+}
+
+.internships-wrapper .astro-left {
+  position: relative;
+  bottom: -50px;
+  left: 11px;
+  width: 140px;
+}
+
+.internships-wrapper .astro-right {
+  position: relative;
+  top: -50px;
+  right: 11px;
+  width: 140px;
+}
+
+@media screen and (min-height: 1050px) {
+}
+@media screen and (min-height: 1050px) {
+}
+@media only screen and (max-height: 1050px) and (min-width: 960px) {
+}
+@media only screen and (max-width: 960px) {
+}
+@media only screen and (max-width: 750px) {
+}
+
+/*# sourceMappingURL=careers.css.map */

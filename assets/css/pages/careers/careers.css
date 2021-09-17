@@ -3,8 +3,9 @@
   z-index: 3;
   margin: 82px 0 0;
   padding: 115px 0 0;
-  min-height: 330px;
+  min-height: 350px;
   background-size: cover;
+  color: #e5f3ff;
   background-image: linear-gradient(
       rgba(21, 61, 165, 0.07),
       rgba(21, 61, 165, 0.1)
@@ -89,6 +90,7 @@ section {
 
 .job-position h1 {
   font-size: 20px;
+  color: #7fc6ff;
 }
 
 .job-position h2 {
@@ -96,12 +98,14 @@ section {
   font-size: 10px;
   font-weight: 500;
   font-family: "Helvetica", sans-serif;
+  color: #527c9e;
 }
 
 .job-position .job-description {
   padding: 1rem 0 3.5rem;
   font-size: 13px;
   font-family: "Helvetica", sans-serif;
+  color: #9dc0dc;
 }
 
 .job-position .job-description ul {
@@ -228,7 +232,6 @@ section {
     font-size: 14px;
     font-weight: 500;
     font-family: "Helvetica", sans-serif;
-    color: #3680bb;
   }
 
   .job-position .job-description {

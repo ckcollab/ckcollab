@@ -1,5 +1,5 @@
 ---
-title: "About Us"
+title: "Careers"
 image: "assets/images/ckclogo.png"
 ---
 <!DOCTYPE html>
@@ -15,7 +15,6 @@ image: "assets/images/ckclogo.png"
         <!-- Vuetify and Material CSS -->
         <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-        <!-- About Us Details -->
         <script src="./assets/js/careers/careers.js"></script>
         <!--  Font Awesome  -->
         <link
@@ -30,7 +29,6 @@ image: "assets/images/ckclogo.png"
         <link rel="stylesheet" href="/assets/css/pages/careers/index.css">
     </head>
     <body>
-        <!--   Most styles in pages/about-us/header.css  -->
         <div id="app">
             <v-app>
                 <div class="banner">
@@ -68,92 +66,101 @@ image: "assets/images/ckclogo.png"
                         </div>
                     </div>
                 </div>
-                <!--   Most styles in Global.css but also in pages/about-us/index.css  -->
                 <section>
                     <!-- wrapper -->
                     <div class="content">
                         <!-- Mobile-only carousel -->
-                        <div id="photo-gallery">
+                        <div id="photo-gallery-carousel">
                             <v-carousel
                                 hide-delimiters
                                 v-model="slide_counter"
                                 :reverse="reversed"
-                                :height="220"
+                                height="60vw"
                                 :dark="true"
                             >
                                 <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.src"></v-carousel-item>
                             </v-carousel>
                         </div>
-                        <div class="job-position">
-                            <h1>
-                                Junior Front-end
-                                <br>
-                                Developer (VueJS)
-                            </h1>
-                            <h2>
-                                CDA/Spokane&nbsp;&nbsp;
-                                Part-time&nbsp;&nbsp;
-                                Compensation D.O.E.
-                            </h2>
-                            <div class="job-description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum sit est scelerisque libero at integer. Mi risus in sit est id ut enim lectus. Nam nulla eu blandit turpis quisque mauris in tincidunt. Etiam congue tellus habitant amet aliquam bibendum tortor.</p>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                </ul>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum hiring@ckcollab.com
-                                </p>
-                                <div class="button-wrapper">
-                                    <a href="mailto:hiring@ckcollab.com?cc=eric@ckcollab.com&subject=Job application ~ Junior Front-end Developer (VueJS)&body=Hello, I'd like more information about applying for the &quot;Junior Front-end Developer (VueJS)&quot; role." class="button-apply-now">
-                                        <div>Apply Now</div>
-                                        <div class="subheading">hiring@ckcollab.com</div>
-                                    </a>
+                        <div id="photo-gallery-list">
+                            <img src="/assets/images/ckc-office-images/1.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/2.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/3.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/4.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/5.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/6.jpg" alt="office photo">
+                            <img src="/assets/images/ckc-office-images/7.jpg" alt="office photo">
+                        </div>
+                        <div class="jobs-listing">
+                            <div class="job-position">
+                                <h1>
+                                    Junior Front-end
+                                    <br>
+                                    Developer (VueJS)
+                                </h1>
+                                <h2>
+                                    CDA/Spokane&nbsp;&nbsp;
+                                    Part-time&nbsp;&nbsp;
+                                    Compensation D.O.E.
+                                </h2>
+                                <div class="job-description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum sit est scelerisque libero at integer. Mi risus in sit est id ut enim lectus. Nam nulla eu blandit turpis quisque mauris in tincidunt. Etiam congue tellus habitant amet aliquam bibendum tortor.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                    </ul>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum hiring@ckcollab.com
+                                    </p>
+                                    <div class="button-wrapper">
+                                        <a href="mailto:hiring@ckcollab.com?cc=eric@ckcollab.com&subject=Job application ~ Junior Front-end Developer (VueJS)&body=Hello, I'd like more information about applying for the &quot;Junior Front-end Developer (VueJS)&quot; role." class="button-apply-now">
+                                            <div>Apply Now</div>
+                                            <div class="subheading">hiring@ckcollab.com</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="job-position">
-                            <h1>
-                                Junior Backend+Devops
-                                <br>
-                                Developer (Django/MySQL)
-                            </h1>
-                            <h2>
-                                CDA/Spokane&nbsp;&nbsp;
-                                Part-time&nbsp;&nbsp;
-                                Compensation D.O.E.
-                            </h2>
-                            <div class="job-description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum sit est scelerisque libero at integer. Mi risus in sit est id ut enim lectus. Nam nulla eu blandit turpis quisque mauris in tincidunt. Etiam congue tellus habitant amet aliquam bibendum tortor.</p>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Lorem ipsum dolor sit</li>
-                                </ul>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum hiring@ckcollab.com
-                                </p>
-                                <div class="button-wrapper">
-                                    <a href="mailto:hiring@ckcollab.com?cc=eric@ckcollab.com&subject=Job application ~ Junior Backend+Devops Developer (Django/MySQL)&body=Hello, I'd like more information about applying for the &quot;Junior Backend+Devops Developer (Django/MySQL)&quot; role." class="button-apply-now">
-                                        <div>Apply Now</div>
-                                        <div class="subheading">hiring@ckcollab.com</div>
-                                    </a>
+                            <div class="job-position">
+                                <h1>
+                                    Junior Backend+Devops
+                                    <br>
+                                    Developer (Django/MySQL)
+                                </h1>
+                                <h2>
+                                    CDA/Spokane&nbsp;&nbsp;
+                                    Part-time&nbsp;&nbsp;
+                                    Compensation D.O.E.
+                                </h2>
+                                <div class="job-description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum sit est scelerisque libero at integer. Mi risus in sit est id ut enim lectus. Nam nulla eu blandit turpis quisque mauris in tincidunt. Etiam congue tellus habitant amet aliquam bibendum tortor.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                    </ul>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices maecenas dictum hiring@ckcollab.com
+                                    </p>
+                                    <div class="button-wrapper">
+                                        <a href="mailto:hiring@ckcollab.com?cc=eric@ckcollab.com&subject=Job application ~ Junior Backend+Devops Developer (Django/MySQL)&body=Hello, I'd like more information about applying for the &quot;Junior Backend+Devops Developer (Django/MySQL)&quot; role." class="button-apply-now">
+                                            <div>Apply Now</div>
+                                            <div class="subheading">hiring@ckcollab.com</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="internships-wrapper">
-                            <img src="./assets/images/astro-left.png" alt="astro-left" class="astro-left">
-                            <div class="internships">
-                                <h1>Internships</h1>
-                                <h2>Are you thinking about starting a career in software development?</h2>
-                                <p class="text">At CKCollab, we’re always looking for naturally curious, technical people. If you a background in STEM, or you’re finishing up your junior/senior year at a local college (like North Idaho College or Gonzaga)... reach out! We’re starting Summer 2022 internships soon!</p>
-                                <a href="mailto:internships@ckcollab.com" class="href-link">🚀 internships@ckcollab.com</a>
+                            <div class="internships-wrapper">
+                                <img src="./assets/images/astro-left.png" alt="astro-left" class="astro-left">
+                                <div class="internships">
+                                    <h1>Internships</h1>
+                                    <h2>Are you thinking about starting a career in software development?</h2>
+                                    <p class="text">At CKCollab, we’re always looking for naturally curious, technical people. If you a background in STEM, or you’re finishing up your junior/senior year at a local college (like North Idaho College or Gonzaga)... reach out! We’re starting Summer 2022 internships soon!</p>
+                                    <a href="mailto:internships@ckcollab.com" class="href-link">🚀 internships@ckcollab.com</a>
+                                </div>
+                                <img src="./assets/images/astro-right.png" alt="astro-right" class="astro-right">
                             </div>
-                            <img src="./assets/images/astro-right.png" alt="astro-right" class="astro-right">
-
                         </div>
                     </div>
                 </section>

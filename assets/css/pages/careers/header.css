@@ -16,8 +16,10 @@
 .navigation-menu {
   position: absolute;
   top: 0;
-  padding: 40px;
-  width: 100%;
+  left: 50%;
+  margin-left: -500px;
+  padding: 34px 0 0;
+  width: 1000px;
   font-weight: 300;
 }
 

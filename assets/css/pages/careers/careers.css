@@ -37,6 +37,7 @@
 
 .content {
   padding: 2rem 1rem;
+  overflow: hidden;
 }
 
 .button-wrapper .button-apply-now {
@@ -45,10 +46,21 @@
   font-size: 14px;
   font-family: "Helvetica", sans-serif;
   background-color: #3ba7fd;
+  border: 1px solid transparent;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
 }
+
+.button-wrapper .button-apply-now:hover {
+  background-color: #0968b5;
+  border: 1px solid #008eff;
+ }
+
+ .button-wrapper .button-apply-now:active {
+  background-color: #3ba7fd;
+  border: 1px solid transparent;
+ }
 
 .button-wrapper .button-apply-now .subheading {
   font-weight: normal;
@@ -65,10 +77,14 @@ section {
   margin-top: 0;
 }
 
-#photo-gallery {
+#photo-gallery-carousel {
   margin-bottom: 2rem;
   border: 9px solid #214059;
   border-radius: 4px;
+}
+
+#photo-gallery-list {
+  display: none;
 }
 
 .job-position h1 {
@@ -76,13 +92,16 @@ section {
 }
 
 .job-position h2 {
-  font-size: 12px;
-  font-weight: 600;
+  padding: 3px 0 0;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Helvetica", sans-serif;
 }
 
 .job-position .job-description {
   padding: 1rem 0 3.5rem;
   font-size: 13px;
+  font-family: "Helvetica", sans-serif;
 }
 
 .job-position .job-description ul {
@@ -153,7 +172,83 @@ section {
 }
 @media only screen and (max-width: 960px) {
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (min-width: 750px) {
+  .splash-careers {
+    min-height: 450px;
+  }
+  .splash-careers h1 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 53px;
+  }
+  .splash-careers .blurb {
+    margin: 0 auto 10px;
+    padding: 15px 17px;
+    width: 340px;
+    font-size: 16px;
+    background-color: rgb(0 30 55 / 8%);
+    backdrop-filter: blur(14px);
+    font-family: "Helvetica", sans-serif;
+    border-radius: 7px;
+  }
+
+  #photo-gallery-carousel {
+    display: none;
+  }
+  #photo-gallery-list {
+    display: block;
+    float: right;
+    width: calc(1000px - (500px + 100px));
+  }
+  #photo-gallery-list img {
+    margin: 0 0 8px;
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border: 8px solid #0a3455;
+    border-radius: 7px;
+  }
+  .content {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: visible;
+  }
+  .jobs-listing,
+  .job-position,
+  .internships-wrapper {
+    width: 500px;
+  }
+  .job-position h1 {
+    font-size: 23px;
+  }
+
+  .job-position h2 {
+    padding: 3px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica", sans-serif;
+    color: #3680bb;
+  }
+
+  .job-position .job-description {
+    padding: 1rem 0 3.5rem;
+    font-size: 15px;
+    font-family: "Helvetica", sans-serif;
+  }
+
+  .job-position .job-description ul {
+    margin: 1rem 0;
+  }
+
+  .button-wrapper .button-apply-now {
+    padding: 11px 13px 10px;
+    font-size: 17px;
+  }
+
+  .button-wrapper .button-apply-now .subheading {
+    font-size: 13px;
+  }
 }
 
 /*# sourceMappingURL=careers.css.map */

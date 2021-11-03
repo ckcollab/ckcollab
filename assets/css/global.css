@@ -201,6 +201,7 @@ body .v-application {
   color: white;
   background-position-y: -50px;
   background-attachment: fixed;
+  background-size: 100%;
   background-image: linear-gradient(
       rgba(21, 61, 165, 0.17),
       rgba(21, 61, 165, 0.17)

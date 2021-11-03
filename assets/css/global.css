@@ -93,10 +93,10 @@ body .v-application {
 .menu-link {
   color: white !important;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 600;
   margin: 0 26px 0 0;
-  padding: 10px 3px 4px;
+  padding: 28px 0;
   border-bottom: solid 2px transparent;
 }
 .drop-us-a-line {
@@ -201,6 +201,7 @@ body .v-application {
   color: white;
   background-position-y: -50px;
   background-attachment: fixed;
+  background-size: 100%;
   background-image: linear-gradient(
       rgba(21, 61, 165, 0.17),
       rgba(21, 61, 165, 0.17)
@@ -345,7 +346,7 @@ body .v-application {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  z-index: 2;
+  z-index: 4;
   text-align: center;
   top: 0;
   left: 0;
@@ -356,7 +357,7 @@ body .v-application {
 }
 
 .hamburger-button {
-  z-index: 3;
+  z-index: 5;
   display: none;
   cursor: pointer;
   position: fixed;

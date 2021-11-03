@@ -46,7 +46,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px 0 16px;
   width: 580px;
   font-weight: bold;
 }

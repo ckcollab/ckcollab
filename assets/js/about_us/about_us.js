@@ -163,7 +163,7 @@ const slides = [
         src: "./assets/images/avatars/jess.png",
         name: "Jess Sargent",
         title: "Junior Web Developer",
-        description: ["Jess graduated from Arizona State University with a Bachelors of Science in Software Engineering. From a young age, building things, technology and self learning have always been his passion. His experience is mainly in backend development but he is currently working on becoming full stack.",
+        description: ["Jess graduated from Arizona State University with a Bachelors of Science in Software Engineering. From a young age, building things, technology, and self learning have always been his passion. His experience is mainly in backend development but he is currently working on becoming full stack.",
             "",
             "In his free time Jess enjoys fitness, cooking and good bourbon."],
         skills: [

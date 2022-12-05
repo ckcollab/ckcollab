@@ -185,6 +185,47 @@ const slides = [
         github: "https://github.com/pinkmanJ",
     },
     {
+        src: "./assets/images/avatars/will.png",
+        name: "William Le",
+        title: "UI/UX Designer",
+        description: ["William got his start in tech by creating custom websites for friends. Eventually, he stumbled on React.js and began his foray in building high-end JavaScript frontends. In his free time, he enjoy lifting weights, shooting guns, and playing guitar."],
+        skills: [
+            {
+                type: "Specialities: ",
+                skills: "Web app design, Product/App design",
+            },
+            {
+                type: "Languages: ",
+                skills: "JavaScript/ECMAScript, HTML, and CSS",
+            },
+        ],
+        website: "",
+        blog: "/authors/eli.html",
+        github: "https://github.com/elitrefts0012",
+    },
+    {
+        src: "./assets/images/avatars/eli.png",
+        name: "Eli Trefts",
+        title: "Junior Web Developer",
+        description: ["Eli got his start in programming during high school making websites and a number of simple Javascript games. He would go on to utilize the skills he learned from this in a professional manner by joining the CKC team. He stills pursues hobby projects in game development using Unity.",
+            "",
+            "Other hobby activities include weightlifting, rock climbing, robotics, and video games."
+        ],
+        skills: [
+            {
+                type: "Frameworks: ",
+                skills: "Django, Vue.js, React Native",
+            },
+            {
+                type: "Languages: ",
+                skills: "Python, Javascript, C#",
+            },
+        ],
+        website: "wle8300.com",
+        blog: "/authors/will.html",
+        github: "https://github.com/wle8300",
+    },
+    {
         src: "./assets/images/avatars/wade.png",
         name: "Wade Lutz",
         title: "Graphic Designer",

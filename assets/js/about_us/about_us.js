@@ -26,32 +26,6 @@ const slides = [
         blog: "/authors/eric.html",
         github: "https://github.com/ckcollab",
     },
-    // {
-    //     src: "./assets/images/avatars/allen.png",
-    //     name: "Allen Carmichael",
-    //     title: "Marketing and Sales",
-    //     description: ["Born in Eugene Oregon, Allen moved to Coeur d'Alene Idaho in 2003 and graduated from Lake City High school. Studied At Boise State university and graduated with a degree in Business Administration.",
-    //         "",
-    //         "Started his career in restaurant management and customer service before moving to the tech industry.  Skilled in customer relations and marketing from his past restaurant career and now is transferring those skills into the tech business.",],
-    //     skills: [
-    //         {
-    //             type: "",
-    //             skills: "Organization of projects and tasks.",
-    //         },
-    //         {
-    //             type: "",
-    //             skills: "Customer service and relationship building.",
-    //         },
-    //         {
-    //             type: "",
-    //             skills: "Experience with time management of employees.",
-    //         },
-    //     ],
-    //     website: "",
-    //     linkedin: "https://www.linkedin.com/in/allen-carmichael-654a8219b/",
-    //     blog: "/authors/allen.html",
-    //     github: "",
-    // },
     {
         src: "./assets/images/avatars/bailey.png",
         name: "Bailey Trefts",
@@ -106,33 +80,6 @@ const slides = [
         blog: "https://medium.com/@samote.wood",
         github: "https://github.com/sw00d",
     },
-    // {
-    //     src: "./assets/images/avatars/nic.png",
-    //     name: "Nic Trefts",
-    //     title: "Junior Web Developer",
-    //     description: ["Nic has been into computer-related shenanigans since middle school, and started programming casually in high school. His interest in programming skyrocketed when he started college, and he'll be graduating North Idaho College with an AS in Computer science in the fall of 2020.",
-    //         "In his free time he trains for and competes in local Super Smash Brothers Melee tournaments.",
-    //         "",
-    //         'There is so much more melee to be played." - Mang0'],
-    //     skills: [
-    //         {
-    //             type: "Languages: ",
-    //             skills: "Python, C++, Javascript, HTML",
-    //         },
-    //         {
-    //             type: "Frameworks: ",
-    //             skills: "Django, TensorFlow, Vue.js, Riot.js",
-    //         },
-    //         {
-    //             type: "",
-    //             skills: "Artificial Intelligence",
-    //         },
-    //     ],
-    //     website: "",
-    //     linkedin: "",
-    //     blog: "",
-    //     github: "https://github.com/dde6khkg",
-    // },
     {
         src: "./assets/images/avatars/harvey.png",
         name: "Harvey Hartwell",
@@ -199,9 +146,9 @@ const slides = [
                 skills: "JavaScript/ECMAScript, HTML, and CSS",
             },
         ],
-        website: "",
-        blog: "/authors/eli.html",
-        github: "https://github.com/elitrefts0012",
+        website: "wle8300.com",
+        blog: "/authors/will.html",
+        github: "https://github.com/wle8300",
     },
     {
         src: "./assets/images/avatars/eli.png",
@@ -221,9 +168,9 @@ const slides = [
                 skills: "Python, Javascript, C#",
             },
         ],
-        website: "wle8300.com",
-        blog: "/authors/will.html",
-        github: "https://github.com/wle8300",
+        website: "",
+        blog: "/authors/eli.html",
+        github: "https://github.com/elitrefts0012",
     },
     {
         src: "./assets/images/avatars/wade.png",

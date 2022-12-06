@@ -27,32 +27,6 @@ const slides = [
         github: "https://github.com/ckcollab",
     },
     {
-        src: "./assets/images/avatars/allen.png",
-        name: "Allen Carmichael",
-        title: "Marketing and Sales",
-        description: ["Born in Eugene Oregon, Allen moved to Coeur d'Alene Idaho in 2003 and graduated from Lake City High school. Studied At Boise State university and graduated with a degree in Business Administration.",
-            "",
-            "Started his career in restaurant management and customer service before moving to the tech industry.  Skilled in customer relations and marketing from his past restaurant career and now is transferring those skills into the tech business.",],
-        skills: [
-            {
-                type: "",
-                skills: "Organization of projects and tasks.",
-            },
-            {
-                type: "",
-                skills: "Customer service and relationship building.",
-            },
-            {
-                type: "",
-                skills: "Experience with time management of employees.",
-            },
-        ],
-        website: "",
-        linkedin: "https://www.linkedin.com/in/allen-carmichael-654a8219b/",
-        blog: "/authors/allen.html",
-        github: "",
-    },
-    {
         src: "./assets/images/avatars/bailey.png",
         name: "Bailey Trefts",
         title: "Senior Developer",
@@ -107,43 +81,16 @@ const slides = [
         github: "https://github.com/sw00d",
     },
     {
-        src: "./assets/images/avatars/nic.png",
-        name: "Nic Trefts",
-        title: "Junior Web Developer",
-        description: ["Nic has been into computer-related shenanigans since middle school, and started programming casually in high school. His interest in programming skyrocketed when he started college, and he'll be graduating North Idaho College with an AS in Computer science in the fall of 2020.",
-            "In his free time he trains for and competes in local Super Smash Brothers Melee tournaments.",
-            "",
-            'There is so much more melee to be played." - Mang0'],
-        skills: [
-            {
-                type: "Languages: ",
-                skills: "Python, C++, Javascript, HTML",
-            },
-            {
-                type: "Frameworks: ",
-                skills: "Django, TensorFlow, Vue.js, Riot.js",
-            },
-            {
-                type: "",
-                skills: "Artificial Intelligence",
-            },
-        ],
-        website: "",
-        linkedin: "",
-        blog: "",
-        github: "https://github.com/dde6khkg",
-    },
-    {
         src: "./assets/images/avatars/harvey.png",
         name: "Harvey Hartwell",
         title: "Junior Web Developer",
         description: ["Harvey graduated from Gonzaga University with a degree in Computer Science and an Emphasis in Communication Studies. He has experience with android app development, web development, and database management.",
             "",
-            "He also cooks a mean boeuf bourguignon"],
+            "He is also a terrible golfer but still has a blast on the course."],
         skills: [
             {
                 type: "Development Tools: ",
-                skills: "Git, Docker, Android Studios",
+                skills: "Git, Docker, Android Studios, AWS",
             },
             {
                 type: "Languages: ",
@@ -160,31 +107,70 @@ const slides = [
         github: "https://github.com/hhartwell",
     },
     {
-        src: "./assets/images/avatars/logan.png",
-        name: "Logan Ruf",
+        src: "./assets/images/avatars/jess.png",
+        name: "Jess Sargent",
         title: "Junior Web Developer",
-        description: ["Logan is a long time tech enthusiast. In high school he did computer repair , IT, and Networking for local businesses. In college Logan switched his focus to cloud computing and software. He currently is AWS certified and will graduate from WGU with a BS in Computer Science in the fall of 2021.",
-            "He enjoys many thing, but some favorite hobbies include biking, independent software projects, trading options, and gaming.",
+        description: ["Jess graduated from Arizona State University with a Bachelors of Science in Software Engineering. From a young age, building things, technology, and self learning have always been his passion. His experience is mainly in backend development but he is currently working on becoming full stack.",
             "",
-            '"Be curious. A skeptic is a wanderer."'],
+            "In his free time Jess enjoys fitness, cooking and good bourbon."],
         skills: [
             {
-                type: "",
-                skills: "AWS Cloud Certified, Cisco Networking",
+                type: "Development Tools: ",
+                skills: "Git, Docker, PyCharm, VSCode",
             },
             {
                 type: "Languages: ",
-                skills: "Python, C++, Java",
+                skills: "Python, JavaScript, Java",
             },
             {
                 type: "Frameworks: ",
-                skills: "Vue.js, Riot.js, Django",
+                skills: "Vue.js, Django",
             },
         ],
         website: "",
-        linkedin: "https://www.linkedin.com/in/logan-ruf/",
-        blog: "/authors/logan.html",
-        github: "https://github.com/Logan-Ruf",
+        blog: "/authors/jess.html",
+        github: "https://github.com/pinkmanJ",
+    },
+    {
+        src: "./assets/images/avatars/will.png",
+        name: "William Le",
+        title: "UI/UX Designer",
+        description: ["William got his start in tech by creating custom websites for friends. Eventually, he stumbled on React.js and began his foray in building high-end JavaScript frontends. In his free time, he enjoy lifting weights, shooting guns, and playing guitar."],
+        skills: [
+            {
+                type: "Specialities: ",
+                skills: "Web app design, Product/App design",
+            },
+            {
+                type: "Languages: ",
+                skills: "JavaScript/ECMAScript, HTML, and CSS",
+            },
+        ],
+        website: "wle8300.com",
+        blog: "/authors/will.html",
+        github: "https://github.com/wle8300",
+    },
+    {
+        src: "./assets/images/avatars/eli.png",
+        name: "Eli Trefts",
+        title: "Junior Web Developer",
+        description: ["Eli got his start in programming during high school making websites and a number of simple Javascript games. He would go on to utilize the skills he learned from this in a professional manner by joining the CKC team. He stills pursues hobby projects in game development using Unity.",
+            "",
+            "Other hobby activities include weightlifting, rock climbing, robotics, and video games."
+        ],
+        skills: [
+            {
+                type: "Frameworks: ",
+                skills: "Django, Vue.js, React Native",
+            },
+            {
+                type: "Languages: ",
+                skills: "Python, Javascript, C#",
+            },
+        ],
+        website: "",
+        blog: "/authors/eli.html",
+        github: "https://github.com/elitrefts0012",
     },
     {
         src: "./assets/images/avatars/wade.png",

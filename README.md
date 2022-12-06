@@ -18,6 +18,16 @@ bundle install
 bundle exec jekyll serve --future --drafts
 ```
 
+### Troubleshooting local
+if you get this error from `bundle install`
+```bash
+/usr/local/opt/ruby/bin/bundle:25:in `load': cannot load such file -- /usr/local/lib/ruby/gems/3.1.0/gems/bundler-2.2.23/exe/bundle (LoadError)
+	from /usr/local/opt/ruby/bin/bundle:25:in `<main>'
+```
+run this. you should be able to run `bundle install` now
+```bash
+bundle update --bundler
+```
 
 ### helping someone view your draft blogs
 

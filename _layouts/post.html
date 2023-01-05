@@ -10,7 +10,7 @@ layout: default
 
 {% assign author = site.authors | where: 'short_name', page.author | first %}
 {% if author %}
-<div class="row">
+<div class="row author-link-wrapper">
     <a href="{{ author.url }}">
         <img class="blog-avatar" src="{{ author.avatar }}" align="left">
     </a>

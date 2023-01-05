@@ -63,6 +63,11 @@ It is not unusual for us to get a new project in the afternoon and have a proof 
 simple solution going by that night or the next day. We can move extremely quickly with
 our toolset.
 
+
+<div style="text-align: center;">
+    <img src="/assets/blog/skeletor-upgrade/react-state.png" style="max-width: 420px; margin: 0 auto;">
+</div>
+
 ### Upcoming changes
 
  * Add opinionated react support, once we have some good opinions!

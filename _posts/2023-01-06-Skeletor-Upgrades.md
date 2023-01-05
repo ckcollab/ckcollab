@@ -47,10 +47,21 @@ It was shockingly close most of the time, and did a perfect job often!
 
  * Built in login/logout/password reset request utilities you need on almost every project
  * Better handling of Heroku by default (Redis SSL anyone?!)
+ * Various changes in `backend/settings/test.py` to make tests faster (cheap password hashing, etc.)
+ * Better handling for emails/email templates
+ * Django Migration checker before git pushes
+ * Prevent use of `v-html` dangerously
+ * Better Vue linting in general
+ * Better S3 and Cloudcube support
+ * Remove many django auth third party dependencies
 
 ### Does this shit even work!?
 
-Has been used successfully to completion on over a dozen projects! 
+Has been used successfully to completion on over a dozen projects!
+
+It is not unusual for us to get a new project in the afternoon and have a proof of concept or 
+simple solution going by that night or the next day. We can move extremely quickly with
+our toolset.
 
 ### Upcoming changes
 

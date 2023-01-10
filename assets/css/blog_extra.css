@@ -107,9 +107,17 @@ img.img-bordered, .img-bordered img {
     border-radius: 15px;
 }
 
+.author-link-wrapper {
+    margin: 30px 0;
+}
 .author-link{
     padding-left: 60px;
     padding-top: 10px;
+}
+
+li {
+    margin-left: 28px;
+    padding: 2px 0;
 }
 
 /* Inline images */

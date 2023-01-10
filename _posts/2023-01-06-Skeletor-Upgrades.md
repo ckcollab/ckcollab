@@ -4,9 +4,10 @@ date: 2023-01-06 08:00:00 +0000
 author: eric
 ---
 
-We've been constantly improving Skeletor over the years, most recently with
-big new chunks of functionality like for mobile apps via React Native and
-a standalone install script that doesn't require django-admin on your command line.
+We've been constantly improving [Skeletor](https://github.com/ckc-org/skeletor/), our base template for new projects, over the years.
+
+Most recently we added big chunks of functionality for mobile apps via React Native and
+a standalone installation script that doesn't require django-admin on your command line.
 
 <!--more-->
 
@@ -24,17 +25,17 @@ $ bash <(curl -fsSL https://skeletor.ckcollab.com)
 ```
 
 Now you have a Django + Vue + React Native project you can deploy to Heroku and get on the
-app stores very quickly. You could add realtime chat in a few steps with [https://github.com/ckc-org/django-chit-chat](`django-chit-chat`).
+app stores very quickly. You could add realtime chat in a few steps with [django-chit-chat](https://github.com/ckc-org/django-chit-chat).
 
 
 ### Mobile!
 
-One of the biggest changes for Skeletor, and for Ckc, is adding mobile app support. We've stayed
+One of the biggest changes for Skeletor, and for Ckc in 2022, was adding mobile app support. We've steered
 away from that ecosystem until recently, where we've found [React Native](https://reactnative.dev/) to be a pretty great tool.. 
 mostly thanks to the folks at [Expo](https://expo.dev/) and their nicely packaged modules.
 
 We played with [Native Base](https://nativebase.io/) this year and were actually burned pretty
-badly by it. We started out with this framework and it seemed fine, but pretty soon
+badly by it. We started out with this framework, and it seemed fine, but pretty soon
 we were experiencing horrible latency loading some components. Then we hit a final straw
 where things were just too slow and had to rip it out.
 
@@ -73,6 +74,6 @@ our toolset.
  * Add opinionated react support, once we have some good opinions!
  * More modules in the mobile base app, like password reset
  * And more broadly, semi-out of scope for this article, is more Ckc maintained packages, we currently have:
-   * [https://github.com/ckc-org/django-ckc](django-ckc) - nice helpers for django in general
-   * [https://github.com/ckc-org/django-chit-chat](django-chit-chat) - chat via websockets (channels!)
-   * [https://github.com/ckc-org/dotfiles](dotfiles) - boot up a dev machine with neat presets
+   * [django-ckc](https://github.com/ckc-org/django-ckc) - nice helpers for django in general
+   * [django-chit-chat](https://github.com/ckc-org/django-chit-chat) - chat via websockets (channels!)
+   * [dotfiles](https://github.com/ckc-org/dotfiles) - boot up a dev machine with neat presets

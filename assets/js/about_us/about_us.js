@@ -57,14 +57,14 @@ const slides = [
     {
         src: "./assets/images/avatars/sam.png",
         name: "Sam Wood",
-        title: "Junior Web Developer",
+        title: "Frontend Developer",
         description: ["Sam, who usually focuses on the frontend of that stack, has gained a solid understanding of many tools that exist at the forefront of web development today. He has helped teach coding bootcamps and develop industry-leading products. Along with this, Sam currently runs a SaaS website on the side.",
             "",
             "In his free time, he enjoys hiking with his dog, attempting to cook, and playing guitar.",],
         skills: [
             {
                 type: "",
-                skills: "Front End Development",
+                skills: "Frontend Development",
             },
             {
                 type: "Languages: ",
@@ -83,7 +83,7 @@ const slides = [
     {
         src: "./assets/images/avatars/harvey.png",
         name: "Harvey Hartwell",
-        title: "Junior Web Developer",
+        title: "Fullstack Developer",
         description: ["Harvey graduated from Gonzaga University with a degree in Computer Science and an Emphasis in Communication Studies. He has experience with android app development, web development, and database management.",
             "",
             "He is also a terrible golfer but still has a blast on the course."],
@@ -109,7 +109,7 @@ const slides = [
     {
         src: "./assets/images/avatars/jess.png",
         name: "Jess Sargent",
-        title: "Junior Web Developer",
+        title: "Backend Developer",
         description: ["Jess graduated from Arizona State University with a Bachelors of Science in Software Engineering. From a young age, building things, technology, and self learning have always been his passion. His experience is mainly in backend development but he is currently working on becoming full stack.",
             "",
             "In his free time Jess enjoys fitness, cooking and good bourbon."],

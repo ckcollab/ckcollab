@@ -23,12 +23,15 @@ html {
 /*---------------*/
 body .v-application {
   background-color: #1e2642;
-  animation: fadeIn 1 0.2s linear;
+  animation: fadeIn 1 .2s linear;
   animation-fill-mode: forwards;
   opacity: 0;
   scroll-behavior: smooth;
   line-height: 1.2 !important;
   font-family: "Montserrat", sans-serif !important;
+}
+#app {
+    background-color: #1e2642;
 }
 
 * {

@@ -105,12 +105,20 @@ Over time you get better and better at knowing when to climb up the tree and try
 to explore deeply.
 
 
+# As a process
+
+Here's a repeatable way to try to avoid going too far up the decision tree:
+
+1. _Calmly_ read all errors, code, commands, etc. in front of you.
+1. If something is obviously broken, focus on that. Do not assume a third party
+system/module is at fault. It's probably you, and it's probably a very small simple problem!
+1. Build a small example replicating exactly your situation with as few moving parts as possible _(i.e., from our example, open something and serve it on port `9000`)_
+1. Rubber duck your situation to a peer.
+1. Reach out to someone smarter than you. If you're the top dog: God help you.
+1. Now start posting on forums, discord, IRC, etc. and try to find any more info you can
 
 
 
 
-
-
-Past related articles
-   - How to get a gig
-   - ?
+# Past related articles
+   - [How to get a web dev gig?](https://ckcollab.com/2019/03/30/how-do-i-get-a-web-dev-gig.html)

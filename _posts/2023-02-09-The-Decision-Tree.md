@@ -26,6 +26,7 @@ think -- a bit strange, but I'll explain!
    * The connection error, maybe it has to do with SSL at some level?
    * Maybe there's something wrong with my Minio configuration?
    * Is Minio booting up OK?
+   * Is the port open in Security Groups? Yes..
    * Why can I talk to minio from the local machine, but the outside Internet can't talk to it?
    * I've tried 1,000 times and everything seems fine!
    * This goes on for days
@@ -38,6 +39,10 @@ idea. I never even thought to ask.
 Basically changing one number, a port, from 9000 to _anything else_ fixed the problem. Why
 didn't I just focus on the initial connection error? Why did I go down so many useless
 paths? I knew what the problem was at the outset, but refused to focus on it. 
+
+I never expected a port to be closed by an outside admin, this had never happened 
+before. I could see the list of open ports in my configuration, but I refused to acknowledge it clearly
+wasn't open.
 
 I couldn't connect: that's it! Focus on that! It _has_ to be a network problem, nothing
 to do with Minio configuration necessarily.
@@ -85,6 +90,19 @@ Be very cautious going so far up the tree, re-check your initial assumptions.
 
 Very likely you just need to open a port or something simple!
 
+
+# It's not always easy
+
+And, actually, sometimes you do have to sit there and take it for 2 weeks. Fully
+absorbing an idea and figuring out a problem may legitimately be very difficult
+and all-consuming.
+
+Even though this port 9000 problem was silly and took way too much time to understand,
+I learned a boatload. This always happens. Every time I am super stuck I come out
+the other end a better engineer.
+
+Over time you get better and better at knowing when to climb up the tree and try 
+to explore deeply.
 
 
 

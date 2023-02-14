@@ -49,7 +49,7 @@ before. I could see the list of open ports in my configuration, but I refused to
 wasn't open.
 
 I couldn't connect: that's it! Focus on that! It _has_ to be a network problem, nothing
-to do with Minio configuration necessarily.
+to do with Minio configuration.
 
 
 # Let your mind go, but with limits
@@ -65,7 +65,7 @@ how to do something -- eventually this challenge will devolve into another way t
 do a CRUD form stored away in your brain.
 
 You'll forget what a rush it was to finally figure out you needed `levioSah()` not
-`levioSo()`. This _will_ be boring someday, I promise.
+`levioSo()`. This _will_ be boring someday, I promise, and you'll miss these days.
 
 
 # Start at the base of the decision tree
@@ -84,13 +84,12 @@ in 5 minutes given a stoic "senior engineer" behind the wheel.
 # Furthest branch away
 
 Very rarely you will encounter a problem where all initial assumptions/clues are actually
-futile: there's something fundamental wrong with your computer architecture
-or the library you're using. 
+futile and there's something fundamental wrong with your computer architecture
+or the library you're using. Usually you did something silly like a typo, forgot to
+pull, forgot to rebuild docker, etc.
 
-Maybe you were expecting the size of something to be 32 bits, but
-it's 64 bits instead. This is exceptionally rare in web dev.
-
-Be very cautious going so far up the tree, re-check your initial assumptions.
+Be very cautious going so far up the tree, re-check your initial assumptions. Re-read the 
+error. Restart your computer.
 
 Very likely you just need to open a port or something simple!
 
@@ -102,8 +101,8 @@ absorbing an idea and figuring out a problem may legitimately be very difficult
 and all-consuming.
 
 Even though this port 9000 problem was silly and took way too much time to understand,
-I learned a boatload. This always happens. Every time I am super stuck I come out
-the other end a better engineer.
+I learned a boatload. This always happens. Every time I am super stuck and find
+the solution: I come out stronger, more apt to take on bigger tasks.
 
 Over time, you get better and better at knowing when to climb up the tree and try 
 to explore deeply.
@@ -116,10 +115,10 @@ Here's a repeatable way to try to avoid going too far up the decision tree:
 1. _Calmly_ read all errors, code, commands, etc. in front of you.
 1. If something is obviously broken, focus on that. Do not assume a third party
 system/module is at fault. It's probably you, and it's probably a very small simple problem!
-1. Build a small example replicating exactly your situation with as few moving parts as possible _(i.e., from our example, open something and serve it on port `9000`)_
+1. Build a small example replicating exactly your situation with as few moving parts as possible _(i.e., from our example, open any kind of server process and serve it on port `9000`)_
 1. Rubber duck your situation to a peer.
 1. Reach out to someone smarter than you. If you're the top dog: God help you.
-1. Now start posting on forums, discord, IRC, etc. and try to find any more info you can
+1. Now start posting on forums, discord, IRC, etc. and try to find any more info
 
 
 

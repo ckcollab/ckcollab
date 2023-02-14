@@ -14,6 +14,10 @@ think -- a bit strange, but I'll explain!
 
 <!--more-->
 
+<div style="text-align: center;">
+     <img src="/assets/images/articles/decision-tree.png" class="img-bordered">
+     <small><i>Why go up the tree until you're sure about the bottom!?</i></small>
+</div>
 
 
 # An example
@@ -101,7 +105,7 @@ Even though this port 9000 problem was silly and took way too much time to under
 I learned a boatload. This always happens. Every time I am super stuck I come out
 the other end a better engineer.
 
-Over time you get better and better at knowing when to climb up the tree and try 
+Over time, you get better and better at knowing when to climb up the tree and try 
 to explore deeply.
 
 

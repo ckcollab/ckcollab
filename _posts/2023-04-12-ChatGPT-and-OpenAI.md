@@ -14,8 +14,9 @@ develop skills/tools to leverage AI.
 <!--more-->
 
 <div style="text-align: center;">
-     <img src="/assets/images/articles/decision-tree.png" class="img-bordered">
-     <small><i>Why go up the tree until you're sure about the bottom!?</i></small>
+     <img src="/assets/images/articles/midjourney_1.jpg" class="img-bordered">
+     <br>
+     <small><i>Some fun attempts to generate an avatar</i></small>
 </div>
 
 
@@ -23,21 +24,23 @@ develop skills/tools to leverage AI.
 
 # How we're using it
 
-Chrome upwork extension, for replying to jobs quickly
-
-Game AI generation of image assets/code
-
-Re-doing our website with image generation, MidJourney
-
-PromptWars
-
-Creating "agents" that can help with various things
- - FishingTravelAgent-GPT
-   - I made a fishing travel agent that can help you find the best fishing spots on your journey
- - JuniorEngineer-GPT
-   - We're working on training an agent that can do basic coding tasks for us, like a junior engineer that's maybe Sophomore level in college.
-   - We can provide example tasks, ask for changes, and the agent will do its best to complete the task
-   - This can be automated so the agent could look at new tasks, figure out how to do them, and push the code up
+ * Chrome Upwork extension, for replying to jobs quickly by 
+having an agent prepared and knowledgeable about your business.
+ * We have a game in development that is leveraging AI for a great deal
+of the art. We can start with small examples, and use further refinement to
+make the images larger -- this is how we're creating large playable maps
+for our game.
+ * We're re-doing our website with a fresh new design that is built around 
+[Midjourney](https://midjourney.com/)
+ * We made a fun website for "prompt wars" using [InvokeAI](https://github.com/invoke-ai/InvokeAI) where you can generate images that
+ compete with others for a given challenge topic.
+ * Creating "agents" that can help with various things
+   - FishingTravelAgent-GPT
+     - I made a fishing travel agent that can help you find the best fishing spots on your journey
+   - JuniorEngineer-GPT
+     - We're working on training an agent that can do basic coding tasks for us, like a junior engineer that's maybe Sophomore level in college.
+     - We can provide example tasks, ask for changes, and the agent will do its best to complete the task
+     - This can be automated so the agent could look at new tasks, figure out how to do them, and push the code up
 
 
 # How we can help you
@@ -53,9 +56,14 @@ doesn't get along with Bob, so we need to make sure they don't work together". W
 can teach an agent about this, provide scheduling needs and requisite information, and
 the agent will behave like a human scheduler!
 
-Facebook ad copy? image generation?
+<font color="red">Facebook ad copy? image generation?</font>
 
-Generating presentations Canva
+<font color="red">Generating presentations Canva</font>
+
+Fun aside: in the past we helped architect the [Codalab](https://competitions.codalab.org/)
+platform, which is a platform for hosting AI competitions. Our special piece
+for that project was the ability to use docker images in student submissions
+which allowed AI research in C#, Julia, R, as well as Python.
 
 
 
@@ -67,8 +75,8 @@ masks on 11 million images. This is an insane tool that can be leveraged quickly
 to facilitate a strong AI agent.
 
 <div style="text-align: center;">
-     <img src="/assets/images/articles/decision-tree.png" class="img-bordered">
-     <small><i>Example SAM mask of an image</i></small>
+     <img src="/assets/images/articles/SAM-model-Metas-new-Segment-Anything-Model-explained-4.webp" class="img-bordered">
+     <small><i>Example SAM mask</i></small>
 </div>
 
 Maybe you have an assembly line where items are packaged, shipment labels are applied,
@@ -95,4 +103,6 @@ A new thing coming out are Artificial General Intelligence (AGI) agents, like:
 
 # Let's bring your business into the AI future!
 
-...
+We're using AI right now with multiple clients. One client is developing a new
+way to manage his pecan farm, leveraging [Github Copilot](https://github.com/features/copilot) 
+along the way to speed up development.

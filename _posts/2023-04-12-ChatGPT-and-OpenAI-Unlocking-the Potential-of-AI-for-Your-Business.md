@@ -20,7 +20,7 @@ The release of ChatGPT revolutionizes AI's role in business, offering our boutiq
 
 # How we're using AI
 
- * Chrome Upwork extension: Respond to job offers quickly by having an AI agent knowledgeable about your business. Uses [OpenAI](https://openai.com/)
+ * Chrome Upwork extension: Respond to job offers quickly by having an AI agent knowledgeable about your business generate proposals for you. Can answer questions like "what frameworks do you know?" or "talk about a recent project like this." Uses [OpenAI](https://openai.com/)
  * Game development: We're leveraging AI to create artwork and large playable maps for our game.
  * Website redesign: Building a fresh new design around [Midjourney](https://midjourney.com/).
  * Prompt Wars: A fun website using [InvokeAI](https://github.com/invoke-ai/InvokeAI) where users generate images that compete with others based on challenge topics.
@@ -46,7 +46,7 @@ doesn't get along with Bob, so we need to make sure they don't work together". W
 can teach an agent about this, provide scheduling needs and requisite information, and
 the agent will behave like a human scheduler!
 
-Compose a long list of straightforward ads, and let ChatGPT transform them into engaging, high-impact copy, optimizing your marketing efforts with ease.
+Another application is in advertising. Compose a long list of straightforward ads, and let ChatGPT transform them into engaging, high-impact copy, optimizing your marketing efforts with ease.
 
 Fun aside: in the past we helped architect the [Codalab](https://competitions.codalab.org/)
 platform, which is a platform for hosting AI competitions. Our special piece
@@ -77,7 +77,7 @@ An AI agent could be trained to see the difference between a box and a unit.
 Maybe sometimes a wheel gets stuck in the assembly line and the boxes start piling up,
 an AI agent could see this problem and notify the appropriate people.
 
-These are all not novel! The novel piece is how simple and quickly this can be done. 
+These ideas are not revolutionary on their own! The novel piece is how simple and quickly this can be done. 
 Instead of needing a research team that can make all of the complex math work, we just
 teach the AI agents like we teach a new hire. It's flexible and generic.
 

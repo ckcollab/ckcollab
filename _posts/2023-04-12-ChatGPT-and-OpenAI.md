@@ -100,6 +100,7 @@ A new thing coming out are Artificial General Intelligence (AGI) agents, like:
  - [BabyAGI](https://github.com/yoheinakajima/babyagi) - A baby AI that has limited memory and functionality
  - [ToddlerAGI](https://twitter.com/gogoliansnake/status/1643225698801164288/) - Modified baby agi, slightly more advanced
  - [TeenageAGI](https://github.com/seanpixel/Teenage-AGI) - Has a deep memory, more advanced than toddler
+ - [AutoGPT](https://github.com/Torantulino/Auto-GPT) - attempt to make GPT-4 fully autonomous
 
 # Let's bring your business into the AI future!
 

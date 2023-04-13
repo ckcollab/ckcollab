@@ -1,44 +1,34 @@
 ---
-title: ChatGPT and OpenAI
+title: ChatGPT and OpenAI: Unlocking the Potential of AI for Your Business
 date: 2023-04-12 08:00:00 +0000
 author: eric
 ---
 
-The future for many jobs is kind of scary, even in the Coeur d'Alene and Spokane area. 
+The future of many jobs may seem uncertain, even in the Coeur d'Alene and Spokane area. 
 
-At first sight of ChatGPT, but we have to remember the rooms and rooms full of 
-people "computers" in the 50's. Instead of
-succumbing to the initial fear, let's try to predict where this is heading and
-develop skills/tools to leverage AI.
+Upon encountering ChatGPT, it's natural to feel apprehensive, but let's not forget the rooms full of human "computers" in the 1950s. Rather than succumbing to fear, let's predict where this technology is heading and develop skills and tools to harness the power of AI.
 
 <!--more-->
 
 <div style="text-align: center;">
      <img src="/assets/images/articles/midjourney_1.jpg" class="img-bordered">
      <br>
-     <small><i>Some fun attempts to generate an avatar</i></small>
+     <small><i>Some fun attempts to generate an avatar, using [Midjourney](https://midjourney.com/)</i></small>
 </div>
 
+The release of ChatGPT revolutionizes AI's role in business, offering our boutique software studio the opportunity to provide clients with innovative solutions. By harnessing ChatGPT, we can develop intelligent chatbots, enhance content generation, and create tailored AI agents to streamline clients' operations and elevate their digital presence.
 
+# How we're using AI
 
-
-# How we're using it
-
- * Chrome Upwork extension, for replying to jobs quickly by 
-having an agent prepared and knowledgeable about your business.
- * We have a game in development that is leveraging AI for a great deal
-of the art. We can start with small examples, and use further refinement to
-make the images larger -- this is how we're creating large playable maps
-for our game.
- * We're re-doing our website with a fresh new design that is built around 
-[Midjourney](https://midjourney.com/)
- * We made a fun website for "prompt wars" using [InvokeAI](https://github.com/invoke-ai/InvokeAI) where you can generate images that
- compete with others for a given challenge topic.
- * Creating "agents" that can help with various things
+ * Chrome Upwork extension: Respond to job offers quickly by having an AI agent knowledgeable about your business. Uses [OpenAI](https://openai.com/)
+ * Game development: We're leveraging AI to create artwork and large playable maps for our game.
+ * Website redesign: Building a fresh new design around [Midjourney](https://midjourney.com/).
+ * Prompt Wars: A fun website using [InvokeAI](https://github.com/invoke-ai/InvokeAI) where users generate images that compete with others based on challenge topics.
+ * AI Agents:
    - FishingTravelAgent-GPT
-     - I made a fishing travel agent that can help you find the best fishing spots on your journey
+     - For fun I made a quick fishing trip travel agent that helps you find the most interesting fishing spots on your journey
    - JuniorEngineer-GPT
-     - We're working on training an agent that can do basic coding tasks for us, like a junior engineer that's maybe Sophomore level in college.
+     - We're working on training an agent that can do basic coding tasks for us, like a junior engineer that's maybe Sophomore level in college
      - We can provide example tasks, ask for changes, and the agent will do its best to complete the task
      - This can be automated so the agent could look at new tasks, figure out how to do them, and push the code up
 
@@ -50,20 +40,18 @@ replying to customer support tickets, or maybe you need to generate a lot of
 content for your website. We can help you create an agent that can do these
 tasks for you.
 
-We can also help you create an agent that can help you with your business. For
+We can also help you create an agent that can be your AI assistant. For
 example, maybe you are annoyed by scheduling your employees every 2 weeks.. "Sally
 doesn't get along with Bob, so we need to make sure they don't work together". We
 can teach an agent about this, provide scheduling needs and requisite information, and
 the agent will behave like a human scheduler!
 
-<font color="red">Facebook ad copy? image generation?</font>
-
-<font color="red">Generating presentations Canva</font>
+Compose a long list of straightforward ads, and let ChatGPT transform them into engaging, high-impact copy, optimizing your marketing efforts with ease.
 
 Fun aside: in the past we helped architect the [Codalab](https://competitions.codalab.org/)
 platform, which is a platform for hosting AI competitions. Our special piece
-for that project was the ability to use docker images in student submissions
-which allowed AI research in C#, Julia, R, as well as Python.
+for that project was the ability to use "docker in docker" for student submissions.
+This allowed AI research in C#, Julia, R, Python, etc.!
 
 
 

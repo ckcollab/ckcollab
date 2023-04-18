@@ -1,5 +1,5 @@
 ---
-title: ChatGPT and OpenAI: Unlocking the Potential of AI for Your Business
+title: "ChatGPT and OpenAI: Unlocking the Potential of AI for Your Business"
 date: 2023-04-12 08:00:00 +0000
 author: eric
 ---
